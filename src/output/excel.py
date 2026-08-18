@@ -33,10 +33,10 @@ def _country_label(v):
 
 def _data_status_label(v):
     labels={
-        "COMPLETED_DAILY_QUOTE":"완료 종가",
-        "COMPLETED_SESSION_SNAPSHOT":"완료 세션",
-        "REFRESHED_COMPLETED_SESSION":"완료 세션 갱신",
-        "PRESERVED_OPEN_OR_UNKNOWN":"이전 안전값 유지",
+        "COMPLETED_DAILY_QUOTE":"최신 완료 거래일",
+        "COMPLETED_SESSION_SNAPSHOT":"최신 완료 거래일",
+        "REFRESHED_COMPLETED_SESSION":"최신 완료 거래일",
+        "PRESERVED_OPEN_OR_UNKNOWN":"이전 완료 거래일 유지",
         "PRESERVED_AFTER_FETCH_ERROR":"수집 오류·이전값 유지",
         "FETCH_ERROR":"수집 오류",
     }
@@ -77,7 +77,7 @@ def _make_table_sheet(ws, rows, qa=None, title="섹터별 주가 모니터", sub
     for c,h in enumerate(headers,1): _header(ws.cell(4,c),h)
     ws.cell(4,1).comment=Comment("국내 Universe 분류 원천: NAVER Finance 업종분류 (https://finance.naver.com). 해외 Universe 분류 원천: TradingView Screener (https://www.tradingview.com).","OpenAI")
     ws.cell(4,14).comment=Comment("가격이 실제로 속한 거래일입니다. 해외는 TradingView 일봉 거래일 필드가 제공될 때 개별 종목별로 기록합니다.","OpenAI")
-    ws.cell(4,15).comment=Comment("완료 종가/완료 세션/이전 안전값 유지 여부를 표시합니다. 장중 또는 상태 불명 시장은 이전 안전값을 유지할 수 있습니다.","OpenAI")
+    ws.cell(4,15).comment=Comment("최신 완료 거래일인지, 장중/상태 불명으로 이전 완료 거래일을 유지했는지 표시합니다.","OpenAI")
     for i,r in enumerate(_sorted(rows),5):
         sector=SECTOR_LABELS.get(r.get("research_sector"),r.get("research_sector") or "-")
         vals=[
@@ -104,7 +104,7 @@ def _make_table_sheet(ws, rows, qa=None, title="섹터별 주가 모니터", sub
         if r.get("data_status") in ("PRESERVED_OPEN_OR_UNKNOWN","PRESERVED_AFTER_FETCH_ERROR","FETCH_ERROR"):
             ws.cell(i,15).fill=PatternFill("solid",fgColor="FFF4D8")
             ws.cell(i,15).font=Font(name="Arial",size=9,bold=True,color="A45B00")
-    widths=[12,8,14,38,13,11,13,14,16,14,11,14,11,14,18,14,24,28]
+    widths=[12,8,14,38,13,11,13,14,16,14,11,14,11,14,20,14,24,28]
     for i,w in enumerate(widths,1): ws.column_dimensions[get_column_letter(i)].width=w
     ws.freeze_panes="H5"
     ws.auto_filter.ref=f"A4:R{max(5,4+len(rows))}"
@@ -127,9 +127,9 @@ def build(rows: list[dict], qa: dict, path: str):
     _make_table_sheet(ws,rows,qa,"섹터별 주가 모니터",subtitle)
 
     kd=wb.create_sheet("국내")
-    _make_table_sheet(kd,domestic,qa,"국내 주가 모니터",f"NAVER/KRX 미러 일일 종가 | {len(domestic):,}개")
+    _make_table_sheet(kd,domestic,qa,"국내 주가 모니터",f"NAVER/KRX 미러 완료 거래일 | {len(domestic):,}개")
     kg=wb.create_sheet("해외")
-    _make_table_sheet(kg,global_rows,qa,"해외 주가 모니터",f"TradingView Primary common shares | {len(global_rows):,}개")
+    _make_table_sheet(kg,global_rows,qa,"해외 주가 모니터",f"TradingView 완료 거래일 스냅샷 | {len(global_rows):,}개")
 
     u=wb.create_sheet("Universe");u.sheet_view.showGridLines=False
     uh=["company_name","ticker","country","exchange","currency","source","source_sector","source_industry","research_sector","research_status","target_price","target_currency","last_report_date","active","review_note"]
@@ -148,8 +148,9 @@ def build(rows: list[dict], qa: dict, path: str):
     q["B1"].fill=PatternFill("solid",fgColor=RED if qa["status"]=="FAIL" else (ORANGE if qa["status"]=="REVIEW" else GREEN))
     summary=[
         ("전체 종목",qa.get("row_count")),("국내 종목",qa.get("domestic_count")),("가격 누락",qa.get("missing_price_count")),("수집 오류",qa.get("fetch_error_count")),
-        ("국내 공식 등락률 적용",qa.get("official_kr_return_count")),("해외 거래일 확인",qa.get("global_price_date_count")),("해외 거래일 미확인",qa.get("global_price_date_missing_count")),
-        ("해외 완료세션 갱신",qa.get("refreshed_completed_global_count")),("해외 이전 안전값 유지",qa.get("preserved_open_or_unknown_global_count")),
+        ("국내 등락률 원천 확인",qa.get("official_kr_return_count")),("국내 0% 종목",qa.get("kr_zero_return_count")),("국내 완료일 초과",qa.get("kr_future_date_count")),
+        ("해외 거래일 확인",qa.get("global_price_date_count")),("해외 거래일 미확인",qa.get("global_price_date_missing_count")),
+        ("해외 최신 완료 거래일 갱신",qa.get("refreshed_completed_global_count")),("해외 이전 완료 거래일 유지",qa.get("preserved_open_or_unknown_global_count")),
     ]
     row=3
     for label,value in summary:
@@ -165,6 +166,6 @@ def build(rows: list[dict], qa: dict, path: str):
             if level=="ERROR": q.cell(row,1).fill=PatternFill("solid",fgColor="FDECEC")
             else: q.cell(row,1).fill=PatternFill("solid",fgColor="FFF4D8")
             row+=1
-    q.column_dimensions["A"].width=28;q.column_dimensions["B"].width=110
+    q.column_dimensions["A"].width=32;q.column_dimensions["B"].width=110
 
     p=Path(path);p.parent.mkdir(parents=True,exist_ok=True);wb.save(p)
