@@ -8,6 +8,7 @@ from src.prices.service import fetch as fetch_price
 from src.qa import run as run_qa
 from src.output.excel import build as build_excel
 from src.output.json_export import write as write_json
+from src.universe import tradingview
 
 
 def load_rows(path: str) -> list[dict]:
@@ -22,13 +23,25 @@ def main():
         raise SystemExit(f"Universe missing: {upath}. Run: python -m src.universe.build")
 
     rows = load_rows(upath)
+
+    # Fetch the entire global market snapshot once. This is dramatically faster
+    # and more reliable than converting thousands of TradingView tickers into
+    # Yahoo symbols one by one.
+    try:
+        global_snapshot = tradingview.fetch_price_snapshot(
+            settings.get("global_discovery_industries", [])
+        )
+    except Exception as exc:
+        print(f"Global snapshot unavailable; Yahoo fallback will be used: {exc}")
+        global_snapshot = {}
+
     enriched, fetch_errors = [], []
     for source_row in rows:
         if str(source_row.get("active", "")).upper() not in ("TRUE", "1", "YES"):
             continue
         row = dict(source_row)
         try:
-            row.update(fetch_price(row))
+            row.update(fetch_price(row, global_snapshot=global_snapshot))
             tp = row.get("target_price")
             if tp not in (None, ""):
                 try:
@@ -50,9 +63,9 @@ def main():
         enriched.append(row)
 
     qa = run_qa(enriched, settings)
-    # Fetch failures are already represented as missing-price warnings/errors by QA.
     qa["fetch_error_count"] = len(fetch_errors)
     qa["fetch_errors"] = fetch_errors[:200]
+    qa["global_snapshot_count"] = len(global_snapshot)
 
     qpath = Path(settings["project"]["qa_json"])
     qpath.parent.mkdir(parents=True, exist_ok=True)
