@@ -21,6 +21,10 @@ PRICE_FIELDS = {
     "source_change_origin", "comparison_base_source",
 }
 
+CLOSED_GLOBAL_SESSION_STATES = {
+    "out_of_session", "post_market", "pre_market", "holiday", "night"
+}
+
 
 def load_rows(path: str) -> list[dict]:
     with open(path, encoding="utf-8-sig", newline="") as f:
@@ -58,11 +62,16 @@ def copy_previous_price(row: dict, previous: dict | None) -> bool:
 
 
 def safe_global_snapshot_value(snapshot: dict | None) -> bool:
-    """True only when the screener quote is safe to publish as a completed close."""
+    """True only when TradingView says the regular market is not open.
+
+    TradingView's market-status enum uses `market` for an open regular session,
+    not `regular`. Unknown states are treated as unsafe and preserve the last
+    completed value.
+    """
     if not snapshot:
         return False
     session = str(snapshot.get("market_session") or "").strip().lower()
-    return bool(session) and session != "regular"
+    return session in CLOSED_GLOBAL_SESSION_STATES
 
 
 def main():
@@ -111,9 +120,6 @@ def main():
                 refreshed_global += 1
             else:
                 if copy_previous_price(row, previous):
-                    # Preserve the last completed value while the market is open or
-                    # its session state is unknown. Keep the *current* observed
-                    # session only for QA/diagnostics; never replace the safe price.
                     if snap:
                         row["market_session"] = snap.get("market_session")
                         row["price_observed_at"] = snap.get("price_observed_at")
@@ -121,9 +127,6 @@ def main():
                     row["data_status"] = "PRESERVED_OPEN_OR_UNKNOWN"
                     preserved_global += 1
                 else:
-                    # First-run fallback: use historical daily closes rather than an
-                    # intraday screener quote. This is intentionally per-symbol only
-                    # when no previously published safe value exists.
                     try:
                         row.update(fetch_price(row, global_snapshot=None))
                         row["last_checked_at"] = checked_at
