@@ -2,10 +2,17 @@ name: Daily stock update
 
 on:
   schedule:
-    # 08:15 KST Mon-Fri: all covered markets are between completed sessions.
-    - cron: '15 23 * * 0-4'
-    # 16:20 KST Mon-Fri: refresh Korea only after KRX regular close.
+    # Morning ALL retries, KST Mon-Fri: 07:17 / 07:47 / 08:17 / 08:47.
+    # GitHub scheduled runs may be delayed, so we use several off-hour slots.
+    - cron: '17 22 * * 0-4'
+    - cron: '47 22 * * 0-4'
+    - cron: '17 23 * * 0-4'
+    - cron: '47 23 * * 0-4'
+    # Korea-close retries, KST Mon-Fri: 16:20 / 16:50 / 17:20 / 18:20.
     - cron: '20 7 * * 1-5'
+    - cron: '50 7 * * 1-5'
+    - cron: '20 8 * * 1-5'
+    - cron: '20 9 * * 1-5'
   workflow_dispatch:
     inputs:
       scope:
@@ -21,34 +28,45 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: stock-price-update-main
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
-      - run: pip install -r requirements.txt
 
-      - name: Resolve safe update scope
+      - name: Resolve safe update scope and deduplicate retries
         env:
           EVENT_NAME: ${{ github.event_name }}
           SCHEDULE_EXPR: ${{ github.event.schedule }}
           MANUAL_SCOPE: ${{ inputs.scope }}
         run: |
+          KST_HOUR=$(TZ=Asia/Seoul date +%H)
+          KST_MIN=$(TZ=Asia/Seoul date +%M)
+          TODAY=$(TZ=Asia/Seoul date +%F)
+
           if [ "$EVENT_NAME" = "schedule" ]; then
-            if [ "$SCHEDULE_EXPR" = "20 7 * * 1-5" ]; then
-              SCOPE="KR_ONLY"
-            else
-              SCOPE="ALL"
-            fi
+            case "$SCHEDULE_EXPR" in
+              '17 22 * * 0-4'|'47 22 * * 0-4'|'17 23 * * 0-4'|'47 23 * * 0-4')
+                SCOPE="ALL"
+                ;;
+              *)
+                SCOPE="KR_ONLY"
+                ;;
+            esac
           else
             SCOPE="${MANUAL_SCOPE:-AUTO}"
             if [ "$SCOPE" = "AUTO" ]; then
-              KST_HOUR=$(TZ=Asia/Seoul date +%H)
               if [ "$KST_HOUR" -lt 9 ]; then
                 SCOPE="ALL"
               elif [ "$KST_HOUR" -ge 16 ]; then
@@ -59,10 +77,39 @@ jobs:
               fi
             fi
           fi
+
+          # Safety guard: a delayed morning ALL job must not publish Asian intraday snapshots.
+          if [ "$SCOPE" = "ALL" ] && [ "$KST_HOUR" -ge 9 ]; then
+            echo "Delayed ALL run reached ${KST_HOUR}:${KST_MIN} KST; skipping to avoid intraday Asia prices."
+            echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
+            echo "UPDATE_SCOPE=$SCOPE" >> "$GITHUB_ENV"
+            exit 0
+          fi
+
+          # Korea close refresh must not run before the market has safely closed.
+          if [ "$SCOPE" = "KR_ONLY" ] && [ "$KST_HOUR" -lt 16 ]; then
+            echo "KR_ONLY run is too early; skipping."
+            echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
+            echo "UPDATE_SCOPE=$SCOPE" >> "$GITHUB_ENV"
+            exit 0
+          fi
+
+          # Scheduled retries are idempotent: if this scope already succeeded today, skip.
+          if [ "$EVENT_NAME" = "schedule" ] && git log -20 --format=%s | grep -Fq "stock update $TODAY $SCOPE"; then
+            echo "$SCOPE already succeeded on $TODAY; skipping retry."
+            echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
+          else
+            echo "SKIP_UPDATE=false" >> "$GITHUB_ENV"
+          fi
           echo "UPDATE_SCOPE=$SCOPE" >> "$GITHUB_ENV"
           echo "Resolved UPDATE_SCOPE=$SCOPE"
 
+      - name: Install dependencies
+        if: env.SKIP_UPDATE != 'true'
+        run: pip install -r requirements.txt
+
       - name: Refresh universe on Monday morning, safe ALL manual runs, or first run
+        if: env.SKIP_UPDATE != 'true'
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: |
@@ -72,9 +119,11 @@ jobs:
           fi
 
       - name: Update prices + QA + outputs
+        if: env.SKIP_UPDATE != 'true'
         run: python -m src.main
 
       - name: Commit successful outputs
+        if: env.SKIP_UPDATE != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
