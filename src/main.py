@@ -15,6 +15,7 @@ PRICE_FIELDS = {
     "price_date", "previous_trading_date", "calendar_days_elapsed",
     "volume", "price_source", "price_observed_at", "market_session",
     "raw_previous_close", "raw_close_change_pct", "corporate_action_adjusted",
+    "source_change_origin", "comparison_base_source",
 }
 
 
