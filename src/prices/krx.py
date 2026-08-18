@@ -6,7 +6,7 @@ from src.utils.http import get
 
 KST = ZoneInfo("Asia/Seoul")
 OFFICIAL_CHANGE_ORIGIN = "NAVER_KRX_MIRROR_DAILY_QUOTE"
-COMPARISON_BASE_SOURCE = "source_change_implied_base"
+COMPARISON_BASE_SOURCE = "source_exact_absolute_change"
 PRICE_URL = "https://m.stock.naver.com/api/stock/{ticker}/price"
 
 
@@ -52,7 +52,17 @@ def _json_rows(ticker: str) -> list[dict]:
     raise RuntimeError(f"Unexpected NAVER price payload: {ticker}")
 
 
-def _extract(row: dict) -> tuple[float, float, float | None, str]:
+def _signed_source_change(row: dict, pct: float) -> float:
+    """Read NAVER's exact absolute day change and apply the sign from its return."""
+    delta = _number(row.get("compareToPreviousClosePrice"))
+    if delta is None:
+        raise RuntimeError("NAVER/KRX-mirrored exact daily price change unavailable")
+    if abs(pct) < 1e-12 or abs(delta) < 1e-12:
+        return 0.0
+    return abs(delta) if pct > 0 else -abs(delta)
+
+
+def _extract(row: dict) -> tuple[float, float, float | None, str, float]:
     close = _number(row.get("closePrice") or row.get("close") or row.get("nowVal"))
     pct = _number(
         row.get("fluctuationsRatio")
@@ -76,10 +86,11 @@ def _extract(row: dict) -> tuple[float, float, float | None, str]:
         raise RuntimeError("NAVER/KRX-mirrored daily return unavailable")
     if not traded_at:
         raise RuntimeError("NAVER/KRX-mirrored trade date unavailable")
-    return close, pct, volume, traded_at
+    change = _signed_source_change(row, pct)
+    return close, pct, volume, traded_at, change
 
 
-def _completed_rows(rows: list[dict]) -> list[tuple[float, float, float | None, str]]:
+def _completed_rows(rows: list[dict]) -> list[tuple[float, float, float | None, str, float]]:
     cutoff = _completed_cutoff_date()
     parsed = []
     for row in rows:
@@ -94,12 +105,13 @@ def _completed_rows(rows: list[dict]) -> list[tuple[float, float, float | None, 
 
 
 def fetch_official_daily_quote(ticker: str) -> dict:
-    """Return the latest *completed* Korean daily quote from NAVER's KRX mirror.
+    """Return the latest completed Korean quote using NAVER's exact day change.
 
     Before 16:00 KST NAVER may expose a same-day pre-open placeholder using the
-    prior close with a 0.0% move. We explicitly discard every row newer than the
-    completed-close cutoff, so a morning run uses the previous completed session
-    instead of falsely publishing today's date and zero returns.
+    prior close with a 0.0% move. Rows newer than the completed-close cutoff are
+    discarded. For the selected completed row, both the percentage move and the
+    exact absolute change come directly from the source instead of reconstructing
+    a comparison price from a rounded percentage.
     """
     ticker_key = str(ticker).zfill(6)
     rows = _json_rows(ticker_key)
@@ -110,18 +122,19 @@ def fetch_official_daily_quote(ticker: str) -> dict:
             f"cutoff={_completed_cutoff_date()}"
         )
 
-    close, pct, volume, price_date = completed[0]
+    close, pct, volume, price_date, change = completed[0]
+    comparison_base = close - change
+    if comparison_base <= 0:
+        raise RuntimeError("NAVER/KRX-mirrored comparison base is invalid")
+
     previous_date = None
     raw_previous = None
     raw_pct = None
     if len(completed) >= 2:
-        raw_previous, _, _, previous_date = completed[1]
+        raw_previous, _, _, previous_date, _ = completed[1]
         if raw_previous and raw_previous > 0:
             raw_pct = (close / raw_previous - 1.0) * 100.0
 
-    comparison_base = close / (1.0 + pct / 100.0)
-    comparison_base = float(round(comparison_base))
-    change = close - comparison_base
     corporate_action_adjusted = raw_pct is not None and abs(raw_pct - pct) >= 1.0
 
     elapsed = None
