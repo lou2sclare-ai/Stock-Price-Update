@@ -12,7 +12,12 @@ COLUMNS = [
     "name", "description", "exchange", "country", "sector", "industry",
     "market_cap_basic", "currency", "type", "subtype", "typespecs",
 ]
-PRICE_COLUMNS = COLUMNS + ["close", "change", "change_abs", "volume"]
+# current_session lets the price layer distinguish an open regular session
+# from a completed/pre/post-market state. This is critical because `close`
+# can be intraday while a regular session is open.
+PRICE_COLUMNS = COLUMNS + [
+    "close", "change", "change_abs", "volume", "current_session"
+]
 
 KOREA_NAMES = {"KR", "KOREA", "SOUTH KOREA", "REPUBLIC OF KOREA"}
 OTC_EXCHANGES = {"OTC", "OTCQX", "OTCQB", "OTCPK", "PINK", "GREY"}
@@ -100,7 +105,11 @@ def fetch_industries(industry_names: list[str]) -> list[dict]:
 
 
 def fetch_price_snapshot(industry_names: list[str]) -> dict[tuple[str, str], dict]:
-    """Return latest regular-session price data keyed by (exchange, ticker)."""
+    """Return regular-session quote data keyed by (exchange, ticker).
+
+    The result deliberately includes `market_session`. Callers must normalize
+    open-session quotes to the latest *completed* regular close before publish.
+    """
     out: dict[tuple[str, str], dict] = {}
     observed_at = datetime.now(timezone.utc).isoformat()
     for industry in industry_names:
@@ -147,5 +156,6 @@ def fetch_price_snapshot(industry_names: list[str]) -> dict[tuple[str, str], dic
                 "volume": volume,
                 "price_source": "TradingView Screener",
                 "price_observed_at": observed_at,
+                "market_session": str(row.get("current_session") or "").strip().lower(),
             }
     return out
