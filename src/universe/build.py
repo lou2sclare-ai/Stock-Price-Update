@@ -23,6 +23,10 @@ CONSTRUCTION_WORDS = re.compile(
     r"\b(caterpillar|komatsu|deere|construction machinery|heavy equipment|excavator|loader|earthmoving)\b",
     re.I,
 )
+KOREA_CONSTRUCTION_WORDS = re.compile(
+    r"(건설기계|건설장비|굴삭기|굴착기|휠로더|로더|두산밥캣|대모|진성티이씨|디와이파워|대창단조|동일금속)",
+    re.I,
+)
 PRESERVE_FIELDS = {
     "research_status", "target_price", "target_currency", "last_report_date",
     "active", "first_seen",
@@ -49,28 +53,45 @@ def load_existing(path: str) -> dict[tuple[str, str, str], dict]:
         return {key(r): r for r in csv.DictReader(f)}
 
 
+def classify_domestic(industry: str, company_name: str) -> tuple[str, str]:
+    if industry == "조선":
+        return "SHIPBUILDING", ""
+    if industry == "우주항공과국방":
+        return "DEFENSE", ""
+    if industry in ("전기장비", "전기제품"):
+        return "POWER_EQUIPMENT", ""
+    if industry == "기계":
+        if KOREA_CONSTRUCTION_WORDS.search(company_name or ""):
+            return "CONSTRUCTION_EQUIPMENT", "Auto-classified from NAVER machinery by company-name keyword; review once."
+        return "MACHINERY", "NAVER 기계 업종 기본 분류. 건설장비 여부는 별도 검토 가능."
+    return "MACHINERY", "Unmapped NAVER industry; review."
+
+
 def build_domestic(settings: dict) -> list[dict]:
     by_ticker: dict[str, dict] = {}
-    # NAVER industry membership defines the domestic source universe.
-    # More specific sectors are listed first in settings so broad '기계' does not overwrite them.
-    for research_sector, cfg in settings["research_sectors"].items():
+    industries = []
+    for cfg in settings["research_sectors"].values():
         for industry in cfg.get("naver_industries", []):
-            for raw in naver.fetch_industry(industry):
-                ticker = raw["ticker"]
-                row = {
-                    **raw,
-                    "source_industry": industry,
-                    "research_sector": research_sector,
-                    "market_cap": "",
-                    "research_status": "UNDEFINED",
-                    "target_price": "",
-                    "target_currency": "KRW",
-                    "last_report_date": "",
-                    "active": "TRUE",
-                    "source_status": "PRESENT",
-                    "review_note": "",
-                }
-                by_ticker.setdefault(ticker, row)
+            if industry not in industries:
+                industries.append(industry)
+    for industry in industries:
+        for raw in naver.fetch_industry(industry):
+            ticker = raw["ticker"]
+            sector, note = classify_domestic(industry, raw.get("company_name") or "")
+            row = {
+                **raw,
+                "source_industry": industry,
+                "research_sector": sector,
+                "market_cap": "",
+                "research_status": "UNDEFINED",
+                "target_price": "",
+                "target_currency": "KRW",
+                "last_report_date": "",
+                "active": "TRUE",
+                "source_status": "PRESENT",
+                "review_note": note,
+            }
+            by_ticker.setdefault(ticker, row)
     return list(by_ticker.values())
 
 
@@ -112,7 +133,6 @@ def build_global(settings: dict) -> list[dict]:
 
 
 def dedupe(rows: list[dict]) -> list[dict]:
-    # First remove exact exchange/ticker duplicates.
     exact: dict[tuple[str, str, str], dict] = {}
     for row in rows:
         k = key(row)
@@ -120,8 +140,6 @@ def dedupe(rows: list[dict]) -> list[dict]:
         if existing is None or float(row.get("market_cap") or 0) > float(existing.get("market_cap") or 0):
             exact[k] = row
 
-    # TradingView can expose secondary listings. Keep the largest listing for the
-    # same normalized global company name; Korean names are keyed by ticker above.
     domestic = [r for r in exact.values() if str(r.get("country") or "").upper() == "KR"]
     global_rows = [r for r in exact.values() if str(r.get("country") or "").upper() != "KR"]
     by_name: dict[str, dict] = {}
@@ -163,7 +181,6 @@ def merge_with_existing(current: list[dict], existing: dict) -> tuple[list[dict]
         row["last_seen"] = today
         row["source_status"] = "PRESENT"
 
-    # Never silently delete a company that disappears from a source classification.
     for k, old in existing.items():
         if k in current_map:
             continue
