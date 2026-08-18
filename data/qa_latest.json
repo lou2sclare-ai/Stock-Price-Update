@@ -8,6 +8,8 @@
   "kr_completed_cutoff": "2026-08-18",
   "kr_zero_return_count": 19,
   "kr_future_date_count": 0,
+  "kr_inexact_change_count": 0,
+  "unsafe_open_global_count": 0,
   "missing_price_count": 0,
   "corporate_action_adjustment_count": 1,
   "corporate_action_adjustments": [
@@ -25,7 +27,7 @@
   "fetch_errors": [],
   "global_snapshot_count": 2762,
   "update_scope": "ALL",
-  "refreshed_completed_global_count": 0,
+  "refreshed_completed_global_count": 2459,
   "preserved_open_or_unknown_global_count": 0,
   "global_price_date_count": 2459,
   "global_price_date_missing_count": 0,
