@@ -2,6 +2,8 @@ from __future__ import annotations
 from collections import Counter
 from datetime import date
 
+OFFICIAL_KRX_CHANGE_ORIGIN = "KRX_GET_MARKET_OHLCV_BY_TICKER"
+
 
 def run(rows: list[dict], settings: dict) -> dict:
     errors, warnings = [], []
@@ -20,6 +22,8 @@ def run(rows: list[dict], settings: dict) -> dict:
     max_move = float(qa_cfg.get("max_abs_daily_change_pct", 40.0))
     missing_prices = 0
     corporate_action_adjustments = []
+    official_kr_count = 0
+
     for r in rows:
         ident = f"{r.get('company_name')} ({r.get('ticker')})"
         p = r.get("price")
@@ -30,6 +34,16 @@ def run(rows: list[dict], settings: dict) -> dict:
                 errors.append(msg)
             else:
                 warnings.append(msg)
+
+        if str(r.get("country") or "").upper() == "KR" and p is not None and p > 0:
+            origin = str(r.get("source_change_origin") or "")
+            base_source = str(r.get("comparison_base_source") or "")
+            if origin != OFFICIAL_KRX_CHANGE_ORIGIN:
+                errors.append(f"KR daily return is not from official KRX cross-sectional quote: {ident}")
+            elif base_source != "KRX_official_change_implied_base":
+                errors.append(f"KR comparison base is not derived from official KRX daily return: {ident}")
+            else:
+                official_kr_count += 1
 
         if r.get("corporate_action_adjusted"):
             corporate_action_adjustments.append({
@@ -51,12 +65,18 @@ def run(rows: list[dict], settings: dict) -> dict:
         if r.get("target_price") and r.get("target_currency") and r.get("currency") and r.get("target_currency") != r.get("currency"):
             errors.append(f"TP currency mismatch: {ident}")
 
+    if official_kr_count != domestic_count:
+        errors.append(
+            f"Official KRX daily-return coverage incomplete: {official_kr_count}/{domestic_count}"
+        )
+
     return {
         "status": "FAIL" if errors else ("REVIEW" if warnings else "PASS"),
         "errors": errors,
         "warnings": warnings,
         "row_count": len(rows),
         "domestic_count": domestic_count,
+        "official_kr_return_count": official_kr_count,
         "missing_price_count": missing_prices,
         "corporate_action_adjustment_count": len(corporate_action_adjustments),
         "corporate_action_adjustments": corporate_action_adjustments[:100],
