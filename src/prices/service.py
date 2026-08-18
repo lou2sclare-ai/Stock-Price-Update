@@ -24,12 +24,28 @@ def _finalize(series: list[dict]) -> dict:
     }
 
 
-def fetch(row: dict) -> dict:
+def fetch(row: dict, global_snapshot: dict | None = None) -> dict:
     country = (row.get("country") or "").upper()
     if country == "KR":
         result = _finalize(krx.fetch_daily_close(row["ticker"]))
         result["price_source"] = "KRX/PyKRX"
         return result
+
+    key = (
+        str(row.get("exchange") or "").upper(),
+        str(row.get("ticker") or "").upper(),
+    )
+    if global_snapshot and key in global_snapshot:
+        result = dict(global_snapshot[key])
+        # TradingView's change is calculated against the prior regular close.
+        # Exact exchange session dates will be added in the calendar QA layer;
+        # until then do not invent dates for global markets.
+        result.setdefault("price_date", None)
+        result.setdefault("previous_trading_date", None)
+        result.setdefault("calendar_days_elapsed", None)
+        return result
+
+    # Fallback only: useful for manually overridden tickers that map cleanly.
     result = _finalize(global_yahoo.fetch_daily_close(row["ticker"], row.get("exchange")))
-    result["price_source"] = "Yahoo Finance/yfinance"
+    result["price_source"] = "Yahoo Finance/yfinance fallback"
     return result
