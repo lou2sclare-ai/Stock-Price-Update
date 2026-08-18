@@ -98,7 +98,7 @@ def main():
         country = str(row.get("country") or "").upper()
         previous = previous_map.get(row_key(row))
 
-        if country != "KR" and scope == "SAFE_REFRESH":
+        if country != "KR":
             key = (
                 str(row.get("exchange") or "").upper(),
                 str(row.get("ticker") or "").upper(),
@@ -110,24 +110,46 @@ def main():
                 row["data_status"] = "REFRESHED_COMPLETED_SESSION"
                 refreshed_global += 1
             else:
-                if not copy_previous_price(row, previous):
-                    fetch_errors.append(
-                        f"{row.get('company_name')} ({row.get('ticker')}): "
-                        "No previous safe global price to preserve"
-                    )
-                row["last_checked_at"] = checked_at
-                row["data_status"] = "PRESERVED_OPEN_OR_UNKNOWN"
-                preserved_global += 1
+                if copy_previous_price(row, previous):
+                    # Preserve the last completed value while the market is open or
+                    # its session state is unknown. Keep the *current* observed
+                    # session only for QA/diagnostics; never replace the safe price.
+                    if snap:
+                        row["market_session"] = snap.get("market_session")
+                        row["price_observed_at"] = snap.get("price_observed_at")
+                    row["last_checked_at"] = checked_at
+                    row["data_status"] = "PRESERVED_OPEN_OR_UNKNOWN"
+                    preserved_global += 1
+                else:
+                    # First-run fallback: use historical daily closes rather than an
+                    # intraday screener quote. This is intentionally per-symbol only
+                    # when no previously published safe value exists.
+                    try:
+                        row.update(fetch_price(row, global_snapshot=None))
+                        row["last_checked_at"] = checked_at
+                        row["data_status"] = "COMPLETED_HISTORICAL_FALLBACK"
+                        refreshed_global += 1
+                    except Exception as exc:
+                        row.update({
+                            "price": None,
+                            "previous_close": None,
+                            "price_change": None,
+                            "price_change_pct": None,
+                            "price_date": None,
+                            "previous_trading_date": None,
+                            "calendar_days_elapsed": None,
+                            "price_source": None,
+                        })
+                        row["last_checked_at"] = checked_at
+                        row["data_status"] = "FETCH_ERROR"
+                        fetch_errors.append(f"{row.get('company_name')} ({row.get('ticker')}): {exc}")
             enriched.append(row)
             continue
 
         try:
             row.update(fetch_price(row, global_snapshot=global_snapshot))
             row["last_checked_at"] = checked_at
-            if country == "KR":
-                row["data_status"] = "COMPLETED_DAILY_QUOTE"
-            else:
-                row.setdefault("data_status", "COMPLETED_SESSION_SNAPSHOT")
+            row["data_status"] = "COMPLETED_DAILY_QUOTE"
             tp = row.get("target_price")
             if tp not in (None, ""):
                 try:
