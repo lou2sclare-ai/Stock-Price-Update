@@ -1,6 +1,78 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stock Sector Dashboard</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div><div class="eyebrow">RESEARCH MONITOR</div><h1>Stock Sector Dashboard</h1><p id="updated">데이터 불러오는 중…</p></div><a id="excel" class="button" target="_blank">최신 Excel</a></header>
-<main><section class="cards"><div class="card"><span>Universe</span><strong id="count">-</strong></div><div class="card"><span>QA</span><strong id="qa">-</strong></div><div class="card"><span>Latest price date</span><strong id="date">-</strong></div></section>
-<section class="toolbar"><input id="search" placeholder="회사명 / Ticker 검색"><select id="sector"><option value="">전체 섹터</option></select><select id="country"><option value="">전체 국가</option></select></section>
-<section class="table-wrap"><table><thead><tr><th>섹터</th><th>국가</th><th>회사</th><th>Ticker</th><th>종가</th><th>등락</th><th>등락률</th><th>TP</th><th>가격기준일</th></tr></thead><tbody id="rows"></tbody></table></section></main>
-<script src="config.js"></script><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>섹터별 주가 모니터</title>
+<style>
+:root{--navy:#0b1d3a;--navy2:#173a70;--blue:#2f61d5;--blue2:#eaf1ff;--ink:#142033;--muted:#66758a;--line:#dde5ef;--bg:#f5f7fb;--white:#fff;--red:#c63b32;--green:#13795b;--orange:#b86a00;--shadow:0 8px 28px rgba(20,32,51,.06)}
+*{box-sizing:border-box}html,body{margin:0;font-family:Inter,Pretendard,"Noto Sans KR",Arial,sans-serif;color:var(--ink);background:var(--bg)}
+.hero{background:linear-gradient(115deg,var(--navy),#183b72);color:#fff;padding:30px max(28px,calc((100vw - 1480px)/2));display:flex;align-items:center;justify-content:space-between;gap:24px}
+.eyebrow{font-size:12px;letter-spacing:.18em;color:#9fc0ff;font-weight:800}.hero h1{font-size:32px;margin:6px 0 7px;line-height:1.15}.hero p{margin:0;color:#c9d8ee;font-size:14px}.hero-actions{display:flex;gap:10px;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:var(--navy);text-decoration:none;border:1px solid rgba(255,255,255,.5);padding:12px 18px;border-radius:10px;font-weight:800;box-shadow:0 2px 0 rgba(0,0,0,.14)}
+main{max-width:1480px;margin:24px auto;padding:0 22px 40px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}.kpi span{display:block;font-size:12px;color:var(--muted);font-weight:700}.kpi strong{display:block;font-size:25px;margin-top:6px;letter-spacing:-.02em}.qa-pass{color:var(--green)}.qa-review{color:var(--orange)}.qa-fail{color:var(--red)}
+.notice{margin:14px 0 0;background:#fff8e8;border:1px solid #f2d69b;border-radius:12px;padding:12px 15px;color:#755000;font-size:13px}.notice summary{cursor:pointer;font-weight:800}.notice ul{margin:9px 0 0;padding-left:20px}
+.panel{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}.tabs{display:flex;gap:8px;padding:16px 16px 0;flex-wrap:wrap}.tab,.sector-chip{appearance:none;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:9px 14px;font-weight:800;cursor:pointer}.tab.active,.sector-chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}.sector-row{display:flex;gap:7px;padding:12px 16px 4px;flex-wrap:wrap}.sector-chip{font-size:12px;padding:7px 11px;background:#f8faff}.sector-chip .n{opacity:.68;margin-left:4px;font-weight:700}
+.toolbar{display:grid;grid-template-columns:minmax(280px,1fr) 220px 180px;gap:10px;padding:12px 16px 16px}.toolbar input,.toolbar select{width:100%;border:1px solid var(--line);background:#fff;border-radius:9px;padding:11px 13px;font-size:14px;color:var(--ink);outline:none}.toolbar input:focus,.toolbar select:focus{border-color:#7ea4ef;box-shadow:0 0 0 3px rgba(47,97,213,.09)}
+.table-meta{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-top:1px solid #edf1f6;background:#fafcff;color:var(--muted);font-size:12px}.table-meta strong{color:var(--ink)}
+.table-wrap{overflow:auto;max-height:68vh;border-top:1px solid var(--line)}table{width:100%;border-collapse:separate;border-spacing:0;min-width:1190px;font-size:13px}thead th{position:sticky;top:0;z-index:4;background:var(--navy);color:#fff;text-align:left;padding:12px 11px;white-space:nowrap;font-size:12px}tbody td{padding:10px 11px;border-bottom:1px solid #edf1f6;white-space:nowrap;background:#fff}tbody tr:nth-child(even) td{background:#fbfcfe}tbody tr:hover td{background:var(--blue2)}th.num,td.num{text-align:right}.company{font-weight:800;max-width:360px;overflow:hidden;text-overflow:ellipsis}.sector-badge{display:inline-block;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:800;background:#eef3fb;color:#28466d}.status{font-size:11px;font-weight:800;padding:4px 7px;border-radius:6px;background:#eef2f7;color:#59677a}.status.coverage{background:#e8f0ff;color:#214fb7}.status.nr{background:#f0f2f5;color:#525c69}.up{color:var(--blue);font-weight:800}.down{color:var(--red);font-weight:800}.muted{color:var(--muted)}
+.pager{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-top:1px solid var(--line)}.pager button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 12px;font-weight:800;color:var(--ink);cursor:pointer}.pager button:disabled{opacity:.35;cursor:default}.pager span{font-size:12px;color:var(--muted);min-width:110px;text-align:center}
+@media(max-width:920px){.hero{padding:24px 20px}.hero h1{font-size:27px}.kpis{grid-template-columns:repeat(2,1fr)}.toolbar{grid-template-columns:1fr 1fr}.toolbar input{grid-column:1/-1}}
+@media(max-width:560px){.hero{align-items:flex-start;flex-direction:column}.kpis{grid-template-columns:1fr 1fr}.kpi{padding:14px}.kpi strong{font-size:21px}.toolbar{grid-template-columns:1fr}.toolbar input{grid-column:auto}.btn{width:100%}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div><div class="eyebrow">RESEARCH MONITOR</div><h1>섹터별 주가 모니터</h1><p id="updated">데이터 불러오는 중…</p></div>
+  <div class="hero-actions"><a id="excel" class="btn" target="_blank" rel="noopener">최신 Excel</a></div>
+</header>
+<main>
+  <section class="kpis">
+    <div class="kpi"><span>전체 Universe</span><strong id="count">-</strong></div>
+    <div class="kpi"><span>국내 기업</span><strong id="domesticCount">-</strong></div>
+    <div class="kpi"><span>해외 기업</span><strong id="globalCount">-</strong></div>
+    <div class="kpi"><span>데이터 QA</span><strong id="qa">-</strong></div>
+  </section>
+  <details id="qaNotice" class="notice" hidden><summary id="qaSummary">QA 검토 항목</summary><ul id="qaWarnings"></ul></details>
+  <section class="panel">
+    <div class="tabs" id="regionTabs">
+      <button class="tab active" data-region="ALL">전체</button>
+      <button class="tab" data-region="KR">국내</button>
+      <button class="tab" data-region="GLOBAL">해외</button>
+    </div>
+    <div class="sector-row" id="sectorChips"></div>
+    <div class="toolbar">
+      <input id="search" placeholder="회사명 / Ticker 검색">
+      <select id="country"><option value="">전체 국가</option></select>
+      <select id="status"><option value="">전체 상태</option><option value="COVERAGE">Coverage</option><option value="NR">NR</option><option value="UNDEFINED">미정</option></select>
+    </div>
+    <div class="table-meta"><span id="resultText">-</span><span>기본 정렬: 섹터 → 국내 우선 → 시가총액</span></div>
+    <div class="table-wrap">
+      <table><thead><tr>
+        <th>섹터</th><th>회사</th><th>국가</th><th>Ticker</th><th>거래소</th><th>상태</th>
+        <th class="num">종가</th><th class="num">등락</th><th class="num">등락률</th><th class="num">TP</th><th class="num">Upside</th><th>데이터 기준</th>
+      </tr></thead><tbody id="rows"></tbody></table>
+    </div>
+    <div class="pager"><button id="prev">이전</button><span id="pageText">-</span><button id="next">다음</button></div>
+  </section>
+</main>
+<script src="config.js"></script>
+<script>
+const cfg=window.DASHBOARD_CONFIG;let all=[],qa={},page=1,region='ALL',sector='ALL';const PAGE_SIZE=100;
+const SECTORS={SHIPBUILDING:'조선',DEFENSE:'방산',POWER_EQUIPMENT:'전력기기',CONSTRUCTION_EQUIPMENT:'건설장비',MACHINERY:'기계'};
+const ORDER={SHIPBUILDING:0,DEFENSE:1,POWER_EQUIPMENT:2,CONSTRUCTION_EQUIPMENT:3,MACHINERY:4};
+const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const isKR=r=>String(r.country||'').toUpperCase()==='KR';const countryName=v=>String(v||'').toUpperCase()==='KR'?'대한민국':(v||'-');
+function fmt(n,c){if(n===null||n===undefined||n==='')return '-';const x=Number(n);const digits=Math.abs(x)<10?3:(Math.abs(x)<100?2:0);return new Intl.NumberFormat('ko-KR',{maximumFractionDigits:digits}).format(x)+(c?` ${c}`:'')}
+function pct(n){return n===null||n===undefined?'-':`${Number(n).toFixed(1)}%`}
+function cls(n){if(n===null||n===undefined)return '';return Number(n)>=0?'up':'down'}
+function statusLabel(s){return s==='COVERAGE'?'Coverage':s==='NR'?'NR':'미정'}
+function dataBasis(r){return r.price_date||(!isKR(r)?'최신 스냅샷':'-')}
+function filtered(){const q=$('#search').value.trim().toLowerCase(),c=$('#country').value,st=$('#status').value;return all.filter(r=>(region==='ALL'||(region==='KR'?isKR(r):!isKR(r)))&&(sector==='ALL'||r.research_sector===sector)&&(!c||r.country===c)&&(!st||r.research_status===st)&&(!q||`${r.company_name} ${r.ticker}`.toLowerCase().includes(q))).sort((a,b)=>(ORDER[a.research_sector]??99)-(ORDER[b.research_sector]??99)||(isKR(b)-isKR(a))||(Number(b.market_cap||0)-Number(a.market_cap||0))||String(a.company_name||'').localeCompare(String(b.company_name||'')))}
+function render(){const f=filtered(),pages=Math.max(1,Math.ceil(f.length/PAGE_SIZE));if(page>pages)page=pages;const slice=f.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE);$('#resultText').innerHTML=`검색 결과 <strong>${f.length.toLocaleString('ko-KR')}</strong>개 · 현재 ${slice.length}개 표시`;$('#pageText').textContent=`${page} / ${pages}`;$('#prev').disabled=page<=1;$('#next').disabled=page>=pages;$('#rows').innerHTML=slice.map(r=>{const up=r.target_price&&r.price?(Number(r.target_price)/Number(r.price)-1)*100:null;return `<tr><td><span class="sector-badge">${esc(SECTORS[r.research_sector]||r.research_sector||'-')}</span></td><td class="company" title="${esc(r.company_name)}">${esc(r.company_name||'-')}</td><td>${esc(countryName(r.country))}</td><td>${esc(r.ticker||'-')}</td><td class="muted">${esc(r.exchange||'-')}</td><td><span class="status ${String(r.research_status||'').toLowerCase()}">${esc(statusLabel(r.research_status))}</span></td><td class="num">${fmt(r.price,r.currency)}</td><td class="num ${cls(r.price_change)}">${fmt(r.price_change)}</td><td class="num ${cls(r.price_change_pct)}">${pct(r.price_change_pct)}</td><td class="num">${fmt(r.target_price,r.target_currency)}</td><td class="num ${cls(up)}">${up===null?'-':pct(up)}</td><td>${esc(dataBasis(r))}</td></tr>`}).join('')}
+function chips(){const counts={ALL:all.length};Object.keys(SECTORS).forEach(s=>counts[s]=all.filter(r=>r.research_sector===s).length);$('#sectorChips').innerHTML=`<button class="sector-chip active" data-sector="ALL">전체 <span class="n">${counts.ALL}</span></button>`+Object.keys(SECTORS).map(s=>`<button class="sector-chip" data-sector="${s}">${SECTORS[s]} <span class="n">${counts[s]||0}</span></button>`).join('');document.querySelectorAll('.sector-chip').forEach(b=>b.onclick=()=>{sector=b.dataset.sector;page=1;document.querySelectorAll('.sector-chip').forEach(x=>x.classList.toggle('active',x===b));render()})}
+function kst(iso){try{return new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date(iso))+' KST'}catch{return iso||'-'}}
+(async()=>{ $('#excel').href=cfg.excelUrl;try{const res=await fetch(cfg.dataUrl,{cache:'no-store'});if(!res.ok)throw new Error(`HTTP ${res.status}`);const data=await res.json();all=data.rows||[];qa=data.qa||{};$('#updated').textContent=`업데이트 ${kst(data.generated_at)} · 조선 · 방산 · 전력기기 · 건설장비 · 기계`;$('#count').textContent=all.length.toLocaleString('ko-KR');const d=all.filter(isKR).length;$('#domesticCount').textContent=d.toLocaleString('ko-KR');$('#globalCount').textContent=(all.length-d).toLocaleString('ko-KR');$('#qa').textContent=qa.status||'-';$('#qa').className='';$('#qa').classList.add((qa.status==='PASS'?'qa-pass':qa.status==='FAIL'?'qa-fail':'qa-review'));const warnings=qa.warnings||[];if(warnings.length){$('#qaNotice').hidden=false;$('#qaSummary').textContent=`QA ${qa.status}: 검토 항목 ${warnings.length}건`;$('#qaWarnings').innerHTML=warnings.slice(0,20).map(x=>`<li>${esc(x)}</li>`).join('')}
+const countries=[...new Set(all.map(x=>x.country).filter(Boolean))].sort((a,b)=>(String(a).toUpperCase()==='KR'?-1:0)-(String(b).toUpperCase()==='KR'?-1:0)||String(a).localeCompare(String(b)));countries.forEach(v=>$('#country').insertAdjacentHTML('beforeend',`<option value="${esc(v)}">${esc(countryName(v))}</option>`));chips();render()}catch(e){$('#updated').textContent='데이터 로드 실패: '+e.message}})();
+['search','country','status'].forEach(id=>$('#'+id).addEventListener(id==='search'?'input':'change',()=>{page=1;render()}));document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{region=b.dataset.region;page=1;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));render()});$('#prev').onclick=()=>{if(page>1){page--;render();document.querySelector('.table-wrap').scrollTop=0}};$('#next').onclick=()=>{page++;render();document.querySelector('.table-wrap').scrollTop=0};
+</script>
+</body></html>
