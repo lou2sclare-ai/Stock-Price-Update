@@ -2,6 +2,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+from datetime import datetime, timezone
 from pathlib import Path
 import yaml
 from src.prices.service import fetch as fetch_price
@@ -13,7 +14,9 @@ from src.universe import tradingview
 PRICE_FIELDS = {
     "price", "previous_close", "price_change", "price_change_pct",
     "price_date", "previous_trading_date", "calendar_days_elapsed",
-    "volume", "price_source", "price_observed_at", "market_session",
+    "volume", "price_source", "price_observed_at", "last_checked_at",
+    "market_session", "data_status", "price_trade_date_source",
+    "price_bar_time", "price_bar_update_time",
     "raw_previous_close", "raw_close_change_pct", "corporate_action_adjusted",
     "source_change_origin", "comparison_base_source",
 }
@@ -74,6 +77,7 @@ def main():
 
     rows = load_rows(upath)
     previous_map = load_previous(settings["project"]["output_json"])
+    checked_at = datetime.now(timezone.utc).isoformat()
 
     try:
         global_snapshot = tradingview.fetch_price_snapshot(
@@ -102,9 +106,8 @@ def main():
             snap = global_snapshot.get(key)
             if safe_global_snapshot_value(snap):
                 row.update(snap)
-                row.setdefault("price_date", None)
-                row.setdefault("previous_trading_date", None)
-                row.setdefault("calendar_days_elapsed", None)
+                row["last_checked_at"] = checked_at
+                row["data_status"] = "REFRESHED_COMPLETED_SESSION"
                 refreshed_global += 1
             else:
                 if not copy_previous_price(row, previous):
@@ -112,12 +115,19 @@ def main():
                         f"{row.get('company_name')} ({row.get('ticker')}): "
                         "No previous safe global price to preserve"
                     )
+                row["last_checked_at"] = checked_at
+                row["data_status"] = "PRESERVED_OPEN_OR_UNKNOWN"
                 preserved_global += 1
             enriched.append(row)
             continue
 
         try:
             row.update(fetch_price(row, global_snapshot=global_snapshot))
+            row["last_checked_at"] = checked_at
+            if country == "KR":
+                row["data_status"] = "COMPLETED_DAILY_QUOTE"
+            else:
+                row.setdefault("data_status", "COMPLETED_SESSION_SNAPSHOT")
             tp = row.get("target_price")
             if tp not in (None, ""):
                 try:
@@ -136,6 +146,8 @@ def main():
                     "calendar_days_elapsed": None,
                     "price_source": None,
                 })
+            row["last_checked_at"] = checked_at
+            row["data_status"] = "PRESERVED_AFTER_FETCH_ERROR" if previous else "FETCH_ERROR"
             fetch_errors.append(f"{row.get('company_name')} ({row.get('ticker')}): {exc}")
         enriched.append(row)
 
@@ -146,6 +158,15 @@ def main():
     qa["update_scope"] = scope
     qa["refreshed_completed_global_count"] = refreshed_global
     qa["preserved_open_or_unknown_global_count"] = preserved_global
+
+    global_rows = [r for r in enriched if str(r.get("country") or "").upper() != "KR"]
+    qa["global_price_date_count"] = sum(1 for r in global_rows if r.get("price_date"))
+    qa["global_price_date_missing_count"] = len(global_rows) - qa["global_price_date_count"]
+    date_counts = {}
+    for r in global_rows:
+        d = r.get("price_date") or "UNKNOWN"
+        date_counts[d] = date_counts.get(d, 0) + 1
+    qa["global_price_date_distribution"] = dict(sorted(date_counts.items()))
 
     qpath = Path(settings["project"]["qa_json"])
     qpath.parent.mkdir(parents=True, exist_ok=True)
