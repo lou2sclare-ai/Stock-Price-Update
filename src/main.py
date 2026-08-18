@@ -14,6 +14,7 @@ PRICE_FIELDS = {
     "price", "previous_close", "price_change", "price_change_pct",
     "price_date", "previous_trading_date", "calendar_days_elapsed",
     "volume", "price_source", "price_observed_at", "market_session",
+    "raw_previous_close", "raw_close_change_pct", "corporate_action_adjusted",
 }
 
 
@@ -53,12 +54,7 @@ def copy_previous_price(row: dict, previous: dict | None) -> bool:
 
 
 def safe_global_snapshot_value(snapshot: dict | None) -> bool:
-    """True only when the screener quote is safe to publish as a completed close.
-
-    `regular` means the exchange's regular session is currently trading, so
-    TradingView `close/change` are intraday. Empty/unknown session states are
-    treated conservatively as unsafe during an afternoon SAFE_REFRESH.
-    """
+    """True only when the screener quote is safe to publish as a completed close."""
     if not snapshot:
         return False
     session = str(snapshot.get("market_session") or "").strip().lower()
@@ -78,9 +74,6 @@ def main():
     rows = load_rows(upath)
     previous_map = load_previous(settings["project"]["output_json"])
 
-    # Both scopes fetch one global screener snapshot. ALL runs only in the
-    # morning safe window. SAFE_REFRESH may run in the afternoon, but it only
-    # publishes overseas quotes whose regular sessions are no longer open.
     try:
         global_snapshot = tradingview.fetch_price_snapshot(
             settings.get("global_discovery_industries", [])
@@ -131,8 +124,6 @@ def main():
                 except ValueError:
                     pass
         except Exception as exc:
-            # If a source temporarily fails, preserve the previously published
-            # price rather than replacing a good value with a blank.
             if not copy_previous_price(row, previous):
                 row.update({
                     "price": None,
