@@ -15,19 +15,22 @@ def _finalize(series: list[dict], prefer_source_change: bool = False) -> dict:
     comparison_base = raw_previous
     corporate_action_adjusted = False
     comparison_base_source = "raw_previous_close"
+    source_change_origin = current.get("source_change_origin")
 
-    # For KRX, the exchange's official daily change rate is the source of truth.
+    # For KRX, the exchange-published daily change rate is the source of truth.
     # It is measured against the day's official comparison/base price, which can
-    # differ from the last raw close after capital reductions, stock splits or
+    # differ from the last raw close after capital reductions, splits,
     # consolidations, relistings, ex-rights/ex-dividend adjustments, etc.
     source_pct = current.get("source_change_pct")
     if prefer_source_change:
         if source_pct is None or source_pct <= -100:
             raise RuntimeError("KRX official daily change rate unavailable or invalid")
+        if source_change_origin != krx.OFFICIAL_CHANGE_ORIGIN:
+            raise RuntimeError(
+                f"KRX daily return provenance invalid: {source_change_origin!r}"
+            )
         pct = float(source_pct)
         comparison_base = current["close"] / (1.0 + pct / 100.0)
-        # Korean listed share prices are quoted in whole KRW. Rounding the
-        # reconstructed official comparison base avoids 850.999... style noise.
         comparison_base = float(round(comparison_base))
         comparison_base_source = "KRX_official_change_implied_base"
         if raw_pct is not None and abs(raw_pct - pct) >= 1.0:
@@ -49,6 +52,7 @@ def _finalize(series: list[dict], prefer_source_change: bool = False) -> dict:
         "raw_close_change_pct": raw_pct,
         "corporate_action_adjusted": corporate_action_adjusted,
         "comparison_base_source": comparison_base_source,
+        "source_change_origin": source_change_origin,
     }
 
 
