@@ -3,20 +3,20 @@
   "errors": [],
   "warnings": [
     "Large daily move -99.0%: Lilium N.V. (LILMF)",
-    "Large daily move 147.2%: Vessel Co., Ltd. (South Korea) (177350)",
-    "Large daily move 140.2%: KS Industry Co., Ltd. (101000)",
+    "Large daily move 140.0%: Vessel Co., Ltd. (South Korea) (177350)",
+    "Large daily move 135.0%: KS Industry Co., Ltd. (101000)",
     "Large daily move 50.0%: BitFrontier Capital Holdings, Inc. (BFCH)",
     "Large daily move 50.0%: FluroTech Ltd. (TEST.H)",
     "Large daily move 9900.0%: Indoor Harvest Corp. (INQD)",
     "Large daily move 55.4%: Astro Communications, Inc. (ASTO)",
     "Large daily move 9900.0%: SES SOLAR INC (SESI)",
-    "Large daily move 129.3%: KS인더스트리 (101000)"
+    "Large daily move 130.2%: KS인더스트리 (101000)"
   ],
-  "row_count": 3411,
+  "row_count": 3193,
   "domestic_count": 267,
   "missing_price_count": 0,
   "checked_on": "2026-08-18",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 3146
+  "global_snapshot_count": 2931
 }
