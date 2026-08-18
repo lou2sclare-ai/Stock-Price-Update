@@ -1,7 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
-from zoneinfo import ZoneInfo
 import requests
 
 SCAN_URL = "https://scanner.tradingview.com/global/scan"
@@ -19,28 +18,6 @@ PRICE_COLUMNS = BASE_PRICE_COLUMNS + [
 
 KOREA_NAMES = {"KR", "KOREA", "SOUTH KOREA", "REPUBLIC OF KOREA"}
 OTC_EXCHANGES = {"OTC", "OTCQX", "OTCQB", "OTCPK", "PINK", "GREY"}
-EXCHANGE_TZ = {
-    "NASDAQ": "America/New_York", "NYSE": "America/New_York", "AMEX": "America/New_York",
-    "NEO": "America/Toronto", "TSX": "America/Toronto", "TSXV": "America/Toronto",
-    "BMFBOVESPA": "America/Sao_Paulo",
-    "LSE": "Europe/London", "XETR": "Europe/Berlin", "FWB": "Europe/Berlin",
-    "EURONEXT": "Europe/Paris", "MIL": "Europe/Rome", "BME": "Europe/Madrid",
-    "SIX": "Europe/Zurich", "OSL": "Europe/Oslo", "OMXSTO": "Europe/Stockholm",
-    "NGM": "Europe/Stockholm", "OMXHEL": "Europe/Helsinki", "OMXHEX": "Europe/Helsinki",
-    "OMXCOP": "Europe/Copenhagen", "GPW": "Europe/Warsaw", "NEWCONNECT": "Europe/Warsaw",
-    "BVB": "Europe/Bucharest", "VIE": "Europe/Vienna", "PSECZ": "Europe/Prague",
-    "BIST": "Europe/Istanbul", "RUS": "Europe/Moscow", "OMXTSE": "Europe/Tallinn",
-    "ZSE": "Europe/Zagreb", "BSESOF": "Europe/Sofia",
-    "TSE": "Asia/Tokyo", "NAG": "Asia/Tokyo", "SSE": "Asia/Shanghai", "SZSE": "Asia/Shanghai",
-    "HKEX": "Asia/Hong_Kong", "TPEX": "Asia/Taipei", "NSE": "Asia/Kolkata", "BSE": "Asia/Kolkata",
-    "SET": "Asia/Bangkok", "IDX": "Asia/Jakarta", "TASE": "Asia/Jerusalem",
-    "TADAWUL": "Asia/Riyadh", "PSX": "Asia/Karachi", "PSE": "Asia/Manila",
-    "HOSE": "Asia/Ho_Chi_Minh", "HNX": "Asia/Ho_Chi_Minh", "UPCOM": "Asia/Ho_Chi_Minh",
-    "CSELK": "Asia/Colombo", "DSEBD": "Asia/Dhaka", "ADX": "Asia/Dubai",
-    "ASX": "Australia/Sydney", "JSE": "Africa/Johannesburg", "EGX": "Africa/Cairo",
-    "NSEKE": "Africa/Nairobi", "CSEMA": "Africa/Casablanca", "NSENG": "Africa/Lagos",
-    "KRX": "Asia/Seoul",
-}
 
 
 @dataclass
@@ -108,6 +85,7 @@ def _epoch_seconds(value) -> float | None:
 
 
 def _price_date(row: dict) -> tuple[str | None, str | None]:
+    # TradingView's explicit business-day field is the preferred source.
     business_day = row.get("time_business_day")
     try:
         n = int(float(business_day))
@@ -117,16 +95,15 @@ def _price_date(row: dict) -> tuple[str | None, str | None]:
         text = str(n)
         return f"{text[:4]}-{text[4:6]}-{text[6:8]}", "TradingView time_business_day"
 
+    # daily-bar.time is a bar identifier timestamp, not an exchange-local wall
+    # clock. Converting it into America/New_York previously shifted US bars one
+    # calendar day backward (e.g. an Aug-18 close displayed as Aug-17). Use the
+    # timestamp's UTC calendar date as the fallback instead.
     ts = _epoch_seconds(row.get("daily-bar.time"))
     if ts is None:
         return None, None
-    exchange = str(row.get("exchange") or "").upper()
-    tz_name = EXCHANGE_TZ.get(exchange)
     dt = datetime.fromtimestamp(ts, tz=timezone.utc)
-    if tz_name:
-        dt = dt.astimezone(ZoneInfo(tz_name))
-        return dt.date().isoformat(), "TradingView daily-bar.time exchange-local"
-    return dt.date().isoformat(), "TradingView daily-bar.time UTC fallback"
+    return dt.date().isoformat(), "TradingView daily-bar.time UTC bar date"
 
 
 def fetch_industries(industry_names: list[str]) -> list[dict]:
