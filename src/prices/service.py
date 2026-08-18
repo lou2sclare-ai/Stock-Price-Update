@@ -17,22 +17,14 @@ def _finalize(series: list[dict], prefer_source_change: bool = False) -> dict:
     comparison_base_source = "raw_previous_close"
     source_change_origin = current.get("source_change_origin")
 
-    # For KRX, the exchange-published daily change rate is the source of truth.
-    # It is measured against the day's official comparison/base price, which can
-    # differ from the last raw close after capital reductions, splits,
-    # consolidations, relistings, ex-rights/ex-dividend adjustments, etc.
     source_pct = current.get("source_change_pct")
     if prefer_source_change:
         if source_pct is None or source_pct <= -100:
-            raise RuntimeError("KRX official daily change rate unavailable or invalid")
-        if source_change_origin != krx.OFFICIAL_CHANGE_ORIGIN:
-            raise RuntimeError(
-                f"KRX daily return provenance invalid: {source_change_origin!r}"
-            )
+            raise RuntimeError("Source daily change rate unavailable or invalid")
         pct = float(source_pct)
         comparison_base = current["close"] / (1.0 + pct / 100.0)
         comparison_base = float(round(comparison_base))
-        comparison_base_source = "KRX_official_change_implied_base"
+        comparison_base_source = "source_change_implied_base"
         if raw_pct is not None and abs(raw_pct - pct) >= 1.0:
             corporate_action_adjusted = True
 
@@ -59,9 +51,7 @@ def _finalize(series: list[dict], prefer_source_change: bool = False) -> dict:
 def fetch(row: dict, global_snapshot: dict | None = None) -> dict:
     country = (row.get("country") or "").upper()
     if country == "KR":
-        result = _finalize(krx.fetch_daily_close(row["ticker"]), prefer_source_change=True)
-        result["price_source"] = "KRX/PyKRX official daily change basis"
-        return result
+        return krx.fetch_official_daily_quote(row["ticker"])
 
     key = (
         str(row.get("exchange") or "").upper(),
