@@ -5,12 +5,12 @@ import requests
 
 SCAN_URL = "https://scanner.tradingview.com/global/scan"
 
-# TradingView is the global universe source. We also use the screener's latest
-# market snapshot as the global-price fallback because it preserves each
-# exchange's native ticker and avoids thousands of fragile symbol conversions.
+# TradingView is the global universe source. We keep primary common-share
+# listings only to avoid duplicate overseas listings, preferred shares and
+# depositary clutter. Price snapshots come from the same screener universe.
 COLUMNS = [
     "name", "description", "exchange", "country", "sector", "industry",
-    "market_cap_basic", "currency", "type", "subtype",
+    "market_cap_basic", "currency", "type", "subtype", "typespecs",
 ]
 PRICE_COLUMNS = COLUMNS + ["close", "change", "change_abs", "volume"]
 
@@ -33,9 +33,11 @@ def _scan(industry: str, columns: list[str] | None = None, limit: int = 10000) -
     payload = {
         "filter": [
             {"left": "type", "operation": "equal", "right": "stock"},
+            {"left": "is_primary", "operation": "equal", "right": True},
+            {"left": "typespecs", "operation": "has", "right": "common"},
             {"left": "industry", "operation": "equal", "right": industry},
         ],
-        "options": {"lang": "en"},
+        "options": {"lang": "en", "active_symbols_only": True},
         "markets": [],
         "symbols": {"query": {"types": []}, "tickers": []},
         "columns": columns,
