@@ -7,12 +7,15 @@ SCAN_URL = "https://scanner.tradingview.com/global/scan"
 
 # TradingView is the global universe source. We keep primary common-share
 # listings only to avoid duplicate overseas listings, preferred shares and
-# depositary clutter. Price snapshots come from the same screener universe.
+# depositary clutter. Korea is sourced exclusively from NAVER Finance.
 COLUMNS = [
     "name", "description", "exchange", "country", "sector", "industry",
     "market_cap_basic", "currency", "type", "subtype", "typespecs",
 ]
 PRICE_COLUMNS = COLUMNS + ["close", "change", "change_abs", "volume"]
+
+KOREA_NAMES = {"KR", "KOREA", "SOUTH KOREA", "REPUBLIC OF KOREA"}
+OTC_EXCHANGES = {"OTC", "OTCQX", "OTCQB", "OTCPK", "PINK", "GREY"}
 
 
 @dataclass
@@ -59,6 +62,16 @@ def _ticker(item: dict, row: dict) -> str:
     return row.get("name") or (s.split(":", 1)[-1] if ":" in s else s)
 
 
+def _keep_listing(row: dict) -> bool:
+    country = str(row.get("country") or "").strip().upper()
+    exchange = str(row.get("exchange") or "").strip().upper()
+    if country in KOREA_NAMES:
+        return False
+    if exchange in OTC_EXCHANGES or exchange.startswith("OTC"):
+        return False
+    return True
+
+
 def fetch_industries(industry_names: list[str]) -> list[dict]:
     out = []
     seen = set()
@@ -66,6 +79,8 @@ def fetch_industries(industry_names: list[str]) -> list[dict]:
         for item in _scan(industry):
             values = item.get("d", [])
             row = dict(zip(COLUMNS, values))
+            if not _keep_listing(row):
+                continue
             ticker = _ticker(item, row)
             key = (str(row.get("exchange") or "").upper(), str(ticker or "").upper())
             if not ticker or key in seen:
@@ -85,18 +100,15 @@ def fetch_industries(industry_names: list[str]) -> list[dict]:
 
 
 def fetch_price_snapshot(industry_names: list[str]) -> dict[tuple[str, str], dict]:
-    """Return latest regular-session price data keyed by (exchange, ticker).
-
-    The screener's `change` field is percentage change from the previous regular
-    close. We derive previous_close from close and change so every row is
-    internally consistent even when an absolute-change field is unavailable.
-    """
+    """Return latest regular-session price data keyed by (exchange, ticker)."""
     out: dict[tuple[str, str], dict] = {}
     observed_at = datetime.now(timezone.utc).isoformat()
     for industry in industry_names:
         for item in _scan(industry, PRICE_COLUMNS):
             values = item.get("d", [])
             row = dict(zip(PRICE_COLUMNS, values))
+            if not _keep_listing(row):
+                continue
             ticker = _ticker(item, row)
             exchange = str(row.get("exchange") or "").upper()
             if not ticker or not exchange:
