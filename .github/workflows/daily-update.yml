@@ -2,9 +2,21 @@ name: Daily stock update
 
 on:
   schedule:
-    # 08:15 KST Monday-Friday (23:15 UTC Sunday-Thursday).
+    # 08:15 KST Mon-Fri: all covered markets are between completed sessions.
     - cron: '15 23 * * 0-4'
+    # 16:20 KST Mon-Fri: refresh Korea only after KRX regular close.
+    - cron: '20 7 * * 1-5'
   workflow_dispatch:
+    inputs:
+      scope:
+        description: 'Safe update scope (AUTO is recommended)'
+        required: true
+        default: AUTO
+        type: choice
+        options:
+          - AUTO
+          - ALL
+          - KR_ONLY
 
 permissions:
   contents: write
@@ -21,12 +33,41 @@ jobs:
           cache: 'pip'
       - run: pip install -r requirements.txt
 
-      - name: Refresh universe on Mondays, manual runs, or first run
+      - name: Resolve safe update scope
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SCHEDULE_EXPR: ${{ github.event.schedule }}
+          MANUAL_SCOPE: ${{ inputs.scope }}
+        run: |
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            if [ "$SCHEDULE_EXPR" = "20 7 * * 1-5" ]; then
+              SCOPE="KR_ONLY"
+            else
+              SCOPE="ALL"
+            fi
+          else
+            SCOPE="${MANUAL_SCOPE:-AUTO}"
+            if [ "$SCOPE" = "AUTO" ]; then
+              KST_HOUR=$(TZ=Asia/Seoul date +%H)
+              if [ "$KST_HOUR" -lt 9 ]; then
+                SCOPE="ALL"
+              elif [ "$KST_HOUR" -ge 16 ]; then
+                SCOPE="KR_ONLY"
+              else
+                echo "AUTO manual run blocked during 09:00-15:59 KST to avoid publishing intraday prices."
+                exit 3
+              fi
+            fi
+          fi
+          echo "UPDATE_SCOPE=$SCOPE" >> "$GITHUB_ENV"
+          echo "Resolved UPDATE_SCOPE=$SCOPE"
+
+      - name: Refresh universe on Monday morning, safe ALL manual runs, or first run
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: |
           KST_DOW=$(TZ=Asia/Seoul date +%u)
-          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$KST_DOW" = "1" ] || [ ! -f data/universe_master.csv ]; then
+          if [ ! -f data/universe_master.csv ] || { [ "$UPDATE_SCOPE" = "ALL" ] && { [ "$KST_DOW" = "1" ] || [ "$EVENT_NAME" = "workflow_dispatch" ]; }; }; then
             python -m src.universe.build
           fi
 
@@ -38,5 +79,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/universe_master.csv data/universe_changes.json data/latest.json data/qa_latest.json output/latest.xlsx
-          git diff --cached --quiet || git commit -m "chore: daily stock update $(TZ=Asia/Seoul date +%F) [skip netlify]"
+          git diff --cached --quiet || git commit -m "chore: stock update $(TZ=Asia/Seoul date +%F) $UPDATE_SCOPE [skip netlify]"
           git push
