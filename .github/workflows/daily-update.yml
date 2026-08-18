@@ -3,7 +3,6 @@ name: Daily stock update
 on:
   schedule:
     # 08:15 KST Monday-Friday (23:15 UTC Sunday-Thursday).
-    # At this time the latest completed sessions from Korea/Europe/US are available.
     - cron: '15 23 * * 0-4'
   workflow_dispatch:
 
@@ -22,10 +21,12 @@ jobs:
           cache: 'pip'
       - run: pip install -r requirements.txt
 
-      - name: Refresh universe on Mondays or first run
+      - name: Refresh universe on Mondays, manual runs, or first run
+        env:
+          EVENT_NAME: ${{ github.event_name }}
         run: |
           KST_DOW=$(TZ=Asia/Seoul date +%u)
-          if [ "$KST_DOW" = "1" ] || [ ! -f data/universe_master.csv ]; then
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$KST_DOW" = "1" ] || [ ! -f data/universe_master.csv ]; then
             python -m src.universe.build
           fi
 
