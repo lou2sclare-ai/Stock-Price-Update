@@ -13,7 +13,7 @@ from src.universe import tradingview
 PRICE_FIELDS = {
     "price", "previous_close", "price_change", "price_change_pct",
     "price_date", "previous_trading_date", "calendar_days_elapsed",
-    "volume", "price_source", "price_observed_at",
+    "volume", "price_source", "price_observed_at", "market_session",
 }
 
 
@@ -52,6 +52,19 @@ def copy_previous_price(row: dict, previous: dict | None) -> bool:
     return copied
 
 
+def safe_global_snapshot_value(snapshot: dict | None) -> bool:
+    """True only when the screener quote is safe to publish as a completed close.
+
+    `regular` means the exchange's regular session is currently trading, so
+    TradingView `close/change` are intraday. Empty/unknown session states are
+    treated conservatively as unsafe during an afternoon SAFE_REFRESH.
+    """
+    if not snapshot:
+        return False
+    session = str(snapshot.get("market_session") or "").strip().lower()
+    return bool(session) and session != "regular"
+
+
 def main():
     settings = yaml.safe_load(Path("config/settings.yml").read_text(encoding="utf-8"))
     upath = settings["project"]["universe_csv"]
@@ -59,41 +72,53 @@ def main():
         raise SystemExit(f"Universe missing: {upath}. Run: python -m src.universe.build")
 
     scope = os.getenv("UPDATE_SCOPE", "ALL").strip().upper()
-    if scope not in {"ALL", "KR_ONLY"}:
+    if scope not in {"ALL", "SAFE_REFRESH"}:
         raise SystemExit(f"Unsupported UPDATE_SCOPE={scope}")
 
     rows = load_rows(upath)
     previous_map = load_previous(settings["project"]["output_json"])
 
-    global_snapshot = {}
-    if scope == "ALL":
-        # ALL is intended for the 08:15 KST run, when US/Europe are closed and
-        # Korea/Japan have not opened yet. At that time the screener snapshot is
-        # a completed-session snapshot across the covered markets.
-        try:
-            global_snapshot = tradingview.fetch_price_snapshot(
-                settings.get("global_discovery_industries", [])
-            )
-        except Exception as exc:
-            print(f"Global snapshot unavailable; Yahoo fallback will be used: {exc}")
-            global_snapshot = {}
+    # Both scopes fetch one global screener snapshot. ALL runs only in the
+    # morning safe window. SAFE_REFRESH may run in the afternoon, but it only
+    # publishes overseas quotes whose regular sessions are no longer open.
+    try:
+        global_snapshot = tradingview.fetch_price_snapshot(
+            settings.get("global_discovery_industries", [])
+        )
+    except Exception as exc:
+        print(f"Global snapshot unavailable; safe previous values will be preserved: {exc}")
+        global_snapshot = {}
 
     enriched, fetch_errors = [], []
+    refreshed_global = 0
+    preserved_global = 0
+
     for source_row in rows:
         if str(source_row.get("active", "")).upper() not in ("TRUE", "1", "YES"):
             continue
         row = dict(source_row)
         country = str(row.get("country") or "").upper()
+        previous = previous_map.get(row_key(row))
 
-        # The afternoon job refreshes only Korea after KRX close. Overseas rows
-        # retain the safe morning snapshot instead of being overwritten with
-        # intraday European/US prices.
-        if scope == "KR_ONLY" and country != "KR":
-            if not copy_previous_price(row, previous_map.get(row_key(row))):
-                fetch_errors.append(
-                    f"{row.get('company_name')} ({row.get('ticker')}): "
-                    "No previous safe global price to preserve"
-                )
+        if country != "KR" and scope == "SAFE_REFRESH":
+            key = (
+                str(row.get("exchange") or "").upper(),
+                str(row.get("ticker") or "").upper(),
+            )
+            snap = global_snapshot.get(key)
+            if safe_global_snapshot_value(snap):
+                row.update(snap)
+                row.setdefault("price_date", None)
+                row.setdefault("previous_trading_date", None)
+                row.setdefault("calendar_days_elapsed", None)
+                refreshed_global += 1
+            else:
+                if not copy_previous_price(row, previous):
+                    fetch_errors.append(
+                        f"{row.get('company_name')} ({row.get('ticker')}): "
+                        "No previous safe global price to preserve"
+                    )
+                preserved_global += 1
             enriched.append(row)
             continue
 
@@ -108,7 +133,7 @@ def main():
         except Exception as exc:
             # If a source temporarily fails, preserve the previously published
             # price rather than replacing a good value with a blank.
-            if not copy_previous_price(row, previous_map.get(row_key(row))):
+            if not copy_previous_price(row, previous):
                 row.update({
                     "price": None,
                     "previous_close": None,
@@ -127,6 +152,8 @@ def main():
     qa["fetch_errors"] = fetch_errors[:200]
     qa["global_snapshot_count"] = len(global_snapshot)
     qa["update_scope"] = scope
+    qa["refreshed_completed_global_count"] = refreshed_global
+    qa["preserved_open_or_unknown_global_count"] = preserved_global
 
     qpath = Path(settings["project"]["qa_json"])
     qpath.parent.mkdir(parents=True, exist_ok=True)
