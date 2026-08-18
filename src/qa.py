@@ -5,7 +5,7 @@ from zoneinfo import ZoneInfo
 
 KST = ZoneInfo("Asia/Seoul")
 OFFICIAL_KR_CHANGE_ORIGIN = "NAVER_KRX_MIRROR_DAILY_QUOTE"
-OFFICIAL_KR_BASE_SOURCE = "source_change_implied_base"
+OFFICIAL_KR_BASE_SOURCE = "source_exact_absolute_change"
 
 
 def _completed_kr_cutoff() -> str:
@@ -35,6 +35,8 @@ def run(rows: list[dict], settings: dict) -> dict:
     official_kr_count = 0
     kr_zero_return_count = 0
     kr_future_date_count = 0
+    kr_inexact_change_count = 0
+    unsafe_open_global_count = 0
     kr_cutoff = _completed_kr_cutoff()
 
     for r in rows:
@@ -66,6 +68,17 @@ def run(rows: list[dict], settings: dict) -> dict:
             if price_date and price_date > kr_cutoff:
                 kr_future_date_count += 1
 
+            prev = r.get("previous_close")
+            chg = r.get("price_change")
+            if prev is not None and chg is not None:
+                if abs((float(p) - float(prev)) - float(chg)) > 1e-6:
+                    kr_inexact_change_count += 1
+        elif country != "KR":
+            session = str(r.get("market_session") or "").strip().lower()
+            status = str(r.get("data_status") or "")
+            if session == "regular" and not status.startswith("PRESERVED"):
+                unsafe_open_global_count += 1
+
         if r.get("corporate_action_adjusted"):
             corporate_action_adjustments.append({
                 "company_name": r.get("company_name"),
@@ -77,8 +90,8 @@ def run(rows: list[dict], settings: dict) -> dict:
             })
 
         pct = r.get("price_change_pct")
-        if pct is not None and abs(pct) >= max_move:
-            warnings.append(f"Large daily move {pct:.1f}%: {ident}")
+        if pct is not None and abs(float(pct)) >= max_move:
+            warnings.append(f"Large daily move {float(pct):.1f}%: {ident}")
         if r.get("research_status") == "COVERAGE" and not r.get("target_price"):
             warnings.append(f"Coverage without TP: {ident}")
         if r.get("research_status") == "NR" and r.get("target_price"):
@@ -92,6 +105,10 @@ def run(rows: list[dict], settings: dict) -> dict:
         errors.append(f"Korean price date exceeds completed-session cutoff {kr_cutoff}: {kr_future_date_count}/{domestic_count}")
     if domestic_count and kr_zero_return_count / domestic_count >= 0.50:
         errors.append(f"Suspicious Korean zero-return concentration: {kr_zero_return_count}/{domestic_count}")
+    if kr_inexact_change_count:
+        errors.append(f"Korean exact price-change arithmetic mismatch: {kr_inexact_change_count}/{domestic_count}")
+    if unsafe_open_global_count:
+        errors.append(f"Open global regular-session prices would be published: {unsafe_open_global_count}")
 
     return {
         "status": "FAIL" if errors else ("REVIEW" if warnings else "PASS"),
@@ -103,6 +120,8 @@ def run(rows: list[dict], settings: dict) -> dict:
         "kr_completed_cutoff": kr_cutoff,
         "kr_zero_return_count": kr_zero_return_count,
         "kr_future_date_count": kr_future_date_count,
+        "kr_inexact_change_count": kr_inexact_change_count,
+        "unsafe_open_global_count": unsafe_open_global_count,
         "missing_price_count": missing_prices,
         "corporate_action_adjustment_count": len(corporate_action_adjustments),
         "corporate_action_adjustments": corporate_action_adjustments[:100],
