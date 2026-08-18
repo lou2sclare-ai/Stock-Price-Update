@@ -1,26 +1,50 @@
 from __future__ import annotations
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 import requests
 
 SCAN_URL = "https://scanner.tradingview.com/global/scan"
 
-# TradingView is the global universe source. We keep primary common-share
-# listings only to avoid duplicate overseas listings, preferred shares and
-# depositary clutter. Korea is sourced exclusively from NAVER Finance.
 COLUMNS = [
     "name", "description", "exchange", "country", "sector", "industry",
     "market_cap_basic", "currency", "type", "subtype", "typespecs",
 ]
-# current_session lets the price layer distinguish an open regular session
-# from a completed/pre/post-market state. This is critical because `close`
-# can be intraday while a regular session is open.
+# TradingView exposes the daily bar timestamp as well as the current session.
+# Together they let us attach an actual trading date to each accepted completed
+# regular-session snapshot rather than showing only the collection timestamp.
 PRICE_COLUMNS = COLUMNS + [
-    "close", "change", "change_abs", "volume", "current_session"
+    "close", "change", "change_abs", "volume", "current_session",
+    "daily-bar.time", "time_business_day", "last_bar_update_time",
 ]
 
 KOREA_NAMES = {"KR", "KOREA", "SOUTH KOREA", "REPUBLIC OF KOREA"}
 OTC_EXCHANGES = {"OTC", "OTCQX", "OTCQB", "OTCPK", "PINK", "GREY"}
+
+# Used only to convert TradingView's daily-bar UNIX time to the exchange-local
+# calendar date. time_business_day is preferred when TradingView supplies it.
+EXCHANGE_TZ = {
+    "NASDAQ": "America/New_York", "NYSE": "America/New_York", "AMEX": "America/New_York",
+    "NEO": "America/Toronto", "TSX": "America/Toronto", "TSXV": "America/Toronto",
+    "BMFBOVESPA": "America/Sao_Paulo",
+    "LSE": "Europe/London", "XETR": "Europe/Berlin", "FWB": "Europe/Berlin",
+    "EURONEXT": "Europe/Paris", "MIL": "Europe/Rome", "BME": "Europe/Madrid",
+    "SIX": "Europe/Zurich", "OSL": "Europe/Oslo", "OMXSTO": "Europe/Stockholm",
+    "NGM": "Europe/Stockholm", "OMXHEL": "Europe/Helsinki", "OMXHEX": "Europe/Helsinki",
+    "OMXCOP": "Europe/Copenhagen", "GPW": "Europe/Warsaw", "NEWCONNECT": "Europe/Warsaw",
+    "BVB": "Europe/Bucharest", "VIE": "Europe/Vienna", "PSECZ": "Europe/Prague",
+    "BIST": "Europe/Istanbul", "RUS": "Europe/Moscow", "OMXTSE": "Europe/Tallinn",
+    "ZSE": "Europe/Zagreb", "BSESOF": "Europe/Sofia",
+    "TSE": "Asia/Tokyo", "NAG": "Asia/Tokyo", "SSE": "Asia/Shanghai", "SZSE": "Asia/Shanghai",
+    "HKEX": "Asia/Hong_Kong", "TPEX": "Asia/Taipei", "NSE": "Asia/Kolkata", "BSE": "Asia/Kolkata",
+    "SET": "Asia/Bangkok", "IDX": "Asia/Jakarta", "TASE": "Asia/Jerusalem",
+    "TADAWUL": "Asia/Riyadh", "PSX": "Asia/Karachi", "PSE": "Asia/Manila",
+    "HOSE": "Asia/Ho_Chi_Minh", "HNX": "Asia/Ho_Chi_Minh", "UPCOM": "Asia/Ho_Chi_Minh",
+    "CSELK": "Asia/Colombo", "DSEBD": "Asia/Dhaka", "ADX": "Asia/Dubai",
+    "ASX": "Australia/Sydney", "JSE": "Africa/Johannesburg", "EGX": "Africa/Cairo",
+    "NSEKE": "Africa/Nairobi", "CSEMA": "Africa/Casablanca", "NSENG": "Africa/Lagos",
+    "KRX": "Asia/Seoul",
+}
 
 
 @dataclass
@@ -77,6 +101,38 @@ def _keep_listing(row: dict) -> bool:
     return True
 
 
+def _epoch_seconds(value) -> float | None:
+    try:
+        x = float(value)
+    except (TypeError, ValueError):
+        return None
+    if x > 10_000_000_000:
+        x /= 1000.0
+    return x if 100_000_000 <= x <= 10_000_000_000 else None
+
+
+def _price_date(row: dict) -> tuple[str | None, str | None]:
+    business_day = row.get("time_business_day")
+    try:
+        n = int(float(business_day))
+    except (TypeError, ValueError):
+        n = 0
+    if 19000101 <= n <= 21001231:
+        text = str(n)
+        return f"{text[:4]}-{text[4:6]}-{text[6:8]}", "TradingView time_business_day"
+
+    ts = _epoch_seconds(row.get("daily-bar.time"))
+    if ts is None:
+        return None, None
+    exchange = str(row.get("exchange") or "").upper()
+    tz_name = EXCHANGE_TZ.get(exchange)
+    dt = datetime.fromtimestamp(ts, tz=timezone.utc)
+    if tz_name:
+        dt = dt.astimezone(ZoneInfo(tz_name))
+        return dt.date().isoformat(), "TradingView daily-bar.time exchange-local"
+    return dt.date().isoformat(), "TradingView daily-bar.time UTC fallback"
+
+
 def fetch_industries(industry_names: list[str]) -> list[dict]:
     out = []
     seen = set()
@@ -105,10 +161,10 @@ def fetch_industries(industry_names: list[str]) -> list[dict]:
 
 
 def fetch_price_snapshot(industry_names: list[str]) -> dict[tuple[str, str], dict]:
-    """Return regular-session quote data keyed by (exchange, ticker).
+    """Return quote data keyed by (exchange, ticker), including bar date/session.
 
-    The result deliberately includes `market_session`. Callers must normalize
-    open-session quotes to the latest *completed* regular close before publish.
+    A caller must publish the snapshot only when market_session is not regular.
+    The attached price_date is the TradingView daily bar's own trading date.
     """
     out: dict[tuple[str, str], dict] = {}
     observed_at = datetime.now(timezone.utc).isoformat()
@@ -148,14 +204,23 @@ def fetch_price_snapshot(industry_names: list[str]) -> dict[tuple[str, str], dic
                 volume = float(row.get("volume")) if row.get("volume") is not None else None
             except (TypeError, ValueError):
                 volume = None
+            price_date, date_source = _price_date(row)
             out[(exchange, str(ticker).upper())] = {
                 "price": close,
                 "previous_close": previous,
                 "price_change": change_abs,
                 "price_change_pct": pct,
+                "price_date": price_date,
+                "previous_trading_date": None,
+                "calendar_days_elapsed": None,
                 "volume": volume,
                 "price_source": "TradingView Screener",
                 "price_observed_at": observed_at,
+                "last_checked_at": observed_at,
                 "market_session": str(row.get("current_session") or "").strip().lower(),
+                "price_trade_date_source": date_source,
+                "price_bar_time": row.get("daily-bar.time"),
+                "price_bar_update_time": row.get("last_bar_update_time"),
+                "data_status": "COMPLETED_SESSION_SNAPSHOT",
             }
     return out
