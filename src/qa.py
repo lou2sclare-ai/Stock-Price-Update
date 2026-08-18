@@ -19,6 +19,7 @@ def run(rows: list[dict], settings: dict) -> dict:
 
     max_move = float(qa_cfg.get("max_abs_daily_change_pct", 40.0))
     missing_prices = 0
+    corporate_action_adjustments = []
     for r in rows:
         ident = f"{r.get('company_name')} ({r.get('ticker')})"
         p = r.get("price")
@@ -29,9 +30,20 @@ def run(rows: list[dict], settings: dict) -> dict:
                 errors.append(msg)
             else:
                 warnings.append(msg)
+
+        if r.get("corporate_action_adjusted"):
+            corporate_action_adjustments.append({
+                "company_name": r.get("company_name"),
+                "ticker": r.get("ticker"),
+                "raw_previous_close": r.get("raw_previous_close"),
+                "official_comparison_base": r.get("previous_close"),
+                "raw_close_change_pct": r.get("raw_close_change_pct"),
+                "official_change_pct": r.get("price_change_pct"),
+            })
+
         pct = r.get("price_change_pct")
         if pct is not None and abs(pct) >= max_move:
-            warnings.append(f"Large daily move {pct:.1f}%: {ident}")
+            warnings.append(f"Large official daily move {pct:.1f}%: {ident}")
         if r.get("research_status") == "COVERAGE" and not r.get("target_price"):
             warnings.append(f"Coverage without TP: {ident}")
         if r.get("research_status") == "NR" and r.get("target_price"):
@@ -46,5 +58,7 @@ def run(rows: list[dict], settings: dict) -> dict:
         "row_count": len(rows),
         "domestic_count": domestic_count,
         "missing_price_count": missing_prices,
+        "corporate_action_adjustment_count": len(corporate_action_adjustments),
+        "corporate_action_adjustments": corporate_action_adjustments[:100],
         "checked_on": date.today().isoformat(),
     }
