@@ -10,19 +10,15 @@ COLUMNS = [
     "name", "description", "exchange", "country", "sector", "industry",
     "market_cap_basic", "currency", "type", "subtype", "typespecs",
 ]
-# TradingView exposes the daily bar timestamp as well as the current session.
-# Together they let us attach an actual trading date to each accepted completed
-# regular-session snapshot rather than showing only the collection timestamp.
-PRICE_COLUMNS = COLUMNS + [
+BASE_PRICE_COLUMNS = COLUMNS + [
     "close", "change", "change_abs", "volume", "current_session",
+]
+PRICE_COLUMNS = BASE_PRICE_COLUMNS + [
     "daily-bar.time", "time_business_day", "last_bar_update_time",
 ]
 
 KOREA_NAMES = {"KR", "KOREA", "SOUTH KOREA", "REPUBLIC OF KOREA"}
 OTC_EXCHANGES = {"OTC", "OTCQX", "OTCQB", "OTCPK", "PINK", "GREY"}
-
-# Used only to convert TradingView's daily-bar UNIX time to the exchange-local
-# calendar date. time_business_day is preferred when TradingView supplies it.
 EXCHANGE_TZ = {
     "NASDAQ": "America/New_York", "NYSE": "America/New_York", "AMEX": "America/New_York",
     "NEO": "America/Toronto", "TSX": "America/Toronto", "TSXV": "America/Toronto",
@@ -160,42 +156,43 @@ def fetch_industries(industry_names: list[str]) -> list[dict]:
     return out
 
 
-def fetch_price_snapshot(industry_names: list[str]) -> dict[tuple[str, str], dict]:
-    """Return quote data keyed by (exchange, ticker), including bar date/session.
+def _industry_price_rows(industry: str) -> tuple[list[dict], list[str]]:
+    try:
+        return _scan(industry, PRICE_COLUMNS), PRICE_COLUMNS
+    except requests.RequestException:
+        # Never break the daily update just because an optional TradingView date
+        # column is unavailable. Price/session safety still works with the base
+        # columns; the UI will explicitly mark the trade date as unavailable.
+        return _scan(industry, BASE_PRICE_COLUMNS), BASE_PRICE_COLUMNS
 
-    A caller must publish the snapshot only when market_session is not regular.
-    The attached price_date is the TradingView daily bar's own trading date.
-    """
+
+def fetch_price_snapshot(industry_names: list[str]) -> dict[tuple[str, str], dict]:
     out: dict[tuple[str, str], dict] = {}
     observed_at = datetime.now(timezone.utc).isoformat()
     for industry in industry_names:
-        for item in _scan(industry, PRICE_COLUMNS):
+        items, columns = _industry_price_rows(industry)
+        for item in items:
             values = item.get("d", [])
-            row = dict(zip(PRICE_COLUMNS, values))
+            row = dict(zip(columns, values))
             if not _keep_listing(row):
                 continue
             ticker = _ticker(item, row)
             exchange = str(row.get("exchange") or "").upper()
             if not ticker or not exchange:
                 continue
-            close = row.get("close")
-            pct = row.get("change")
             try:
-                close = float(close)
+                close = float(row.get("close"))
             except (TypeError, ValueError):
                 continue
             if close <= 0:
                 continue
             try:
-                pct = float(pct) if pct is not None else None
+                pct = float(row.get("change")) if row.get("change") is not None else None
             except (TypeError, ValueError):
                 pct = None
-            previous = None
-            if pct is not None and pct > -100:
-                previous = close / (1.0 + pct / 100.0)
-            change_abs = row.get("change_abs")
+            previous = close / (1.0 + pct / 100.0) if pct is not None and pct > -100 else None
             try:
-                change_abs = float(change_abs) if change_abs is not None else None
+                change_abs = float(row.get("change_abs")) if row.get("change_abs") is not None else None
             except (TypeError, ValueError):
                 change_abs = None
             if change_abs is None and previous is not None:
