@@ -1,20 +1,27 @@
 {
-  "status": "REVIEW",
+  "status": "PASS",
   "errors": [],
-  "warnings": [
-    "Large official daily move 50.0%: FluroTech Ltd. (TEST.H)",
-    "Large official daily move 124.1%: KS인더스트리 (101000)"
-  ],
-  "row_count": 2770,
+  "warnings": [],
+  "row_count": 2753,
   "domestic_count": 267,
+  "official_kr_return_count": 267,
   "missing_price_count": 0,
-  "corporate_action_adjustment_count": 0,
-  "corporate_action_adjustments": [],
+  "corporate_action_adjustment_count": 1,
+  "corporate_action_adjustments": [
+    {
+      "company_name": "KS인더스트리",
+      "ticker": "101000",
+      "raw_previous_close": 311.0,
+      "official_comparison_base": 851.0,
+      "raw_close_change_pct": 124.11575562700965,
+      "official_change_pct": -18.1
+    }
+  ],
   "checked_on": "2026-08-18",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2677,
-  "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 2402,
-  "preserved_open_or_unknown_global_count": 101
+  "global_snapshot_count": 2792,
+  "update_scope": "ALL",
+  "refreshed_completed_global_count": 0,
+  "preserved_open_or_unknown_global_count": 0
 }
