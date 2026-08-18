@@ -5,21 +5,32 @@
   "row_count": 2726,
   "domestic_count": 267,
   "official_kr_return_count": 267,
+  "kr_completed_cutoff": "2026-08-18",
+  "kr_zero_return_count": 19,
+  "kr_future_date_count": 0,
   "missing_price_count": 0,
-  "corporate_action_adjustment_count": 0,
-  "corporate_action_adjustments": [],
-  "checked_on": "2026-08-18",
+  "corporate_action_adjustment_count": 1,
+  "corporate_action_adjustments": [
+    {
+      "company_name": "KS인더스트리",
+      "ticker": "101000",
+      "raw_previous_close": 311.0,
+      "official_comparison_base": 851.0,
+      "raw_close_change_pct": 124.11575562700965,
+      "official_change_pct": -18.1
+    }
+  ],
+  "checked_on": "2026-08-19",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2761,
+  "global_snapshot_count": 2762,
   "update_scope": "ALL",
   "refreshed_completed_global_count": 0,
   "preserved_open_or_unknown_global_count": 0,
   "global_price_date_count": 2459,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-08-17": 306,
-    "2026-08-18": 2152,
+    "2026-08-18": 2458,
     "2026-08-19": 1
   }
 }

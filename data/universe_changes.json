@@ -1,7 +1,7 @@
 {
   "as_of": "2026-08-18",
   "added_count": 0,
-  "removed_count": 1184,
+  "removed_count": 1183,
   "added": [],
   "removed": [
     {
@@ -9821,15 +9821,6 @@
         "308170"
       ],
       "company_name": "CTR Mobility Co.,Ltd.",
-      "research_sector": "POWER_EQUIPMENT"
-    },
-    {
-      "key": [
-        "NEW ZEALAND",
-        "NZX",
-        "AOF"
-      ],
-      "company_name": "AoFrio Limited",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
