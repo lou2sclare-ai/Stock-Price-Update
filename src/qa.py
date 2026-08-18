@@ -2,7 +2,8 @@ from __future__ import annotations
 from collections import Counter
 from datetime import date
 
-OFFICIAL_KRX_CHANGE_ORIGIN = "KRX_GET_MARKET_OHLCV_BY_TICKER"
+OFFICIAL_KR_CHANGE_ORIGIN = "NAVER_KRX_MIRROR_DAILY_QUOTE"
+OFFICIAL_KR_BASE_SOURCE = "source_change_implied_base"
 
 
 def run(rows: list[dict], settings: dict) -> dict:
@@ -38,10 +39,10 @@ def run(rows: list[dict], settings: dict) -> dict:
         if str(r.get("country") or "").upper() == "KR" and p is not None and p > 0:
             origin = str(r.get("source_change_origin") or "")
             base_source = str(r.get("comparison_base_source") or "")
-            if origin != OFFICIAL_KRX_CHANGE_ORIGIN:
-                errors.append(f"KR daily return is not from official KRX cross-sectional quote: {ident}")
-            elif base_source != "KRX_official_change_implied_base":
-                errors.append(f"KR comparison base is not derived from official KRX daily return: {ident}")
+            if origin != OFFICIAL_KR_CHANGE_ORIGIN:
+                errors.append(f"KR daily return source is invalid: {ident} ({origin})")
+            elif base_source != OFFICIAL_KR_BASE_SOURCE:
+                errors.append(f"KR comparison base source is invalid: {ident} ({base_source})")
             else:
                 official_kr_count += 1
 
@@ -67,7 +68,7 @@ def run(rows: list[dict], settings: dict) -> dict:
 
     if official_kr_count != domestic_count:
         errors.append(
-            f"Official KRX daily-return coverage incomplete: {official_kr_count}/{domestic_count}"
+            f"Official Korean daily-return coverage incomplete: {official_kr_count}/{domestic_count}"
         )
 
     return {
