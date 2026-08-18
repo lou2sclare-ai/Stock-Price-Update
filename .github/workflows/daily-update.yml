@@ -3,12 +3,11 @@ name: Daily stock update
 on:
   schedule:
     # Morning ALL retries, KST Mon-Fri: 07:17 / 07:47 / 08:17 / 08:47.
-    # GitHub scheduled runs may be delayed, so we use several off-hour slots.
     - cron: '17 22 * * 0-4'
     - cron: '47 22 * * 0-4'
     - cron: '17 23 * * 0-4'
     - cron: '47 23 * * 0-4'
-    # Korea-close retries, KST Mon-Fri: 16:20 / 16:50 / 17:20 / 18:20.
+    # Afternoon SAFE_REFRESH retries, KST Mon-Fri: 16:20 / 16:50 / 17:20 / 18:20.
     - cron: '20 7 * * 1-5'
     - cron: '50 7 * * 1-5'
     - cron: '20 8 * * 1-5'
@@ -16,14 +15,14 @@ on:
   workflow_dispatch:
     inputs:
       scope:
-        description: 'Safe update scope (AUTO is recommended)'
+        description: 'Update mode (AUTO is recommended)'
         required: true
         default: AUTO
         type: choice
         options:
           - AUTO
           - ALL
-          - KR_ONLY
+          - SAFE_REFRESH
 
 permissions:
   contents: write
@@ -61,7 +60,7 @@ jobs:
                 SCOPE="ALL"
                 ;;
               *)
-                SCOPE="KR_ONLY"
+                SCOPE="SAFE_REFRESH"
                 ;;
             esac
           else
@@ -70,7 +69,7 @@ jobs:
               if [ "$KST_HOUR" -lt 9 ]; then
                 SCOPE="ALL"
               elif [ "$KST_HOUR" -ge 16 ]; then
-                SCOPE="KR_ONLY"
+                SCOPE="SAFE_REFRESH"
               else
                 echo "AUTO manual run blocked during 09:00-15:59 KST to avoid publishing intraday prices."
                 exit 3
@@ -78,23 +77,24 @@ jobs:
             fi
           fi
 
-          # Safety guard: a delayed morning ALL job must not publish Asian intraday snapshots.
+          # Delayed morning ALL jobs are unsafe after Asian regular sessions start.
           if [ "$SCOPE" = "ALL" ] && [ "$KST_HOUR" -ge 9 ]; then
-            echo "Delayed ALL run reached ${KST_HOUR}:${KST_MIN} KST; skipping to avoid intraday Asia prices."
+            echo "ALL is unsafe at ${KST_HOUR}:${KST_MIN} KST; skipping."
             echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
             echo "UPDATE_SCOPE=$SCOPE" >> "$GITHUB_ENV"
             exit 0
           fi
 
-          # Korea close refresh must not run before the market has safely closed.
-          if [ "$SCOPE" = "KR_ONLY" ] && [ "$KST_HOUR" -lt 16 ]; then
-            echo "KR_ONLY run is too early; skipping."
+          # SAFE_REFRESH is designed for after KRX close. Korea is refreshed,
+          # and overseas markets are refreshed only when their regular session
+          # is not open; open/unknown markets keep the last safe published value.
+          if [ "$SCOPE" = "SAFE_REFRESH" ] && [ "$KST_HOUR" -lt 16 ]; then
+            echo "SAFE_REFRESH is too early; skipping."
             echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
             echo "UPDATE_SCOPE=$SCOPE" >> "$GITHUB_ENV"
             exit 0
           fi
 
-          # Scheduled retries are idempotent: if this scope already succeeded today, skip.
           if [ "$EVENT_NAME" = "schedule" ] && git log -20 --format=%s | grep -Fq "stock update $TODAY $SCOPE"; then
             echo "$SCOPE already succeeded on $TODAY; skipping retry."
             echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
