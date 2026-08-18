@@ -1,0 +1,5 @@
+[build]
+  publish = "website"
+  # Stop data-only GitHub Action commits from consuming a production deploy.
+  # Exit 0 means "ignore this build"; exit 1 means "website changed, deploy".
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF website netlify.toml"

@@ -1,0 +1,6 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stock Sector Dashboard</title><link rel="stylesheet" href="style.css"></head><body>
+<header><div><div class="eyebrow">RESEARCH MONITOR</div><h1>Stock Sector Dashboard</h1><p id="updated">데이터 불러오는 중…</p></div><a id="excel" class="button" target="_blank">최신 Excel</a></header>
+<main><section class="cards"><div class="card"><span>Universe</span><strong id="count">-</strong></div><div class="card"><span>QA</span><strong id="qa">-</strong></div><div class="card"><span>Latest price date</span><strong id="date">-</strong></div></section>
+<section class="toolbar"><input id="search" placeholder="회사명 / Ticker 검색"><select id="sector"><option value="">전체 섹터</option></select><select id="country"><option value="">전체 국가</option></select></section>
+<section class="table-wrap"><table><thead><tr><th>섹터</th><th>국가</th><th>회사</th><th>Ticker</th><th>종가</th><th>등락</th><th>등락률</th><th>TP</th><th>가격기준일</th></tr></thead><tbody id="rows"></tbody></table></section></main>
+<script src="config.js"></script><script src="app.js"></script></body></html>
