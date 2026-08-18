@@ -14,14 +14,22 @@ def _finalize(series: list[dict], prefer_source_change: bool = False) -> dict:
     pct = raw_pct
     comparison_base = raw_previous
     corporate_action_adjusted = False
+    comparison_base_source = "raw_previous_close"
 
-    # KRX publishes the official daily return against the exchange's comparison
-    # base price. After a split/consolidation, capital reduction, relisting, etc.
-    # that base can differ materially from the last raw close before suspension.
+    # For KRX, the exchange's official daily change rate is the source of truth.
+    # It is measured against the day's official comparison/base price, which can
+    # differ from the last raw close after capital reductions, stock splits or
+    # consolidations, relistings, ex-rights/ex-dividend adjustments, etc.
     source_pct = current.get("source_change_pct")
-    if prefer_source_change and source_pct is not None and source_pct > -100:
+    if prefer_source_change:
+        if source_pct is None or source_pct <= -100:
+            raise RuntimeError("KRX official daily change rate unavailable or invalid")
         pct = float(source_pct)
-        comparison_base = current["close"] / (1.0 + pct / 100.0) if pct != -100 else None
+        comparison_base = current["close"] / (1.0 + pct / 100.0)
+        # Korean listed share prices are quoted in whole KRW. Rounding the
+        # reconstructed official comparison base avoids 850.999... style noise.
+        comparison_base = float(round(comparison_base))
+        comparison_base_source = "KRX_official_change_implied_base"
         if raw_pct is not None and abs(raw_pct - pct) >= 1.0:
             corporate_action_adjusted = True
 
@@ -40,6 +48,7 @@ def _finalize(series: list[dict], prefer_source_change: bool = False) -> dict:
         "raw_previous_close": raw_previous,
         "raw_close_change_pct": raw_pct,
         "corporate_action_adjusted": corporate_action_adjusted,
+        "comparison_base_source": comparison_base_source,
     }
 
 
@@ -47,7 +56,7 @@ def fetch(row: dict, global_snapshot: dict | None = None) -> dict:
     country = (row.get("country") or "").upper()
     if country == "KR":
         result = _finalize(krx.fetch_daily_close(row["ticker"]), prefer_source_change=True)
-        result["price_source"] = "KRX/PyKRX official change basis"
+        result["price_source"] = "KRX/PyKRX official daily change basis"
         return result
 
     key = (
