@@ -1,7 +1,7 @@
 {
   "as_of": "2026-08-18",
   "added_count": 0,
-  "removed_count": 1011,
+  "removed_count": 1356,
   "added": [],
   "removed": [
     {
@@ -218,6 +218,15 @@
         "914043"
       ],
       "company_name": "HEICO Corporation Class A",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "012450"
+      ],
+      "company_name": "Hanwha Aerospace Co., Ltd.",
       "research_sector": "DEFENSE"
     },
     {
@@ -456,6 +465,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "079550"
+      ],
+      "company_name": "LIG Defense&Aerospace",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
         "UNITED STATES",
         "LSX",
         "A2QQ8Z"
@@ -470,6 +488,24 @@
         "WF5A"
       ],
       "company_name": "Kratos Defense & Security Solutions, Inc.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "272210"
+      ],
+      "company_name": "Hanwha Systems Co., Ltd.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "047810"
+      ],
+      "company_name": "Korea Aerospace Industries, Ltd.",
       "research_sector": "DEFENSE"
     },
     {
@@ -906,11 +942,29 @@
     },
     {
       "key": [
+        "UNITED STATES",
+        "OTC",
+        "BUKS"
+      ],
+      "company_name": "Butler National Corp.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
         "UNITED KINGDOM",
         "LS",
         "865031"
       ],
       "company_name": "MS International PLC",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "144960"
+      ],
+      "company_name": "New Power Plasma Co., Ltd.",
       "research_sector": "DEFENSE"
     },
     {
@@ -929,6 +983,15 @@
         "XK4"
       ],
       "company_name": "Gabler Group AG",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "AERG"
+      ],
+      "company_name": "Applied Energetics, Inc.",
       "research_sector": "DEFENSE"
     },
     {
@@ -987,11 +1050,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "010820"
+      ],
+      "company_name": "Firstec Co., Ltd",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
         "FRANCE",
         "GETTEX",
         "12J0"
       ],
       "company_name": "Latecoere SA",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "484590"
+      ],
+      "company_name": "Samyang Comtech Co. Ltd.",
       "research_sector": "DEFENSE"
     },
     {
@@ -1077,6 +1158,24 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "046120"
+      ],
+      "company_name": "Orbitech Co., Ltd.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "274090"
+      ],
+      "company_name": "KENCOA AEROSPACE CORPORATION",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
         "UNITED KINGDOM",
         "LSX",
         "A40P0H"
@@ -1100,6 +1199,33 @@
         "0A4B"
       ],
       "company_name": "AgEagle Aerial Systems, Inc.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "065450"
+      ],
+      "company_name": "Victek Co., Ltd",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "424960"
+      ],
+      "company_name": "Smart Radar System, Inc.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "333620"
+      ],
+      "company_name": "Nsys Co., Ltd.",
       "research_sector": "DEFENSE"
     },
     {
@@ -1140,11 +1266,47 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "221840"
+      ],
+      "company_name": "HIZEAERO Co., Ltd.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "046310"
+      ],
+      "company_name": "BG T&A Co.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "215090"
+      ],
+      "company_name": "SolDefense Co., Ltd.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
         "ROMANIA",
         "BVB",
         "RORX"
       ],
       "company_name": "Romaero SA",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "337840"
+      ],
+      "company_name": "UXN Co., Ltd.",
       "research_sector": "DEFENSE"
     },
     {
@@ -1187,6 +1349,15 @@
       "key": [
         "UNITED STATES",
         "OTC",
+        "ETCC"
+      ],
+      "company_name": "Environmental Tectonics Corp.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
         "FCUL"
       ],
       "company_name": "Food Culture Inc.",
@@ -1194,11 +1365,11 @@
     },
     {
       "key": [
-        "TAIWAN",
-        "TPEX",
-        "7558"
+        "UNITED STATES",
+        "OTC",
+        "XERI"
       ],
-      "company_name": "Bryton, Inc.",
+      "company_name": "Xeriant, Inc.",
       "research_sector": "DEFENSE"
     },
     {
@@ -1208,6 +1379,15 @@
         "TIKK"
       ],
       "company_name": "Tel-Instrument Electronics Corp.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "DROP"
+      ],
+      "company_name": "Fuse Science, Inc.",
       "research_sector": "DEFENSE"
     },
     {
@@ -1239,6 +1419,24 @@
     },
     {
       "key": [
+        "CANADA",
+        "OTC",
+        "LLLI"
+      ],
+      "company_name": "Lamperd Less Lethal Inc.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "MNDP"
+      ],
+      "company_name": "Mundus Group, Inc.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
         "UNITED STATES",
         "OTC",
         "DTII"
@@ -1257,11 +1455,38 @@
     },
     {
       "key": [
+        "UNITED STATES",
+        "OTC",
+        "GDSI"
+      ],
+      "company_name": "Global Digital Solutions, Inc.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "GERMANY",
+        "OTC",
+        "LILMF"
+      ],
+      "company_name": "Lilium N.V.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
         "GERMANY",
         "LSE",
         "0AB4"
       ],
       "company_name": "Lilium N.V. Class A",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "EKCS"
+      ],
+      "company_name": "Electronic Control Security, Inc.",
       "research_sector": "DEFENSE"
     },
     {
@@ -1352,6 +1577,15 @@
         "DRON"
       ],
       "company_name": "Dronamics Capital AD Registered Shs",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "288180"
+      ],
+      "company_name": "KP Aero Industries Co., Ltd.",
       "research_sector": "DEFENSE"
     },
     {
@@ -1532,6 +1766,24 @@
         "FANUF"
       ],
       "company_name": "Fanuc Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "329180"
+      ],
+      "company_name": "HD Hyundai Heavy Industries Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "034020"
+      ],
+      "company_name": "Doosan Enerbility Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -1752,6 +2004,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "042660"
+      ],
+      "company_name": "Hanwha Ocean Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "FINLAND",
         "LSIN",
         "0IKJ"
@@ -1824,6 +2085,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "042700"
+      ],
+      "company_name": "Hanmi Semiconductor Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "SWEDEN",
         "LSE",
         "0R4P"
@@ -1844,6 +2114,15 @@
       "key": [
         "SOUTH KOREA",
         "KRX",
+        "000150"
+      ],
+      "company_name": "Doosan Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
         "000157"
       ],
       "company_name": "Doosan Corporation Pfd Registered Shs -II- Issue 99",
@@ -1856,6 +2135,15 @@
         "000155"
       ],
       "company_name": "Doosan Corporation Pfd Registered Shs Non-Voting",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "010140"
+      ],
+      "company_name": "Samsung Heavy Industries Co., Ltd",
       "research_sector": "MACHINERY"
     },
     {
@@ -1901,6 +2189,24 @@
         "G1A"
       ],
       "company_name": "GEA Group Aktiengesellschaft",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "267250"
+      ],
+      "company_name": "HD HYUNDAI CO.,LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "064350"
+      ],
+      "company_name": "Hyundai Rotem Co.",
       "research_sector": "MACHINERY"
     },
     {
@@ -2175,6 +2481,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "277810"
+      ],
+      "company_name": "Rainbow Robotics, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "SWEDEN",
         "LSIN",
         "0MQG"
@@ -2243,6 +2558,15 @@
         "5E2"
       ],
       "company_name": "Seatrium Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "036930"
+      ],
+      "company_name": "Jusung Engineering Co., Ltd",
       "research_sector": "MACHINERY"
     },
     {
@@ -2355,6 +2679,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "267270"
+      ],
+      "company_name": "HD Construction Equipment Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "FINLAND",
         "LSIN",
         "0MGH"
@@ -2396,6 +2729,15 @@
         "2715"
       ],
       "company_name": "Estun Automation Co. Ltd. Class H",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "241560"
+      ],
+      "company_name": "Doosan Bobcat Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -2463,6 +2805,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "240810"
+      ],
+      "company_name": "Wonik IPS Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "JAPAN",
         "OTC",
         "HSYDF"
@@ -2526,6 +2877,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "454910"
+      ],
+      "company_name": "Doosan Robotics Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "SWEDEN",
         "OTC",
         "MMNNF"
@@ -2558,6 +2918,15 @@
         "2474"
       ],
       "company_name": "Catcher Technology Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "039030"
+      ],
+      "company_name": "EO Technics Co., Ltd",
       "research_sector": "MACHINERY"
     },
     {
@@ -2625,6 +2994,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "082740"
+      ],
+      "company_name": "Hanwha Engine Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "UNITED STATES",
         "HAM",
         "WTH"
@@ -2634,11 +3012,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "108490"
+      ],
+      "company_name": "ROBOTIS Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "CANADA",
         "NYSE",
         "EFXT"
       ],
       "company_name": "Enerflex Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "319660"
+      ],
+      "company_name": "PSK INC",
       "research_sector": "MACHINERY"
     },
     {
@@ -2742,6 +3138,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "319400"
+      ],
+      "company_name": "HUYNDAI MOVEX Co. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "AUSTRALIA",
         "OTC",
         "SREMF"
@@ -2774,6 +3179,15 @@
         "A0N9P2"
       ],
       "company_name": "CIMC Enric Holdings Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "084370"
+      ],
+      "company_name": "Eugene Technology Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -3120,6 +3534,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "083650"
+      ],
+      "company_name": "BHI Co. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "7795"
@@ -3147,6 +3570,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "089970"
+      ],
+      "company_name": "VM Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "MI"
@@ -3161,6 +3593,15 @@
         "AUTLF"
       ],
       "company_name": "Austal Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "089030"
+      ],
+      "company_name": "Techwing, Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -3188,6 +3629,15 @@
         "858055"
       ],
       "company_name": "Tennant Company",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "323280"
+      ],
+      "company_name": "TAESUNG CO., LTD.",
       "research_sector": "MACHINERY"
     },
     {
@@ -3426,6 +3876,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "077970"
+      ],
+      "company_name": "STX Engine Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "NESCO"
@@ -3462,11 +3921,20 @@
     },
     {
       "key": [
-        "TAIWAN",
-        "TPEX",
-        "3644"
+        "SOUTH KOREA",
+        "KRX",
+        "466100"
       ],
-      "company_name": "Linco Technology Co., Ltd.",
+      "company_name": "CLOBOT Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "195870"
+      ],
+      "company_name": "HAESUNG DS Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -3525,11 +3993,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "090710"
+      ],
+      "company_name": "Hyulim ROBOT Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "083450"
+      ],
+      "company_name": "Global Standard Technology Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "UNITED STATES",
         "FWB",
         "HYEA"
       ],
       "company_name": "Hyster-Yale, Inc. Class A",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "388720"
+      ],
+      "company_name": "Yuilrobotics Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -3557,6 +4052,24 @@
         "2402"
       ],
       "company_name": "Beijing SinoHytec Co., Ltd. Class H",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "090360"
+      ],
+      "company_name": "Robostar Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "MUEL"
+      ],
+      "company_name": "Mueller (PAUL) Co.",
       "research_sector": "MACHINERY"
     },
     {
@@ -3593,6 +4106,15 @@
         "3013"
       ],
       "company_name": "Chenming Electronic Technology Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "074600"
+      ],
+      "company_name": "WONIK QnC Corporation",
       "research_sector": "MACHINERY"
     },
     {
@@ -3651,11 +4173,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "036530"
+      ],
+      "company_name": "SNT Holdings CO., LTD",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "161580"
+      ],
+      "company_name": "Philoptics Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "CHINA",
         "SZSE",
         "200530"
       ],
       "company_name": "Bingshan Refrigeration & Heat Transfer Technologies Co., Ltd. Class B",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "MCCK"
+      ],
+      "company_name": "Mestek, Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -3678,11 +4227,47 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "075580"
+      ],
+      "company_name": "SEJIN HEAVY INDUSTRIES CO., LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "222080"
+      ],
+      "company_name": "SFA NEXEL Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "GERMANY",
         "GETTEX",
         "HG1"
       ],
       "company_name": "Homag Group AG",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "171090"
+      ],
+      "company_name": "SUNIC SYSTEM Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "053610"
+      ],
+      "company_name": "Protec Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -3750,6 +4335,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "023160"
+      ],
+      "company_name": "TK Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "HONG KONG",
         "SGX",
         "T15"
@@ -3804,6 +4398,33 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "100840"
+      ],
+      "company_name": "SNTEnergy Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "348340"
+      ],
+      "company_name": "Neuromeka Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "036810"
+      ],
+      "company_name": "Fine Semitech Corp",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "3059"
@@ -3827,6 +4448,24 @@
         "5GD"
       ],
       "company_name": "Sunpower Group Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "082270"
+      ],
+      "company_name": "GemVax & KAEL Co Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "079900"
+      ],
+      "company_name": "Junjin Construction & Robot Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -3876,6 +4515,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "484870"
+      ],
+      "company_name": "MNC Solution Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "SWITZERLAND",
         "LSE",
         "0QQF"
@@ -3894,11 +4542,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "101160"
+      ],
+      "company_name": "Worldex Industry & Trading Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "JAPAN",
         "MUN",
         "NIP"
       ],
       "company_name": "Nippon Sharyo,Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "125490"
+      ],
+      "company_name": "Hallacast Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -3917,6 +4583,24 @@
         "7929"
       ],
       "company_name": "CerTone Heat Solution Co Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "077360"
+      ],
+      "company_name": "Duksan Hi-Metal Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "024850"
+      ],
+      "company_name": "HLB innoVation Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -3984,6 +4668,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "241770"
+      ],
+      "company_name": "MECARO Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "5292"
@@ -3998,6 +4691,24 @@
         "4571"
       ],
       "company_name": "Khgears International Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "013030"
+      ],
+      "company_name": "Hy-Lok Corp.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "089890"
+      ],
+      "company_name": "KOSES Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -4020,6 +4731,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "029460"
+      ],
+      "company_name": "KC CO., LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "HONG KONG",
         "TRADEGATE",
         "L5D"
@@ -4029,11 +4749,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "160980"
+      ],
+      "company_name": "CYMECHS INC.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "033160"
+      ],
+      "company_name": "MK Electron Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "2236"
       ],
       "company_name": "Patec Precision Industry Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "330860"
+      ],
+      "company_name": "NEPES ARK CORP.",
       "research_sector": "MACHINERY"
     },
     {
@@ -4083,6 +4830,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "117730"
+      ],
+      "company_name": "T-ROBOTICS Co. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "GERMANY",
         "VIE",
         "TTR1"
@@ -4092,11 +4848,65 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "488900"
+      ],
+      "company_name": "Vitzro Nextech Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TPEX",
         "6654"
       ],
       "company_name": "Tian Zheng International Precision Machinery Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "114810"
+      ],
+      "company_name": "Hansol IONES Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "098070"
+      ],
+      "company_name": "Hantech, Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "092460"
+      ],
+      "company_name": "Hanla IMS Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "011930"
+      ],
+      "company_name": "SHINSUNG E&G Co.LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "159010"
+      ],
+      "company_name": "ASFLOW CO.,LTD",
       "research_sector": "MACHINERY"
     },
     {
@@ -4155,11 +4965,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "036890"
+      ],
+      "company_name": "Jinsung T.E.C. Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "025560"
+      ],
+      "company_name": "Mirae Corp",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "COASTAL"
       ],
       "company_name": "Coastal Contracts Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "002900"
+      ],
+      "company_name": "TYM CORPORATION",
       "research_sector": "MACHINERY"
     },
     {
@@ -4173,15 +5010,6 @@
     },
     {
       "key": [
-        "TAIWAN",
-        "TPEX",
-        "1569"
-      ],
-      "company_name": "Bin Chuan Enterprise Co., Ltd.",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
         "INDIA",
         "BSE",
         "KABRAEXTRU"
@@ -4191,11 +5019,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "484810"
+      ],
+      "company_name": "TXR Robotics Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "GERMANY",
         "VIE",
         "AAGG"
       ],
       "company_name": "Aumann AG",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "064820"
+      ],
+      "company_name": "Cape Industries Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "060720"
+      ],
+      "company_name": "KH Vatec Co., Ltd",
       "research_sector": "MACHINERY"
     },
     {
@@ -4214,6 +5069,33 @@
         "1J4"
       ],
       "company_name": "JEP Holdings Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "036200"
+      ],
+      "company_name": "Union Semiconductor Equipment Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "114190"
+      ],
+      "company_name": "KANGWON ENERGY Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "475400"
+      ],
+      "company_name": "CMES Robotics Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -4290,11 +5172,11 @@
     },
     {
       "key": [
-        "TAIWAN",
-        "TPEX",
-        "1580"
+        "SOUTH KOREA",
+        "KRX",
+        "452280"
       ],
-      "company_name": "Sinmag Equipment Corporation",
+      "company_name": "HanSun Engineering Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -4317,20 +5199,29 @@
     },
     {
       "key": [
-        "TAIWAN",
-        "TPEX",
-        "8098"
+        "SOUTH KOREA",
+        "KRX",
+        "0008Z0"
       ],
-      "company_name": "Duratek Inc",
+      "company_name": "S&SYS Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "TAIWAN",
-        "TPEX",
-        "3310"
+        "SOUTH KOREA",
+        "KRX",
+        "014940"
       ],
-      "company_name": "Chialin Precision Industrial Co., Ltd.",
+      "company_name": "Oriental Precision & Engineering Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "459510"
+      ],
+      "company_name": "Naurobotics Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -4389,11 +5280,47 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "000490"
+      ],
+      "company_name": "DAEDONG CORPORATION",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "272110"
+      ],
+      "company_name": "KnJ Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "382800"
+      ],
+      "company_name": "GnBS eco Co.,Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "AMBEST"
       ],
       "company_name": "Ambest Group Berhad",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "036560"
+      ],
+      "company_name": "KZ Precision Corporation",
       "research_sector": "MACHINERY"
     },
     {
@@ -4416,11 +5343,65 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "078150"
+      ],
+      "company_name": "HB Technology Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "094820"
+      ],
+      "company_name": "ILJIN POWER CO., LTD",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "045390"
+      ],
+      "company_name": "DAEA TI Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "ROTO"
       ],
       "company_name": "Roto Pumps Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "372170"
+      ],
+      "company_name": "YUNSUNG F&C Co.,Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "004380"
+      ],
+      "company_name": "Samik THK Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "187870"
+      ],
+      "company_name": "DEVICE CO.,Ltd",
       "research_sector": "MACHINERY"
     },
     {
@@ -4488,6 +5469,24 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "469610"
+      ],
+      "company_name": "Innotech Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "086670"
+      ],
+      "company_name": "BMT Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "1528"
@@ -4515,6 +5514,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "012200"
+      ],
+      "company_name": "Keyang Electric Machinery Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "POLAND",
         "GETTEX",
         "2W1"
@@ -4529,6 +5537,15 @@
         "4555"
       ],
       "company_name": "Taiwan Chelic Corp. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "322310"
+      ],
+      "company_name": "AUROS TECHNOLOGY INC.",
       "research_sector": "MACHINERY"
     },
     {
@@ -4551,6 +5568,24 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "101360"
+      ],
+      "company_name": "Eco&Dream Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "101970"
+      ],
+      "company_name": "Wooyang HC Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "FAVCO"
@@ -4560,11 +5595,29 @@
     },
     {
       "key": [
+        "UNITED STATES",
+        "OTC",
+        "BURCA"
+      ],
+      "company_name": "Burnham Holdings, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TPEX",
         "4527"
       ],
       "company_name": "Kuen Ling Machinery Refrigerating Co.,Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "140670"
+      ],
+      "company_name": "RS Automation Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -4614,6 +5667,24 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "210540"
+      ],
+      "company_name": "DY POWER Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "232680"
+      ],
+      "company_name": "RAON ROBOTICS Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "7631"
@@ -4632,11 +5703,47 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "095190"
+      ],
+      "company_name": "SHINHWAPRITECH CO. LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "333430"
+      ],
+      "company_name": "IL SEUNG Co. LTD",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "267320"
+      ],
+      "company_name": "Naintech Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "GERMANY",
         "HAM",
         "HP3A"
       ],
       "company_name": "Ringmetall SE",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "073010"
+      ],
+      "company_name": "KSP Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -4659,11 +5766,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "282880"
+      ],
+      "company_name": "COWINTECH CO. LTD",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TPEX",
         "7709"
       ],
       "company_name": "Honor Seiki Co. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "259630"
+      ],
+      "company_name": "mPlus Corp.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "053080"
+      ],
+      "company_name": "K-ENSOL CO. LTD.",
       "research_sector": "MACHINERY"
     },
     {
@@ -4677,6 +5811,51 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "017550"
+      ],
+      "company_name": "SOOSAN CEBOTICS",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "417010"
+      ],
+      "company_name": "NanoTIM Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "129920"
+      ],
+      "company_name": "Daesung Hi-Tech Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "041440"
+      ],
+      "company_name": "HYUNDAI EVERDIGM Corp.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "101170"
+      ],
+      "company_name": "WOORIM POWER TRAIN SOLUTION Co. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "GENETEC"
@@ -4686,11 +5865,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "013570"
+      ],
+      "company_name": "DY Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "108230"
+      ],
+      "company_name": "Toptec Corp.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "INDIA",
         "NSE",
         "PERMAGN"
       ],
       "company_name": "Permanent Magnets Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "209640"
+      ],
+      "company_name": "YJ Link Co., Ltd",
       "research_sector": "MACHINERY"
     },
     {
@@ -4731,15 +5937,6 @@
     },
     {
       "key": [
-        "TAIWAN",
-        "TPEX",
-        "2249"
-      ],
-      "company_name": "Young Shine Electric Co., Ltd.",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
         "INDIA",
         "NSE",
         "AXTEL"
@@ -4758,11 +5955,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "083500"
+      ],
+      "company_name": "FNS TECH Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "INDIA",
         "NSE",
         "TANKUP"
       ],
       "company_name": "Tankup Engineers Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "054920"
+      ],
+      "company_name": "Hancom WITH Inc",
       "research_sector": "MACHINERY"
     },
     {
@@ -4790,6 +6005,33 @@
         "0OGG"
       ],
       "company_name": "Catana Group SA",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "352090"
+      ],
+      "company_name": "Stormtec Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "049950"
+      ],
+      "company_name": "Meere Company Incorporated",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "141000"
+      ],
+      "company_name": "Viatron Technologies, Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -4830,6 +6072,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "217820"
+      ],
+      "company_name": "WONIK PNE CO. LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "SLP"
@@ -4848,6 +6099,24 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "007820"
+      ],
+      "company_name": "MX Robotics Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "015590"
+      ],
+      "company_name": "DKME Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TPEX",
         "5438"
@@ -4857,11 +6126,56 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "163560"
+      ],
+      "company_name": "DRB Industrial Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "NETHERLANDS",
         "GETTEX",
         "8J30"
       ],
       "company_name": "Ebusco Holding N.V.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "011700"
+      ],
+      "company_name": "Hanshin Machinery Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "004840"
+      ],
+      "company_name": "DRB Holding Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "104460"
+      ],
+      "company_name": "DYPNF Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "413390"
+      ],
+      "company_name": "MOT Co., LTD",
       "research_sector": "MACHINERY"
     },
     {
@@ -4893,11 +6207,65 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "120030"
+      ],
+      "company_name": "Chosun Welding Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "382840"
+      ],
+      "company_name": "ONEJOON Co. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "217190"
+      ],
+      "company_name": "Genesem, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "320000"
+      ],
+      "company_name": "HanWool Semiconductor, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "212710"
+      ],
+      "company_name": "Iste Co. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "HIL"
       ],
       "company_name": "HIL Industries Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "451220"
+      ],
+      "company_name": "IMT Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -4911,6 +6279,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "105740"
+      ],
+      "company_name": "DK-Lok Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "1541"
@@ -4920,11 +6297,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "000850"
+      ],
+      "company_name": "Hwacheon Machine Tool Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "417970"
+      ],
+      "company_name": "MODEL SOLUTION CO., LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TPEX",
         "1599"
       ],
       "company_name": "Aeontek Co Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "432470"
+      ],
+      "company_name": "KNS CO. LTD",
       "research_sector": "MACHINERY"
     },
     {
@@ -4947,6 +6351,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "277880"
+      ],
+      "company_name": "TSI Co.,Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "PMIBHD"
@@ -4965,11 +6378,47 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "000590"
+      ],
+      "company_name": "CS Holdings Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TPEX",
         "4523"
       ],
       "company_name": "Everbrite Technology Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "059270"
+      ],
+      "company_name": "Haisung Aero-Robotics Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "323350"
+      ],
+      "company_name": "DAWON NEXVIEW CO. LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "137080"
+      ],
+      "company_name": "NARAE NANOTECH CORPORATION",
       "research_sector": "MACHINERY"
     },
     {
@@ -4983,11 +6432,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "002700"
+      ],
+      "company_name": "SHINIL ELECTRONICS CO. LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "SINGAPORE",
         "SGX",
         "BKX"
       ],
       "company_name": "Yongmao Holdings Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "412350"
+      ],
+      "company_name": "Laserssel Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5001,6 +6468,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "126880"
+      ],
+      "company_name": "JNK Global Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "GERMANY",
         "LSX",
         "A0HGQS"
@@ -5010,11 +6486,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "419080"
+      ],
+      "company_name": "Enjet Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "010660"
+      ],
+      "company_name": "Hwacheon Machinery Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "JAPAN",
         "TSE",
         "6346"
       ],
       "company_name": "Kikukawa Enterprise,Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "215360"
+      ],
+      "company_name": "WOORY INDUSTRIAL CO.,LTD",
       "research_sector": "MACHINERY"
     },
     {
@@ -5037,6 +6540,33 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "096350"
+      ],
+      "company_name": "Daechang Solution Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "067170"
+      ],
+      "company_name": "Autech Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "092440"
+      ],
+      "company_name": "Kishin Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "UNIQUE"
@@ -5046,11 +6576,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "001560"
+      ],
+      "company_name": "CHEILGRINDING WHEEL INDUSTRIAL Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "HERCULES"
       ],
       "company_name": "Hercules Investments Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "054300"
+      ],
+      "company_name": "PanStar Enterprise Co., Ltd",
       "research_sector": "MACHINERY"
     },
     {
@@ -5069,6 +6617,24 @@
         "6360"
       ],
       "company_name": "Tokyo Automatic Machinery Works, Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "039610"
+      ],
+      "company_name": "HS VALVE CO LTD",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "241790"
+      ],
+      "company_name": "TEMC CNS Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5100,20 +6666,20 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "317830"
+      ],
+      "company_name": "SP SYSTEMS Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "CANADA",
         "OTC",
         "DYFSF"
       ],
       "company_name": "Dynacert Inc",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "TAIWAN",
-        "TPEX",
-        "5267"
-      ],
-      "company_name": "Lung Pien Vacuum Industry Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5132,6 +6698,15 @@
         "DAR"
       ],
       "company_name": "Datron AG",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "048770"
+      ],
+      "company_name": "TPC Robotics Corporation",
       "research_sector": "MACHINERY"
     },
     {
@@ -5181,11 +6756,65 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "317850"
+      ],
+      "company_name": "DAEMO Engineering Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "053160"
+      ],
+      "company_name": "FreeMs Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "019990"
+      ],
+      "company_name": "Enertork Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "317870"
+      ],
+      "company_name": "Envioneer Co. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "217500"
+      ],
+      "company_name": "Russell Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "JAPAN",
         "FSE",
         "5953"
       ],
       "company_name": "Showa Manufacturing Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "321260"
+      ],
+      "company_name": "PRO2000 CO.,LTD.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5208,6 +6837,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "480370"
+      ],
+      "company_name": "CK Solution Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "CHINA",
         "HKEX",
         "1289"
@@ -5226,11 +6864,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "163280"
+      ],
+      "company_name": "Airrane Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "JAPAN",
         "TSE",
         "6396"
       ],
       "company_name": "Unozawa-Gumi Iron Works, Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "092780"
+      ],
+      "company_name": "DYP Co.,Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "066130"
+      ],
+      "company_name": "Haatz Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5280,11 +6945,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "065130"
+      ],
+      "company_name": "Top Engineering Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "ARGENTINA",
         "BCBA",
-        "AGRO.CI"
+        "AGRO"
       ],
       "company_name": "Agrometal SA",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "043340"
+      ],
+      "company_name": "Essen Tech Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5316,6 +6999,24 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "290670"
+      ],
+      "company_name": "DAEBO MAGNETIC CO.,LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "068330"
+      ],
+      "company_name": "ilShinbiobase Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TPEX",
         "4575"
@@ -5325,11 +7026,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "178780"
+      ],
+      "company_name": "ILWOUL GML Co.Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "SINGAPORE",
         "SGX",
         "1Y1"
       ],
       "company_name": "9R Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "258610"
+      ],
+      "company_name": "CAELUM Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5379,11 +7098,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "023960"
+      ],
+      "company_name": "SC Engineering Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "HONG KONG",
         "HKEX",
         "8080"
       ],
       "company_name": "North Asia Strategic Holdings Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "049800"
+      ],
+      "company_name": "Woojin Plaimm Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "089140"
+      ],
+      "company_name": "NEXTURN&ROLLKOREA Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5397,11 +7143,29 @@
     },
     {
       "key": [
+        "UNITED STATES",
+        "OTC",
+        "HIPH"
+      ],
+      "company_name": "American Premium Water Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "PRESTAR"
       ],
       "company_name": "Prestar Resources Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "051490"
+      ],
+      "company_name": "Nara Mold & Die Co., Ltd",
       "research_sector": "MACHINERY"
     },
     {
@@ -5415,11 +7179,20 @@
     },
     {
       "key": [
-        "TAIWAN",
-        "TPEX",
-        "4431"
+        "SOUTH KOREA",
+        "KRX",
+        "050860"
       ],
-      "company_name": "Mytrex Health Technologies, Inc.",
+      "company_name": "Asia Technology Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "352700"
+      ],
+      "company_name": "CNTUS Co.Ltd",
       "research_sector": "MACHINERY"
     },
     {
@@ -5429,6 +7202,69 @@
         "TRSG"
       ],
       "company_name": "Tungray Technologies Inc",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "469750"
+      ],
+      "company_name": "IVISIONWORKS CO. LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "037330"
+      ],
+      "company_name": "Inzi Display Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "148930"
+      ],
+      "company_name": "HYTC CO., LTD",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "119500"
+      ],
+      "company_name": "Formetal Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "096630"
+      ],
+      "company_name": "S Connect Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "376180"
+      ],
+      "company_name": "Picogram Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "215790"
+      ],
+      "company_name": "INNO INSTRUMENT INC.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5489,9 +7325,27 @@
       "key": [
         "SOUTH KOREA",
         "KRX",
+        "123840"
+      ],
+      "company_name": "NUON CO. LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
         "032860"
       ],
       "company_name": "Lamy Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "311060"
+      ],
+      "company_name": "LAT CO., LTD.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5559,6 +7413,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "290520"
+      ],
+      "company_name": "Shindo Eng Lab Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "LIFTECH"
@@ -5577,11 +7440,47 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "238490"
+      ],
+      "company_name": "HIMS CO. LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "257370"
+      ],
+      "company_name": "People & Technology Ms, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "049120"
+      ],
+      "company_name": "Fine DNC Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "ASM"
       ],
       "company_name": "ASM Automation Group Berhad",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "044780"
+      ],
+      "company_name": "HK Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5600,6 +7499,15 @@
         "MMSV"
       ],
       "company_name": "MMS Ventures Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "054220"
+      ],
+      "company_name": "Vitzrosys Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5631,6 +7539,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "101680"
+      ],
+      "company_name": "HNK Machine Tool Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "FINLAND",
         "LSE",
         "0EYY"
@@ -5640,11 +7557,74 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "076080"
+      ],
+      "company_name": "Welcron Hantec Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "195990"
+      ],
+      "company_name": "RootK Co. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "455180"
+      ],
+      "company_name": "KGA Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "200230"
+      ],
+      "company_name": "TELCON RF PHARMACEUTICAL. Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "VIETNAM",
         "HNX",
         "AME"
       ],
       "company_name": "Alphanam E&C Joint Stock Company",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "063760"
+      ],
+      "company_name": "ELP Corp.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "PHILIPPINES",
+        "OTC",
+        "DELX"
+      ],
+      "company_name": "Delex Healthcare Group Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "043360"
+      ],
+      "company_name": "DIGITAL GRAPHICS Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5721,11 +7701,47 @@
     },
     {
       "key": [
+        "UNITED STATES",
+        "OTC",
+        "OCLN"
+      ],
+      "company_name": "OriginClear, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "POWER"
       ],
       "company_name": "POWERTECHNIC GROUP BHD",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "0070X0"
+      ],
+      "company_name": "Stechm Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "240600"
+      ],
+      "company_name": "Yujin Technology Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "CVAT"
+      ],
+      "company_name": "Cavitation Technologies, Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5748,11 +7764,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "103230"
+      ],
+      "company_name": "S & W Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "INDIA",
         "NSE",
         "ITL"
       ],
       "company_name": "ITL Industries Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "131180"
+      ],
+      "company_name": "DILLI ILLUSTRATE INC.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5771,6 +7805,33 @@
         "KRKOP"
       ],
       "company_name": "TKZ Krasny Kotelshchik",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "050090"
+      ],
+      "company_name": "BK Holdings CO. LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "176590"
+      ],
+      "company_name": "KONASOL CO. LTD",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "177350"
+      ],
+      "company_name": "Vessel Co., Ltd. (South Korea)",
       "research_sector": "MACHINERY"
     },
     {
@@ -5804,9 +7865,36 @@
       "key": [
         "SOUTH KOREA",
         "KRX",
+        "079950"
+      ],
+      "company_name": "INVENIA Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
         "169670"
       ],
       "company_name": "Kostek Systems, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "101000"
+      ],
+      "company_name": "KS Industry Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "084180"
+      ],
+      "company_name": "Soosung Webtoon Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5834,6 +7922,15 @@
         "3064"
       ],
       "company_name": "Astro Corp.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "TKOI"
+      ],
+      "company_name": "Telkonet, Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -5973,11 +8070,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "234070"
+      ],
+      "company_name": "A ONE CUBETECH CO. LTD.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "CNASIA"
       ],
       "company_name": "CN Asia Corporation Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "CANADA",
+        "OTC",
+        "FUNN"
+      ],
+      "company_name": "Amfil Technologies Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -6027,6 +8142,15 @@
     },
     {
       "key": [
+        "UNITED STATES",
+        "OTC",
+        "RCHN"
+      ],
+      "company_name": "Rouchon Industries, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "HAWAENG"
@@ -6050,6 +8174,42 @@
         "SARTHAKIND"
       ],
       "company_name": "Sarthak Industries Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "ELEK"
+      ],
+      "company_name": "Elektros Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "DKSC"
+      ],
+      "company_name": "Dakshidin Corp.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "BKTH"
+      ],
+      "company_name": "Breakthrough Chemistry Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "269620"
+      ],
+      "company_name": "SYSWORK Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -6086,6 +8246,15 @@
         "RGEN"
       ],
       "company_name": "Regenera Insights Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "WTII"
+      ],
+      "company_name": "Water Technologies International,Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -6155,9 +8324,36 @@
       "key": [
         "UNITED STATES",
         "OTC",
+        "TMSH"
+      ],
+      "company_name": "TransGlobal Assets, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "BFCH"
+      ],
+      "company_name": "BitFrontier Capital Holdings, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
         "OWUV"
       ],
       "company_name": "One World Universe Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "GWTR"
+      ],
+      "company_name": "Global Water Technologies, Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -6191,6 +8387,15 @@
       "key": [
         "UNITED STATES",
         "OTC",
+        "GARB"
+      ],
+      "company_name": "GARB OIL & POWER CORP",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
         "GNAL"
       ],
       "company_name": "GENERATION ALPHA INC",
@@ -6200,9 +8405,63 @@
       "key": [
         "UNITED STATES",
         "OTC",
+        "TPII"
+      ],
+      "company_name": "Triad Pro Innovators, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "RINO"
+      ],
+      "company_name": "RINO International Corp.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
         "SENR"
       ],
       "company_name": "Strategic Environmental & Energy Resources, Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "SVTE"
+      ],
+      "company_name": "SERVICE TEAM INC",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "FWDG"
+      ],
+      "company_name": "FUTUREWORLD CORP",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "INQD"
+      ],
+      "company_name": "Indoor Harvest Corp.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "GRNH"
+      ],
+      "company_name": "GreenGro Technologies, Inc.",
       "research_sector": "MACHINERY"
     },
     {
@@ -6486,6 +8745,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "373220"
+      ],
+      "company_name": "LG Energy Solution Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "UNITED STATES",
         "MUN",
         "AK1"
@@ -6540,6 +8808,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "006400"
+      ],
+      "company_name": "Samsung SDI Co., Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "UNITED STATES",
         "TRADEGATE",
         "HUEC"
@@ -6549,11 +8826,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "010120"
+      ],
+      "company_name": "LS Electric Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "267260"
+      ],
+      "company_name": "HD Hyundai Electric",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "JAPAN",
         "LS",
         "878403"
       ],
       "company_name": "Nidec Corporation",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "298040"
+      ],
+      "company_name": "Hyosung Heavy Industries Corp.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -6711,6 +9015,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "247540"
+      ],
+      "company_name": "Ecopro BM Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "1519"
@@ -6743,6 +9056,15 @@
         "SUZLON"
       ],
       "company_name": "Suzlon Energy Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "006260"
+      ],
+      "company_name": "LS Corp.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -6810,11 +9132,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "062040"
+      ],
+      "company_name": "Sanil Electric Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "UNITED STATES",
         "LSX",
         "A2QJX9"
       ],
       "company_name": "QuantumScape Corporation Class A",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "000500"
+      ],
+      "company_name": "Gaon Cable Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -6878,6 +9218,15 @@
         "KODT2"
       ],
       "company_name": "Koncar-Distributirni i specijalni transformatori d.d. Pref.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "103590"
+      ],
+      "company_name": "Iljin Electric Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -6981,11 +9330,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "064760"
+      ],
+      "company_name": "Tokai Carbon Korea Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "CHINA",
         "HKEX",
         "9981"
       ],
       "company_name": "Shenzhen Woer Heat-Shrinkable Material Co., Ltd. Class H",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "058610"
+      ],
+      "company_name": "SPG Co., Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "000240"
+      ],
+      "company_name": "HANKOOK & COMPANY CO., LTD.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7071,6 +9447,24 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "010170"
+      ],
+      "company_name": "Taihan Fiberoptics Co., Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "112610"
+      ],
+      "company_name": "CS Wind Corp.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "UNITED KINGDOM",
         "OTC",
         "VLXGF"
@@ -7094,6 +9488,15 @@
         "ATLANTAELE"
       ],
       "company_name": "Atlanta Electricals Limited",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "020150"
+      ],
+      "company_name": "LOTTE ENERGY MATERIALS CORPORATION",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7134,6 +9537,24 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "229640"
+      ],
+      "company_name": "LS Eco Energy Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "078600"
+      ],
+      "company_name": "Daejoo Electronic Materials Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "QPOWER"
@@ -7148,6 +9569,15 @@
         "ESABINDIA"
       ],
       "company_name": "Esab India Limited",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "082920"
+      ],
+      "company_name": "VITZROCELL Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7211,6 +9641,15 @@
         "006345"
       ],
       "company_name": "Daewon Cable Co Ltd Pfd Registered Shs Non-Voting",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "006340"
+      ],
+      "company_name": "Daewon Cable Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7323,6 +9762,51 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "252990"
+      ],
+      "company_name": "SEMCNS Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "213420"
+      ],
+      "company_name": "DUK SAN NEOLUX CO.LTD",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "119850"
+      ],
+      "company_name": "GnCenergy Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "033100"
+      ],
+      "company_name": "Cheryong Electric Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "004490"
+      ],
+      "company_name": "SEBANG GLOBAL BATTERY Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "LGBBROSLTD"
@@ -7391,6 +9875,15 @@
         "HIRECT"
       ],
       "company_name": "Hind Rectifiers Limited",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "160190"
+      ],
+      "company_name": "HIGEN RNM Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7593,6 +10086,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "015860"
+      ],
+      "company_name": "Iljin Holdings Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "SINGAPORE",
         "SGX",
         "G20"
@@ -7611,20 +10113,29 @@
     },
     {
       "key": [
-        "TAIWAN",
-        "TWSE",
-        "4540"
+        "SOUTH KOREA",
+        "KRX",
+        "393890"
       ],
-      "company_name": "TBI MOTION TECHNOLOGY CO LTD",
+      "company_name": "W-SCOPE CHUNGJU PLANT Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "NATM"
+      ],
+      "company_name": "Natama Investment Group Inc.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
       "key": [
         "TAIWAN",
-        "TPEX",
-        "6940"
+        "TWSE",
+        "4540"
       ],
-      "company_name": "Gus Technology Co Ltd",
+      "company_name": "TBI MOTION TECHNOLOGY CO LTD",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7638,11 +10149,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "026890"
+      ],
+      "company_name": "STIC Investments, Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "UNITED STATES",
         "GETTEX",
         "G6G0"
       ],
       "company_name": "GrafTech International Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "232530"
+      ],
+      "company_name": "Energy Material Technology Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7701,6 +10230,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "018000"
+      ],
+      "company_name": "Unison Co Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "CANADA",
         "NEO",
         "HMM.A"
@@ -7710,11 +10248,56 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "024840"
+      ],
+      "company_name": "KBI METAL Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "151860"
+      ],
+      "company_name": "KG Eco Solution Co.,Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "091580"
+      ],
+      "company_name": "Sangsin Energy Display Precision Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "378340"
+      ],
+      "company_name": "PHILENERGY CO., LTD.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "6224"
       ],
       "company_name": "Polytronics Technology Corp.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "042370"
+      ],
+      "company_name": "Vitzro Tech Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7755,6 +10338,33 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "290690"
+      ],
+      "company_name": "ARIBIO Holdings Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "065710"
+      ],
+      "company_name": "Seoho Electric Co., Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "125020"
+      ],
+      "company_name": "TC Materials Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "7821"
@@ -7782,11 +10392,20 @@
     },
     {
       "key": [
-        "TAIWAN",
-        "TPEX",
-        "5209"
+        "SOUTH KOREA",
+        "KRX",
+        "243840"
       ],
-      "company_name": "CTCI Advanced Systems Inc.",
+      "company_name": "SHIN HEUNG ENERGY & ELECTRONICS Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "264850"
+      ],
+      "company_name": "Elensys Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7796,6 +10415,24 @@
         "PWRWELL"
       ],
       "company_name": "Powerwell Holdings Bhd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "388050"
+      ],
+      "company_name": "G2Power Co. Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "307180"
+      ],
+      "company_name": "IL CO.,LTD.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7814,6 +10451,24 @@
         "888615"
       ],
       "company_name": "Ultralife Corporation",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "199820"
+      ],
+      "company_name": "CHEIL ELECTRIC CO.,LTD.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "260870"
+      ],
+      "company_name": "SK Signet Inc.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7845,6 +10500,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "108380"
+      ],
+      "company_name": "Daeyang Electric Co., Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "1616"
@@ -7863,11 +10527,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "092070"
+      ],
+      "company_name": "DNF Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "6799"
       ],
       "company_name": "M3 Technology Inc",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "153890"
+      ],
+      "company_name": "Justek, Inc.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7935,11 +10617,38 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "413630"
+      ],
+      "company_name": "CP System Co., Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "2462"
       ],
       "company_name": "TAIWAN LINE TEK ELECTRONIC CO., LTD.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "388790"
+      ],
+      "company_name": "LiComm Co. Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "458650"
+      ],
+      "company_name": "Sungwoo Co. Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -7998,11 +10707,47 @@
     },
     {
       "key": [
+        "UNITED STATES",
+        "OTC",
+        "ATVK"
+      ],
+      "company_name": "Ameritek Ventures",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "6558"
       ],
       "company_name": "SYNergy ScienTech Corp.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "CHINA",
+        "OTC",
+        "TANAF"
+      ],
+      "company_name": "Tian'an Technology Group Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "125210"
+      ],
+      "company_name": "AMOGREENTECH Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "419050"
+      ],
+      "company_name": "SAMKEE ENERGY SOLUTIONS CO. LTD",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8088,15 +10833,6 @@
     },
     {
       "key": [
-        "TAIWAN",
-        "TPEX",
-        "2252"
-      ],
-      "company_name": "CUBTEK Inc.",
-      "research_sector": "POWER_EQUIPMENT"
-    },
-    {
-      "key": [
         "AUSTRALIA",
         "OTC",
         "CWGYF"
@@ -8106,11 +10842,47 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "294630"
+      ],
+      "company_name": "SUNAM CO., LTD",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "007610"
+      ],
+      "company_name": "Seondo Electric Co., Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "360070"
+      ],
+      "company_name": "Top Material Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "CANADA",
         "NEO",
         "LEM"
       ],
       "company_name": "Leading Edge Materials Corp.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "WNDW"
+      ],
+      "company_name": "SolarWindow Technologies, Inc.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8151,6 +10923,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "136150"
+      ],
+      "company_name": "Wonil T&I Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TPEX",
         "3516"
@@ -8165,6 +10946,15 @@
         "6380"
       ],
       "company_name": "Oriental Chain Mfg. Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "459100"
+      ],
+      "company_name": "WiTs Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8223,6 +11013,24 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "042110"
+      ],
+      "company_name": "SCD Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "273640"
+      ],
+      "company_name": "YM Tech Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TPEX",
         "7816"
@@ -8250,6 +11058,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "262260"
+      ],
+      "company_name": "APRO Co., LTD",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "TAIWAN",
         "TWSE",
         "2496"
@@ -8264,6 +11081,24 @@
         "SUCCESS"
       ],
       "company_name": "Success Transformer Corp. Bhd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "479960"
+      ],
+      "company_name": "Winners Elec Co. Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "189860"
+      ],
+      "company_name": "SEOJEON ELECTRIC MACHINERY CO., LTD.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8286,6 +11121,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "109080"
+      ],
+      "company_name": "Opticis Co., Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "RMC"
@@ -8300,15 +11144,6 @@
         "FCLI"
       ],
       "company_name": "Full Circle Lithium Corp",
-      "research_sector": "POWER_EQUIPMENT"
-    },
-    {
-      "key": [
-        "TAIWAN",
-        "TPEX",
-        "4972"
-      ],
-      "company_name": "Tons Lightology Inc.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8354,6 +11189,24 @@
         "6943"
       ],
       "company_name": "NKK SWITCHES CO., LTD.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "AUSI"
+      ],
+      "company_name": "Aura Systems, Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "452200"
+      ],
+      "company_name": "Mintech Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8421,6 +11274,15 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "256150"
+      ],
+      "company_name": "Handok Clean Tech Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "MALAYSIA",
         "MYX",
         "HEXCAP"
@@ -8439,11 +11301,29 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "128540"
+      ],
+      "company_name": "ECOCAB CO. LTD",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "JAPAN",
         "TSE",
         "5939"
       ],
       "company_name": "Otani Kogyo Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "308170"
+      ],
+      "company_name": "CTR Mobility Co.,Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8462,6 +11342,15 @@
         "ASSAD"
       ],
       "company_name": "L'Accumulateur Tunisien Assad",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "053060"
+      ],
+      "company_name": "SaeDong Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8489,6 +11378,24 @@
         "5AI"
       ],
       "company_name": "H2G Green Limited",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "013810"
+      ],
+      "company_name": "Speco Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "091340"
+      ],
+      "company_name": "S&K POLYTEC Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8538,6 +11445,24 @@
     },
     {
       "key": [
+        "UNITED STATES",
+        "OTC",
+        "NEWH"
+      ],
+      "company_name": "NewHydrogen Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "434190"
+      ],
+      "company_name": "Talos Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "SWITZERLAND",
         "LSE",
         "0R3Q"
@@ -8552,6 +11477,15 @@
         "037400"
       ],
       "company_name": "WOOREE ENTERPRISE CO. LTD",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "012340"
+      ],
+      "company_name": "NUINTEK Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8583,11 +11517,29 @@
     },
     {
       "key": [
+        "UNITED STATES",
+        "OTC",
+        "CEIN"
+      ],
+      "company_name": "Camber Energy, Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "BONLON"
       ],
       "company_name": "Bonlon Industries Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "CYBL"
+      ],
+      "company_name": "Cyberlux Corp.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8615,6 +11567,24 @@
         "FOS"
       ],
       "company_name": "FOS Capital Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "189350"
+      ],
+      "company_name": "Coset, Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "ASTO"
+      ],
+      "company_name": "Astro Communications, Inc.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8682,6 +11652,15 @@
     },
     {
       "key": [
+        "UNITED STATES",
+        "OTC",
+        "PWDY"
+      ],
+      "company_name": "Powerdyne International, Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "VIETNAM",
         "HNX",
         "VTH"
@@ -8736,6 +11715,15 @@
     },
     {
       "key": [
+        "UNITED STATES",
+        "OTC",
+        "TOGI"
+      ],
+      "company_name": "TurnOnGreen, Inc",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "CANADA",
         "OTC",
         "EGTYF"
@@ -8786,6 +11774,24 @@
         "PTOS"
       ],
       "company_name": "P2 Solar, Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "QUAN"
+      ],
+      "company_name": "Quantum International Corp",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "NVVE"
+      ],
+      "company_name": "Nuvve Holding Corp.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8882,6 +11888,15 @@
       "key": [
         "UNITED STATES",
         "OTC",
+        "CHGI"
+      ],
+      "company_name": "China Carbon Graphite Group, Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
         "HLXW"
       ],
       "company_name": "HELIX WIND CORP",
@@ -8903,6 +11918,51 @@
         "AERN"
       ],
       "company_name": "AER ENERGY RESOURCES INC",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "CHINA",
+        "OTC",
+        "JBZY"
+      ],
+      "company_name": "JB&ZJMY HOLDING COMPANY INC",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "NXUR"
+      ],
+      "company_name": "Nxu Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "BFYW"
+      ],
+      "company_name": "Better For You Wellness Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "UNITED STATES",
+        "OTC",
+        "SESI"
+      ],
+      "company_name": "SES SOLAR INC",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "052960"
+      ],
+      "company_name": "3C Tae Yang Co., Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -8979,6 +12039,15 @@
     },
     {
       "key": [
+        "CANADA",
+        "OTC",
+        "CECBF"
+      ],
+      "company_name": "SALTBAE CAPITAL CORP",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "VIETNAM",
         "UPCOM",
         "TGP"
@@ -9003,6 +12072,15 @@
       ],
       "company_name": "Vinacap Telecom Electronics Joint Stock Co",
       "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "009540"
+      ],
+      "company_name": "HD KOREA SHIPBUILDING & OFFSHORE ENGINEERING CO. LTD.",
+      "research_sector": "SHIPBUILDING"
     },
     {
       "key": [
@@ -9060,6 +12138,24 @@
     },
     {
       "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "439260"
+      ],
+      "company_name": "DAEHAN SHIPBUILDING Co., Ltd.",
+      "research_sector": "SHIPBUILDING"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "071970"
+      ],
+      "company_name": "HD-Hyundai Marine Engine Co., Ltd.",
+      "research_sector": "SHIPBUILDING"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "KMEW"
@@ -9092,6 +12188,15 @@
         "SNC"
       ],
       "company_name": "Santierul Naval Constanta SA",
+      "research_sector": "SHIPBUILDING"
+    },
+    {
+      "key": [
+        "SOUTH KOREA",
+        "KRX",
+        "099410"
+      ],
+      "company_name": "Dongbang Ship Machinery Co., Ltd.",
       "research_sector": "SHIPBUILDING"
     },
     {
