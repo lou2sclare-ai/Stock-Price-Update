@@ -1,5 +1,5 @@
 from __future__ import annotations
-from datetime import datetime
+from datetime import datetime, timedelta
 from math import isfinite
 from zoneinfo import ZoneInfo
 from src.utils.http import get
@@ -8,7 +8,6 @@ KST = ZoneInfo("Asia/Seoul")
 OFFICIAL_CHANGE_ORIGIN = "NAVER_KRX_MIRROR_DAILY_QUOTE"
 COMPARISON_BASE_SOURCE = "source_change_implied_base"
 PRICE_URL = "https://m.stock.naver.com/api/stock/{ticker}/price"
-BASIC_URL = "https://m.stock.naver.com/api/stock/{ticker}/basic"
 
 
 def _number(value):
@@ -33,9 +32,16 @@ def _date(value):
     return None
 
 
+def _completed_cutoff_date() -> str:
+    """Latest calendar date allowed to be published as a completed KRX close."""
+    now = datetime.now(KST)
+    cutoff = now.date() if now.hour >= 16 else now.date() - timedelta(days=1)
+    return cutoff.isoformat()
+
+
 def _json_rows(ticker: str) -> list[dict]:
     url = PRICE_URL.format(ticker=str(ticker).zfill(6))
-    payload = get(url, params={"pageSize": 5, "page": 1}, timeout=15, retries=3).json()
+    payload = get(url, params={"pageSize": 7, "page": 1}, timeout=15, retries=3).json()
     if isinstance(payload, list):
         return payload
     if isinstance(payload, dict):
@@ -46,15 +52,7 @@ def _json_rows(ticker: str) -> list[dict]:
     raise RuntimeError(f"Unexpected NAVER price payload: {ticker}")
 
 
-def _basic(ticker: str) -> dict:
-    url = BASIC_URL.format(ticker=str(ticker).zfill(6))
-    payload = get(url, timeout=15, retries=3).json()
-    if not isinstance(payload, dict):
-        raise RuntimeError(f"Unexpected NAVER basic payload: {ticker}")
-    return payload
-
-
-def _extract(row: dict) -> tuple[float, float, float | None, str | None]:
+def _extract(row: dict) -> tuple[float, float, float | None, str]:
     close = _number(row.get("closePrice") or row.get("close") or row.get("nowVal"))
     pct = _number(
         row.get("fluctuationsRatio")
@@ -76,48 +74,50 @@ def _extract(row: dict) -> tuple[float, float, float | None, str | None]:
         raise RuntimeError("NAVER/KRX-mirrored close unavailable")
     if pct is None or pct <= -100:
         raise RuntimeError("NAVER/KRX-mirrored daily return unavailable")
+    if not traded_at:
+        raise RuntimeError("NAVER/KRX-mirrored trade date unavailable")
     return close, pct, volume, traded_at
 
 
-def fetch_official_daily_quote(ticker: str) -> dict:
-    """Return a completed Korean daily quote from NAVER's KRX-mirrored feed.
+def _completed_rows(rows: list[dict]) -> list[tuple[float, float, float | None, str]]:
+    cutoff = _completed_cutoff_date()
+    parsed = []
+    for row in rows:
+        try:
+            item = _extract(row)
+        except Exception:
+            continue
+        if item[3] <= cutoff:
+            parsed.append(item)
+    parsed.sort(key=lambda x: x[3], reverse=True)
+    return parsed
 
-    GitHub-hosted jobs can be unreliable against the direct KRX endpoint. NAVER
-    already mirrors the exchange comparison data used on its stock page, so the
-    published close and daily percentage move are taken from that quote feed.
-    We never recompute the percentage from two historical raw closes.
+
+def fetch_official_daily_quote(ticker: str) -> dict:
+    """Return the latest *completed* Korean daily quote from NAVER's KRX mirror.
+
+    Before 16:00 KST NAVER may expose a same-day pre-open placeholder using the
+    prior close with a 0.0% move. We explicitly discard every row newer than the
+    completed-close cutoff, so a morning run uses the previous completed session
+    instead of falsely publishing today's date and zero returns.
     """
     ticker_key = str(ticker).zfill(6)
-    rows = []
-    try:
-        rows = _json_rows(ticker_key)
-        current = rows[0] if rows else None
-        if not current:
-            raise RuntimeError("NAVER price rows empty")
-        close, pct, volume, price_date = _extract(current)
-    except Exception as first_exc:
-        try:
-            current = _basic(ticker_key)
-            close, pct, volume, price_date = _extract(current)
-        except Exception as second_exc:
-            raise RuntimeError(
-                f"NAVER KRX-mirrored quote failed: {ticker_key}; "
-                f"price={first_exc}; basic={second_exc}"
-            ) from second_exc
+    rows = _json_rows(ticker_key)
+    completed = _completed_rows(rows)
+    if not completed:
+        raise RuntimeError(
+            f"No completed NAVER/KRX-mirrored daily quote: {ticker_key}; "
+            f"cutoff={_completed_cutoff_date()}"
+        )
 
+    close, pct, volume, price_date = completed[0]
     previous_date = None
     raw_previous = None
     raw_pct = None
-    if len(rows) >= 2:
-        try:
-            raw_previous, _, _, previous_date = _extract(rows[1])
-            if raw_previous and raw_previous > 0:
-                raw_pct = (close / raw_previous - 1.0) * 100.0
-        except Exception:
-            previous_date = _date(rows[1].get("localTradedAt") or rows[1].get("date"))
-            raw_previous = _number(rows[1].get("closePrice") or rows[1].get("close"))
-            if raw_previous and raw_previous > 0:
-                raw_pct = (close / raw_previous - 1.0) * 100.0
+    if len(completed) >= 2:
+        raw_previous, _, _, previous_date = completed[1]
+        if raw_previous and raw_previous > 0:
+            raw_pct = (close / raw_previous - 1.0) * 100.0
 
     comparison_base = close / (1.0 + pct / 100.0)
     comparison_base = float(round(comparison_base))
@@ -126,13 +126,10 @@ def fetch_official_daily_quote(ticker: str) -> dict:
 
     elapsed = None
     if price_date and previous_date:
-        try:
-            elapsed = (
-                datetime.strptime(price_date, "%Y-%m-%d").date()
-                - datetime.strptime(previous_date, "%Y-%m-%d").date()
-            ).days
-        except ValueError:
-            elapsed = None
+        elapsed = (
+            datetime.strptime(price_date, "%Y-%m-%d").date()
+            - datetime.strptime(previous_date, "%Y-%m-%d").date()
+        ).days
 
     return {
         "price": close,
