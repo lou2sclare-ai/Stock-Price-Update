@@ -16,6 +16,8 @@ jobs:
           python-version: '3.11'
       - name: Expand project files
         run: python bootstrap_project.py
+      - name: Keep workflow files unchanged
+        run: git restore .github/workflows/bootstrap.yml .github/workflows/daily-update.yml
       - name: Commit project files
         run: |
           git config user.name "github-actions[bot]"
