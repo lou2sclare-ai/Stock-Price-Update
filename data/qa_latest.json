@@ -3,13 +3,13 @@
   "errors": [],
   "warnings": [
     "Large daily move 50.0%: FluroTech Ltd. (TEST.H)",
-    "Large daily move 126.7%: KS인더스트리 (101000)"
+    "Large daily move 129.6%: KS인더스트리 (101000)"
   ],
-  "row_count": 2834,
+  "row_count": 2770,
   "domestic_count": 267,
   "missing_price_count": 0,
   "checked_on": "2026-08-18",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2586
+  "global_snapshot_count": 2738
 }
