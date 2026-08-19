@@ -6,6 +6,9 @@ from zoneinfo import ZoneInfo
 KST = ZoneInfo("Asia/Seoul")
 OFFICIAL_KR_CHANGE_ORIGIN = "NAVER_KRX_MIRROR_DAILY_QUOTE"
 OFFICIAL_KR_BASE_SOURCE = "source_exact_absolute_change"
+CLOSED_GLOBAL_SESSION_STATES = {
+    "out_of_session", "post_market", "pre_market", "holiday", "night"
+}
 
 
 def _completed_kr_cutoff() -> str:
@@ -37,6 +40,7 @@ def run(rows: list[dict], settings: dict) -> dict:
     kr_future_date_count = 0
     kr_inexact_change_count = 0
     unsafe_open_global_count = 0
+    unknown_global_session_count = 0
     kr_cutoff = _completed_kr_cutoff()
 
     for r in rows:
@@ -76,7 +80,11 @@ def run(rows: list[dict], settings: dict) -> dict:
         elif country != "KR":
             session = str(r.get("market_session") or "").strip().lower()
             status = str(r.get("data_status") or "")
-            if session == "regular" and not status.startswith("PRESERVED"):
+            if not session:
+                unknown_global_session_count += 1
+                if not status.startswith("PRESERVED") and status != "COMPLETED_HISTORICAL_FALLBACK":
+                    unsafe_open_global_count += 1
+            elif session not in CLOSED_GLOBAL_SESSION_STATES and not status.startswith("PRESERVED"):
                 unsafe_open_global_count += 1
 
         if r.get("corporate_action_adjusted"):
@@ -108,7 +116,7 @@ def run(rows: list[dict], settings: dict) -> dict:
     if kr_inexact_change_count:
         errors.append(f"Korean exact price-change arithmetic mismatch: {kr_inexact_change_count}/{domestic_count}")
     if unsafe_open_global_count:
-        errors.append(f"Open global regular-session prices would be published: {unsafe_open_global_count}")
+        errors.append(f"Unsafe/unknown global session prices would be published: {unsafe_open_global_count}")
 
     return {
         "status": "FAIL" if errors else ("REVIEW" if warnings else "PASS"),
@@ -122,6 +130,7 @@ def run(rows: list[dict], settings: dict) -> dict:
         "kr_future_date_count": kr_future_date_count,
         "kr_inexact_change_count": kr_inexact_change_count,
         "unsafe_open_global_count": unsafe_open_global_count,
+        "unknown_global_session_count": unknown_global_session_count,
         "missing_price_count": missing_prices,
         "corporate_action_adjustment_count": len(corporate_action_adjustments),
         "corporate_action_adjustments": corporate_action_adjustments[:100],
