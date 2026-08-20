@@ -4,7 +4,7 @@
   "warnings": [
     "Large daily move -42.9%: ESS Tech, Inc. (GWH)"
   ],
-  "row_count": 2726,
+  "row_count": 2708,
   "domestic_count": 267,
   "official_kr_return_count": 267,
   "kr_completed_cutoff": "2026-08-20",
@@ -21,13 +21,12 @@
   "fetch_errors": [],
   "global_snapshot_count": 2767,
   "update_scope": "ALL",
-  "refreshed_completed_global_count": 2436,
-  "preserved_open_or_unknown_global_count": 23,
-  "global_price_date_count": 2459,
+  "refreshed_completed_global_count": 2440,
+  "preserved_open_or_unknown_global_count": 1,
+  "global_price_date_count": 2441,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-08-18": 4,
-    "2026-08-19": 23,
-    "2026-08-20": 2432
+    "2026-08-19": 5,
+    "2026-08-20": 2436
   }
 }
