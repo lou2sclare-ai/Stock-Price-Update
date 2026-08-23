@@ -58,7 +58,10 @@ def run(rows: list[dict], settings: dict) -> dict:
         p = r.get("price")
         if p is None or p <= 0:
             missing_prices += 1
-            msg = f"Missing/invalid price: {ident}"
+            msg = (
+                f"완료 종가 미확보: {ident} — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. "
+                f"신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다."
+            )
             if qa_cfg.get("hard_fail_on_missing_price", False):
                 errors.append(msg)
             else:
@@ -131,9 +134,12 @@ def run(rows: list[dict], settings: dict) -> dict:
 
         pct = r.get("price_change_pct")
         if pct is not None and abs(float(pct)) >= max_move:
-            warnings.append(f"Large daily move {float(pct):.1f}%: {ident}")
+            warnings.append(
+                f"급등락 검토 {float(pct):+.1f}%: {ident} — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. "
+                f"계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
+            )
         if r.get("research_status") == "COVERAGE" and not r.get("target_price"):
-            warnings.append(f"Coverage without TP: {ident}")
+            warnings.append(f"Coverage without TP: {ident} — Coverage 상태이지만 목표주가가 없어 확인이 필요합니다.")
         if r.get("research_status") == "NR" and r.get("target_price"):
             errors.append(f"NR has TP: {ident}")
         if r.get("target_price") and r.get("target_currency") and r.get("currency") and r.get("target_currency") != r.get("currency"):
@@ -185,7 +191,8 @@ def run(rows: list[dict], settings: dict) -> dict:
     if severe_lagging_global:
         sample = severe_lagging_global[:5]
         warnings.append(
-            f"Global price-date freshness review: {len(severe_lagging_global)} securities lag their exchange by >=7 days; sample={sample}"
+            f"거래일 지연 검토: {len(severe_lagging_global)}개 종목이 동일 거래소 최신 거래일보다 7일 이상 늦습니다. "
+            f"휴장·거래정지·저유동성 여부를 확인할 REVIEW 항목입니다. sample={sample}"
         )
 
     kr_dates = [_parse_date(r.get("price_date")) for r in domestic]
