@@ -77,7 +77,6 @@ jobs:
             fi
           fi
 
-          # Delayed morning ALL jobs are unsafe after Asian regular sessions start.
           if [ "$SCOPE" = "ALL" ] && [ "$KST_HOUR" -ge 9 ]; then
             echo "ALL is unsafe at ${KST_HOUR}:${KST_MIN} KST; skipping."
             echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
@@ -85,9 +84,6 @@ jobs:
             exit 0
           fi
 
-          # SAFE_REFRESH is designed for after KRX close. Korea is refreshed,
-          # and overseas markets are refreshed only when their regular session
-          # is not open; open/unknown markets keep the last safe published value.
           if [ "$SCOPE" = "SAFE_REFRESH" ] && [ "$KST_HOUR" -lt 16 ]; then
             echo "SAFE_REFRESH is too early; skipping."
             echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
@@ -122,8 +118,58 @@ jobs:
         if: env.SKIP_UPDATE != 'true'
         run: python -m src.main
 
+      - name: Surface QA failure reason
+        if: failure() && env.SKIP_UPDATE != 'true'
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          p = Path('data/qa_latest.json')
+          if not p.exists():
+              print('::error title=Stock QA::QA file was not created; failure occurred before QA output.')
+              raise SystemExit(0)
+          qa = json.loads(p.read_text(encoding='utf-8'))
+          errors = qa.get('errors') or []
+          warnings = qa.get('warnings') or []
+          print(f"QA status: {qa.get('status')}")
+          print(f"Errors: {len(errors)} | Warnings: {len(warnings)}")
+          for msg in errors:
+              safe = str(msg).replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+              print(f"::error title=Stock QA blocked publication::{safe}")
+          for msg in warnings[:10]:
+              safe = str(msg).replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+              print(f"::warning title=Stock QA review::{safe}")
+          summary = os.environ.get('GITHUB_STEP_SUMMARY')
+          if summary:
+              with open(summary, 'a', encoding='utf-8') as f:
+                  f.write('## Stock QA failure details\n\n')
+                  f.write(f"**Status:** {qa.get('status')}  \n")
+                  f.write(f"**Errors:** {len(errors)} / **Warnings:** {len(warnings)}\n\n")
+                  if errors:
+                      f.write('### Blocking errors\n')
+                      for msg in errors:
+                          f.write(f"- {msg}\n")
+                  if warnings:
+                      f.write('\n### Review warnings\n')
+                      for msg in warnings[:20]:
+                          f.write(f"- {msg}\n")
+          PY
+
+      - name: Preserve QA diagnostics only
+        if: failure() && env.SKIP_UPDATE != 'true'
+        run: |
+          if [ -f data/qa_latest.json ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/qa_latest.json
+            git diff --cached --quiet || git commit -m "chore: QA diagnostic $(TZ=Asia/Seoul date +%F) $UPDATE_SCOPE [skip netlify]"
+            git push || true
+          fi
+
       - name: Commit successful outputs
-        if: env.SKIP_UPDATE != 'true'
+        if: success() && env.SKIP_UPDATE != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
