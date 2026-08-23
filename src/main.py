@@ -62,16 +62,22 @@ def copy_previous_price(row: dict, previous: dict | None) -> bool:
 
 
 def safe_global_snapshot_value(snapshot: dict | None) -> bool:
-    """True only when TradingView says the regular market is not open.
-
-    TradingView's market-status enum uses `market` for an open regular session,
-    not `regular`. Unknown states are treated as unsafe and preserve the last
-    completed value.
-    """
     if not snapshot:
         return False
     session = str(snapshot.get("market_session") or "").strip().lower()
     return session in CLOSED_GLOBAL_SESSION_STATES
+
+
+def _completed_snapshot_status(row: dict) -> str:
+    """Classify a completed overseas quote without inventing a prior reference.
+
+    Newly listed securities can have a valid completed close while TradingView
+    does not yet provide a previous-close comparison. In that case the close is
+    publishable, but day change fields must remain blank and the UI should say so.
+    """
+    if row.get("previous_close") is None or row.get("price_change_pct") is None:
+        return "COMPLETED_NO_COMPARISON_REFERENCE"
+    return "REFRESHED_COMPLETED_SESSION"
 
 
 def main():
@@ -116,7 +122,7 @@ def main():
             if safe_global_snapshot_value(snap):
                 row.update(snap)
                 row["last_checked_at"] = checked_at
-                row["data_status"] = "REFRESHED_COMPLETED_SESSION"
+                row["data_status"] = _completed_snapshot_status(row)
                 refreshed_global += 1
             else:
                 if copy_previous_price(row, previous):
@@ -130,7 +136,11 @@ def main():
                     try:
                         row.update(fetch_price(row, global_snapshot=None))
                         row["last_checked_at"] = checked_at
-                        row["data_status"] = "COMPLETED_HISTORICAL_FALLBACK"
+                        row["data_status"] = (
+                            "COMPLETED_NO_COMPARISON_REFERENCE"
+                            if row.get("previous_close") is None or row.get("price_change_pct") is None
+                            else "COMPLETED_HISTORICAL_FALLBACK"
+                        )
                         refreshed_global += 1
                     except Exception as exc:
                         row.update({
