@@ -1,34 +1,16 @@
 {
   "as_of": "2026-08-23",
-  "added_count": 3,
-  "removed_count": 1148,
+  "added_count": 1,
+  "removed_count": 1176,
   "added": [
     {
       "key": [
-        "INDIA",
-        "NSE",
-        "SKYTECH"
+        "KR",
+        "KRX",
+        "417030"
       ],
-      "company_name": "SKYTECH INFINITE PLATFM L",
-      "research_sector": "POWER_EQUIPMENT"
-    },
-    {
-      "key": [
-        "INDIA",
-        "BSE",
-        "TECHNOCRAT"
-      ],
-      "company_name": "TECHNOCRATS PLASMA SYSTEMS LIMITED",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "MALAYSIA",
-        "SGX",
-        "51O"
-      ],
-      "company_name": "MSM International Limited",
-      "research_sector": "MACHINERY"
+      "company_name": "니어스랩",
+      "research_sector": "DEFENSE"
     }
   ],
   "removed": [
@@ -809,6 +791,15 @@
     {
       "key": [
         "AUSTRALIA",
+        "ASX",
+        "EOS"
+      ],
+      "company_name": "Electro Optic Systems Holdings Limited",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
         "OTC",
         "EOPSF"
       ],
@@ -846,6 +837,15 @@
       "key": [
         "AUSTRALIA",
         "BX",
+        "DRO"
+      ],
+      "company_name": "DroneShield Limited",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
         "DRO"
       ],
       "company_name": "DroneShield Limited",
@@ -1204,6 +1204,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "BST"
+      ],
+      "company_name": "Boresight Ltd.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
         "SOUTH KOREA",
         "KRX",
         "424960"
@@ -1312,6 +1321,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "OEC"
+      ],
+      "company_name": "Orbital Corporation Ltd",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
         "UNITED STATES",
         "GETTEX",
         "SP5"
@@ -1344,6 +1362,15 @@
         "XERI"
       ],
       "company_name": "Xeriant, Inc.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "HCL"
+      ],
+      "company_name": "HighCom Limited",
       "research_sector": "DEFENSE"
     },
     {
@@ -3139,6 +3166,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "SRL"
+      ],
+      "company_name": "Sunrise Energy Metals Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "GERMANY",
         "OTC",
         "DEUZF"
@@ -3414,6 +3450,15 @@
         "089970"
       ],
       "company_name": "VM Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "ASB"
+      ],
+      "company_name": "Austal Limited",
       "research_sector": "MACHINERY"
     },
     {
@@ -4561,6 +4606,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "XRF"
+      ],
+      "company_name": "XRF Scientific Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "KABRAEXTRU"
@@ -4588,6 +4642,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "TTT"
+      ],
+      "company_name": "Titomic Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "SOUTH KOREA",
         "KRX",
         "064820"
@@ -4602,6 +4665,15 @@
         "060720"
       ],
       "company_name": "KH Vatec Co., Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "MPW"
+      ],
+      "company_name": "Metal Powder Works Limited",
       "research_sector": "MACHINERY"
     },
     {
@@ -5263,11 +5335,29 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "ANG"
+      ],
+      "company_name": "Austin Engineering Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "INDIA",
         "NSE",
         "AXTEL"
       ],
       "company_name": "Axtel Industries Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "MXI"
+      ],
+      "company_name": "MaxiPARTS Limited",
       "research_sector": "MACHINERY"
     },
     {
@@ -5506,6 +5596,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "VEE"
+      ],
+      "company_name": "Veem Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "GERMANY",
         "GETTEX",
         "ALXA"
@@ -5565,6 +5664,15 @@
         "277880"
       ],
       "company_name": "TSI Co.,Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "EVZ"
+      ],
+      "company_name": "EVZ Limited",
       "research_sector": "MACHINERY"
     },
     {
@@ -5713,6 +5821,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "CXL"
+      ],
+      "company_name": "Calix Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "NORWAY",
         "LSE",
         "0ELH"
@@ -5821,6 +5938,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "AL3"
+      ],
+      "company_name": "AML3D Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "CANADA",
         "OTC",
         "DYFSF"
@@ -5853,6 +5979,15 @@
         "048770"
       ],
       "company_name": "TPC Robotics Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "EDE"
+      ],
+      "company_name": "Eden Innovations Ltd",
       "research_sector": "MACHINERY"
     },
     {
@@ -5970,6 +6105,15 @@
         "6396"
       ],
       "company_name": "Unozawa-Gumi Iron Works, Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "RWL"
+      ],
+      "company_name": "Rubicon Water Limited",
       "research_sector": "MACHINERY"
     },
     {
@@ -6397,6 +6541,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "A3D"
+      ],
+      "company_name": "Aurora Labs Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "QUINT"
@@ -6573,6 +6726,15 @@
         "FBRKF"
       ],
       "company_name": "FBR Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "FBR"
+      ],
+      "company_name": "FBR Limited",
       "research_sector": "MACHINERY"
     },
     {
@@ -8719,6 +8881,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "BLX"
+      ],
+      "company_name": "Beacon Lighting Group Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "INDIA",
         "BSE",
         "RISHABH"
@@ -8859,6 +9030,15 @@
         "018000"
       ],
       "company_name": "Unison Co Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "MYG"
+      ],
+      "company_name": "Mayfield Group Holdings Limited",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -9223,6 +9403,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "LIS"
+      ],
+      "company_name": "Li-S Energy Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "UNITED KINGDOM",
         "LS",
         "A3C8RH"
@@ -9295,11 +9484,29 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "CCE"
+      ],
+      "company_name": "Carnegie Clean Energy Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "UNITED STATES",
         "OTC",
         "WNDW"
       ],
       "company_name": "SolarWindow Technologies, Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "AVL"
+      ],
+      "company_name": "Australian Vanadium Limited",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -9417,6 +9624,15 @@
         "273640"
       ],
       "company_name": "YM Tech Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "FGR"
+      ],
+      "company_name": "First Graphene Ltd",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
@@ -9727,6 +9943,15 @@
     },
     {
       "key": [
+        "AUSTRALIA",
+        "ASX",
+        "EGY"
+      ],
+      "company_name": "Energy Technologies Limited",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
         "SOUTH KOREA",
         "KRX",
         "217320"
@@ -9741,6 +9966,15 @@
         "OPTRON"
       ],
       "company_name": "Optronics Technologies SA",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "AUSTRALIA",
+        "ASX",
+        "IG6"
+      ],
+      "company_name": "International Graphite Limited",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
