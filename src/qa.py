@@ -1,5 +1,5 @@
 from __future__ import annotations
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
@@ -17,6 +17,13 @@ def _completed_kr_cutoff() -> str:
     return cutoff.isoformat()
 
 
+def _parse_date(value):
+    try:
+        return datetime.strptime(str(value), "%Y-%m-%d").date()
+    except (TypeError, ValueError):
+        return None
+
+
 def run(rows: list[dict], settings: dict) -> dict:
     errors, warnings = [], []
     qa_cfg = settings.get("qa", {})
@@ -26,6 +33,7 @@ def run(rows: list[dict], settings: dict) -> dict:
         errors.append(f"Duplicate primary keys: {dupes[:10]}")
 
     domestic = [r for r in rows if str(r.get("country") or "").upper() == "KR"]
+    global_rows = [r for r in rows if str(r.get("country") or "").upper() != "KR"]
     domestic_count = len(domestic)
     if domestic_count < int(qa_cfg.get("minimum_domestic_universe", 1)):
         errors.append(f"Domestic universe unexpectedly small: {domestic_count}")
@@ -41,6 +49,7 @@ def run(rows: list[dict], settings: dict) -> dict:
     kr_inexact_change_count = 0
     unsafe_open_global_count = 0
     unknown_global_session_count = 0
+    no_comparison_reference = []
     kr_cutoff = _completed_kr_cutoff()
 
     for r in rows:
@@ -82,10 +91,25 @@ def run(rows: list[dict], settings: dict) -> dict:
             status = str(r.get("data_status") or "")
             if not session:
                 unknown_global_session_count += 1
-                if not status.startswith("PRESERVED") and status != "COMPLETED_HISTORICAL_FALLBACK":
+                if not status.startswith("PRESERVED") and status not in {
+                    "COMPLETED_HISTORICAL_FALLBACK", "COMPLETED_NO_COMPARISON_REFERENCE"
+                }:
                     unsafe_open_global_count += 1
             elif session not in CLOSED_GLOBAL_SESSION_STATES and not status.startswith("PRESERVED"):
                 unsafe_open_global_count += 1
+
+            if p is not None and p > 0 and (
+                r.get("previous_close") is None
+                or r.get("price_change") is None
+                or r.get("price_change_pct") is None
+            ):
+                no_comparison_reference.append({
+                    "company_name": r.get("company_name"),
+                    "ticker": r.get("ticker"),
+                    "exchange": r.get("exchange"),
+                    "price_date": r.get("price_date"),
+                    "data_status": r.get("data_status"),
+                })
 
         if r.get("corporate_action_adjusted"):
             corporate_action_adjustments.append({
@@ -118,6 +142,49 @@ def run(rows: list[dict], settings: dict) -> dict:
     if unsafe_open_global_count:
         errors.append(f"Unsafe/unknown global session prices would be published: {unsafe_open_global_count}")
 
+    # Freshness diagnostics. Compare stocks only with other stocks on the same
+    # exchange so weekends, national holidays and time zones do not create false
+    # alarms. A lag is informational; only a >=7 calendar-day lag is REVIEW.
+    exchange_latest = {}
+    for r in global_rows:
+        ex = str(r.get("exchange") or "").upper()
+        d = _parse_date(r.get("price_date"))
+        if ex and d and (ex not in exchange_latest or d > exchange_latest[ex]):
+            exchange_latest[ex] = d
+
+    lagging_global = []
+    severe_lagging_global = []
+    for r in global_rows:
+        ex = str(r.get("exchange") or "").upper()
+        d = _parse_date(r.get("price_date"))
+        latest = exchange_latest.get(ex)
+        if not d or not latest or d >= latest:
+            continue
+        lag_days = (latest - d).days
+        entry = {
+            "company_name": r.get("company_name"),
+            "ticker": r.get("ticker"),
+            "exchange": ex,
+            "price_date": d.isoformat(),
+            "exchange_latest_date": latest.isoformat(),
+            "lag_calendar_days": lag_days,
+            "data_status": r.get("data_status"),
+        }
+        lagging_global.append(entry)
+        if lag_days >= 7 and not str(r.get("data_status") or "").startswith("PRESERVED"):
+            severe_lagging_global.append(entry)
+
+    if severe_lagging_global:
+        sample = severe_lagging_global[:5]
+        warnings.append(
+            f"Global price-date freshness review: {len(severe_lagging_global)} securities lag their exchange by >=7 days; sample={sample}"
+        )
+
+    kr_dates = [_parse_date(r.get("price_date")) for r in domestic]
+    kr_dates = [d for d in kr_dates if d]
+    kr_latest = max(kr_dates) if kr_dates else None
+    kr_latest_count = sum(1 for d in kr_dates if d == kr_latest) if kr_latest else 0
+
     return {
         "status": "FAIL" if errors else ("REVIEW" if warnings else "PASS"),
         "errors": errors,
@@ -126,12 +193,19 @@ def run(rows: list[dict], settings: dict) -> dict:
         "domestic_count": domestic_count,
         "official_kr_return_count": official_kr_count,
         "kr_completed_cutoff": kr_cutoff,
+        "kr_latest_price_date": kr_latest.isoformat() if kr_latest else None,
+        "kr_latest_price_date_count": kr_latest_count,
         "kr_zero_return_count": kr_zero_return_count,
         "kr_future_date_count": kr_future_date_count,
         "kr_inexact_change_count": kr_inexact_change_count,
         "unsafe_open_global_count": unsafe_open_global_count,
         "unknown_global_session_count": unknown_global_session_count,
         "missing_price_count": missing_prices,
+        "missing_return_reference_count": len(no_comparison_reference),
+        "missing_return_references": no_comparison_reference[:100],
+        "global_lagging_price_date_count": len(lagging_global),
+        "global_lagging_price_dates": lagging_global[:100],
+        "global_severe_lagging_price_date_count": len(severe_lagging_global),
         "corporate_action_adjustment_count": len(corporate_action_adjustments),
         "corporate_action_adjustments": corporate_action_adjustments[:100],
         "checked_on": datetime.now(KST).date().isoformat(),
