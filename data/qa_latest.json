@@ -1,25 +1,52 @@
 {
-  "status": "REVIEW",
-  "errors": [],
+  "status": "FAIL",
+  "errors": [
+    "Official Korean daily-return coverage incomplete: 267/268"
+  ],
   "warnings": [
+    "Missing/invalid price: 니어스랩 (417030)",
     "Large daily move 40.0%: MSM International Limited (51O)"
   ],
-  "row_count": 2699,
-  "domestic_count": 267,
+  "row_count": 2700,
+  "domestic_count": 268,
   "official_kr_return_count": 267,
   "kr_completed_cutoff": "2026-08-23",
+  "kr_latest_price_date": "2026-08-21",
+  "kr_latest_price_date_count": 267,
   "kr_zero_return_count": 17,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
   "unknown_global_session_count": 0,
-  "missing_price_count": 0,
+  "missing_price_count": 1,
+  "missing_return_reference_count": 2,
+  "missing_return_references": [
+    {
+      "company_name": "TECHNOCRATS PLASMA SYSTEMS LIMITED",
+      "ticker": "TECHNOCRAT",
+      "exchange": "BSE",
+      "price_date": "2026-08-21",
+      "data_status": "COMPLETED_NO_COMPARISON_REFERENCE"
+    },
+    {
+      "company_name": "SKYTECH INFINITE PLATFM L",
+      "ticker": "SKYTECH",
+      "exchange": "NSE",
+      "price_date": "2026-08-21",
+      "data_status": "COMPLETED_NO_COMPARISON_REFERENCE"
+    }
+  ],
+  "global_lagging_price_date_count": 0,
+  "global_lagging_price_dates": [],
+  "global_severe_lagging_price_date_count": 0,
   "corporate_action_adjustment_count": 0,
   "corporate_action_adjustments": [],
   "checked_on": "2026-08-24",
-  "fetch_error_count": 0,
-  "fetch_errors": [],
-  "global_snapshot_count": 2804,
+  "fetch_error_count": 1,
+  "fetch_errors": [
+    "니어스랩 (417030): No completed NAVER/KRX-mirrored daily quote: 417030; cutoff=2026-08-23"
+  ],
+  "global_snapshot_count": 2776,
   "update_scope": "ALL",
   "refreshed_completed_global_count": 2431,
   "preserved_open_or_unknown_global_count": 1,
