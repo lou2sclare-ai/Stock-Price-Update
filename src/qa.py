@@ -44,6 +44,7 @@ def run(rows: list[dict], settings: dict) -> dict:
     missing_prices = 0
     corporate_action_adjustments = []
     official_kr_count = 0
+    kr_priced_count = 0
     kr_zero_return_count = 0
     kr_future_date_count = 0
     kr_inexact_change_count = 0
@@ -65,6 +66,13 @@ def run(rows: list[dict], settings: dict) -> dict:
 
         country = str(r.get("country") or "").upper()
         if country == "KR" and p is not None and p > 0:
+            # Only Korean rows that actually have a publishable completed close
+            # are expected to carry the official daily-return provenance fields.
+            # A newly listed/security-discovery row can legitimately exist before
+            # its first completed session; that case is already handled by the
+            # missing-price QA policy above and must not become a contradictory
+            # hard failure when hard_fail_on_missing_price is false.
+            kr_priced_count += 1
             origin = str(r.get("source_change_origin") or "")
             base_source = str(r.get("comparison_base_source") or "")
             if origin != OFFICIAL_KR_CHANGE_ORIGIN:
@@ -131,8 +139,8 @@ def run(rows: list[dict], settings: dict) -> dict:
         if r.get("target_price") and r.get("target_currency") and r.get("currency") and r.get("target_currency") != r.get("currency"):
             errors.append(f"TP currency mismatch: {ident}")
 
-    if official_kr_count != domestic_count:
-        errors.append(f"Official Korean daily-return coverage incomplete: {official_kr_count}/{domestic_count}")
+    if official_kr_count != kr_priced_count:
+        errors.append(f"Official Korean daily-return coverage incomplete: {official_kr_count}/{kr_priced_count} priced Korean securities")
     if kr_future_date_count:
         errors.append(f"Korean price date exceeds completed-session cutoff {kr_cutoff}: {kr_future_date_count}/{domestic_count}")
     if domestic_count and kr_zero_return_count / domestic_count >= 0.50:
@@ -191,6 +199,7 @@ def run(rows: list[dict], settings: dict) -> dict:
         "warnings": warnings,
         "row_count": len(rows),
         "domestic_count": domestic_count,
+        "kr_priced_count": kr_priced_count,
         "official_kr_return_count": official_kr_count,
         "kr_completed_cutoff": kr_cutoff,
         "kr_latest_price_date": kr_latest.isoformat() if kr_latest else None,
