@@ -85,7 +85,6 @@ def _epoch_seconds(value) -> float | None:
 
 
 def _price_date(row: dict) -> tuple[str | None, str | None]:
-    # TradingView's explicit business-day field is the preferred source.
     business_day = row.get("time_business_day")
     try:
         n = int(float(business_day))
@@ -95,10 +94,6 @@ def _price_date(row: dict) -> tuple[str | None, str | None]:
         text = str(n)
         return f"{text[:4]}-{text[4:6]}-{text[6:8]}", "TradingView time_business_day"
 
-    # daily-bar.time is a bar identifier timestamp, not an exchange-local wall
-    # clock. Converting it into America/New_York previously shifted US bars one
-    # calendar day backward (e.g. an Aug-18 close displayed as Aug-17). Use the
-    # timestamp's UTC calendar date as the fallback instead.
     ts = _epoch_seconds(row.get("daily-bar.time"))
     if ts is None:
         return None, None
@@ -137,9 +132,6 @@ def _industry_price_rows(industry: str) -> tuple[list[dict], list[str]]:
     try:
         return _scan(industry, PRICE_COLUMNS), PRICE_COLUMNS
     except requests.RequestException:
-        # Never break the daily update just because an optional TradingView date
-        # column is unavailable. Price/session safety still works with the base
-        # columns; the UI will explicitly mark the trade date as unavailable.
         return _scan(industry, BASE_PRICE_COLUMNS), BASE_PRICE_COLUMNS
 
 
@@ -163,17 +155,32 @@ def fetch_price_snapshot(industry_names: list[str]) -> dict[tuple[str, str], dic
                 continue
             if close <= 0:
                 continue
+
             try:
                 pct = float(row.get("change")) if row.get("change") is not None else None
             except (TypeError, ValueError):
                 pct = None
-            previous = close / (1.0 + pct / 100.0) if pct is not None and pct > -100 else None
             try:
                 change_abs = float(row.get("change_abs")) if row.get("change_abs") is not None else None
             except (TypeError, ValueError):
                 change_abs = None
+
+            # Prefer TradingView's exact absolute day change to reconstruct the
+            # prior comparison close. Percentage change is commonly rounded and
+            # can introduce small arithmetic drift when inverted.
+            previous = None
+            comparison_base_source = None
+            if change_abs is not None:
+                candidate = close - change_abs
+                if candidate > 0:
+                    previous = candidate
+                    comparison_base_source = "TradingView_change_abs"
+            if previous is None and pct is not None and pct > -100:
+                previous = close / (1.0 + pct / 100.0)
+                comparison_base_source = "TradingView_change_pct_implied"
             if change_abs is None and previous is not None:
                 change_abs = close - previous
+
             try:
                 volume = float(row.get("volume")) if row.get("volume") is not None else None
             except (TypeError, ValueError):
@@ -195,6 +202,7 @@ def fetch_price_snapshot(industry_names: list[str]) -> dict[tuple[str, str], dic
                 "price_trade_date_source": date_source,
                 "price_bar_time": row.get("daily-bar.time"),
                 "price_bar_update_time": row.get("last_bar_update_time"),
+                "comparison_base_source": comparison_base_source,
                 "data_status": "COMPLETED_SESSION_SNAPSHOT",
             }
     return out
