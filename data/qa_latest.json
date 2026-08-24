@@ -2,9 +2,10 @@
   "status": "REVIEW",
   "errors": [],
   "warnings": [
-    "급등락 검토 +40.0%: MSM International Limited (51O) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
+    "급등락 검토 -48.6%: First Breach Inc. (FBDT) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
+    "급등락 검토 +80.5%: Expion360 Inc. (XPON) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
   ],
-  "row_count": 2700,
+  "row_count": 2685,
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
@@ -17,69 +18,23 @@
   "unsafe_open_global_count": 0,
   "unknown_global_session_count": 0,
   "missing_price_count": 0,
-  "missing_return_reference_count": 2,
-  "missing_return_references": [
-    {
-      "company_name": "TECHNOCRATS PLASMA SYSTEMS LIMITED",
-      "ticker": "TECHNOCRAT",
-      "exchange": "BSE",
-      "price_date": "2026-08-21",
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "SKYTECH INFINITE PLATFM L",
-      "ticker": "SKYTECH",
-      "exchange": "NSE",
-      "price_date": "2026-08-21",
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    }
-  ],
-  "global_lagging_price_date_count": 3,
-  "global_lagging_price_dates": [
-    {
-      "company_name": "Micron Machinery Co., Ltd.",
-      "ticker": "6159",
-      "exchange": "TSE",
-      "price_date": "2026-08-21",
-      "exchange_latest_date": "2026-08-24",
-      "lag_calendar_days": 3,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Nakanippon Casting Co., Ltd.",
-      "ticker": "6439",
-      "exchange": "NAG",
-      "price_date": "2026-08-21",
-      "exchange_latest_date": "2026-08-24",
-      "lag_calendar_days": 3,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "China Nature Energy Technology Holdings Limited",
-      "ticker": "1597",
-      "exchange": "HKEX",
-      "price_date": "2026-08-21",
-      "exchange_latest_date": "2026-08-24",
-      "lag_calendar_days": 3,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    }
-  ],
+  "missing_return_reference_count": 0,
+  "missing_return_references": [],
+  "global_lagging_price_date_count": 0,
+  "global_lagging_price_dates": [],
   "global_severe_lagging_price_date_count": 0,
   "corporate_action_adjustment_count": 0,
   "corporate_action_adjustments": [],
-  "checked_on": "2026-08-24",
+  "checked_on": "2026-08-25",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2755,
-  "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1607,
-  "preserved_open_or_unknown_global_count": 825,
-  "global_price_date_count": 2432,
+  "global_snapshot_count": 2809,
+  "update_scope": "ALL",
+  "refreshed_completed_global_count": 2417,
+  "preserved_open_or_unknown_global_count": 0,
+  "global_price_date_count": 2417,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-08-19": 2,
-    "2026-08-21": 1109,
-    "2026-08-23": 21,
-    "2026-08-24": 1300
+    "2026-08-24": 2417
   }
 }
