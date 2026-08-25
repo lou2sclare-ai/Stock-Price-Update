@@ -9,10 +9,10 @@
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
-  "kr_completed_cutoff": "2026-08-24",
-  "kr_latest_price_date": "2026-08-24",
+  "kr_completed_cutoff": "2026-08-25",
+  "kr_latest_price_date": "2026-08-25",
   "kr_latest_price_date_count": 267,
-  "kr_zero_return_count": 23,
+  "kr_zero_return_count": 22,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
@@ -20,21 +20,923 @@
   "missing_price_count": 0,
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 0,
-  "global_lagging_price_dates": [],
+  "global_lagging_price_date_count": 126,
+  "global_lagging_price_dates": [
+    {
+      "company_name": "Honeywell Aerospace Inc.",
+      "ticker": "HONA",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Axon Enterprise, Inc.",
+      "ticker": "AXON",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Rocket Lab Corporation",
+      "ticker": "RKLB",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Arxis, Inc.",
+      "ticker": "ARXS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "FTAI Aviation Ltd.",
+      "ticker": "FTAI",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Leonardo DRS, Inc.",
+      "ticker": "DRS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Kratos Defense & Security Solutions, Inc.",
+      "ticker": "KTOS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "AeroVironment, Inc.",
+      "ticker": "AVAV",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Mercury Systems Inc",
+      "ticker": "MRCY",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Firefly Aerospace Inc.",
+      "ticker": "FLY",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Intuitive Machines, Inc.",
+      "ticker": "LUNR",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "OSI Systems, Inc.",
+      "ticker": "OSIS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Astronics Corporation",
+      "ticker": "ATRO",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Satellogic Inc.",
+      "ticker": "SATL",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Smith & Wesson Brands, Inc.",
+      "ticker": "SWBI",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "TAT Technologies Ltd.",
+      "ticker": "TATT",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Innovative Solutions and Support, Inc.",
+      "ticker": "IA",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Outdoor Holding Company",
+      "ticker": "POWW",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "AIRO Group Holdings, Inc.",
+      "ticker": "AIRO",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "First Breach Inc.",
+      "ticker": "FBDT",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "New Horizon Aircraft Ltd.",
+      "ticker": "HOVR",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Coda Octopus Group, Inc.",
+      "ticker": "CODA",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Safe Pro Group Inc.",
+      "ticker": "SPAI",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Momentus Inc.",
+      "ticker": "MNTS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Byrna Technologies, Inc.",
+      "ticker": "BYRN",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Mobilicom Limited",
+      "ticker": "MOB",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Senstar Technologies Corporation",
+      "ticker": "SNT",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "DUKE Robotics Corp.",
+      "ticker": "DUKR",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Astrotech Corporation",
+      "ticker": "ASTC",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Lam Research Corporation",
+      "ticker": "LRCX",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Applied Materials, Inc.",
+      "ticker": "AMAT",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "PACCAR Inc.",
+      "ticker": "PCAR",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Honeywell International Inc.",
+      "ticker": "HON",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Symbotic Inc.",
+      "ticker": "SYM",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Entegris, Inc.",
+      "ticker": "ENTG",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Woodward, Inc.",
+      "ticker": "WWD",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Nordson Corporation",
+      "ticker": "NDSN",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Lincoln Electric Holdings, Inc.",
+      "ticker": "LECO",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "X-Energy, Inc.",
+      "ticker": "XE",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "AAON, Inc.",
+      "ticker": "AAON",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "ACM Research, Inc.",
+      "ticker": "ACMR",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "The Middleby Corporation",
+      "ticker": "MIDD",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Franklin Electric Co., Inc.",
+      "ticker": "FELE",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Kulicke and Soffa Industries, Inc.",
+      "ticker": "KLIC",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "CECO Environmental Corp.",
+      "ticker": "CECO",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Axcelis Technologies, Inc.",
+      "ticker": "ACLS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Ultra Clean Holdings, Inc.",
+      "ticker": "UCTT",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Newell Brands Inc.",
+      "ticker": "NWL",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Midera Food Processing, Inc.",
+      "ticker": "MFP",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Ichor Holdings",
+      "ticker": "ICHR",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Astec Industries, Inc.",
+      "ticker": "ASTE",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Power Solutions International, Inc.",
+      "ticker": "PSIX",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Columbus McKinnon Corporation",
+      "ticker": "CMCO",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Deep Fission, Inc.",
+      "ticker": "FISN",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Serve Robotics Inc.",
+      "ticker": "SERV",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Velo3D, Inc.",
+      "ticker": "VELO",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Energy Recovery, Inc.",
+      "ticker": "ERII",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "L.B. Foster Company",
+      "ticker": "FSTR",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Twin Disc, Incorporated",
+      "ticker": "TWIN",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Palladyne AI Corp.",
+      "ticker": "PDYN",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Amtech Systems, Inc.",
+      "ticker": "ASYS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Freightcar America, Inc.",
+      "ticker": "RAIL",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Perma-Pipe International Holdings, Inc.",
+      "ticker": "PPIH",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Taylor Devices, Inc.",
+      "ticker": "TAYD",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Hurco Companies, Inc.",
+      "ticker": "HURC",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Hadron Energy, Inc.",
+      "ticker": "HDRN",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "CEA Industries Inc.",
+      "ticker": "BNC",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Commercial Vehicle Group, Inc.",
+      "ticker": "CVGI",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Sono-Tek Corporation",
+      "ticker": "SOTK",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Rapid Micro Biosystems, Inc.",
+      "ticker": "RPID",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "TechPrecision Corporation",
+      "ticker": "TPCS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Deswell Industries, Inc.",
+      "ticker": "DSWL",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "RYTHM, Inc.",
+      "ticker": "RYM",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "AIOS Tech Inc.",
+      "ticker": "AIOS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "ClearSign Technologies Corporation",
+      "ticker": "CLIR",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Knightscope, Inc.",
+      "ticker": "KSCP",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Data I/O Corporation",
+      "ticker": "DAIO",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Greenland Technologies Holding Corporation",
+      "ticker": "GTEC",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "ZK International Group Co., Ltd",
+      "ticker": "ZKIN",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "LiqTech International, Inc.",
+      "ticker": "LIQT",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Art's-Way Manufacturing Co., Inc.",
+      "ticker": "ARTW",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "TOMI Environmental Solutions, Inc.",
+      "ticker": "TOMZ",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "JE Cleantech Holdings Limited",
+      "ticker": "JCSE",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Mingteng International Corporation Inc.",
+      "ticker": "MTEN",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Nauticus Robotics, Inc.",
+      "ticker": "KITT",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Huachen AI Parking Management Technology Holding Co., Ltd.",
+      "ticker": "HCAI",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "INLIF LIMITED",
+      "ticker": "INLF",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Hydrofarm Holdings Group, Inc.",
+      "ticker": "HYFM",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "CDT Environmental Technology Investment Holdings Limited",
+      "ticker": "CDTG",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Lumentum Holdings Inc.",
+      "ticker": "LITE",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "INNIO N.V.",
+      "ticker": "INIO",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Powell Industries, Inc.",
+      "ticker": "POWL",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Enphase Energy, Inc.",
+      "ticker": "ENPH",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "QuantumScape Corporation",
+      "ticker": "QS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Fluence Energy, Inc.",
+      "ticker": "FLNC",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "SolarEdge Technologies, Inc.",
+      "ticker": "SEDG",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Allient Inc.",
+      "ticker": "ALNT",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "American Superconductor Corporation",
+      "ticker": "AMSC",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "POET Technologies Inc.",
+      "ticker": "POET",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    },
+    {
+      "company_name": "Eos Energy Enterprises, Inc.",
+      "ticker": "EOSE",
+      "exchange": "NASDAQ",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-25",
+      "lag_calendar_days": 1,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
+    }
+  ],
   "global_severe_lagging_price_date_count": 0,
   "corporate_action_adjustment_count": 0,
   "corporate_action_adjustments": [],
   "checked_on": "2026-08-25",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2809,
-  "update_scope": "ALL",
-  "refreshed_completed_global_count": 2417,
-  "preserved_open_or_unknown_global_count": 0,
+  "global_snapshot_count": 2743,
+  "update_scope": "SAFE_REFRESH",
+  "refreshed_completed_global_count": 1624,
+  "preserved_open_or_unknown_global_count": 793,
   "global_price_date_count": 2417,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-08-24": 2417
+    "2026-08-24": 1117,
+    "2026-08-25": 1300
   }
 }
