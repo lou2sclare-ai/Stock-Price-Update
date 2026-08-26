@@ -8,10 +8,10 @@
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
-  "kr_completed_cutoff": "2026-08-25",
-  "kr_latest_price_date": "2026-08-25",
-  "kr_latest_price_date_count": 267,
-  "kr_zero_return_count": 22,
+  "kr_completed_cutoff": "2026-08-26",
+  "kr_latest_price_date": "2026-08-26",
+  "kr_latest_price_date_count": 265,
+  "kr_zero_return_count": 26,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
@@ -19,22 +19,51 @@
   "missing_price_count": 0,
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 0,
-  "global_lagging_price_dates": [],
+  "global_lagging_price_date_count": 3,
+  "global_lagging_price_dates": [
+    {
+      "company_name": "Chen Hsong Holdings Limited",
+      "ticker": "57",
+      "exchange": "HKEX",
+      "price_date": "2026-08-25",
+      "exchange_latest_date": "2026-08-26",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Eunisell Interlinked Plc",
+      "ticker": "EUNISELL",
+      "exchange": "NSENG",
+      "price_date": "2026-08-24",
+      "exchange_latest_date": "2026-08-26",
+      "lag_calendar_days": 2,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Tiasang Battery JSC",
+      "ticker": "TSB",
+      "exchange": "HNX",
+      "price_date": "2026-08-25",
+      "exchange_latest_date": "2026-08-26",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    }
+  ],
   "global_severe_lagging_price_date_count": 0,
   "corporate_action_adjustment_count": 0,
   "corporate_action_adjustments": [],
   "checked_on": "2026-08-26",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2804,
-  "update_scope": "ALL",
-  "refreshed_completed_global_count": 2410,
-  "preserved_open_or_unknown_global_count": 0,
+  "global_snapshot_count": 2727,
+  "update_scope": "SAFE_REFRESH",
+  "refreshed_completed_global_count": 1618,
+  "preserved_open_or_unknown_global_count": 792,
   "global_price_date_count": 2410,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-08-24": 19,
-    "2026-08-25": 2391
+    "2026-08-24": 18,
+    "2026-08-25": 1110,
+    "2026-08-26": 1282
   }
 }
