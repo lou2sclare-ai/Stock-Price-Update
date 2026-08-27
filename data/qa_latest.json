@@ -2,16 +2,16 @@
   "status": "REVIEW",
   "errors": [],
   "warnings": [
-    "급등락 검토 +74.0%: Expion360 Inc. (XPON) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
+    "급등락 검토 -90.6%: SDT Uzay ve Savunma Teknolojileri A.S. (SDTTR) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
   ],
-  "row_count": 2672,
+  "row_count": 2665,
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
-  "kr_completed_cutoff": "2026-08-26",
-  "kr_latest_price_date": "2026-08-26",
+  "kr_completed_cutoff": "2026-08-27",
+  "kr_latest_price_date": "2026-08-27",
   "kr_latest_price_date_count": 265,
-  "kr_zero_return_count": 26,
+  "kr_zero_return_count": 22,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
@@ -24,18 +24,18 @@
   "global_severe_lagging_price_date_count": 0,
   "corporate_action_adjustment_count": 0,
   "corporate_action_adjustments": [],
-  "checked_on": "2026-08-27",
+  "checked_on": "2026-08-28",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2801,
+  "global_snapshot_count": 2793,
   "update_scope": "ALL",
-  "refreshed_completed_global_count": 2404,
+  "refreshed_completed_global_count": 2397,
   "preserved_open_or_unknown_global_count": 0,
-  "global_price_date_count": 2404,
+  "global_price_date_count": 2397,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-08-24": 1,
-    "2026-08-25": 29,
-    "2026-08-26": 2374
+    "2026-08-25": 7,
+    "2026-08-26": 5,
+    "2026-08-27": 2385
   }
 }
