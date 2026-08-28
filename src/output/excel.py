@@ -49,6 +49,13 @@ def _sorted(rows):
     return sorted(rows,key=lambda r:(SECTOR_ORDER.get(r.get("research_sector"),99),0 if _is_kr(r) else 1,-float(r.get("market_cap") or 0),str(r.get("company_name") or "")))
 
 
+def _priority_sorted(rows):
+    return sorted(
+        [r for r in rows if r.get("priority_coverage")],
+        key=lambda r:(int(r.get("priority_coverage_rank") or 999),str(r.get("company_name") or "")),
+    )
+
+
 def _title(ws, last_col, title, subtitle):
     ws.sheet_view.showGridLines=False
     ws.row_dimensions[1].height=31
@@ -118,12 +125,65 @@ def _make_table_sheet(ws, rows, qa=None, title="섹터별 주가 모니터", sub
             ws.conditional_formatting.add(f"{col}5:{col}{last}",CellIsRule(operator="lessThan",formula=["0"],font=Font(color=BLUE,bold=True)))
 
 
+def _make_priority_sheet(ws, rows, qa):
+    rows=_priority_sorted(rows)
+    headers=["우선순위","섹터","회사","Ticker","리서치 상태","종가","전일종가/기준가","등락","등락률","TP","Upside","가격 거래일","데이터 상태","확인시각","가격 출처"]
+    expected=int(qa.get("priority_coverage_expected_count") or 15)
+    subtitle=(
+        f"우선 커버리지/관찰 목록 | {len(rows)}/{expected}개 반영 | "
+        "우선순위 표시는 리서치 상태(Coverage/NR/미정) 판정과 별도"
+    )
+    _title(ws,len(headers),"우선 커버리지",subtitle)
+    ws.row_dimensions[3].height=8
+    for c,h in enumerate(headers,1): _header(ws.cell(4,c),h)
+    ws.cell(4,1).comment=Comment("사용자가 지정한 우선 관찰 순위입니다. research_status=COVERAGE 판정과는 별도이며, 기존 리서치 상태 로직을 변경하지 않습니다.","OpenAI")
+    for i,r in enumerate(rows,5):
+        sector=SECTOR_LABELS.get(r.get("research_sector"),r.get("research_sector") or "-")
+        display_name=r.get("priority_coverage_display_name") or r.get("company_name")
+        vals=[
+            r.get("priority_coverage_rank"),sector,display_name,r.get("ticker"),_status_label(r.get("research_status")),
+            r.get("price"),r.get("previous_close"),r.get("price_change"),(r.get("price_change_pct")/100 if r.get("price_change_pct") is not None else None),
+            r.get("target_price"),None,r.get("price_date") or "날짜 미확인",_data_status_label(r.get("data_status")),r.get("last_checked_at") or r.get("price_observed_at"),r.get("price_source")
+        ]
+        for c,v in enumerate(vals,1):
+            cell=ws.cell(i,c,v)
+            cell.font=Font(name="Arial",size=9,color="000000",bold=(c in (1,3)))
+            cell.alignment=Alignment(vertical="center",horizontal="right" if c in (1,6,7,8,9,10,11) else "left")
+            if i%2==0: cell.fill=PatternFill("solid",fgColor=PALE)
+        ws.cell(i,1).fill=PatternFill("solid",fgColor=LIGHT)
+        ws.cell(i,1).font=Font(name="Arial",size=10,bold=True,color=NAVY2)
+        ws.cell(i,2).font=Font(name="Arial",size=9,bold=True,color=NAVY2)
+        if r.get("target_price") and r.get("price"):
+            ws.cell(i,11,f"=IFERROR(J{i}/F{i}-1,\"\")")
+        for c in (6,7,8,10): ws.cell(i,c).number_format='#,##0.###;[Blue](#,##0.###);-'
+        for c in (9,11): ws.cell(i,c).number_format='0.0%;[Blue](0.0%);-'
+        if r.get("research_status")=="COVERAGE":
+            ws.cell(i,5).fill=PatternFill("solid",fgColor="E8F0FF")
+            ws.cell(i,5).font=Font(name="Arial",size=9,bold=True,color="214FB7")
+        if r.get("data_status") in ("PRESERVED_OPEN_OR_UNKNOWN","PRESERVED_AFTER_FETCH_ERROR","FETCH_ERROR","COMPLETED_NO_COMPARISON_REFERENCE"):
+            ws.cell(i,13).fill=PatternFill("solid",fgColor="FFF4D8")
+            ws.cell(i,13).font=Font(name="Arial",size=9,bold=True,color="A45B00")
+    widths=[10,12,32,13,13,14,16,14,11,14,11,14,24,24,30]
+    for i,w in enumerate(widths,1): ws.column_dimensions[get_column_letter(i)].width=w
+    ws.freeze_panes="F5"
+    ws.auto_filter.ref=f"A4:O{max(5,4+len(rows))}"
+    ws.sheet_view.zoomScale=92
+    if rows:
+        last=4+len(rows)
+        for col in ("H","I","K"):
+            ws.conditional_formatting.add(f"{col}5:{col}{last}",CellIsRule(operator="greaterThan",formula=["0"],font=Font(color=RED,bold=True)))
+            ws.conditional_formatting.add(f"{col}5:{col}{last}",CellIsRule(operator="lessThan",formula=["0"],font=Font(color=BLUE,bold=True)))
+
+
 def build(rows: list[dict], qa: dict, path: str):
     rows=_sorted(rows)
     domestic=[r for r in rows if _is_kr(r)]
     global_rows=[r for r in rows if not _is_kr(r)]
     wb=Workbook()
-    ws=wb.active;ws.title="Dashboard"
+    priority=wb.active;priority.title="우선 커버리지"
+    _make_priority_sheet(priority,rows,qa)
+
+    ws=wb.create_sheet("Dashboard")
     subtitle=f"QA {qa['status']} | 전체 {len(rows):,}개 | 국내 {len(domestic):,}개 | 해외 {len(global_rows):,}개 | 생성 {datetime.now().strftime('%Y-%m-%d %H:%M')}"
     _make_table_sheet(ws,rows,qa,"섹터별 주가 모니터",subtitle)
 
@@ -133,14 +193,14 @@ def build(rows: list[dict], qa: dict, path: str):
     _make_table_sheet(kg,global_rows,qa,"해외 주가 모니터",f"TradingView 완료 거래일 스냅샷 | {len(global_rows):,}개")
 
     u=wb.create_sheet("Universe");u.sheet_view.showGridLines=False
-    uh=["company_name","ticker","country","exchange","currency","source","source_sector","source_industry","research_sector","research_status","target_price","target_currency","last_report_date","active","review_note"]
+    uh=["company_name","ticker","country","exchange","currency","source","source_sector","source_industry","research_sector","research_status","target_price","target_currency","last_report_date","active","review_note","priority_coverage_rank"]
     for c,h in enumerate(uh,1): _header(u.cell(1,c),h)
     for i,r in enumerate(rows,2):
         for c,h in enumerate(uh,1):
             cell=u.cell(i,c,r.get(h,""));cell.font=Font(name="Arial",size=9)
             if i%2==0: cell.fill=PatternFill("solid",fgColor=PALE)
-    u.freeze_panes="A2";u.auto_filter.ref=f"A1:O{max(2,1+len(rows))}";u.sheet_view.zoomScale=85
-    for c in range(1,16):u.column_dimensions[get_column_letter(c)].width=18
+    u.freeze_panes="A2";u.auto_filter.ref=f"A1:P{max(2,1+len(rows))}";u.sheet_view.zoomScale=85
+    for c in range(1,17):u.column_dimensions[get_column_letter(c)].width=18
     u.column_dimensions["A"].width=38;u.column_dimensions["H"].width=34;u.column_dimensions["O"].width=54
 
     q=wb.create_sheet("QA");q.sheet_view.showGridLines=False
@@ -149,6 +209,7 @@ def build(rows: list[dict], qa: dict, path: str):
     q["B1"].fill=PatternFill("solid",fgColor=RED if qa["status"]=="FAIL" else (ORANGE if qa["status"]=="REVIEW" else GREEN))
     summary=[
         ("전체 종목",qa.get("row_count")),("국내 종목",qa.get("domestic_count")),("가격 누락",qa.get("missing_price_count")),("수집 오류",qa.get("fetch_error_count")),
+        ("우선 커버리지 기대 종목",qa.get("priority_coverage_expected_count")),("우선 커버리지 반영 종목",qa.get("priority_coverage_present_count")),
         ("국내 등락률 원천 확인",qa.get("official_kr_return_count")),("국내 최신 가격 거래일",qa.get("kr_latest_price_date")),("국내 최신 거래일 종목",qa.get("kr_latest_price_date_count")),
         ("국내 0% 종목",qa.get("kr_zero_return_count")),("국내 완료일 초과",qa.get("kr_future_date_count")),("직전 비교기준 없음",qa.get("missing_return_reference_count")),
         ("해외 거래일 확인",qa.get("global_price_date_count")),("해외 거래일 미확인",qa.get("global_price_date_missing_count")),
@@ -158,6 +219,12 @@ def build(rows: list[dict], qa: dict, path: str):
     row=3
     for label,value in summary:
         q.cell(row,1,label);q.cell(row,2,value);row+=1
+    missing_priority=qa.get("priority_coverage_missing") or []
+    if missing_priority:
+        row+=1
+        q.cell(row,1,"우선 커버리지 미반영");q.cell(row,1).font=Font(bold=True);row+=1
+        for item in missing_priority:
+            q.cell(row,1,f"#{item.get('rank')} {item.get('display_name')}");q.cell(row,2,item.get('ticker'));row+=1
     row+=1
     q.cell(row,1,"해외 거래일 분포");q.cell(row,1).font=Font(bold=True);row+=1
     for d,n in (qa.get("global_price_date_distribution") or {}).items():
