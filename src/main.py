@@ -80,6 +80,30 @@ def _completed_snapshot_status(row: dict) -> str:
     return "REFRESHED_COMPLETED_SESSION"
 
 
+def _priority_map(settings: dict) -> dict[str, dict]:
+    out = {}
+    for item in settings.get("priority_coverage", []) or []:
+        ticker = str(item.get("ticker") or "").strip()
+        if not ticker:
+            continue
+        out[ticker.zfill(6)] = item
+    return out
+
+
+def _apply_priority_metadata(row: dict, priority_map: dict[str, dict]):
+    """Attach presentation priority without changing research_status semantics."""
+    ticker = str(row.get("ticker") or "").strip().zfill(6)
+    item = priority_map.get(ticker) if str(row.get("country") or "").upper() == "KR" else None
+    if item:
+        row["priority_coverage"] = True
+        row["priority_coverage_rank"] = int(item.get("rank") or 999)
+        row["priority_coverage_display_name"] = item.get("display_name") or row.get("company_name")
+    else:
+        row["priority_coverage"] = False
+        row["priority_coverage_rank"] = None
+        row["priority_coverage_display_name"] = None
+
+
 def main():
     settings = yaml.safe_load(Path("config/settings.yml").read_text(encoding="utf-8"))
     upath = settings["project"]["universe_csv"]
@@ -92,6 +116,7 @@ def main():
 
     rows = load_rows(upath)
     previous_map = load_previous(settings["project"]["output_json"])
+    priority_map = _priority_map(settings)
     checked_at = datetime.now(timezone.utc).isoformat()
 
     try:
@@ -110,6 +135,7 @@ def main():
         if str(source_row.get("active", "")).upper() not in ("TRUE", "1", "YES"):
             continue
         row = dict(source_row)
+        _apply_priority_metadata(row, priority_map)
         country = str(row.get("country") or "").upper()
         previous = previous_map.get(row_key(row))
 
@@ -193,6 +219,24 @@ def main():
     qa["update_scope"] = scope
     qa["refreshed_completed_global_count"] = refreshed_global
     qa["preserved_open_or_unknown_global_count"] = preserved_global
+
+    priority_rows = sorted(
+        [r for r in enriched if r.get("priority_coverage")],
+        key=lambda r: int(r.get("priority_coverage_rank") or 999),
+    )
+    expected_priority = sorted(priority_map.values(), key=lambda x: int(x.get("rank") or 999))
+    present_tickers = {str(r.get("ticker") or "").zfill(6) for r in priority_rows}
+    qa["priority_coverage_expected_count"] = len(expected_priority)
+    qa["priority_coverage_present_count"] = len(priority_rows)
+    qa["priority_coverage_missing"] = [
+        {
+            "rank": item.get("rank"),
+            "ticker": str(item.get("ticker") or "").zfill(6),
+            "display_name": item.get("display_name"),
+        }
+        for item in expected_priority
+        if str(item.get("ticker") or "").zfill(6) not in present_tickers
+    ]
 
     global_rows = [r for r in enriched if str(r.get("country") or "").upper() != "KR"]
     qa["global_price_date_count"] = sum(1 for r in global_rows if r.get("price_date"))
