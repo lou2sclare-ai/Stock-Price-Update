@@ -50,6 +50,56 @@ research_sectors:
       - engines
       - turbines
 
+# Priority coverage/watch list for research visibility.
+# This is intentionally separate from research_status=COVERAGE, because the
+# latter requires a target price and a report updated within six months.
+priority_coverage:
+  - rank: 1
+    ticker: "009540"
+    display_name: HD한국조선해양
+  - rank: 2
+    ticker: "329180"
+    display_name: HD현대중공업
+  - rank: 3
+    ticker: "010140"
+    display_name: 삼성중공업
+  - rank: 4
+    ticker: "042660"
+    display_name: 한화오션
+  - rank: 5
+    ticker: "071970"
+    display_name: HD현대마린엔진
+  - rank: 6
+    ticker: "012450"
+    display_name: 한화에어로스페이스
+  - rank: 7
+    ticker: "064350"
+    display_name: 현대로템
+  - rank: 8
+    ticker: "047810"
+    display_name: 한국항공우주
+  - rank: 9
+    ticker: "079550"
+    display_name: LIG디펜스앤에어로스페이스
+  - rank: 10
+    ticker: "272210"
+    display_name: 한화시스템
+  - rank: 11
+    ticker: "267260"
+    display_name: HD현대일렉트릭
+  - rank: 12
+    ticker: "298040"
+    display_name: 효성중공업
+  - rank: 13
+    ticker: "010120"
+    display_name: LS ELECTRIC
+  - rank: 14
+    ticker: "267270"
+    display_name: HD건설기계
+  - rank: 15
+    ticker: "241560"
+    display_name: 두산밥캣
+
 # Pin a company to a research sector/status without editing Python.
 # Keys may be TICKER or EXCHANGE:TICKER.
 manual_overrides: {}
