@@ -2,7 +2,7 @@
   "status": "REVIEW",
   "errors": [],
   "warnings": [
-    "급등락 검토 +157.1%: H2 Core AG (M5S) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
+    "급등락 검토 +46.9%: Yuk Wing Group Holdings Ltd. (1536) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
   ],
   "row_count": 2662,
   "domestic_count": 268,
@@ -19,27 +19,278 @@
   "missing_price_count": 0,
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 0,
-  "global_lagging_price_dates": [],
+  "global_lagging_price_date_count": 28,
+  "global_lagging_price_dates": [
+    {
+      "company_name": "Montana Aerospace AG",
+      "ticker": "AERO",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Embention Sistemas Inteligentes SA",
+      "ticker": "ALUAV",
+      "exchange": "EURONEXT",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Schindler Holding Ltd.",
+      "ticker": "SCHN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "VAT Group AG",
+      "ticker": "VACN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "BELIMO Holding AG",
+      "ticker": "BEAN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Accelleron Industries AG",
+      "ticker": "ACLN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Sulzer AG",
+      "ticker": "SUN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Georg Fischer AG",
+      "ticker": "GF",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Bucher Industries AG",
+      "ticker": "BUCN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Stadler Rail AG",
+      "ticker": "SRAIL",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Burckhardt Compression Holding AG",
+      "ticker": "BCHN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Interroll Holding AG",
+      "ticker": "INRN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Landis+Gyr Group AG",
+      "ticker": "LAND",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Schweiter Technologies AG",
+      "ticker": "SWTQ",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Suzhou YourBest New-type Materials Co., Ltd. Class A",
+      "ticker": "301266",
+      "exchange": "SZSE",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Rieter Holding AG",
+      "ticker": "RIEN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Phoenix Mecano AG",
+      "ticker": "PMN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Komax Holding AG",
+      "ticker": "KOMN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Bystronic AG",
+      "ticker": "BYS",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Mikron Holding AG",
+      "ticker": "MIKN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "StarragTornos Group AG",
+      "ticker": "STGN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Klingelnberg AG",
+      "ticker": "KLIN",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "D&G Technology Holding Company Limited",
+      "ticker": "1301",
+      "exchange": "HKEX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Royal Arc Electrodes Limited",
+      "ticker": "ROYALARC",
+      "exchange": "NSE",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "AAGES S.A",
+      "ticker": "AAG",
+      "exchange": "BVB",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Centiel AG",
+      "ticker": "CNTL",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Hengxin Technology Ltd.",
+      "ticker": "1085",
+      "exchange": "HKEX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Perrot Duval Holding SA",
+      "ticker": "PEDU",
+      "exchange": "SIX",
+      "price_date": "2026-08-28",
+      "exchange_latest_date": "2026-08-31",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    }
+  ],
   "global_severe_lagging_price_date_count": 0,
   "corporate_action_adjustment_count": 0,
   "corporate_action_adjustments": [],
-  "checked_on": "2026-08-31",
+  "checked_on": "2026-09-01",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2692,
-  "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 744,
-  "preserved_open_or_unknown_global_count": 1650,
+  "global_snapshot_count": 2800,
+  "update_scope": "ALL",
+  "refreshed_completed_global_count": 2366,
+  "preserved_open_or_unknown_global_count": 28,
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
   "global_price_date_count": 2394,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-08-27": 1,
-    "2026-08-28": 1996,
-    "2026-08-30": 30,
-    "2026-08-31": 367
+    "2026-08-28": 91,
+    "2026-08-31": 2303
   }
 }
