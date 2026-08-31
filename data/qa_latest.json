@@ -8,10 +8,10 @@
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
-  "kr_completed_cutoff": "2026-08-30",
-  "kr_latest_price_date": "2026-08-28",
+  "kr_completed_cutoff": "2026-08-31",
+  "kr_latest_price_date": "2026-08-31",
   "kr_latest_price_date_count": 268,
-  "kr_zero_return_count": 26,
+  "kr_zero_return_count": 24,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
@@ -22,24 +22,15 @@
   "global_lagging_price_date_count": 0,
   "global_lagging_price_dates": [],
   "global_severe_lagging_price_date_count": 0,
-  "corporate_action_adjustment_count": 1,
-  "corporate_action_adjustments": [
-    {
-      "company_name": "아스트",
-      "ticker": "067390",
-      "raw_previous_close": 506.0,
-      "official_comparison_base": 5060.0,
-      "raw_close_change_pct": 885.1778656126482,
-      "official_change_pct": -1.48
-    }
-  ],
+  "corporate_action_adjustment_count": 0,
+  "corporate_action_adjustments": [],
   "checked_on": "2026-08-31",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2803,
-  "update_scope": "ALL",
-  "refreshed_completed_global_count": 2394,
-  "preserved_open_or_unknown_global_count": 0,
+  "global_snapshot_count": 2692,
+  "update_scope": "SAFE_REFRESH",
+  "refreshed_completed_global_count": 744,
+  "preserved_open_or_unknown_global_count": 1650,
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
@@ -47,7 +38,8 @@
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
     "2026-08-27": 1,
-    "2026-08-28": 2363,
-    "2026-08-30": 30
+    "2026-08-28": 1996,
+    "2026-08-30": 30,
+    "2026-08-31": 367
   }
 }
