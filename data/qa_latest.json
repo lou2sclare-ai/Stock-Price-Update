@@ -8,10 +8,10 @@
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
-  "kr_completed_cutoff": "2026-08-31",
-  "kr_latest_price_date": "2026-08-31",
+  "kr_completed_cutoff": "2026-09-01",
+  "kr_latest_price_date": "2026-09-01",
   "kr_latest_price_date_count": 268,
-  "kr_zero_return_count": 24,
+  "kr_zero_return_count": 17,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
@@ -19,7 +19,7 @@
   "missing_price_count": 0,
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 28,
+  "global_lagging_price_date_count": 30,
   "global_lagging_price_dates": [
     {
       "company_name": "Montana Aerospace AG",
@@ -139,6 +139,15 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
+      "company_name": "Guangdong Senssun Weighing Apparatus Group Ltd. Class A",
+      "ticker": "002870",
+      "exchange": "SZSE",
+      "price_date": "2026-08-31",
+      "exchange_latest_date": "2026-09-01",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
       "company_name": "Schweiter Technologies AG",
       "ticker": "SWTQ",
       "exchange": "SIX",
@@ -152,8 +161,8 @@
       "ticker": "301266",
       "exchange": "SZSE",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-08-31",
-      "lag_calendar_days": 3,
+      "exchange_latest_date": "2026-09-01",
+      "lag_calendar_days": 4,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -220,6 +229,15 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
+      "company_name": "Nakanishi Mfg. Co., Ltd.",
+      "ticker": "5941",
+      "exchange": "TSE",
+      "price_date": "2026-08-31",
+      "exchange_latest_date": "2026-09-01",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
       "company_name": "D&G Technology Holding Company Limited",
       "ticker": "1301",
       "exchange": "HKEX",
@@ -280,17 +298,18 @@
   "checked_on": "2026-09-01",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2800,
-  "update_scope": "ALL",
-  "refreshed_completed_global_count": 2366,
-  "preserved_open_or_unknown_global_count": 28,
+  "global_snapshot_count": 2675,
+  "update_scope": "SAFE_REFRESH",
+  "refreshed_completed_global_count": 1519,
+  "preserved_open_or_unknown_global_count": 875,
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
   "global_price_date_count": 2394,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-08-28": 91,
-    "2026-08-31": 2303
+    "2026-08-28": 89,
+    "2026-08-31": 1109,
+    "2026-09-01": 1196
   }
 }
