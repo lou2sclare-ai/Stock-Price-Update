@@ -1,7 +1,9 @@
 {
-  "status": "PASS",
+  "status": "REVIEW",
   "errors": [],
-  "warnings": [],
+  "warnings": [
+    "급등락 검토 +50.0%: Star Navigation Systems Group Ltd. (SNA) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
+  ],
   "row_count": 2662,
   "domestic_count": 268,
   "kr_priced_count": 268,
@@ -17,15 +19,15 @@
   "missing_price_count": 0,
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 30,
+  "global_lagging_price_date_count": 31,
   "global_lagging_price_dates": [
     {
       "company_name": "Montana Aerospace AG",
       "ticker": "AERO",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -33,8 +35,8 @@
       "ticker": "SCHN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -42,8 +44,8 @@
       "ticker": "VACN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -51,8 +53,8 @@
       "ticker": "BEAN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -60,8 +62,8 @@
       "ticker": "ACLN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -69,8 +71,8 @@
       "ticker": "SUN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -78,8 +80,8 @@
       "ticker": "GF",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -87,8 +89,8 @@
       "ticker": "BUCN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -96,8 +98,8 @@
       "ticker": "SRAIL",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -105,8 +107,8 @@
       "ticker": "BCHN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -114,8 +116,8 @@
       "ticker": "INRN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -123,8 +125,8 @@
       "ticker": "LAND",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -141,8 +143,8 @@
       "ticker": "SWTQ",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -159,8 +161,8 @@
       "ticker": "RIEN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -168,8 +170,8 @@
       "ticker": "PMN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -177,8 +179,8 @@
       "ticker": "KOMN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -186,8 +188,8 @@
       "ticker": "BYS",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -195,8 +197,8 @@
       "ticker": "MIKN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -213,8 +215,8 @@
       "ticker": "STGN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -222,16 +224,43 @@
       "ticker": "KLIN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
-      "company_name": "Severnav SA",
-      "ticker": "SEVE",
+      "company_name": "Pelican Aqua Holding Plc",
+      "ticker": "PLCAN",
+      "exchange": "OSL",
+      "price_date": "2026-09-01",
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "SunScout Holding Limited",
+      "ticker": "SNSC",
+      "exchange": "AMEX",
+      "price_date": "2026-09-01",
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Gurunanak Agriculture India Limited",
+      "ticker": "GURUNANAK",
+      "exchange": "NSE",
+      "price_date": "2026-09-01",
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Mecanica Codlea SA",
+      "ticker": "MEOY",
       "exchange": "BVB",
-      "price_date": "2026-08-31",
-      "exchange_latest_date": "2026-09-01",
+      "price_date": "2026-09-01",
+      "exchange_latest_date": "2026-09-02",
       "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
@@ -240,8 +269,8 @@
       "ticker": "CNTL",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -249,35 +278,8 @@
       "ticker": "1085",
       "exchange": "HKEX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Chengdu SIWI Science & Technology Co., Ltd. Class H",
-      "ticker": "1202",
-      "exchange": "HKEX",
-      "price_date": "2026-08-31",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 1,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Iproeb SA",
-      "ticker": "IPRU",
-      "exchange": "BVB",
-      "price_date": "2026-08-31",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 1,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "SCI Electric Public Co. Ltd.",
-      "ticker": "SCI",
-      "exchange": "SET",
-      "price_date": "2026-08-31",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 1,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -285,21 +287,30 @@
       "ticker": "PEDU",
       "exchange": "SIX",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-01",
-      "lag_calendar_days": 4,
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 5,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Smarten Power Systems Limited",
+      "ticker": "SMARTEN",
+      "exchange": "NSE",
+      "price_date": "2026-09-01",
+      "exchange_latest_date": "2026-09-02",
+      "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     }
   ],
   "global_severe_lagging_price_date_count": 0,
   "corporate_action_adjustment_count": 0,
   "corporate_action_adjustments": [],
-  "checked_on": "2026-09-02",
+  "checked_on": "2026-09-03",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2666,
-  "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1519,
-  "preserved_open_or_unknown_global_count": 875,
+  "global_snapshot_count": 2804,
+  "update_scope": "ALL",
+  "refreshed_completed_global_count": 2363,
+  "preserved_open_or_unknown_global_count": 31,
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
@@ -307,8 +318,8 @@
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
     "2026-08-28": 33,
-    "2026-08-31": 5,
-    "2026-09-01": 1160,
-    "2026-09-02": 1196
+    "2026-08-31": 1,
+    "2026-09-01": 6,
+    "2026-09-02": 2354
   }
 }
