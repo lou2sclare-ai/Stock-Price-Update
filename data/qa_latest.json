@@ -9,10 +9,10 @@
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
-  "kr_completed_cutoff": "2026-09-03",
-  "kr_latest_price_date": "2026-09-03",
+  "kr_completed_cutoff": "2026-09-04",
+  "kr_latest_price_date": "2026-09-04",
   "kr_latest_price_date_count": 268,
-  "kr_zero_return_count": 24,
+  "kr_zero_return_count": 27,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
@@ -20,8 +20,71 @@
   "missing_price_count": 0,
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 31,
+  "global_lagging_price_date_count": 164,
   "global_lagging_price_dates": [
+    {
+      "company_name": "XCMG Construction Machinery Co., Ltd. Class A",
+      "ticker": "000425",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Shantui Construction Machinery Co., Ltd. Class A",
+      "ticker": "000680",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "AVIC Xi'an Aircraft Industry Group Co., Ltd. Class A",
+      "ticker": "000768",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Avic (Chengdu) UAS Co., Ltd. Class A",
+      "ticker": "688297",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "AECC Aero-engine Control Co., Ltd. Class A",
+      "ticker": "000738",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Baimtec Material Co., Ltd. Class A",
+      "ticker": "688563",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "North Industries Group Red Arrow Co., Ltd. Class A",
+      "ticker": "000519",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
     {
       "company_name": "Montana Aerospace AG",
       "ticker": "AERO",
@@ -29,6 +92,69 @@
       "price_date": "2026-08-28",
       "exchange_latest_date": "2026-09-03",
       "lag_calendar_days": 6,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Ligeance Aerospace Technology Co., Ltd. Class A",
+      "ticker": "000697",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Hefei Jianghang Aircraft Equipment Corporation Ltd. Class A",
+      "ticker": "688586",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Wuxi Hyatech Co.,Ltd. Class A",
+      "ticker": "688510",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Jiangsu Maixinlin Aviation Science and Technology Corp Class A",
+      "ticker": "688685",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Beijing Navigation Control Technology Co., Ltd. Class A",
+      "ticker": "688282",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Sichuan Tianwei Electronic Co. Ltd. Class A",
+      "ticker": "688511",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Integrity Technology Group Inc. Class A",
+      "ticker": "688244",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -41,12 +167,57 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
+      "company_name": "Nanjing LES Information Technology Co., Ltd Class A",
+      "ticker": "688631",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Hunan Aerospace Huanyu Communication Technology Co., Ltd. Class A",
+      "ticker": "688523",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "YUSHU TECHNOLOGY CO LTD",
+      "ticker": "688836",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
       "company_name": "Schindler Holding Ltd.",
       "ticker": "SCHN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
       "exchange_latest_date": "2026-09-03",
       "lag_calendar_days": 6,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Gree Electric Appliances, Inc. of Zhuhai Class A",
+      "ticker": "000651",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Huagong Tech Co., Ltd. Class A",
+      "ticker": "000988",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -68,12 +239,39 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
+      "company_name": "Beijing E-Town Semiconductor Technology Co., Ltd. Class A",
+      "ticker": "688729",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
       "company_name": "Accelleron Industries AG",
       "ticker": "ACLN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
       "exchange_latest_date": "2026-09-03",
       "lag_calendar_days": 6,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Zoomlion Heavy Industry Science & Technology Co. Ltd. Class A",
+      "ticker": "000157",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Circuit Fabology Microelectronics Equipment Co.,Ltd. Class A",
+      "ticker": "688630",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -86,12 +284,30 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
+      "company_name": "Moon Environment Technology Co., Ltd. Class A",
+      "ticker": "000811",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
       "company_name": "Georg Fischer AG",
       "ticker": "GF",
       "exchange": "SIX",
       "price_date": "2026-08-28",
       "exchange_latest_date": "2026-09-03",
       "lag_calendar_days": 6,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Infore Environment Technology Group Co., Ltd. Class A",
+      "ticker": "000967",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -113,12 +329,111 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
+      "company_name": "Beijing Jingyi Automation Equipment Co., Ltd. Class A",
+      "ticker": "688652",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "China Railway Construction Heavy Industry Corp. Ltd. Class A",
+      "ticker": "688425",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Shareate Tools Ltd. Class A",
+      "ticker": "688257",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "China Baoan Group Co., Ltd. Class A",
+      "ticker": "000009",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Guangxi Liugong Machinery Co., Ltd Class A",
+      "ticker": "000528",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
       "company_name": "Burckhardt Compression Holding AG",
       "ticker": "BCHN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
       "exchange_latest_date": "2026-09-03",
       "lag_calendar_days": 6,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Wuxi Autowell Technology Co. Ltd. Class A",
+      "ticker": "688516",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Hymson Laser Technology Group Co., Ltd. Class A",
+      "ticker": "688559",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Shenyang Machine Tool Co., Ltd. Class A",
+      "ticker": "000410",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Shenzhen Xinyichang Technology Co., Ltd. Class A",
+      "ticker": "688383",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Suzhou Gyz Electronic Technology Co., Ltd. Class A",
+      "ticker": "688260",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Beijing Jiuzhouyigui Environmental Technology Co., Ltd. Class A",
+      "ticker": "688485",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -140,12 +455,309 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
+      "company_name": "Weichai Heavy Machinery Co., Ltd. Class A",
+      "ticker": "000880",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Ningbo PIA Automation Holding Corp. Class A",
+      "ticker": "688306",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Qinchuan Machine Tool & Tool Group Share Co. Ltd. Class A",
+      "ticker": "000837",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Jiangxi Guoke Defence Group Co., Ltd. Class A",
+      "ticker": "688543",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Sprint Precision Technologies Co. Ltd. Class A",
+      "ticker": "688605",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Neway CNC Equipment (Suzhou) Co., Ltd. Class A",
+      "ticker": "688697",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "MayAir Technology (China) Co., Ltd. Class A",
+      "ticker": "688376",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Suzhou Veichi Electric Co. Ltd. Class A",
+      "ticker": "688698",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Hangzhou Honghua Digital Technology Stock Co., Ltd. Class A",
+      "ticker": "688789",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
       "company_name": "Guangdong Senssun Weighing Apparatus Group Ltd. Class A",
       "ticker": "002870",
       "exchange": "SZSE",
       "price_date": "2026-08-31",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 3,
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 4,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "KEDE Numerical Control Co. Ltd. Class A",
+      "ticker": "688305",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Motorcomm Electronic Technology Co., Ltd. Class A",
+      "ticker": "688515",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Sichuan Zigong Conveying Machine Group Co. Ltd. Class A",
+      "ticker": "001288",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Zhejiang Headman Machinery Co. Ltd. Class A",
+      "ticker": "688577",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Qingdao Gaoce Technology Co. Ltd. Class A",
+      "ticker": "688556",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "SUFA Technology Industry Co., Ltd., CNNC Class A",
+      "ticker": "000777",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Wuhan Yifi Laser Corporation Limited Class A",
+      "ticker": "688646",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "CGN Nuclear Technology Development Co. Ltd. Class A",
+      "ticker": "000881",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Crystal Growth and Energy Equipment Inc. Class A",
+      "ticker": "688478",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Create Technology & Science Co., Ltd. Class A",
+      "ticker": "000551",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Nextool Technology Co., Ltd. Class A",
+      "ticker": "688419",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Guangdong Lyric Robot Automation Co. Ltd. Class A",
+      "ticker": "688499",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Wetown Electric Group Co. Ltd. Class A",
+      "ticker": "688226",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Niutech Environment Technology Corporation Class A",
+      "ticker": "688309",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Vontron Technology Co., Ltd. Class A",
+      "ticker": "000920",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Hangzhou Huaguang Advanced Welding Materials Co. Ltd. Class A",
+      "ticker": "688379",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Sinopec Oilfield Equipment Corporation Class A",
+      "ticker": "000852",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "OK Science & Technology Co., Ltd. Class A",
+      "ticker": "001223",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Changhong Huayi Compressor Co., Ltd. Class A",
+      "ticker": "000404",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Jiangsu Beiren Smart Manufacturing Technology Co., Ltd. Class A",
+      "ticker": "688218",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Beijing Tianma Intelligent Control Technology Co. Ltd. Class A",
+      "ticker": "688570",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "J.S. Corrugating Machinery Co., Ltd. Class A",
+      "ticker": "000821",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Cubic Sensor and Instrument Co., Ltd. Class A",
+      "ticker": "688665",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Wuxi Chemical Equipment Co., Ltd. Class A",
+      "ticker": "001332",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -158,12 +770,84 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
+      "company_name": "Nantong Guosheng Intelligence Technology Group Co., Ltd. Class A",
+      "ticker": "688558",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Wayz Intelligent Manufacturing Technology Co., Ltd. Class A",
+      "ticker": "688211",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Zhejiang Risun Intelligent Technology Co. Ltd. Class A",
+      "ticker": "688215",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Hangzhou Jingye Intelligent Technology Co., Ltd. Class A",
+      "ticker": "688290",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Beijing Tieke Shougang Railway-Tech Co., Ltd. Class A",
+      "ticker": "688569",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Zhuhai Huajin Capital Co Ltd Class A",
+      "ticker": "000532",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Beijing SinoHytec Co., Ltd. Class A",
+      "ticker": "688339",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
       "company_name": "Suzhou YourBest New-type Materials Co., Ltd. Class A",
       "ticker": "301266",
       "exchange": "SZSE",
       "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 6,
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 7,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Kunming Yunnei Power Co., Ltd. Class A",
+      "ticker": "000903",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -176,12 +860,39 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
+      "company_name": "Bingshan Refrigeration & Heat Transfer Technologies Co., Ltd. Class A",
+      "ticker": "000530",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Anhui Tuoshan Heavy Industries Co., Ltd. Class A",
+      "ticker": "001226",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
       "company_name": "Phoenix Mecano AG",
       "ticker": "PMN",
       "exchange": "SIX",
       "price_date": "2026-08-28",
       "exchange_latest_date": "2026-09-03",
       "lag_calendar_days": 6,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Zhejiang XiaSha Precision Manufacturing Co., Ltd. Class A",
+      "ticker": "001306",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
+      "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -194,133 +905,34 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
-      "company_name": "Bystronic AG",
-      "ticker": "BYS",
-      "exchange": "SIX",
-      "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 6,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Mikron Holding AG",
-      "ticker": "MIKN",
-      "exchange": "SIX",
-      "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 6,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "StarragTornos Group AG",
-      "ticker": "STGN",
-      "exchange": "SIX",
-      "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 6,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Klingelnberg AG",
-      "ticker": "KLIN",
-      "exchange": "SIX",
-      "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 6,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "General Packer Co., Ltd.",
-      "ticker": "6267",
-      "exchange": "TSE",
-      "price_date": "2026-09-02",
-      "exchange_latest_date": "2026-09-03",
+      "company_name": "Hangzhou Hota M&E Holdings Co., Ltd. Class A",
+      "ticker": "001225",
+      "exchange": "SZSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
       "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
-      "company_name": "SunScout Holding Limited",
-      "ticker": "SNSC",
-      "exchange": "AMEX",
-      "price_date": "2026-09-01",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 2,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Sotipapier SA",
-      "ticker": "STPAP",
-      "exchange": "BVMT",
-      "price_date": "2026-09-02",
-      "exchange_latest_date": "2026-09-03",
+      "company_name": "Bluesword Intelligent Technology Co. Ltd. Class A",
+      "ticker": "688557",
+      "exchange": "SSE",
+      "price_date": "2026-09-03",
+      "exchange_latest_date": "2026-09-04",
       "lag_calendar_days": 1,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Royal Arc Electrodes Limited",
-      "ticker": "ROYALARC",
-      "exchange": "NSE",
-      "price_date": "2026-09-02",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 1,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Mecanica Codlea SA",
-      "ticker": "MEOY",
-      "exchange": "BVB",
-      "price_date": "2026-09-01",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 2,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Centiel AG",
-      "ticker": "CNTL",
-      "exchange": "SIX",
-      "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 6,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Iproeb SA",
-      "ticker": "IPRU",
-      "exchange": "BVB",
-      "price_date": "2026-09-02",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 1,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Perrot Duval Holding SA",
-      "ticker": "PEDU",
-      "exchange": "SIX",
-      "price_date": "2026-08-28",
-      "exchange_latest_date": "2026-09-03",
-      "lag_calendar_days": 6,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     }
   ],
   "global_severe_lagging_price_date_count": 0,
-  "corporate_action_adjustment_count": 1,
-  "corporate_action_adjustments": [
-    {
-      "company_name": "에코프로비엠",
-      "ticker": "247540",
-      "raw_previous_close": 108000.0,
-      "official_comparison_base": 106300.0,
-      "raw_close_change_pct": -1.388888888888884,
-      "official_change_pct": 0.19
-    }
-  ],
+  "corporate_action_adjustment_count": 0,
+  "corporate_action_adjustments": [],
   "checked_on": "2026-09-04",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2802,
-  "update_scope": "ALL",
-  "refreshed_completed_global_count": 2363,
-  "preserved_open_or_unknown_global_count": 31,
+  "global_snapshot_count": 2670,
+  "update_scope": "SAFE_REFRESH",
+  "refreshed_completed_global_count": 1397,
+  "preserved_open_or_unknown_global_count": 997,
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
@@ -330,7 +942,8 @@
     "2026-08-28": 23,
     "2026-08-31": 1,
     "2026-09-01": 2,
-    "2026-09-02": 5,
-    "2026-09-03": 2363
+    "2026-09-02": 4,
+    "2026-09-03": 1301,
+    "2026-09-04": 1063
   }
 }
