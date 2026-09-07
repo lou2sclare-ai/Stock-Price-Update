@@ -3,7 +3,6 @@
   "errors": [],
   "warnings": [
     "급등락 검토 +46.7%: CDT Environmental Technology Investment Holdings Limited (CDTG) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
-    "급등락 검토 +50.0%: C.I. Group Public Co. Ltd. (CIG) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
     "급등락 검토 -49.1%: AURA SMART AIR LTD (AUSA-M) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
     "급등락 검토 +52.4%: H2 Core AG (M5S) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
   ],
@@ -11,27 +10,28 @@
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
-  "kr_completed_cutoff": "2026-09-06",
-  "kr_latest_price_date": "2026-09-04",
+  "kr_completed_cutoff": "2026-09-07",
+  "kr_latest_price_date": "2026-09-07",
   "kr_latest_price_date_count": 268,
-  "kr_zero_return_count": 27,
+  "kr_zero_return_count": 20,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
   "unknown_global_session_count": 0,
   "missing_price_count": 0,
-  "missing_return_reference_count": 1,
-  "missing_return_references": [
-    {
-      "company_name": "JFB Construction Holdings",
-      "ticker": "XTND",
-      "exchange": "NYSE",
-      "price_date": "2026-09-04",
-      "data_status": "COMPLETED_NO_COMPARISON_REFERENCE"
-    }
-  ],
-  "global_lagging_price_date_count": 1,
+  "missing_return_reference_count": 0,
+  "missing_return_references": [],
+  "global_lagging_price_date_count": 2,
   "global_lagging_price_dates": [
+    {
+      "company_name": "Sino ICT Holdings Limited",
+      "ticker": "365",
+      "exchange": "HKEX",
+      "price_date": "2026-09-04",
+      "exchange_latest_date": "2026-09-07",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
     {
       "company_name": "AO \"ANZHER MASHIN ZAVOD\" ORD",
       "ticker": "ANGE",
@@ -39,7 +39,7 @@
       "price_date": "2026-09-04",
       "exchange_latest_date": "2026-09-06",
       "lag_calendar_days": 2,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     }
   ],
   "global_severe_lagging_price_date_count": 0,
@@ -48,17 +48,18 @@
   "checked_on": "2026-09-07",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2777,
-  "update_scope": "ALL",
-  "refreshed_completed_global_count": 2384,
-  "preserved_open_or_unknown_global_count": 0,
+  "global_snapshot_count": 2782,
+  "update_scope": "SAFE_REFRESH",
+  "refreshed_completed_global_count": 1962,
+  "preserved_open_or_unknown_global_count": 422,
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
   "global_price_date_count": 2384,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-09-04": 2354,
-    "2026-09-06": 30
+    "2026-09-04": 720,
+    "2026-09-06": 8,
+    "2026-09-07": 1656
   }
 }
