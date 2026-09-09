@@ -2,18 +2,20 @@
   "status": "REVIEW",
   "errors": [],
   "warnings": [
-    "급등락 검토 +46.7%: CDT Environmental Technology Investment Holdings Limited (CDTG) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
+    "급등락 검토 +50.0%: Star Navigation Systems Group Ltd. (SNA) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
+    "급등락 검토 +50.4%: CEA Industries Inc. (BNC) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
     "급등락 검토 -49.1%: AURA SMART AIR LTD (AUSA-M) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
-    "급등락 검토 +52.4%: H2 Core AG (M5S) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
+    "급등락 검토 +52.4%: H2 Core AG (M5S) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
+    "급등락 검토 -93.9%: 이노벡스 (279060) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
   ],
   "row_count": 2652,
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
-  "kr_completed_cutoff": "2026-09-08",
-  "kr_latest_price_date": "2026-09-08",
+  "kr_completed_cutoff": "2026-09-09",
+  "kr_latest_price_date": "2026-09-09",
   "kr_latest_price_date_count": 268,
-  "kr_zero_return_count": 24,
+  "kr_zero_return_count": 20,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
@@ -24,24 +26,6 @@
   "global_lagging_price_date_count": 5,
   "global_lagging_price_dates": [
     {
-      "company_name": "Alfred Herbert (India) Ltd.",
-      "ticker": "ALFREDHE",
-      "exchange": "NSE",
-      "price_date": "2026-09-07",
-      "exchange_latest_date": "2026-09-08",
-      "lag_calendar_days": 1,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Envair Electrodyne Limited",
-      "ticker": "ENVAIREL",
-      "exchange": "BSE",
-      "price_date": "2026-09-07",
-      "exchange_latest_date": "2026-09-08",
-      "lag_calendar_days": 1,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
       "company_name": "AO \"ANZHER MASHIN ZAVOD\" ORD",
       "ticker": "ANGE",
       "exchange": "RUS",
@@ -51,11 +35,29 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
-      "company_name": "Visdem Technosys Limited",
-      "ticker": "VISDEM",
-      "exchange": "NSE",
-      "price_date": "2026-09-07",
-      "exchange_latest_date": "2026-09-08",
+      "company_name": "Harish Textile Engineers Ltd",
+      "ticker": "HARISH",
+      "exchange": "BSE",
+      "price_date": "2026-09-08",
+      "exchange_latest_date": "2026-09-09",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Mewar Hi-Tech Engineering Ltd.",
+      "ticker": "MHEL",
+      "exchange": "BSE",
+      "price_date": "2026-09-08",
+      "exchange_latest_date": "2026-09-09",
+      "lag_calendar_days": 1,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Sino-Synergy Hydrogen Energy Technology (Jiaxing) Co., Ltd. Class H",
+      "ticker": "9663",
+      "exchange": "HKEX",
+      "price_date": "2026-09-08",
+      "exchange_latest_date": "2026-09-09",
       "lag_calendar_days": 1,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
@@ -64,30 +66,31 @@
       "ticker": "SKYTECH",
       "exchange": "NSE",
       "price_date": "2026-09-07",
-      "exchange_latest_date": "2026-09-08",
-      "lag_calendar_days": 1,
+      "exchange_latest_date": "2026-09-09",
+      "lag_calendar_days": 2,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     }
   ],
   "global_severe_lagging_price_date_count": 0,
   "corporate_action_adjustment_count": 0,
   "corporate_action_adjustments": [],
-  "checked_on": "2026-09-08",
+  "checked_on": "2026-09-09",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2772,
+  "global_snapshot_count": 2754,
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1948,
-  "preserved_open_or_unknown_global_count": 436,
+  "refreshed_completed_global_count": 1957,
+  "preserved_open_or_unknown_global_count": 427,
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
   "global_price_date_count": 2384,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-09-04": 719,
+    "2026-09-04": 414,
     "2026-09-06": 8,
-    "2026-09-07": 14,
-    "2026-09-08": 1643
+    "2026-09-07": 2,
+    "2026-09-08": 308,
+    "2026-09-09": 1652
   }
 }
