@@ -2,18 +2,18 @@
   "status": "REVIEW",
   "errors": [],
   "warnings": [
+    "급등락 검토 +50.0%: Star Navigation Systems Group Ltd. (SNA) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
     "급등락 검토 +50.0%: C.I. Group Public Co. Ltd. (CIG) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
-    "급등락 검토 +52.4%: H2 Core AG (M5S) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
-    "급등락 검토 -57.1%: 이노벡스 (279060) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
+    "급등락 검토 +52.4%: H2 Core AG (M5S) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
   ],
   "row_count": 2652,
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
-  "kr_completed_cutoff": "2026-09-11",
-  "kr_latest_price_date": "2026-09-11",
+  "kr_completed_cutoff": "2026-09-14",
+  "kr_latest_price_date": "2026-09-14",
   "kr_latest_price_date_count": 268,
-  "kr_zero_return_count": 27,
+  "kr_zero_return_count": 33,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
@@ -21,8 +21,26 @@
   "missing_price_count": 0,
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 4,
+  "global_lagging_price_date_count": 6,
   "global_lagging_price_dates": [
+    {
+      "company_name": "Nippon Dry-Chemical Co., Ltd.",
+      "ticker": "1909",
+      "exchange": "TSE",
+      "price_date": "2026-09-11",
+      "exchange_latest_date": "2026-09-14",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Eiken Industries Co., Ltd",
+      "ticker": "7265",
+      "exchange": "TSE",
+      "price_date": "2026-09-11",
+      "exchange_latest_date": "2026-09-14",
+      "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
     {
       "company_name": "AO \"ANZHER MASHIN ZAVOD\" ORD",
       "ticker": "ANGE",
@@ -63,25 +81,26 @@
   "global_severe_lagging_price_date_count": 0,
   "corporate_action_adjustment_count": 0,
   "corporate_action_adjustments": [],
-  "checked_on": "2026-09-11",
+  "checked_on": "2026-09-14",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2768,
+  "global_snapshot_count": 2652,
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1990,
-  "preserved_open_or_unknown_global_count": 394,
+  "refreshed_completed_global_count": 1801,
+  "preserved_open_or_unknown_global_count": 583,
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
   "global_price_date_count": 2384,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-09-04": 381,
+    "2026-09-04": 375,
     "2026-09-06": 8,
-    "2026-09-07": 2,
+    "2026-09-07": 1,
     "2026-09-08": 1,
     "2026-09-09": 1,
-    "2026-09-10": 361,
-    "2026-09-11": 1630
+    "2026-09-10": 56,
+    "2026-09-11": 748,
+    "2026-09-14": 1194
   }
 }
