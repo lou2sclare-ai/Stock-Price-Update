@@ -3,7 +3,6 @@ name: Daily stock update
 on:
   schedule:
     # Morning ALL retries, KST Mon-Fri: 06:47 / 07:17 / 07:47 / 08:17 / 08:47.
-    # The earlier retry also re-registers the schedule after silent GitHub scheduler gaps.
     - cron: '47 21 * * 0-4'
     - cron: '17 22 * * 0-4'
     - cron: '47 22 * * 0-4'
@@ -25,6 +24,15 @@ on:
           - AUTO
           - ALL
           - SAFE_REFRESH
+      refresh_universe:
+        description: 'Universe refresh (AUTO=scheduled Monday only; FORCE=refresh now; SKIP=use current)'
+        required: true
+        default: AUTO
+        type: choice
+        options:
+          - AUTO
+          - FORCE
+          - SKIP
 
 permissions:
   contents: write
@@ -38,10 +46,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
-          fetch-depth: 20
-      - uses: actions/setup-python@v5
+          fetch-depth: 30
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -79,10 +87,6 @@ jobs:
             fi
           fi
 
-          # Do not discard a delayed morning ALL run just because GitHub started it
-          # after 09:00 KST. src.prices.krx filters out unfinished KRX sessions and
-          # src.main preserves overseas rows whose current session is still open,
-          # so ALL remains completed-close safe even when a scheduled job is delayed.
           if [ "$SCOPE" = "ALL" ]; then
             echo "ALL remains safe at ${KST_HOUR}:${KST_MIN} KST; completed-close guards run in Python."
           fi
@@ -91,37 +95,95 @@ jobs:
             echo "SAFE_REFRESH is too early; skipping."
             echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
             echo "UPDATE_SCOPE=$SCOPE" >> "$GITHUB_ENV"
+            echo "QA_ATTEMPTED=false" >> "$GITHUB_ENV"
             exit 0
           fi
 
-          if [ "$EVENT_NAME" = "schedule" ] && git log -20 --format=%s | grep -Fq "stock update $TODAY $SCOPE"; then
-            echo "$SCOPE already succeeded on $TODAY; skipping retry."
+          # A Monday run that had to fall back to the previous universe is not
+          # considered fully complete, so a later scheduled retry can try the
+          # universe refresh again. Other successful retries are deduplicated.
+          if [ "$EVENT_NAME" = "schedule" ] && git log -30 --format=%s | grep -Fq "stock update $TODAY $SCOPE universe-ok"; then
+            echo "$SCOPE already succeeded on $TODAY with a healthy universe; skipping retry."
             echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
           else
             echo "SKIP_UPDATE=false" >> "$GITHUB_ENV"
           fi
           echo "UPDATE_SCOPE=$SCOPE" >> "$GITHUB_ENV"
+          echo "QA_ATTEMPTED=false" >> "$GITHUB_ENV"
           echo "Resolved UPDATE_SCOPE=$SCOPE event=$EVENT_NAME schedule=$SCHEDULE_EXPR"
 
       - name: Install dependencies
         if: env.SKIP_UPDATE != 'true'
-        run: pip install -r requirements.txt
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
 
-      - name: Refresh universe on Monday morning, safe ALL manual runs, or first run
+      - name: Run deterministic self-checks
+        if: env.SKIP_UPDATE != 'true'
+        run: |
+          python -m compileall -q src tests
+          python -m unittest discover -s tests -p 'test_*.py' -v
+
+      - name: Refresh universe safely when due
         if: env.SKIP_UPDATE != 'true'
         env:
           EVENT_NAME: ${{ github.event_name }}
+          MANUAL_UNIVERSE_MODE: ${{ inputs.refresh_universe }}
         run: |
           KST_DOW=$(TZ=Asia/Seoul date +%u)
-          if [ ! -f data/universe_master.csv ] || { [ "$UPDATE_SCOPE" = "ALL" ] && { [ "$KST_DOW" = "1" ] || [ "$EVENT_NAME" = "workflow_dispatch" ]; }; }; then
-            python -m src.universe.build
+          MODE="${MANUAL_UNIVERSE_MODE:-AUTO}"
+          SHOULD_REFRESH=false
+          REQUIRED_REFRESH=false
+
+          if [ ! -s data/universe_master.csv ]; then
+            SHOULD_REFRESH=true
+            REQUIRED_REFRESH=true
+          elif [ "$MODE" = "FORCE" ]; then
+            SHOULD_REFRESH=true
+          elif [ "$MODE" = "AUTO" ] && [ "$EVENT_NAME" = "schedule" ] && [ "$UPDATE_SCOPE" = "ALL" ] && [ "$KST_DOW" = "1" ]; then
+            SHOULD_REFRESH=true
+          fi
+
+          if [ "$SHOULD_REFRESH" != "true" ]; then
+            echo "Universe refresh not due; using the validated existing universe."
+            echo "UNIVERSE_REFRESH_STATE=ok" >> "$GITHUB_ENV"
+            exit 0
+          fi
+
+          echo "Attempting universe refresh (mode=$MODE, required=$REQUIRED_REFRESH)."
+          if python -m src.universe.build; then
+            echo "UNIVERSE_REFRESH_STATE=ok" >> "$GITHUB_ENV"
+            echo "Universe refresh succeeded."
+          else
+            STATUS=$?
+            if [ "$REQUIRED_REFRESH" = "true" ]; then
+              echo "::error title=Universe refresh failed::No usable existing universe is available, so the price update cannot continue."
+              exit "$STATUS"
+            fi
+
+            # build.py validates before writing, but restore tracked universe files
+            # defensively in case a later write step was interrupted.
+            git restore --source=HEAD -- data/universe_master.csv data/universe_changes.json || true
+            echo "UNIVERSE_REFRESH_STATE=fallback" >> "$GITHUB_ENV"
+            echo "::warning title=Universe refresh fallback::Universe discovery failed; continuing the price update with the last validated universe. A later retry can refresh it again."
+            if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+              {
+                echo "## Universe refresh fallback"
+                echo
+                echo "External universe discovery failed, so this run continues with the last validated universe instead of failing the stock-price update."
+              } >> "$GITHUB_STEP_SUMMARY"
+            fi
           fi
 
       - name: Update prices + QA + outputs
         if: env.SKIP_UPDATE != 'true'
-        run: python -m src.main
+        run: |
+          echo "QA_ATTEMPTED=true" >> "$GITHUB_ENV"
+          # Remove the checked-in QA file first. If this run fails before writing
+          # a new QA result, the failure reporter will not mistake yesterday's QA
+          # for the current run's diagnosis.
+          rm -f data/qa_latest.json
+          python -m src.main
 
-      - name: Surface QA failure reason
+      - name: Surface current-run failure reason
         if: failure() && env.SKIP_UPDATE != 'true'
         run: |
           python - <<'PY'
@@ -129,10 +191,15 @@ jobs:
           import os
           from pathlib import Path
 
+          if os.environ.get('QA_ATTEMPTED', '').lower() != 'true':
+              print('::error title=Stock pipeline::The run failed before the current price/QA stage. Check the first failed step above; previous QA is intentionally ignored.')
+              raise SystemExit(0)
+
           p = Path('data/qa_latest.json')
           if not p.exists():
-              print('::error title=Stock QA::QA file was not created; failure occurred before QA output.')
+              print('::error title=Stock QA::Current-run QA file was not created; failure occurred before QA output.')
               raise SystemExit(0)
+
           qa = json.loads(p.read_text(encoding='utf-8'))
           errors = qa.get('errors') or []
           warnings = qa.get('warnings') or []
@@ -160,10 +227,10 @@ jobs:
                           f.write(f"- {msg}\n")
           PY
 
-      - name: Preserve QA diagnostics only
+      - name: Preserve current QA diagnostics only
         if: failure() && env.SKIP_UPDATE != 'true'
         run: |
-          if [ -f data/qa_latest.json ]; then
+          if [ "$QA_ATTEMPTED" = "true" ] && [ -f data/qa_latest.json ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/qa_latest.json
@@ -176,6 +243,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          UNIVERSE_TAG="universe-${UNIVERSE_REFRESH_STATE:-ok}"
           git add data/universe_master.csv data/universe_changes.json data/latest.json data/qa_latest.json output/latest.xlsx
-          git diff --cached --quiet || git commit -m "chore: stock update $(TZ=Asia/Seoul date +%F) $UPDATE_SCOPE [skip netlify]"
-          git push
+          git diff --cached --quiet || git commit -m "chore: stock update $(TZ=Asia/Seoul date +%F) $UPDATE_SCOPE $UNIVERSE_TAG [skip netlify]"
+          if ! git push; then
+            echo "Push raced with another main-branch update; retrying once with rebase."
+            git pull --rebase origin main
+            git push
+          fi
