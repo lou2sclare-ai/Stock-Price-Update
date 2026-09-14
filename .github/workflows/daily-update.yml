@@ -99,11 +99,24 @@ jobs:
             exit 0
           fi
 
-          # A Monday run that had to fall back to the previous universe is not
-          # considered fully complete, so a later scheduled retry can try the
-          # universe refresh again. Other successful retries are deduplicated.
-          if [ "$EVENT_NAME" = "schedule" ] && git log -30 --format=%s | grep -Fq "stock update $TODAY $SCOPE universe-ok"; then
-            echo "$SCOPE already succeeded on $TODAY with a healthy universe; skipping retry."
+          # Deduplicate only when today's successful stock update already
+          # contains the current source/config/workflow code. If code or config
+          # changed after that success, the next retry must run again so fixes
+          # are reflected in today's published output without waiting a day.
+          SHOULD_SKIP=false
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            LAST_SUCCESS=$(git log -30 --format='%H%x09%s' | grep -F "stock update $TODAY $SCOPE universe-ok" | head -1 | cut -f1 || true)
+            if [ -n "$LAST_SUCCESS" ]; then
+              if git diff --quiet "$LAST_SUCCESS"..HEAD -- src config .github/workflows; then
+                SHOULD_SKIP=true
+              else
+                echo "Code/config changed after today's successful $SCOPE update; running retry with the fix."
+              fi
+            fi
+          fi
+
+          if [ "$SHOULD_SKIP" = "true" ]; then
+            echo "$SCOPE already succeeded on $TODAY with current code and a healthy universe; skipping retry."
             echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
           else
             echo "SKIP_UPDATE=false" >> "$GITHUB_ENV"
@@ -172,6 +185,10 @@ jobs:
               } >> "$GITHUB_STEP_SUMMARY"
             fi
           fi
+
+      - name: Apply confirmed inactive listings
+        if: env.SKIP_UPDATE != 'true'
+        run: python -m src.universe.inactive
 
       - name: Update prices + QA + outputs
         if: env.SKIP_UPDATE != 'true'
