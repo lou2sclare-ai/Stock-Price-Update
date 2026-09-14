@@ -2,10 +2,13 @@ from __future__ import annotations
 import csv
 import json
 import re
-from datetime import date
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 import yaml
 from src.universe import naver, tradingview
+
+KST = ZoneInfo("Asia/Seoul")
 
 FIELDS = [
     "company_name", "ticker", "country", "exchange", "currency",
@@ -31,6 +34,14 @@ PRESERVE_FIELDS = {
     "research_status", "target_price", "target_currency", "last_report_date",
     "active", "first_seen",
 }
+
+
+def _today_kst() -> str:
+    return datetime.now(KST).date().isoformat()
+
+
+def _is_active(row: dict) -> bool:
+    return str(row.get("active", "")).strip().upper() in {"TRUE", "1", "YES"}
 
 
 def load_settings(path="config/settings.yml"):
@@ -67,14 +78,18 @@ def classify_domestic(industry: str, company_name: str) -> tuple[str, str]:
     return "MACHINERY", "Unmapped NAVER industry; review."
 
 
-def build_domestic(settings: dict) -> list[dict]:
-    by_ticker: dict[str, dict] = {}
-    industries = []
+def _configured_domestic_industries(settings: dict) -> list[str]:
+    industries: list[str] = []
     for cfg in settings["research_sectors"].values():
         for industry in cfg.get("naver_industries", []):
             if industry not in industries:
                 industries.append(industry)
-    for industry in industries:
+    return industries
+
+
+def build_domestic(settings: dict) -> list[dict]:
+    by_ticker: dict[str, dict] = {}
+    for industry in _configured_domestic_industries(settings):
         for raw in naver.fetch_industry(industry):
             ticker = raw["ticker"]
             sector, note = classify_domestic(industry, raw.get("company_name") or "")
@@ -163,8 +178,60 @@ def apply_overrides(rows: list[dict], settings: dict) -> list[dict]:
     return rows
 
 
+def validate_fresh_universe(fresh: list[dict], existing: dict, settings: dict) -> None:
+    """Reject partial/empty source responses before they can mass-remove stocks."""
+    qa_cfg = settings.get("qa", {}) or {}
+    refresh_cfg = settings.get("universe_refresh", {}) or {}
+    min_ratio = float(refresh_cfg.get("minimum_retained_ratio", 0.60))
+
+    fresh_domestic = [r for r in fresh if str(r.get("country") or "").upper() == "KR"]
+    fresh_global = [r for r in fresh if str(r.get("country") or "").upper() != "KR"]
+
+    min_domestic = int(qa_cfg.get("minimum_domestic_universe", 1))
+    min_total = int(qa_cfg.get("minimum_total_universe", 1))
+    if len(fresh_domestic) < min_domestic:
+        raise RuntimeError(
+            f"Universe refresh rejected: domestic source returned {len(fresh_domestic)} rows; minimum={min_domestic}"
+        )
+    if len(fresh) < min_total:
+        raise RuntimeError(
+            f"Universe refresh rejected: total source returned {len(fresh)} rows; minimum={min_total}"
+        )
+
+    expected_domestic = set(_configured_domestic_industries(settings))
+    observed_domestic = {str(r.get("source_industry") or "") for r in fresh_domestic}
+    missing_domestic = sorted(expected_domestic - observed_domestic)
+    if missing_domestic:
+        raise RuntimeError(
+            f"Universe refresh rejected: NAVER industries missing from response: {missing_domestic}"
+        )
+
+    expected_global = set(settings.get("global_discovery_industries", []) or [])
+    observed_global = {str(r.get("source_industry") or "") for r in fresh_global}
+    missing_global = sorted(expected_global - observed_global)
+    if missing_global:
+        raise RuntimeError(
+            f"Universe refresh rejected: TradingView industries missing from response: {missing_global}"
+        )
+
+    existing_active = [r for r in existing.values() if _is_active(r)]
+    old_domestic = [r for r in existing_active if str(r.get("country") or "").upper() == "KR"]
+    old_global = [r for r in existing_active if str(r.get("country") or "").upper() != "KR"]
+
+    if old_domestic and len(fresh_domestic) < len(old_domestic) * min_ratio:
+        raise RuntimeError(
+            "Universe refresh rejected: domestic count collapsed "
+            f"from {len(old_domestic)} to {len(fresh_domestic)} (< {min_ratio:.0%} retained)"
+        )
+    if old_global and len(fresh_global) < len(old_global) * min_ratio:
+        raise RuntimeError(
+            "Universe refresh rejected: global count collapsed "
+            f"from {len(old_global)} to {len(fresh_global)} (< {min_ratio:.0%} retained)"
+        )
+
+
 def merge_with_existing(current: list[dict], existing: dict) -> tuple[list[dict], dict]:
-    today = date.today().isoformat()
+    today = _today_kst()
     current_map = {key(r): r for r in current}
     added, removed = [], []
 
@@ -185,13 +252,15 @@ def merge_with_existing(current: list[dict], existing: dict) -> tuple[list[dict]
         if k in current_map:
             continue
         old = dict(old)
+        already_removed = str(old.get("source_status") or "").upper() == "REMOVED"
         old["active"] = "FALSE"
         old["source_status"] = "REMOVED"
-        note = str(old.get("review_note") or "").strip()
-        marker = f"Removed from source universe on {today}; review before deletion."
-        old["review_note"] = f"{note} | {marker}".strip(" |")
+        if not already_removed:
+            note = str(old.get("review_note") or "").strip()
+            marker = f"Removed from source universe on {today}; review before deletion."
+            old["review_note"] = f"{note} | {marker}".strip(" |")
+            removed.append({"key": list(k), "company_name": old.get("company_name"), "research_sector": old.get("research_sector")})
         current_map[k] = old
-        removed.append({"key": list(k), "company_name": old.get("company_name"), "research_sector": old.get("research_sector")})
 
     changes = {
         "as_of": today,
@@ -227,6 +296,7 @@ def main():
     domestic = build_domestic(s)
     global_rows = build_global(s)
     fresh = apply_overrides(dedupe(domestic + global_rows), s)
+    validate_fresh_universe(fresh, existing, s)
     rows, changes = merge_with_existing(fresh, existing)
     write_universe(rows, universe_path)
     cp = Path(s["project"]["universe_changes_json"])
@@ -234,7 +304,7 @@ def main():
     cp.write_text(json.dumps(changes, ensure_ascii=False, indent=2), encoding="utf-8")
     print(
         f"Universe: domestic={len(domestic)}, global={len(global_rows)}, "
-        f"total={len(rows)}, added={changes['added_count']}, removed={changes['removed_count']}"
+        f"fresh={len(fresh)}, total={len(rows)}, added={changes['added_count']}, removed={changes['removed_count']}"
     )
 
 
