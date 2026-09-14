@@ -48,7 +48,12 @@ def _finalize(series: list[dict], prefer_source_change: bool = False) -> dict:
     }
 
 
-def fetch(row: dict, global_snapshot: dict | None = None) -> dict:
+def fetch(
+    row: dict,
+    global_snapshot: dict | None = None,
+    *,
+    before_date: str | date | None = None,
+) -> dict:
     country = (row.get("country") or "").upper()
     if country == "KR":
         return krx.fetch_official_daily_quote(row["ticker"])
@@ -64,6 +69,13 @@ def fetch(row: dict, global_snapshot: dict | None = None) -> dict:
         result.setdefault("calendar_days_elapsed", None)
         return result
 
-    result = _finalize(global_yahoo.fetch_daily_close(row["ticker"], row.get("exchange")))
-    result["price_source"] = "Yahoo Finance/yfinance fallback"
+    result = _finalize(
+        global_yahoo.fetch_daily_close(
+            row["ticker"],
+            row.get("exchange"),
+            before_date=before_date,
+        )
+    )
+    result["price_source"] = "Yahoo Finance/yfinance historical fallback"
+    result["market_session"] = "historical_fallback"
     return result
