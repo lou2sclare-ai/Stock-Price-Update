@@ -2,7 +2,9 @@ name: Daily stock update
 
 on:
   schedule:
-    # Morning ALL retries, KST Mon-Fri: 07:17 / 07:47 / 08:17 / 08:47.
+    # Morning ALL retries, KST Mon-Fri: 06:47 / 07:17 / 07:47 / 08:17 / 08:47.
+    # The earlier retry also re-registers the schedule after silent GitHub scheduler gaps.
+    - cron: '47 21 * * 0-4'
     - cron: '17 22 * * 0-4'
     - cron: '47 22 * * 0-4'
     - cron: '17 23 * * 0-4'
@@ -56,7 +58,7 @@ jobs:
 
           if [ "$EVENT_NAME" = "schedule" ]; then
             case "$SCHEDULE_EXPR" in
-              '17 22 * * 0-4'|'47 22 * * 0-4'|'17 23 * * 0-4'|'47 23 * * 0-4')
+              '47 21 * * 0-4'|'17 22 * * 0-4'|'47 22 * * 0-4'|'17 23 * * 0-4'|'47 23 * * 0-4')
                 SCOPE="ALL"
                 ;;
               *)
@@ -77,11 +79,12 @@ jobs:
             fi
           fi
 
-          if [ "$SCOPE" = "ALL" ] && [ "$KST_HOUR" -ge 9 ]; then
-            echo "ALL is unsafe at ${KST_HOUR}:${KST_MIN} KST; skipping."
-            echo "SKIP_UPDATE=true" >> "$GITHUB_ENV"
-            echo "UPDATE_SCOPE=$SCOPE" >> "$GITHUB_ENV"
-            exit 0
+          # Do not discard a delayed morning ALL run just because GitHub started it
+          # after 09:00 KST. src.prices.krx filters out unfinished KRX sessions and
+          # src.main preserves overseas rows whose current session is still open,
+          # so ALL remains completed-close safe even when a scheduled job is delayed.
+          if [ "$SCOPE" = "ALL" ]; then
+            echo "ALL remains safe at ${KST_HOUR}:${KST_MIN} KST; completed-close guards run in Python."
           fi
 
           if [ "$SCOPE" = "SAFE_REFRESH" ] && [ "$KST_HOUR" -lt 16 ]; then
@@ -98,7 +101,7 @@ jobs:
             echo "SKIP_UPDATE=false" >> "$GITHUB_ENV"
           fi
           echo "UPDATE_SCOPE=$SCOPE" >> "$GITHUB_ENV"
-          echo "Resolved UPDATE_SCOPE=$SCOPE"
+          echo "Resolved UPDATE_SCOPE=$SCOPE event=$EVENT_NAME schedule=$SCHEDULE_EXPR"
 
       - name: Install dependencies
         if: env.SKIP_UPDATE != 'true'
