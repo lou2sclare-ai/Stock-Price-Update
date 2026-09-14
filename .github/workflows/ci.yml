@@ -42,3 +42,28 @@ jobs:
         run: python -m compileall -q src tests
       - name: Run regression tests
         run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Live global stale-price recovery probe
+        env:
+          UPDATE_SCOPE: ALL
+        run: |
+          python -m src.main > /tmp/recovery-probe.log
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          qa = json.loads(Path('data/qa_latest.json').read_text(encoding='utf-8'))
+          fields = [
+              'status',
+              'global_targeted_snapshot_count',
+              'global_historical_recovery_attempted_count',
+              'global_historical_recovery_succeeded_count',
+              'preserved_open_or_unknown_global_count',
+              'global_lagging_price_date_count',
+              'global_severe_lagging_price_date_count',
+              'global_absolute_stale_price_date_count',
+              'global_price_date_distribution',
+          ]
+          for field in fields:
+              print(f'{field}={qa.get(field)}')
+          print('lagging_samples=', qa.get('global_lagging_price_dates', [])[:20])
+          print('fetch_errors=', qa.get('fetch_errors', [])[:20])
+          PY
