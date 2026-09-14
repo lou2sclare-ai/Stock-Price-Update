@@ -1,5 +1,5 @@
 from __future__ import annotations
-from collections import Counter, defaultdict
+from collections import Counter
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
@@ -41,6 +41,7 @@ def run(rows: list[dict], settings: dict) -> dict:
         errors.append(f"Total universe unexpectedly small: {len(rows)}")
 
     max_move = float(qa_cfg.get("max_abs_daily_change_pct", 40.0))
+    stale_days_warning = int(qa_cfg.get("stale_price_days_warning", 7))
     missing_prices = 0
     corporate_action_adjustments = []
     official_kr_count = 0
@@ -156,9 +157,10 @@ def run(rows: list[dict], settings: dict) -> dict:
     if unsafe_open_global_count:
         errors.append(f"Unsafe/unknown global session prices would be published: {unsafe_open_global_count}")
 
-    # Freshness diagnostics. Compare stocks only with other stocks on the same
-    # exchange so weekends, national holidays and time zones do not create false
-    # alarms. A lag is informational; only a >=7 calendar-day lag is REVIEW.
+    # Relative freshness diagnostics. Compare stocks with other stocks on the
+    # same exchange so ordinary weekends, holidays and time zones do not create
+    # false alarms. This catches individual laggards, but it cannot detect an
+    # entire exchange whose rows all stopped refreshing on the same old date.
     exchange_latest = {}
     for r in global_rows:
         ex = str(r.get("exchange") or "").upper()
@@ -185,14 +187,51 @@ def run(rows: list[dict], settings: dict) -> dict:
             "data_status": r.get("data_status"),
         }
         lagging_global.append(entry)
-        if lag_days >= 7 and not str(r.get("data_status") or "").startswith("PRESERVED"):
+        if lag_days >= stale_days_warning:
             severe_lagging_global.append(entry)
 
     if severe_lagging_global:
         sample = severe_lagging_global[:5]
         warnings.append(
-            f"거래일 지연 검토: {len(severe_lagging_global)}개 종목이 동일 거래소 최신 거래일보다 7일 이상 늦습니다. "
-            f"휴장·거래정지·저유동성 여부를 확인할 REVIEW 항목입니다. sample={sample}"
+            f"거래소 내 거래일 지연 검토: {len(severe_lagging_global)}개 종목이 동일 거래소 최신 거래일보다 "
+            f"{stale_days_warning}일 이상 늦습니다. 휴장·거래정지·저유동성 여부를 확인할 REVIEW 항목입니다. "
+            f"sample={sample}"
+        )
+
+    # Absolute freshness diagnostics. This is deliberately separate from the
+    # same-exchange comparison above: if a scheduled morning refresh disappears,
+    # every stock on an exchange can remain on the same stale date and relative
+    # comparison reports no lag at all. Calendar-day age is only a REVIEW signal,
+    # not a hard failure, because long holidays and suspensions are legitimate.
+    today = datetime.now(KST).date()
+    absolute_stale_global = []
+    preserved_absolute_stale_global = []
+    for r in global_rows:
+        d = _parse_date(r.get("price_date"))
+        if not d:
+            continue
+        age_days = (today - d).days
+        if age_days < stale_days_warning:
+            continue
+        entry = {
+            "company_name": r.get("company_name"),
+            "ticker": r.get("ticker"),
+            "exchange": str(r.get("exchange") or "").upper(),
+            "price_date": d.isoformat(),
+            "age_calendar_days": age_days,
+            "market_session": r.get("market_session"),
+            "data_status": r.get("data_status"),
+        }
+        absolute_stale_global.append(entry)
+        if str(r.get("data_status") or "").startswith("PRESERVED"):
+            preserved_absolute_stale_global.append(entry)
+
+    if absolute_stale_global:
+        sample = absolute_stale_global[:5]
+        warnings.append(
+            f"완료거래일 절대 지연 검토: {len(absolute_stale_global)}개 해외 종목의 완료거래일이 오늘보다 "
+            f"{stale_days_warning}일 이상 오래되었습니다. 동일 거래소 전체가 함께 멈춘 경우도 잡는 REVIEW 항목입니다. "
+            f"이 중 PRESERVED 상태는 {len(preserved_absolute_stale_global)}개입니다. sample={sample}"
         )
 
     kr_dates = [_parse_date(r.get("price_date")) for r in domestic]
@@ -222,7 +261,10 @@ def run(rows: list[dict], settings: dict) -> dict:
         "global_lagging_price_date_count": len(lagging_global),
         "global_lagging_price_dates": lagging_global[:100],
         "global_severe_lagging_price_date_count": len(severe_lagging_global),
+        "global_absolute_stale_price_date_count": len(absolute_stale_global),
+        "global_absolute_stale_price_dates": absolute_stale_global[:100],
+        "global_preserved_absolute_stale_count": len(preserved_absolute_stale_global),
         "corporate_action_adjustment_count": len(corporate_action_adjustments),
         "corporate_action_adjustments": corporate_action_adjustments[:100],
-        "checked_on": datetime.now(KST).date().isoformat(),
+        "checked_on": today.isoformat(),
     }
