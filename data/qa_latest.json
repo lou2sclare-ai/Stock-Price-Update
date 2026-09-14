@@ -2,9 +2,8 @@
   "status": "REVIEW",
   "errors": [],
   "warnings": [
-    "급등락 검토 +50.0%: Star Navigation Systems Group Ltd. (SNA) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
-    "급등락 검토 +50.0%: C.I. Group Public Co. Ltd. (CIG) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
-    "급등락 검토 +52.4%: H2 Core AG (M5S) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
+    "거래소 내 거래일 지연 검토: 4개 종목이 동일 거래소 최신 거래일보다 7일 이상 늦습니다. 휴장·거래정지·저유동성 여부를 확인할 REVIEW 항목입니다. sample=[{'company_name': 'Schindler Holding Ltd.', 'ticker': 'SHR', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-14', 'lag_calendar_days': 10, 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Interroll Holding AG', 'ticker': 'I3H', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-14', 'lag_calendar_days': 10, 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Schweiter Technologies AG', 'ticker': 'SN20', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-14', 'lag_calendar_days': 10, 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Rieter Holding AG', 'ticker': 'RIHN', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-14', 'lag_calendar_days': 10, 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}]",
+    "완료거래일 절대 지연 검토: 6개 해외 종목의 완료거래일이 오늘보다 7일 이상 오래되었습니다. 동일 거래소 전체가 함께 멈춘 경우도 잡는 REVIEW 항목입니다. 이 중 PRESERVED 상태는 6개입니다. sample=[{'company_name': 'Schindler Holding Ltd.', 'ticker': 'SHR', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 11, 'market_session': 'market', 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Interroll Holding AG', 'ticker': 'I3H', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 11, 'market_session': 'out_of_session', 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Schweiter Technologies AG', 'ticker': 'SN20', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 11, 'market_session': 'out_of_session', 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Rieter Holding AG', 'ticker': 'RIHN', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 11, 'market_session': 'market', 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Mewar Hi-Tech Engineering Ltd.', 'ticker': 'MHEL', 'exchange': 'BSE', 'price_date': '2026-09-08', 'age_calendar_days': 7, 'market_session': 'out_of_session', 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}]"
   ],
   "row_count": 2652,
   "domestic_count": 268,
@@ -13,7 +12,7 @@
   "kr_completed_cutoff": "2026-09-14",
   "kr_latest_price_date": "2026-09-14",
   "kr_latest_price_date_count": 268,
-  "kr_zero_return_count": 33,
+  "kr_zero_return_count": 19,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
@@ -21,8 +20,26 @@
   "missing_price_count": 0,
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 6,
+  "global_lagging_price_date_count": 10,
   "global_lagging_price_dates": [
+    {
+      "company_name": "Schindler Holding Ltd.",
+      "ticker": "SHR",
+      "exchange": "BX",
+      "price_date": "2026-09-04",
+      "exchange_latest_date": "2026-09-14",
+      "lag_calendar_days": 10,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Interroll Holding AG",
+      "ticker": "I3H",
+      "exchange": "BX",
+      "price_date": "2026-09-04",
+      "exchange_latest_date": "2026-09-14",
+      "lag_calendar_days": 10,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
     {
       "company_name": "Nippon Dry-Chemical Co., Ltd.",
       "ticker": "1909",
@@ -30,6 +47,24 @@
       "price_date": "2026-09-11",
       "exchange_latest_date": "2026-09-14",
       "lag_calendar_days": 3,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Schweiter Technologies AG",
+      "ticker": "SN20",
+      "exchange": "BX",
+      "price_date": "2026-09-04",
+      "exchange_latest_date": "2026-09-14",
+      "lag_calendar_days": 10,
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Rieter Holding AG",
+      "ticker": "RIHN",
+      "exchange": "BX",
+      "price_date": "2026-09-04",
+      "exchange_latest_date": "2026-09-14",
+      "lag_calendar_days": 10,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -42,12 +77,12 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
-      "company_name": "AO \"ANZHER MASHIN ZAVOD\" ORD",
-      "ticker": "ANGE",
-      "exchange": "RUS",
-      "price_date": "2026-09-04",
-      "exchange_latest_date": "2026-09-06",
-      "lag_calendar_days": 2,
+      "company_name": "AURA SMART AIR LTD",
+      "ticker": "AUSA-M",
+      "exchange": "TASE",
+      "price_date": "2026-09-10",
+      "exchange_latest_date": "2026-09-14",
+      "lag_calendar_days": 4,
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
@@ -78,29 +113,86 @@
       "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     }
   ],
-  "global_severe_lagging_price_date_count": 0,
+  "global_severe_lagging_price_date_count": 4,
+  "global_absolute_stale_price_date_count": 6,
+  "global_absolute_stale_price_dates": [
+    {
+      "company_name": "Schindler Holding Ltd.",
+      "ticker": "SHR",
+      "exchange": "BX",
+      "price_date": "2026-09-04",
+      "age_calendar_days": 11,
+      "market_session": "market",
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Interroll Holding AG",
+      "ticker": "I3H",
+      "exchange": "BX",
+      "price_date": "2026-09-04",
+      "age_calendar_days": 11,
+      "market_session": "out_of_session",
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Schweiter Technologies AG",
+      "ticker": "SN20",
+      "exchange": "BX",
+      "price_date": "2026-09-04",
+      "age_calendar_days": 11,
+      "market_session": "out_of_session",
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Rieter Holding AG",
+      "ticker": "RIHN",
+      "exchange": "BX",
+      "price_date": "2026-09-04",
+      "age_calendar_days": 11,
+      "market_session": "market",
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Mewar Hi-Tech Engineering Ltd.",
+      "ticker": "MHEL",
+      "exchange": "BSE",
+      "price_date": "2026-09-08",
+      "age_calendar_days": 7,
+      "market_session": "out_of_session",
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    },
+    {
+      "company_name": "Skytech Infinite Platform Ltd.",
+      "ticker": "SKYTECH",
+      "exchange": "NSE",
+      "price_date": "2026-09-07",
+      "age_calendar_days": 8,
+      "market_session": "out_of_session",
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+    }
+  ],
+  "global_preserved_absolute_stale_count": 6,
   "corporate_action_adjustment_count": 0,
   "corporate_action_adjustments": [],
-  "checked_on": "2026-09-14",
+  "checked_on": "2026-09-15",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2652,
-  "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1801,
-  "preserved_open_or_unknown_global_count": 583,
+  "global_snapshot_count": 2800,
+  "update_scope": "ALL",
+  "refreshed_completed_global_count": 2374,
+  "preserved_open_or_unknown_global_count": 10,
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
   "global_price_date_count": 2384,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-09-04": 375,
-    "2026-09-06": 8,
+    "2026-09-04": 4,
     "2026-09-07": 1,
     "2026-09-08": 1,
     "2026-09-09": 1,
-    "2026-09-10": 56,
-    "2026-09-11": 748,
-    "2026-09-14": 1194
+    "2026-09-10": 1,
+    "2026-09-11": 297,
+    "2026-09-14": 2079
   }
 }
