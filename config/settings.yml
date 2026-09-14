@@ -104,6 +104,16 @@ priority_coverage:
 # Keys may be TICKER or EXCHANGE:TICKER.
 manual_overrides: {}
 
+# Confirmed inactive listings are excluded from daily output from the effective
+# date even before the next weekly universe rebuild catches up with the source.
+# Add entries only from an authoritative exchange/company delisting notice.
+inactive_listings:
+  - country: Japan
+    exchange: TSE
+    ticker: "1909"
+    effective_date: "2026-09-14"
+    reason: "JPX delisting effective 2026-09-14"
+
 # Reject a source refresh before it can mass-remove stocks if the fresh active
 # universe collapses below this share of the previous validated universe.
 universe_refresh:
