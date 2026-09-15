@@ -2,17 +2,17 @@
   "status": "REVIEW",
   "errors": [],
   "warnings": [
-    "거래소 내 거래일 지연 검토: 4개 종목이 동일 거래소 최신 거래일보다 7일 이상 늦습니다. 휴장·거래정지·저유동성 여부를 확인할 REVIEW 항목입니다. sample=[{'company_name': 'Schindler Holding Ltd.', 'ticker': 'SHR', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-14', 'lag_calendar_days': 10, 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Interroll Holding AG', 'ticker': 'I3H', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-14', 'lag_calendar_days': 10, 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Schweiter Technologies AG', 'ticker': 'SN20', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-14', 'lag_calendar_days': 10, 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Rieter Holding AG', 'ticker': 'RIHN', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-14', 'lag_calendar_days': 10, 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}]",
-    "완료거래일 절대 지연 검토: 6개 해외 종목의 완료거래일이 오늘보다 7일 이상 오래되었습니다. 동일 거래소 전체가 함께 멈춘 경우도 잡는 REVIEW 항목입니다. 이 중 PRESERVED 상태는 6개입니다. sample=[{'company_name': 'Schindler Holding Ltd.', 'ticker': 'SHR', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 11, 'market_session': 'market', 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Interroll Holding AG', 'ticker': 'I3H', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 11, 'market_session': 'out_of_session', 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Schweiter Technologies AG', 'ticker': 'SN20', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 11, 'market_session': 'out_of_session', 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Rieter Holding AG', 'ticker': 'RIHN', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 11, 'market_session': 'market', 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}, {'company_name': 'Mewar Hi-Tech Engineering Ltd.', 'ticker': 'MHEL', 'exchange': 'BSE', 'price_date': '2026-09-08', 'age_calendar_days': 7, 'market_session': 'out_of_session', 'data_status': 'PRESERVED_OPEN_OR_UNKNOWN'}]"
+    "거래소 내 거래일 지연 검토: 2개 종목이 동일 거래소 최신 거래일보다 7일 이상 늦습니다. 휴장·거래정지·저유동성 여부를 확인할 REVIEW 항목입니다. sample=[{'company_name': 'Interroll Holding AG', 'ticker': 'I3H', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-14', 'lag_calendar_days': 10, 'data_status': 'REFRESHED_COMPLETED_SESSION'}, {'company_name': 'Schweiter Technologies AG', 'ticker': 'SN20', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-14', 'lag_calendar_days': 10, 'data_status': 'REFRESHED_COMPLETED_SESSION'}]",
+    "완료거래일 절대 지연 검토: 3개 해외 종목의 완료거래일이 오늘보다 7일 이상 오래되었습니다. 동일 거래소 전체가 함께 멈춘 경우도 잡는 REVIEW 항목입니다. 이 중 PRESERVED 상태는 0개입니다. sample=[{'company_name': 'Interroll Holding AG', 'ticker': 'I3H', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 11, 'market_session': 'out_of_session', 'data_status': 'REFRESHED_COMPLETED_SESSION'}, {'company_name': 'Schweiter Technologies AG', 'ticker': 'SN20', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 11, 'market_session': 'out_of_session', 'data_status': 'REFRESHED_COMPLETED_SESSION'}, {'company_name': 'Mewar Hi-Tech Engineering Ltd.', 'ticker': 'MHEL', 'exchange': 'BSE', 'price_date': '2026-09-08', 'age_calendar_days': 7, 'market_session': 'out_of_session', 'data_status': 'REFRESHED_COMPLETED_SESSION'}]"
   ],
-  "row_count": 2652,
+  "row_count": 2651,
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
   "kr_completed_cutoff": "2026-09-14",
   "kr_latest_price_date": "2026-09-14",
   "kr_latest_price_date_count": 268,
-  "kr_zero_return_count": 19,
+  "kr_zero_return_count": 20,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "unsafe_open_global_count": 0,
@@ -20,16 +20,16 @@
   "missing_price_count": 0,
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 10,
+  "global_lagging_price_date_count": 8,
   "global_lagging_price_dates": [
     {
       "company_name": "Schindler Holding Ltd.",
       "ticker": "SHR",
       "exchange": "BX",
-      "price_date": "2026-09-04",
+      "price_date": "2026-09-11",
       "exchange_latest_date": "2026-09-14",
-      "lag_calendar_days": 10,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+      "lag_calendar_days": 3,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
     },
     {
       "company_name": "Interroll Holding AG",
@@ -38,16 +38,7 @@
       "price_date": "2026-09-04",
       "exchange_latest_date": "2026-09-14",
       "lag_calendar_days": 10,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Nippon Dry-Chemical Co., Ltd.",
-      "ticker": "1909",
-      "exchange": "TSE",
-      "price_date": "2026-09-11",
-      "exchange_latest_date": "2026-09-14",
-      "lag_calendar_days": 3,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+      "data_status": "REFRESHED_COMPLETED_SESSION"
     },
     {
       "company_name": "Schweiter Technologies AG",
@@ -56,16 +47,16 @@
       "price_date": "2026-09-04",
       "exchange_latest_date": "2026-09-14",
       "lag_calendar_days": 10,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+      "data_status": "REFRESHED_COMPLETED_SESSION"
     },
     {
       "company_name": "Rieter Holding AG",
       "ticker": "RIHN",
       "exchange": "BX",
-      "price_date": "2026-09-04",
+      "price_date": "2026-09-09",
       "exchange_latest_date": "2026-09-14",
-      "lag_calendar_days": 10,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+      "lag_calendar_days": 5,
+      "data_status": "REFRESHED_COMPLETED_SESSION"
     },
     {
       "company_name": "Eiken Industries Co., Ltd",
@@ -74,7 +65,7 @@
       "price_date": "2026-09-11",
       "exchange_latest_date": "2026-09-14",
       "lag_calendar_days": 3,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+      "data_status": "REFRESHED_COMPLETED_SESSION"
     },
     {
       "company_name": "AURA SMART AIR LTD",
@@ -83,7 +74,7 @@
       "price_date": "2026-09-10",
       "exchange_latest_date": "2026-09-14",
       "lag_calendar_days": 4,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+      "data_status": "REFRESHED_COMPLETED_SESSION"
     },
     {
       "company_name": "Mewar Hi-Tech Engineering Ltd.",
@@ -92,7 +83,7 @@
       "price_date": "2026-09-08",
       "exchange_latest_date": "2026-09-11",
       "lag_calendar_days": 3,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+      "data_status": "REFRESHED_COMPLETED_SESSION"
     },
     {
       "company_name": "Visdem Technosys Limited",
@@ -101,30 +92,12 @@
       "price_date": "2026-09-09",
       "exchange_latest_date": "2026-09-11",
       "lag_calendar_days": 2,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Skytech Infinite Platform Ltd.",
-      "ticker": "SKYTECH",
-      "exchange": "NSE",
-      "price_date": "2026-09-07",
-      "exchange_latest_date": "2026-09-11",
-      "lag_calendar_days": 4,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+      "data_status": "REFRESHED_COMPLETED_SESSION"
     }
   ],
-  "global_severe_lagging_price_date_count": 4,
-  "global_absolute_stale_price_date_count": 6,
+  "global_severe_lagging_price_date_count": 2,
+  "global_absolute_stale_price_date_count": 3,
   "global_absolute_stale_price_dates": [
-    {
-      "company_name": "Schindler Holding Ltd.",
-      "ticker": "SHR",
-      "exchange": "BX",
-      "price_date": "2026-09-04",
-      "age_calendar_days": 11,
-      "market_session": "market",
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
     {
       "company_name": "Interroll Holding AG",
       "ticker": "I3H",
@@ -132,7 +105,7 @@
       "price_date": "2026-09-04",
       "age_calendar_days": 11,
       "market_session": "out_of_session",
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+      "data_status": "REFRESHED_COMPLETED_SESSION"
     },
     {
       "company_name": "Schweiter Technologies AG",
@@ -141,16 +114,7 @@
       "price_date": "2026-09-04",
       "age_calendar_days": 11,
       "market_session": "out_of_session",
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Rieter Holding AG",
-      "ticker": "RIHN",
-      "exchange": "BX",
-      "price_date": "2026-09-04",
-      "age_calendar_days": 11,
-      "market_session": "market",
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+      "data_status": "REFRESHED_COMPLETED_SESSION"
     },
     {
       "company_name": "Mewar Hi-Tech Engineering Ltd.",
@@ -159,40 +123,103 @@
       "price_date": "2026-09-08",
       "age_calendar_days": 7,
       "market_session": "out_of_session",
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
-    {
-      "company_name": "Skytech Infinite Platform Ltd.",
-      "ticker": "SKYTECH",
-      "exchange": "NSE",
-      "price_date": "2026-09-07",
-      "age_calendar_days": 8,
-      "market_session": "out_of_session",
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
+      "data_status": "REFRESHED_COMPLETED_SESSION"
     }
   ],
-  "global_preserved_absolute_stale_count": 6,
+  "global_preserved_absolute_stale_count": 0,
   "corporate_action_adjustment_count": 0,
   "corporate_action_adjustments": [],
   "checked_on": "2026-09-15",
   "fetch_error_count": 0,
   "fetch_errors": [],
-  "global_snapshot_count": 2800,
+  "global_snapshot_count": 2778,
+  "global_targeted_snapshot_count": 9,
+  "global_targeted_snapshot_error": null,
+  "global_historical_recovery_attempted_count": 0,
+  "global_historical_recovery_succeeded_count": 0,
   "update_scope": "ALL",
-  "refreshed_completed_global_count": 2374,
-  "preserved_open_or_unknown_global_count": 10,
+  "refreshed_completed_global_count": 2383,
+  "preserved_open_or_unknown_global_count": 0,
+  "global_exchange_latest_completed_dates": {
+    "ADX": "2026-09-14",
+    "AMEX": "2026-09-14",
+    "AQUIS": "2026-09-14",
+    "ATHEX": "2026-09-14",
+    "BCBA": "2026-09-14",
+    "BET": "2026-09-14",
+    "BIST": "2026-09-14",
+    "BME": "2026-09-14",
+    "BMFBOVESPA": "2026-09-14",
+    "BSE": "2026-09-11",
+    "BSESOF": "2026-09-14",
+    "BSSE": "2026-09-14",
+    "BVB": "2026-09-14",
+    "BVMT": "2026-09-14",
+    "BX": "2026-09-14",
+    "CSE": "2026-09-14",
+    "CSELK": "2026-09-14",
+    "CSEMA": "2026-09-14",
+    "DSEBD": "2026-09-14",
+    "EGX": "2026-09-14",
+    "EURONEXT": "2026-09-14",
+    "GPW": "2026-09-14",
+    "HKEX": "2026-09-14",
+    "HNX": "2026-09-14",
+    "HOSE": "2026-09-14",
+    "IDX": "2026-09-14",
+    "JSE": "2026-09-14",
+    "KRX": "2026-09-14",
+    "KSE": "2026-09-14",
+    "LSE": "2026-09-14",
+    "MIL": "2026-09-14",
+    "MYX": "2026-09-14",
+    "NAG": "2026-09-14",
+    "NASDAQ": "2026-09-14",
+    "NEO": "2026-09-14",
+    "NEWCONNECT": "2026-09-14",
+    "NGM": "2026-09-14",
+    "NSE": "2026-09-11",
+    "NSEKE": "2026-09-14",
+    "NSENG": "2026-09-14",
+    "NYSE": "2026-09-14",
+    "OMXCOP": "2026-09-14",
+    "OMXHEX": "2026-09-14",
+    "OMXRSE": "2026-09-14",
+    "OMXSTO": "2026-09-14",
+    "OMXTSE": "2026-09-14",
+    "OSL": "2026-09-14",
+    "PSE": "2026-09-14",
+    "PSECZ": "2026-09-14",
+    "PSX": "2026-09-14",
+    "RUS": "2026-09-14",
+    "SET": "2026-09-14",
+    "SGX": "2026-09-14",
+    "SIX": "2026-09-14",
+    "SSE": "2026-09-14",
+    "SZSE": "2026-09-14",
+    "TADAWUL": "2026-09-14",
+    "TASE": "2026-09-14",
+    "TPEX": "2026-09-14",
+    "TSE": "2026-09-14",
+    "TSX": "2026-09-14",
+    "TSXV": "2026-09-14",
+    "TWSE": "2026-09-14",
+    "UPCOM": "2026-09-14",
+    "VIE": "2026-09-14",
+    "XETR": "2026-09-14",
+    "ZSE": "2026-09-14"
+  },
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
-  "global_price_date_count": 2384,
+  "global_price_date_count": 2383,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-09-04": 4,
-    "2026-09-07": 1,
+    "2026-09-04": 2,
     "2026-09-08": 1,
-    "2026-09-09": 1,
+    "2026-09-09": 2,
     "2026-09-10": 1,
-    "2026-09-11": 297,
+    "2026-09-11": 298,
     "2026-09-14": 2079
   }
 }
