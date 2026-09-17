@@ -28,6 +28,9 @@ EXCHANGE_SUFFIX = {
     "TSXV": ".V",
     "ASX": ".AX",
     "HKEX": ".HK",
+    "SSE": ".SS",
+    "SZSE": ".SZ",
+    "TPEX": ".TWO",
     "SET": ".BK",
     "SGX": ".SI",
     "IDX": ".JK",
@@ -44,6 +47,10 @@ def yahoo_symbol(ticker: str, exchange: str | None) -> str:
     exchange = str(exchange or "").strip().upper()
     if not ticker:
         raise RuntimeError("Yahoo fallback requires a ticker")
+    # Yahoo uses four-digit Hong Kong symbols even when TradingView exposes a
+    # shorter numeric ticker (for example HKEX:42 -> 0042.HK).
+    if exchange == "HKEX" and ticker.isdigit():
+        ticker = ticker.zfill(4)
     if "." in ticker:
         return ticker
     if not exchange or exchange in NO_SUFFIX_EXCHANGES:

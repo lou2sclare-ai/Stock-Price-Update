@@ -53,6 +53,7 @@ def run(rows: list[dict], settings: dict) -> dict:
     unsafe_open_global_count = 0
     unknown_global_session_count = 0
     no_comparison_reference = []
+    awaiting_first_close = []
     kr_cutoff = _completed_kr_cutoff()
 
     for r in rows:
@@ -60,14 +61,23 @@ def run(rows: list[dict], settings: dict) -> dict:
         p = r.get("price")
         if p is None or p <= 0:
             missing_prices += 1
-            msg = (
-                f"완료 종가 미확보: {ident} — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. "
-                f"신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다."
-            )
-            if qa_cfg.get("hard_fail_on_missing_price", False):
-                errors.append(msg)
+            if str(r.get("data_status") or "") == "AWAITING_FIRST_COMPLETED_CLOSE":
+                awaiting_first_close.append({
+                    "company_name": r.get("company_name"),
+                    "ticker": r.get("ticker"),
+                    "exchange": r.get("exchange"),
+                    "observed_trade_date": r.get("pending_trade_date"),
+                    "market_session": r.get("market_session"),
+                })
             else:
-                warnings.append(msg)
+                msg = (
+                    f"완료 종가 미확보: {ident} — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. "
+                    f"신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다."
+                )
+                if qa_cfg.get("hard_fail_on_missing_price", False):
+                    errors.append(msg)
+                else:
+                    warnings.append(msg)
 
         country = str(r.get("country") or "").upper()
         if country == "KR" and p is not None and p > 0:
@@ -270,6 +280,8 @@ def run(rows: list[dict], settings: dict) -> dict:
         "unsafe_open_global_count": unsafe_open_global_count,
         "unknown_global_session_count": unknown_global_session_count,
         "missing_price_count": missing_prices,
+        "awaiting_first_completed_close_count": len(awaiting_first_close),
+        "awaiting_first_completed_close": awaiting_first_close[:100],
         "missing_return_reference_count": len(no_comparison_reference),
         "missing_return_references": no_comparison_reference[:100],
         "global_lagging_price_date_count": len(lagging_global),

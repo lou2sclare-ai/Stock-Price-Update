@@ -14,11 +14,13 @@ on:
     - cron: '47 22 * * 0-4'
     - cron: '17 23 * * 0-4'
     - cron: '47 23 * * 0-4'
-    # Afternoon SAFE_REFRESH retries, KST Mon-Fri: 16:20 / 16:50 / 17:20 / 18:20.
+    # Afternoon SAFE_REFRESH passes, KST Mon-Fri. Each pass is intentional:
+    # Asian exchanges close at different times, with India last around 19:00.
     - cron: '20 7 * * 1-5'
     - cron: '50 7 * * 1-5'
     - cron: '20 8 * * 1-5'
     - cron: '20 9 * * 1-5'
+    - cron: '20 10 * * 1-5'
   workflow_dispatch:
     inputs:
       scope:
@@ -109,12 +111,11 @@ jobs:
             exit 0
           fi
 
-          # Deduplicate only when today's successful stock update already
-          # contains the current source/config/workflow code. If code or config
-          # changed after that success, the next retry must run again so fixes
-          # are reflected in today's published output without waiting a day.
+          # Morning ALL entries are retries for the same closed-market snapshot,
+          # so deduplicate them after success. Afternoon SAFE_REFRESH entries are
+          # separate passes because Asian exchanges close at different times.
           SHOULD_SKIP=false
-          if [ "$EVENT_NAME" = "schedule" ]; then
+          if [ "$EVENT_NAME" = "schedule" ] && [ "$SCOPE" = "ALL" ]; then
             LAST_SUCCESS=$(git log -30 --format='%H%x09%s' | grep -F "stock update $TODAY $SCOPE universe-ok" | head -1 | cut -f1 || true)
             if [ -n "$LAST_SUCCESS" ]; then
               if git diff --quiet "$LAST_SUCCESS"..HEAD -- src config .github/workflows; then
@@ -160,7 +161,7 @@ jobs:
             REQUIRED_REFRESH=true
           elif [ "$MODE" = "FORCE" ]; then
             SHOULD_REFRESH=true
-          elif [ "$MODE" = "AUTO" ] && [ "$UPDATE_SCOPE" = "ALL" ]; then
+          elif [ "$MODE" = "AUTO" ] && [ "$UPDATE_SCOPE" = "ALL" ] && [ "$EVENT_NAME" != "push" ]; then
             SHOULD_REFRESH=true
           fi
 
