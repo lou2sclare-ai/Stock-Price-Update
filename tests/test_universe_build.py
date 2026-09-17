@@ -1,6 +1,11 @@
 import unittest
+from unittest.mock import patch
 
-from src.universe.build import merge_with_existing, validate_fresh_universe
+from src.universe.build import (
+    build_fresh_with_source_fallback,
+    merge_with_existing,
+    validate_fresh_universe,
+)
 
 
 def settings():
@@ -18,6 +23,53 @@ def settings():
 
 
 class UniverseBuildTests(unittest.TestCase):
+    def test_domestic_failure_does_not_block_global_refresh(self):
+        domestic_key = ("KR", "KRX", "000001")
+        stale_global_key = ("UNITED STATES", "NYSE", "OLD")
+        existing = {
+            domestic_key: {
+                "company_name": "Domestic Co",
+                "country": "KR",
+                "exchange": "KRX",
+                "ticker": "000001",
+                "active": "TRUE",
+                "source_industry": "조선",
+                "source_status": "PRESENT",
+                "last_seen": "2026-09-01",
+            },
+            stale_global_key: {
+                "company_name": "Old Global Co",
+                "country": "United States",
+                "exchange": "NYSE",
+                "ticker": "OLD",
+                "active": "TRUE",
+                "source_industry": "Aerospace & Defense",
+                "source_status": "PRESENT",
+                "last_seen": "2026-09-01",
+            },
+        }
+        fresh_global = [{
+            "company_name": "New Global Co",
+            "country": "United States",
+            "exchange": "NYSE",
+            "ticker": "NEW",
+            "active": "TRUE",
+            "source_industry": "Aerospace & Defense",
+        }]
+
+        with patch("src.universe.build.build_domestic", side_effect=RuntimeError("NAVER down")), patch(
+            "src.universe.build.build_global", return_value=fresh_global
+        ):
+            fresh, errors = build_fresh_with_source_fallback(settings(), existing)
+
+        rows, changes = merge_with_existing(fresh, existing)
+        by_ticker = {row["ticker"]: row for row in rows}
+        self.assertEqual(len(errors), 1)
+        self.assertEqual(by_ticker["000001"]["last_seen"], "2026-09-01")
+        self.assertEqual(by_ticker["000001"]["source_status"], "PRESENT")
+        self.assertEqual(by_ticker["OLD"]["source_status"], "REMOVED")
+        self.assertEqual(changes["removed_count"], 1)
+
     def test_partial_refresh_is_rejected_before_mass_removal(self):
         existing = {}
         for i in range(10):
