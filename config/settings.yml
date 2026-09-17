@@ -137,5 +137,5 @@ global_discovery_industries:
 
 price_fetch:
   # Bounded parallelism keeps a NAVER outage below the workflow timeout while
-  # avoiding an unbounded request burst.
+  # avoiding an unbounded request burst. Code/config pushes regenerate outputs.
   domestic_workers: 8
