@@ -2,6 +2,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -151,6 +152,33 @@ def _exchange_completed_latest(snapshot: dict[tuple[str, str], dict]) -> dict[st
     return out
 
 
+def _fetch_domestic_batch(
+    rows: list[dict],
+    global_snapshot: dict,
+    max_workers: int = 8,
+) -> dict[tuple[str, str, str], tuple[dict | None, Exception | None]]:
+    """Fetch independent Korean quotes concurrently with bounded fan-out."""
+    domestic = [
+        row for row in rows
+        if str(row.get("active", "")).upper() in ("TRUE", "1", "YES")
+        and str(row.get("country") or "").upper() == "KR"
+    ]
+    results: dict[tuple[str, str, str], tuple[dict | None, Exception | None]] = {}
+
+    def one(row: dict) -> dict:
+        return fetch_price(row, global_snapshot=global_snapshot)
+
+    with ThreadPoolExecutor(max_workers=max(1, int(max_workers))) as pool:
+        pending = {pool.submit(one, row): row_key(row) for row in domestic}
+        for future in as_completed(pending):
+            key = pending[future]
+            try:
+                results[key] = (future.result(), None)
+            except Exception as exc:
+                results[key] = (None, exc)
+    return results
+
+
 def main():
     settings = yaml.safe_load(Path("config/settings.yml").read_text(encoding="utf-8"))
     upath = settings["project"]["universe_csv"]
@@ -195,12 +223,19 @@ def main():
         print(f"Targeted TradingView recovery skipped for {len(missing_keys)} missing keys.")
 
     exchange_latest = _exchange_completed_latest(global_snapshot)
+    domestic_workers = int(settings.get("price_fetch", {}).get("domestic_workers", 8))
+    domestic_results = _fetch_domestic_batch(
+        rows,
+        global_snapshot,
+        max_workers=domestic_workers,
+    )
 
     enriched, fetch_errors = [], []
     refreshed_global = 0
     preserved_global = 0
     historical_recovery_attempted = 0
     historical_recovery_succeeded = 0
+    checked_no_new_trade = 0
 
     for source_row in rows:
         if str(source_row.get("active", "")).upper() not in ("TRUE", "1", "YES"):
@@ -213,7 +248,17 @@ def main():
         if country != "KR":
             key = _global_key(row)
             snap = global_snapshot.get(key)
-            if safe_global_snapshot_value(snap) and _price_date_not_older(snap, previous):
+            exchange_target = exchange_latest.get(key[0])
+            snap_is_safe = (
+                safe_global_snapshot_value(snap)
+                and _price_date_not_older(snap, previous)
+            )
+            snap_date = str(snap.get("price_date") or "") if snap else ""
+            snap_lags_exchange = bool(
+                snap_is_safe and exchange_target and snap_date < exchange_target
+            )
+
+            if snap_is_safe and not snap_lags_exchange:
                 row.update(snap)
                 row["last_checked_at"] = checked_at
                 row["data_status"] = _completed_snapshot_status(row)
@@ -223,10 +268,10 @@ def main():
                 # whenever the broad TradingView scan missed a symbol. That made
                 # a one-off omission permanent. If the same exchange has a newer
                 # completed date, first try a completed historical quote.
-                exchange_target = exchange_latest.get(key[0])
                 previous_date = str(previous.get("price_date") or "") if previous else ""
                 needs_recovery = (
                     previous is None
+                    or snap_lags_exchange
                     or (exchange_target and previous_date and previous_date < exchange_target)
                 )
                 recovered = None
@@ -242,7 +287,8 @@ def main():
                     except Exception as exc:
                         recovery_error = exc
 
-                if recovered and _price_date_newer(recovered, previous):
+                recovery_baseline = snap if snap_is_safe else previous
+                if recovered and _price_date_newer(recovered, recovery_baseline):
                     row.update(recovered)
                     if snap:
                         row["market_session"] = snap.get("market_session")
@@ -255,6 +301,24 @@ def main():
                     )
                     refreshed_global += 1
                     historical_recovery_succeeded += 1
+                elif snap_is_safe:
+                    # The source was checked successfully, but this security has
+                    # no newer completed trade than its exchange peers.  Keep the
+                    # real last-traded date instead of fabricating an exchange date.
+                    row.update(snap)
+                    row["last_checked_at"] = checked_at
+                    row["data_status"] = (
+                        "CHECKED_NO_NEW_TRADE"
+                        if snap_lags_exchange
+                        else _completed_snapshot_status(row)
+                    )
+                    refreshed_global += 1
+                    if snap_lags_exchange:
+                        checked_no_new_trade += 1
+                    if recovery_error is not None:
+                        fetch_errors.append(
+                            f"{row.get('company_name')} ({row.get('ticker')}) historical recovery: {recovery_error}"
+                        )
                 elif copy_previous_price(row, previous):
                     if snap:
                         row["market_session"] = snap.get("market_session")
@@ -300,8 +364,14 @@ def main():
             enriched.append(row)
             continue
 
+        domestic_result, domestic_error = domestic_results.get(
+            row_key(row),
+            (None, RuntimeError("Domestic quote task missing")),
+        )
         try:
-            row.update(fetch_price(row, global_snapshot=global_snapshot))
+            if domestic_error is not None:
+                raise domestic_error
+            row.update(domestic_result or {})
             row["last_checked_at"] = checked_at
             row["data_status"] = "COMPLETED_DAILY_QUOTE"
             tp = row.get("target_price")
@@ -335,6 +405,7 @@ def main():
     qa["global_targeted_snapshot_error"] = targeted_snapshot_error
     qa["global_historical_recovery_attempted_count"] = historical_recovery_attempted
     qa["global_historical_recovery_succeeded_count"] = historical_recovery_succeeded
+    qa["global_checked_no_new_trade_count"] = checked_no_new_trade
     qa["update_scope"] = scope
     qa["refreshed_completed_global_count"] = refreshed_global
     qa["preserved_open_or_unknown_global_count"] = preserved_global
