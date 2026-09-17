@@ -100,6 +100,26 @@ class QaTests(unittest.TestCase):
         self.assertEqual(qa["missing_price_count"], 1)
         self.assertEqual(qa["status"], "REVIEW")
 
+    def test_live_new_row_waiting_for_close_is_not_a_collection_warning(self):
+        row = {
+            "country": "China",
+            "exchange": "HKEX",
+            "ticker": "3231",
+            "company_name": "Newly discovered listing",
+            "price": None,
+            "price_date": None,
+            "pending_trade_date": "2026-09-17",
+            "market_session": "market",
+            "data_status": "AWAITING_FIRST_COMPLETED_CLOSE",
+            "research_status": "UNDEFINED",
+        }
+
+        qa = run([row], settings())
+
+        self.assertEqual(qa["missing_price_count"], 1)
+        self.assertEqual(qa["awaiting_first_completed_close_count"], 1)
+        self.assertFalse(any("완료 종가 미확보" in message for message in qa["warnings"]))
+
 
 if __name__ == "__main__":
     unittest.main()

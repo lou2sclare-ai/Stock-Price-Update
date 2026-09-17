@@ -42,8 +42,17 @@ def _data_status_label(v):
         "CHECKED_NO_NEW_TRADE":"확인 완료·신규 체결 없음",
         "PRESERVED_AFTER_FETCH_ERROR":"수집 오류·이전값 유지",
         "FETCH_ERROR":"수집 오류",
+        "AWAITING_FIRST_COMPLETED_CLOSE":"장 마감 후 첫 완료종가 확인 예정",
     }
     return labels.get(v,v or "-")
+
+
+def _price_date_label(r):
+    if r.get("price_date"):
+        return r.get("price_date")
+    if r.get("data_status") == "AWAITING_FIRST_COMPLETED_CLOSE":
+        return "장 마감 후 확인"
+    return "날짜 미확인"
 
 
 def _sorted(rows):
@@ -93,7 +102,7 @@ def _make_table_sheet(ws, rows, qa=None, title="섹터별 주가 모니터", sub
         vals=[
             sector,"국내" if _is_kr(r) else "해외",_country_label(r.get("country")),r.get("company_name"),r.get("ticker"),r.get("exchange"),_status_label(r.get("research_status")),
             r.get("price"),r.get("previous_close"),r.get("price_change"),(r.get("price_change_pct")/100 if r.get("price_change_pct") is not None else None),r.get("target_price"),None,
-            r.get("price_date") or "날짜 미확인",_data_status_label(r.get("data_status")),r.get("previous_trading_date"),r.get("last_checked_at") or r.get("price_observed_at"),r.get("price_source")
+            _price_date_label(r),_data_status_label(r.get("data_status")),r.get("previous_trading_date"),r.get("last_checked_at") or r.get("price_observed_at"),r.get("price_source")
         ]
         for c,v in enumerate(vals,1):
             cell=ws.cell(i,c,v)
@@ -111,7 +120,7 @@ def _make_table_sheet(ws, rows, qa=None, title="섹터별 주가 모니터", sub
             ws.cell(i,7).fill=PatternFill("solid",fgColor="EEF0F3")
         if r.get("research_sector") in SECTOR_LABELS:
             ws.cell(i,1).font=Font(name="Arial",size=9,bold=True,color=NAVY2)
-        if r.get("data_status") in ("PRESERVED_OPEN_OR_UNKNOWN","PRESERVED_AFTER_FETCH_ERROR","FETCH_ERROR","COMPLETED_NO_COMPARISON_REFERENCE"):
+        if r.get("data_status") in ("PRESERVED_OPEN_OR_UNKNOWN","PRESERVED_AFTER_FETCH_ERROR","FETCH_ERROR","COMPLETED_NO_COMPARISON_REFERENCE","AWAITING_FIRST_COMPLETED_CLOSE"):
             ws.cell(i,15).fill=PatternFill("solid",fgColor="FFF4D8")
             ws.cell(i,15).font=Font(name="Arial",size=9,bold=True,color="A45B00")
     widths=[12,8,14,38,13,11,13,14,16,14,11,14,11,14,24,14,24,28]
@@ -144,7 +153,7 @@ def _make_priority_sheet(ws, rows, qa):
         vals=[
             r.get("priority_coverage_rank"),sector,display_name,r.get("ticker"),_status_label(r.get("research_status")),
             r.get("price"),r.get("previous_close"),r.get("price_change"),(r.get("price_change_pct")/100 if r.get("price_change_pct") is not None else None),
-            r.get("target_price"),None,r.get("price_date") or "날짜 미확인",_data_status_label(r.get("data_status")),r.get("last_checked_at") or r.get("price_observed_at"),r.get("price_source")
+            r.get("target_price"),None,_price_date_label(r),_data_status_label(r.get("data_status")),r.get("last_checked_at") or r.get("price_observed_at"),r.get("price_source")
         ]
         for c,v in enumerate(vals,1):
             cell=ws.cell(i,c,v)
@@ -161,7 +170,7 @@ def _make_priority_sheet(ws, rows, qa):
         if r.get("research_status")=="COVERAGE":
             ws.cell(i,5).fill=PatternFill("solid",fgColor="E8F0FF")
             ws.cell(i,5).font=Font(name="Arial",size=9,bold=True,color="214FB7")
-        if r.get("data_status") in ("PRESERVED_OPEN_OR_UNKNOWN","PRESERVED_AFTER_FETCH_ERROR","FETCH_ERROR","COMPLETED_NO_COMPARISON_REFERENCE"):
+        if r.get("data_status") in ("PRESERVED_OPEN_OR_UNKNOWN","PRESERVED_AFTER_FETCH_ERROR","FETCH_ERROR","COMPLETED_NO_COMPARISON_REFERENCE","AWAITING_FIRST_COMPLETED_CLOSE"):
             ws.cell(i,13).fill=PatternFill("solid",fgColor="FFF4D8")
             ws.cell(i,13).font=Font(name="Arial",size=9,bold=True,color="A45B00")
     widths=[10,12,32,13,13,14,16,14,11,14,11,14,24,24,30]
@@ -213,7 +222,8 @@ def build(rows: list[dict], qa: dict, path: str):
         ("우선 커버리지 기대 종목",qa.get("priority_coverage_expected_count")),("우선 커버리지 반영 종목",qa.get("priority_coverage_present_count")),
         ("국내 등락률 원천 확인",qa.get("official_kr_return_count")),("국내 최신 가격 거래일",qa.get("kr_latest_price_date")),("국내 최신 거래일 종목",qa.get("kr_latest_price_date_count")),
         ("국내 0% 종목",qa.get("kr_zero_return_count")),("국내 완료일 초과",qa.get("kr_future_date_count")),("직전 비교기준 없음",qa.get("missing_return_reference_count")),
-        ("해외 거래일 확인",qa.get("global_price_date_count")),("해외 거래일 미확인",qa.get("global_price_date_missing_count")),
+        ("해외 거래일 확인",qa.get("global_price_date_count")),("장 마감 후 첫 완료종가 대기",qa.get("global_awaiting_first_completed_close_count")),
+        ("해외 거래일 미확인",max(0,int(qa.get("global_price_date_missing_count") or 0)-int(qa.get("global_awaiting_first_completed_close_count") or 0))),
         ("해외 동일 거래소 대비 지연 후보",qa.get("global_lagging_price_date_count")),("해외 7일 이상 지연 후보",qa.get("global_severe_lagging_price_date_count")),
         ("해외 최신 완료 거래일 갱신",qa.get("refreshed_completed_global_count")),("해외 이전 완료 거래일 유지",qa.get("preserved_open_or_unknown_global_count")),
     ]

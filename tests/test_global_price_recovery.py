@@ -42,6 +42,10 @@ class GlobalPriceRecoveryTests(unittest.TestCase):
         self.assertEqual(global_yahoo.yahoo_symbol("AUSA-M", "TASE"), "AUSA-M.TA")
         self.assertEqual(global_yahoo.yahoo_symbol("1909", "TSE"), "1909.T")
         self.assertEqual(global_yahoo.yahoo_symbol("SHR", "BX"), "SHR.SW")
+        self.assertEqual(global_yahoo.yahoo_symbol("42", "HKEX"), "0042.HK")
+        self.assertEqual(global_yahoo.yahoo_symbol("301699", "SZSE"), "301699.SZ")
+        self.assertEqual(global_yahoo.yahoo_symbol("603448", "SSE"), "603448.SS")
+        self.assertEqual(global_yahoo.yahoo_symbol("7934", "TPEX"), "7934.TWO")
 
     def test_unknown_exchange_never_queries_ambiguous_raw_ticker(self):
         with self.assertRaises(RuntimeError):
@@ -58,6 +62,23 @@ class GlobalPriceRecoveryTests(unittest.TestCase):
         self.assertTrue(stock_main._price_date_not_older({"price_date": "2026-09-11"}, old))
         self.assertTrue(stock_main._price_date_not_older({"price_date": "2026-09-14"}, old))
         self.assertFalse(stock_main._price_date_not_older({"price_date": "2026-09-10"}, old))
+
+    def test_empty_previous_row_is_not_preserved(self):
+        row = {}
+        previous = {"price": None, "price_date": None, "data_status": "FETCH_ERROR"}
+        self.assertFalse(stock_main.copy_previous_price(row, previous))
+
+    def test_live_quote_without_completed_session_is_pending(self):
+        self.assertTrue(stock_main.awaiting_first_completed_close({
+            "price": 10.0,
+            "price_date": "2026-09-17",
+            "market_session": "market",
+        }))
+        self.assertFalse(stock_main.awaiting_first_completed_close({
+            "price": 10.0,
+            "price_date": "2026-09-17",
+            "market_session": "post_market",
+        }))
 
     def test_exchange_lagging_snapshot_is_eligible_for_newer_history(self):
         snapshot = {"price_date": "2026-09-04", "market_session": "out_of_session"}

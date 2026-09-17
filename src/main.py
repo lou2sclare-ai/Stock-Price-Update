@@ -54,7 +54,15 @@ def load_previous(path: str) -> dict[tuple[str, str, str], dict]:
 
 
 def copy_previous_price(row: dict, previous: dict | None) -> bool:
-    if not previous:
+    # A prior output row may exist without ever obtaining a completed close.
+    # Copying that empty row would turn a FETCH_ERROR into a misleading
+    # PRESERVED state forever, so preserve only an actually publishable value.
+    if not previous or not previous.get("price_date") or previous.get("price") is None:
+        return False
+    try:
+        if float(previous.get("price") or 0) <= 0:
+            return False
+    except (TypeError, ValueError):
         return False
     copied = False
     for field in PRICE_FIELDS:
@@ -69,6 +77,19 @@ def safe_global_snapshot_value(snapshot: dict | None) -> bool:
         return False
     session = str(snapshot.get("market_session") or "").strip().lower()
     return session in CLOSED_GLOBAL_SESSION_STATES
+
+
+def awaiting_first_completed_close(snapshot: dict | None) -> bool:
+    """Return whether a live quote exists but its session is not complete."""
+    if not snapshot or not snapshot.get("price_date"):
+        return False
+    try:
+        if float(snapshot.get("price") or 0) <= 0:
+            return False
+    except (TypeError, ValueError):
+        return False
+    session = str(snapshot.get("market_session") or "").strip().lower()
+    return bool(session and session not in CLOSED_GLOBAL_SESSION_STATES)
 
 
 def _price_date_not_older(candidate: dict | None, previous: dict | None) -> bool:
@@ -236,6 +257,7 @@ def main():
     historical_recovery_attempted = 0
     historical_recovery_succeeded = 0
     checked_no_new_trade = 0
+    awaiting_first_close = []
 
     for source_row in rows:
         if str(source_row.get("active", "")).upper() not in ("TRUE", "1", "YES"):
@@ -334,11 +356,14 @@ def main():
                     # No prior safe value exists. Use only a historical close
                     # strictly before the current KST date, never an intraday bar.
                     try:
-                        recovered = recovered or fetch_price(
-                            row,
-                            global_snapshot=None,
-                            before_date=completed_before_date,
-                        )
+                        if recovered is None:
+                            if recovery_error is not None:
+                                raise recovery_error
+                            recovered = fetch_price(
+                                row,
+                                global_snapshot=None,
+                                before_date=completed_before_date,
+                            )
                         row.update(recovered)
                         row["last_checked_at"] = checked_at
                         row["data_status"] = (
@@ -359,8 +384,25 @@ def main():
                             "price_source": None,
                         })
                         row["last_checked_at"] = checked_at
-                        row["data_status"] = "FETCH_ERROR"
-                        fetch_errors.append(f"{row.get('company_name')} ({row.get('ticker')}): {exc}")
+                        if awaiting_first_completed_close(snap):
+                            # A real live quote exists, but this row entered the
+                            # universe before a safely publishable close was
+                            # stored. Retry after the exchange closes.
+                            row["market_session"] = snap.get("market_session")
+                            row["price_observed_at"] = snap.get("price_observed_at")
+                            row["pending_trade_date"] = snap.get("price_date")
+                            row["data_status"] = "AWAITING_FIRST_COMPLETED_CLOSE"
+                            awaiting_first_close.append({
+                                "company_name": row.get("company_name"),
+                                "ticker": row.get("ticker"),
+                                "exchange": row.get("exchange"),
+                                "observed_trade_date": snap.get("price_date"),
+                                "market_session": snap.get("market_session"),
+                                "historical_fallback_error": str(exc),
+                            })
+                        else:
+                            row["data_status"] = "FETCH_ERROR"
+                            fetch_errors.append(f"{row.get('company_name')} ({row.get('ticker')}): {exc}")
             enriched.append(row)
             continue
 
@@ -406,6 +448,8 @@ def main():
     qa["global_historical_recovery_attempted_count"] = historical_recovery_attempted
     qa["global_historical_recovery_succeeded_count"] = historical_recovery_succeeded
     qa["global_checked_no_new_trade_count"] = checked_no_new_trade
+    qa["global_awaiting_first_completed_close_count"] = len(awaiting_first_close)
+    qa["global_awaiting_first_completed_close"] = awaiting_first_close[:100]
     qa["update_scope"] = scope
     qa["refreshed_completed_global_count"] = refreshed_global
     qa["preserved_open_or_unknown_global_count"] = preserved_global
@@ -434,7 +478,11 @@ def main():
     qa["global_price_date_missing_count"] = len(global_rows) - qa["global_price_date_count"]
     date_counts = {}
     for r in global_rows:
-        d = r.get("price_date") or "UNKNOWN"
+        d = r.get("price_date") or (
+            "첫 완료종가 대기"
+            if r.get("data_status") == "AWAITING_FIRST_COMPLETED_CLOSE"
+            else "UNKNOWN"
+        )
         date_counts[d] = date_counts.get(d, 0) + 1
     qa["global_price_date_distribution"] = dict(sorted(date_counts.items()))
 
