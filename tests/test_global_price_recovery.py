@@ -59,6 +59,43 @@ class GlobalPriceRecoveryTests(unittest.TestCase):
         self.assertTrue(stock_main._price_date_not_older({"price_date": "2026-09-14"}, old))
         self.assertFalse(stock_main._price_date_not_older({"price_date": "2026-09-10"}, old))
 
+    def test_exchange_lagging_snapshot_is_eligible_for_newer_history(self):
+        snapshot = {"price_date": "2026-09-04", "market_session": "out_of_session"}
+        previous = {"price_date": "2026-09-04"}
+        exchange_target = "2026-09-16"
+
+        snap_is_safe = (
+            stock_main.safe_global_snapshot_value(snapshot)
+            and stock_main._price_date_not_older(snapshot, previous)
+        )
+        snap_lags_exchange = bool(
+            snap_is_safe and snapshot["price_date"] < exchange_target
+        )
+
+        self.assertTrue(snap_lags_exchange)
+        self.assertTrue(stock_main._price_date_newer(
+            {"price_date": "2026-09-15"}, snapshot
+        ))
+
+    def test_domestic_batch_collects_results_and_errors(self):
+        rows = [
+            {"active": "TRUE", "country": "KR", "exchange": "KRX", "ticker": "000001"},
+            {"active": "TRUE", "country": "KR", "exchange": "KRX", "ticker": "000002"},
+            {"active": "TRUE", "country": "US", "exchange": "NYSE", "ticker": "AAA"},
+        ]
+
+        def fake_fetch(row, global_snapshot=None):
+            if row["ticker"] == "000002":
+                raise RuntimeError("source unavailable")
+            return {"price": 100.0, "price_date": "2026-09-16"}
+
+        with patch.object(stock_main, "fetch_price", side_effect=fake_fetch):
+            results = stock_main._fetch_domestic_batch(rows, {}, max_workers=2)
+
+        self.assertEqual(len(results), 2)
+        self.assertEqual(results[("KR", "KRX", "000001")][0]["price"], 100.0)
+        self.assertIsInstance(results[("KR", "KRX", "000002")][1], RuntimeError)
+
 
 if __name__ == "__main__":
     unittest.main()
