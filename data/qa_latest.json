@@ -22,7 +22,7 @@
   "awaiting_first_completed_close": [],
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 126,
+  "global_lagging_price_date_count": 127,
   "global_lagging_price_dates": [
     {
       "company_name": "Honeywell Aerospace Inc.",
@@ -31,7 +31,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Rocket Lab Corporation",
@@ -40,7 +40,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Axon Enterprise, Inc.",
@@ -49,7 +49,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Arxis, Inc.",
@@ -58,7 +58,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "FTAI Aviation Ltd.",
@@ -67,7 +67,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Leonardo DRS, Inc.",
@@ -76,7 +76,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Kratos Defense & Security Solutions, Inc.",
@@ -85,7 +85,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "AeroVironment, Inc.",
@@ -94,7 +94,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Mercury Systems Inc",
@@ -103,7 +103,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Firefly Aerospace Inc.",
@@ -112,7 +112,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "OSI Systems, Inc.",
@@ -121,7 +121,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Intuitive Machines, Inc.",
@@ -130,7 +130,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Astronics Corporation",
@@ -139,7 +139,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Satellogic Inc.",
@@ -148,7 +148,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "TAT Technologies Ltd.",
@@ -157,7 +157,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Innovative Solutions and Support, Inc.",
@@ -166,7 +166,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Outdoor Holding Company",
@@ -175,7 +175,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "AIRO Group Holdings, Inc.",
@@ -184,7 +184,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Coda Octopus Group, Inc.",
@@ -193,7 +193,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "New Horizon Aircraft Ltd.",
@@ -202,7 +202,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Momentus Inc.",
@@ -211,7 +211,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Safe Pro Group Inc.",
@@ -220,7 +220,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Byrna Technologies, Inc.",
@@ -229,7 +229,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Mobilicom Limited",
@@ -238,7 +238,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "First Breach Inc.",
@@ -247,7 +247,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Senstar Technologies Corporation",
@@ -256,7 +256,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "DUKE Robotics Corp.",
@@ -265,7 +265,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Astrotech Corporation",
@@ -274,7 +274,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Lam Research Corporation",
@@ -283,7 +283,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Applied Materials, Inc.",
@@ -292,7 +292,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Honeywell International Inc.",
@@ -301,7 +301,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "PACCAR Inc.",
@@ -310,7 +310,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Symbotic Inc.",
@@ -319,7 +319,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Entegris, Inc.",
@@ -328,7 +328,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Woodward, Inc.",
@@ -337,7 +337,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Nordson Corporation",
@@ -346,7 +346,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "MKS Inc.",
@@ -355,7 +355,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Lincoln Electric Holdings, Inc.",
@@ -364,7 +364,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "AAON, Inc.",
@@ -373,7 +373,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "X-Energy, Inc.",
@@ -382,7 +382,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "The Middleby Corporation",
@@ -391,7 +391,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "ACM Research, Inc.",
@@ -400,7 +400,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Franklin Electric Co., Inc.",
@@ -409,7 +409,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "CECO Environmental Corp.",
@@ -418,7 +418,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Axcelis Technologies, Inc.",
@@ -427,7 +427,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Ultra Clean Holdings, Inc.",
@@ -436,7 +436,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Newell Brands Inc.",
@@ -445,7 +445,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Midera Food Processing, Inc.",
@@ -454,7 +454,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Ichor Holdings",
@@ -463,7 +463,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Astec Industries, Inc.",
@@ -472,7 +472,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Power Solutions International, Inc.",
@@ -481,7 +481,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Columbus McKinnon Corporation",
@@ -490,7 +490,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Deep Fission, Inc.",
@@ -499,7 +499,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "L.B. Foster Company",
@@ -508,7 +508,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Serve Robotics Inc.",
@@ -517,7 +517,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Energy Recovery, Inc.",
@@ -526,7 +526,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Twin Disc, Incorporated",
@@ -535,7 +535,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Velo3D, Inc.",
@@ -544,7 +544,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Palladyne AI Corp.",
@@ -553,7 +553,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Perma-Pipe International Holdings, Inc.",
@@ -562,7 +562,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Amtech Systems, Inc.",
@@ -571,7 +571,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Freightcar America, Inc.",
@@ -580,7 +580,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "CEA Industries Inc.",
@@ -589,7 +589,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Taylor Devices, Inc.",
@@ -598,7 +598,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Hurco Companies, Inc.",
@@ -607,7 +607,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Commercial Vehicle Group, Inc.",
@@ -616,7 +616,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Trio-Tech International",
@@ -625,7 +625,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Sono-Tek Corporation",
@@ -634,7 +634,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Rapid Micro Biosystems, Inc.",
@@ -643,7 +643,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "TechPrecision Corporation",
@@ -652,7 +652,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Deswell Industries, Inc.",
@@ -661,7 +661,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "AIOS Tech Inc.",
@@ -670,7 +670,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "RYTHM, Inc.",
@@ -679,7 +679,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Greenland Technologies Holding Corporation",
@@ -688,7 +688,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Data I/O Corporation",
@@ -697,7 +697,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Knightscope, Inc.",
@@ -706,7 +706,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "ClearSign Technologies Corporation",
@@ -715,7 +715,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "LiqTech International, Inc.",
@@ -724,7 +724,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Art's-Way Manufacturing Co., Inc.",
@@ -733,7 +733,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "TOMI Environmental Solutions, Inc.",
@@ -742,7 +742,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Mingteng International Corporation Inc.",
@@ -751,7 +751,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "JE Cleantech Holdings Limited",
@@ -760,7 +760,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Huachen AI Parking Management Technology Holding Co., Ltd.",
@@ -769,7 +769,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Nauticus Robotics, Inc.",
@@ -778,7 +778,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Hydrofarm Holdings Group, Inc.",
@@ -787,7 +787,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "CDT Environmental Technology Investment Holdings Limited",
@@ -796,7 +796,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "INLIF LIMITED",
@@ -805,7 +805,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Lumentum Holdings Inc.",
@@ -814,7 +814,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "INNIO N.V.",
@@ -823,7 +823,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Powell Industries, Inc.",
@@ -832,7 +832,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Enphase Energy, Inc.",
@@ -841,7 +841,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "QuantumScape Corporation",
@@ -850,7 +850,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "SolarEdge Technologies, Inc.",
@@ -859,7 +859,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Fluence Energy, Inc.",
@@ -868,7 +868,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Allient Inc.",
@@ -877,7 +877,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Eos Energy Enterprises, Inc.",
@@ -886,7 +886,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "American Superconductor Corporation",
@@ -895,7 +895,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "POET Technologies Inc.",
@@ -904,7 +904,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "ADS-TEC ENERGY PLC",
@@ -913,7 +913,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Nano Nuclear Energy Inc.",
@@ -922,7 +922,7 @@
       "price_date": "2026-09-16",
       "exchange_latest_date": "2026-09-17",
       "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     }
   ],
   "global_severe_lagging_price_date_count": 0,
@@ -1333,154 +1333,29 @@
     }
   ],
   "checked_on": "2026-09-17",
-  "fetch_error_count": 126,
+  "fetch_error_count": 2,
   "fetch_errors": [
-    "Honeywell Aerospace Inc. (HONA) historical recovery: No Yahoo daily data: HONA",
-    "Rocket Lab Corporation (RKLB) historical recovery: No Yahoo daily data: RKLB",
-    "Axon Enterprise, Inc. (AXON) historical recovery: No Yahoo daily data: AXON",
-    "Arxis, Inc. (ARXS) historical recovery: No Yahoo daily data: ARXS",
-    "FTAI Aviation Ltd. (FTAI) historical recovery: No Yahoo daily data: FTAI",
-    "Leonardo DRS, Inc. (DRS) historical recovery: No Yahoo daily data: DRS",
-    "Kratos Defense & Security Solutions, Inc. (KTOS) historical recovery: No Yahoo daily data: KTOS",
-    "AeroVironment, Inc. (AVAV) historical recovery: No Yahoo daily data: AVAV",
-    "Mercury Systems Inc (MRCY) historical recovery: No Yahoo daily data: MRCY",
-    "Firefly Aerospace Inc. (FLY) historical recovery: No Yahoo daily data: FLY",
-    "OSI Systems, Inc. (OSIS) historical recovery: No Yahoo daily data: OSIS",
-    "Intuitive Machines, Inc. (LUNR) historical recovery: No Yahoo daily data: LUNR",
-    "Astronics Corporation (ATRO) historical recovery: No Yahoo daily data: ATRO",
-    "Satellogic Inc. (SATL) historical recovery: No Yahoo daily data: SATL",
-    "TAT Technologies Ltd. (TATT) historical recovery: No Yahoo daily data: TATT",
-    "Innovative Solutions and Support, Inc. (IA) historical recovery: No Yahoo daily data: IA",
-    "Outdoor Holding Company (POWW) historical recovery: No Yahoo daily data: POWW",
-    "AIRO Group Holdings, Inc. (AIRO) historical recovery: No Yahoo daily data: AIRO",
-    "Coda Octopus Group, Inc. (CODA) historical recovery: No Yahoo daily data: CODA",
-    "New Horizon Aircraft Ltd. (HOVR) historical recovery: No Yahoo daily data: HOVR",
-    "Momentus Inc. (MNTS) historical recovery: No Yahoo daily data: MNTS",
-    "Safe Pro Group Inc. (SPAI) historical recovery: No Yahoo daily data: SPAI",
-    "Byrna Technologies, Inc. (BYRN) historical recovery: No Yahoo daily data: BYRN",
-    "Mobilicom Limited (MOB) historical recovery: No Yahoo daily data: MOB",
-    "First Breach Inc. (FBDT) historical recovery: No Yahoo daily data: FBDT",
-    "Senstar Technologies Corporation (SNT) historical recovery: No Yahoo daily data: SNT",
-    "DUKE Robotics Corp. (DUKR) historical recovery: No Yahoo daily data: DUKR",
-    "Astrotech Corporation (ASTC) historical recovery: No Yahoo daily data: ASTC",
-    "Lam Research Corporation (LRCX) historical recovery: No Yahoo daily data: LRCX",
-    "Applied Materials, Inc. (AMAT) historical recovery: No Yahoo daily data: AMAT",
-    "Honeywell International Inc. (HON) historical recovery: No Yahoo daily data: HON",
-    "PACCAR Inc. (PCAR) historical recovery: No Yahoo daily data: PCAR",
-    "Symbotic Inc. (SYM) historical recovery: No Yahoo daily data: SYM",
-    "Entegris, Inc. (ENTG) historical recovery: No Yahoo daily data: ENTG",
-    "Woodward, Inc. (WWD) historical recovery: No Yahoo daily data: WWD",
-    "Nordson Corporation (NDSN) historical recovery: No Yahoo daily data: NDSN",
-    "MKS Inc. (MKSI) historical recovery: No Yahoo daily data: MKSI",
-    "Lincoln Electric Holdings, Inc. (LECO) historical recovery: No Yahoo daily data: LECO",
-    "AAON, Inc. (AAON) historical recovery: No Yahoo daily data: AAON",
-    "X-Energy, Inc. (XE) historical recovery: No Yahoo daily data: XE",
-    "The Middleby Corporation (MIDD) historical recovery: No Yahoo daily data: MIDD",
-    "ACM Research, Inc. (ACMR) historical recovery: No Yahoo daily data: ACMR",
-    "Franklin Electric Co., Inc. (FELE) historical recovery: No Yahoo daily data: FELE",
-    "CECO Environmental Corp. (CECO) historical recovery: No Yahoo daily data: CECO",
-    "Axcelis Technologies, Inc. (ACLS) historical recovery: No Yahoo daily data: ACLS",
-    "Ultra Clean Holdings, Inc. (UCTT) historical recovery: No Yahoo daily data: UCTT",
-    "Newell Brands Inc. (NWL) historical recovery: No Yahoo daily data: NWL",
-    "Midera Food Processing, Inc. (MFP) historical recovery: No Yahoo daily data: MFP",
-    "Ichor Holdings (ICHR) historical recovery: No Yahoo daily data: ICHR",
-    "Astec Industries, Inc. (ASTE) historical recovery: No Yahoo daily data: ASTE",
-    "Power Solutions International, Inc. (PSIX) historical recovery: No Yahoo daily data: PSIX",
-    "Columbus McKinnon Corporation (CMCO) historical recovery: No Yahoo daily data: CMCO",
-    "Deep Fission, Inc. (FISN) historical recovery: No Yahoo daily data: FISN",
-    "L.B. Foster Company (FSTR) historical recovery: No Yahoo daily data: FSTR",
-    "Serve Robotics Inc. (SERV) historical recovery: No Yahoo daily data: SERV",
-    "Energy Recovery, Inc. (ERII) historical recovery: No Yahoo daily data: ERII",
-    "Twin Disc, Incorporated (TWIN) historical recovery: No Yahoo daily data: TWIN",
-    "Velo3D, Inc. (VELO) historical recovery: No Yahoo daily data: VELO",
-    "Palladyne AI Corp. (PDYN) historical recovery: No Yahoo daily data: PDYN",
-    "Perma-Pipe International Holdings, Inc. (PPIH) historical recovery: No Yahoo daily data: PPIH",
-    "Amtech Systems, Inc. (ASYS) historical recovery: No Yahoo daily data: ASYS",
-    "Freightcar America, Inc. (RAIL) historical recovery: No Yahoo daily data: RAIL",
-    "CEA Industries Inc. (BNC) historical recovery: No Yahoo daily data: BNC",
-    "Taylor Devices, Inc. (TAYD) historical recovery: No Yahoo daily data: TAYD",
-    "Hurco Companies, Inc. (HURC) historical recovery: No Yahoo daily data: HURC",
-    "Commercial Vehicle Group, Inc. (CVGI) historical recovery: No Yahoo daily data: CVGI",
-    "Trio-Tech International (TRT) historical recovery: No Yahoo daily data: TRT",
-    "Sono-Tek Corporation (SOTK) historical recovery: No Yahoo daily data: SOTK",
-    "Rapid Micro Biosystems, Inc. (RPID) historical recovery: No Yahoo daily data: RPID",
-    "TechPrecision Corporation (TPCS) historical recovery: No Yahoo daily data: TPCS",
-    "Deswell Industries, Inc. (DSWL) historical recovery: No Yahoo daily data: DSWL",
-    "AIOS Tech Inc. (AIOS) historical recovery: No Yahoo daily data: AIOS",
-    "RYTHM, Inc. (RYM) historical recovery: No Yahoo daily data: RYM",
-    "Greenland Technologies Holding Corporation (GTEC) historical recovery: No Yahoo daily data: GTEC",
-    "Data I/O Corporation (DAIO) historical recovery: No Yahoo daily data: DAIO",
-    "Knightscope, Inc. (KSCP) historical recovery: No Yahoo daily data: KSCP",
-    "ClearSign Technologies Corporation (CLIR) historical recovery: No Yahoo daily data: CLIR",
-    "LiqTech International, Inc. (LIQT) historical recovery: No Yahoo daily data: LIQT",
-    "Art's-Way Manufacturing Co., Inc. (ARTW) historical recovery: No Yahoo daily data: ARTW",
-    "TOMI Environmental Solutions, Inc. (TOMZ) historical recovery: No Yahoo daily data: TOMZ",
-    "Mingteng International Corporation Inc. (MTEN) historical recovery: No Yahoo daily data: MTEN",
-    "JE Cleantech Holdings Limited (JCSE) historical recovery: No Yahoo daily data: JCSE",
-    "Huachen AI Parking Management Technology Holding Co., Ltd. (HCAI) historical recovery: No Yahoo daily data: HCAI",
-    "Nauticus Robotics, Inc. (KITT) historical recovery: No Yahoo daily data: KITT",
-    "Hydrofarm Holdings Group, Inc. (HYFM) historical recovery: No Yahoo daily data: HYFM",
-    "CDT Environmental Technology Investment Holdings Limited (CDTG) historical recovery: No Yahoo daily data: CDTG",
-    "INLIF LIMITED (INLF) historical recovery: No Yahoo daily data: INLF",
-    "Lumentum Holdings Inc. (LITE) historical recovery: No Yahoo daily data: LITE",
-    "INNIO N.V. (INIO) historical recovery: No Yahoo daily data: INIO",
-    "Powell Industries, Inc. (POWL) historical recovery: No Yahoo daily data: POWL",
-    "Enphase Energy, Inc. (ENPH) historical recovery: No Yahoo daily data: ENPH",
-    "QuantumScape Corporation (QS) historical recovery: No Yahoo daily data: QS",
-    "SolarEdge Technologies, Inc. (SEDG) historical recovery: No Yahoo daily data: SEDG",
-    "Fluence Energy, Inc. (FLNC) historical recovery: No Yahoo daily data: FLNC",
-    "Allient Inc. (ALNT) historical recovery: No Yahoo daily data: ALNT",
-    "Eos Energy Enterprises, Inc. (EOSE) historical recovery: No Yahoo daily data: EOSE",
-    "American Superconductor Corporation (AMSC) historical recovery: No Yahoo daily data: AMSC",
-    "POET Technologies Inc. (POET) historical recovery: No Yahoo daily data: POET",
-    "ADS-TEC ENERGY PLC (ADSE) historical recovery: No Yahoo daily data: ADSE",
-    "Nano Nuclear Energy Inc. (NNE) historical recovery: No Yahoo daily data: NNE",
-    "Array Technologies, Inc. (ARRY) historical recovery: No Yahoo daily data: ARRY",
-    "Enovix Corporation (ENVX) historical recovery: No Yahoo daily data: ENVX",
-    "Solid Power, Inc. (SLDP) historical recovery: No Yahoo daily data: SLDP",
-    "General Fusion Group Ltd. (GFUZ) historical recovery: No Yahoo daily data: GFUZ",
-    "Terra Innovatum Global N.V. (NKLR) historical recovery: No Yahoo daily data: NKLR",
-    "AirJoule Technologies Corporation (AIRJ) historical recovery: No Yahoo daily data: AIRJ",
-    "Microvast Holdings, Inc. (MVST) historical recovery: No Yahoo daily data: MVST",
-    "NeoVolta Inc. (NEOV) historical recovery: No Yahoo daily data: NEOV",
-    "Capstone Energy Plus, Inc. (CEPL) historical recovery: No Yahoo daily data: CEPL",
-    "Hadron Energy, Inc. (HDRN) historical recovery: No Yahoo daily data: HDRN",
-    "Broadwind, Inc. (BWEN) historical recovery: No Yahoo daily data: BWEN",
-    "Innoviz Technologies Ltd. (INVZ) historical recovery: No Yahoo daily data: INVZ",
-    "Ultralife Corporation (ULBI) historical recovery: No Yahoo daily data: ULBI",
-    "CBAK Energy Technology Limited (CBAT) historical recovery: No Yahoo daily data: CBAT",
-    "Arbe Robotics Ltd. (ARBE) historical recovery: No Yahoo daily data: ARBE",
-    "Blink Charging Co. (BLNK) historical recovery: No Yahoo daily data: BLNK",
-    "Pioneer Power Solutions, Inc. (PPSI) historical recovery: No Yahoo daily data: PPSI",
-    "Beam Global (BEEM) historical recovery: No Yahoo daily data: BEEM",
-    "Energy Focus, Inc. (EFOI) historical recovery: No Yahoo daily data: EFOI",
-    "Dragonfly Energy Holdings Corp (DFLI) historical recovery: No Yahoo daily data: DFLI",
-    "Flux Power Holdings, Inc. (FLUX) historical recovery: No Yahoo daily data: FLUX",
-    "J-Star Holding Co., Ltd. (YMAT) historical recovery: No Yahoo daily data: YMAT",
-    "Expion Energy, Inc. (XPON) historical recovery: No Yahoo daily data: XPON",
-    "CN Energy Group Inc. (CNEY) historical recovery: No Yahoo daily data: CNEY",
-    "Elong Power Holding Limited (ELPW) historical recovery: No Yahoo daily data: ELPW",
-    "Erayak Power Solution Group Inc. (RAYA) historical recovery: No Yahoo daily data: RAYA"
+    "IMMI AD (IMMI) historical recovery: Yahoo fallback disabled for unmapped exchange BSESOF: using the raw ticker could resolve to the wrong security",
+    "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security"
   ],
-  "global_snapshot_count": 2799,
-  "global_targeted_snapshot_count": 25,
+  "global_snapshot_count": 2794,
+  "global_targeted_snapshot_count": 31,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 126,
+  "global_historical_recovery_attempted_count": 2,
   "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 126,
+  "global_checked_no_new_trade_count": 2,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1937,
-  "preserved_open_or_unknown_global_count": 426,
+  "refreshed_completed_global_count": 1649,
+  "preserved_open_or_unknown_global_count": 714,
   "global_exchange_latest_completed_dates": {
     "ADX": "2026-09-17",
-    "AMEX": "2026-09-16",
     "ASX": "2026-09-17",
-    "BCBA": "2026-09-16",
+    "ATHEX": "2026-09-17",
     "BSE": "2026-09-17",
+    "BSESOF": "2026-09-17",
     "BVMT": "2026-09-17",
-    "CSE": "2026-09-16",
     "CSELK": "2026-09-17",
     "DSEBD": "2026-09-17",
     "EGX": "2026-09-17",
@@ -1493,12 +1368,12 @@
     "KSE": "2026-09-17",
     "MYX": "2026-09-17",
     "NAG": "2026-09-17",
-    "NASDAQ": "2026-09-17",
-    "NEO": "2026-09-16",
     "NSE": "2026-09-17",
     "NSEKE": "2026-09-17",
-    "NYSE": "2026-09-16",
+    "NSENG": "2026-09-17",
     "NZX": "2026-09-17",
+    "OMXRSE": "2026-09-17",
+    "OMXTSE": "2026-09-17",
     "PSE": "2026-09-17",
     "PSX": "2026-09-17",
     "SET": "2026-09-17",
@@ -1508,10 +1383,9 @@
     "TADAWUL": "2026-09-17",
     "TPEX": "2026-09-17",
     "TSE": "2026-09-17",
-    "TSX": "2026-09-16",
-    "TSXV": "2026-09-16",
     "TWSE": "2026-09-17",
-    "UPCOM": "2026-09-17"
+    "UPCOM": "2026-09-17",
+    "ZSE": "2026-09-17"
   },
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
@@ -1519,7 +1393,7 @@
   "global_price_date_count": 2363,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-09-16": 720,
-    "2026-09-17": 1643
+    "2026-09-16": 714,
+    "2026-09-17": 1649
   }
 }
