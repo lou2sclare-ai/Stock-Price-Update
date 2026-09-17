@@ -49,6 +49,7 @@ def run(rows: list[dict], settings: dict) -> dict:
     kr_zero_return_count = 0
     kr_future_date_count = 0
     kr_inexact_change_count = 0
+    kr_fetch_error_count = 0
     unsafe_open_global_count = 0
     unknown_global_session_count = 0
     no_comparison_reference = []
@@ -70,6 +71,8 @@ def run(rows: list[dict], settings: dict) -> dict:
 
         country = str(r.get("country") or "").upper()
         if country == "KR" and p is not None and p > 0:
+            if str(r.get("data_status") or "") == "PRESERVED_AFTER_FETCH_ERROR":
+                kr_fetch_error_count += 1
             # Only Korean rows that actually have a publishable completed close
             # are expected to carry the official daily-return provenance fields.
             # A newly listed/security-discovery row can legitimately exist before
@@ -103,11 +106,16 @@ def run(rows: list[dict], settings: dict) -> dict:
             status = str(r.get("data_status") or "")
             if not session:
                 unknown_global_session_count += 1
-                if not status.startswith("PRESERVED") and status not in {
+                if p is not None and p > 0 and not status.startswith("PRESERVED") and status not in {
                     "COMPLETED_HISTORICAL_FALLBACK", "COMPLETED_NO_COMPARISON_REFERENCE"
                 }:
                     unsafe_open_global_count += 1
-            elif session not in CLOSED_GLOBAL_SESSION_STATES and not status.startswith("PRESERVED"):
+            elif (
+                p is not None
+                and p > 0
+                and session not in CLOSED_GLOBAL_SESSION_STATES
+                and not status.startswith("PRESERVED")
+            ):
                 unsafe_open_global_count += 1
 
             if p is not None and p > 0 and (
@@ -154,6 +162,11 @@ def run(rows: list[dict], settings: dict) -> dict:
         errors.append(f"Suspicious Korean zero-return concentration: {kr_zero_return_count}/{domestic_count}")
     if kr_inexact_change_count:
         errors.append(f"Korean exact price-change arithmetic mismatch: {kr_inexact_change_count}/{domestic_count}")
+    if domestic_count and kr_fetch_error_count >= max(10, int(domestic_count * 0.25)):
+        errors.append(
+            f"Korean quote source failure concentration: {kr_fetch_error_count}/{domestic_count}; "
+            "publication blocked so stale domestic prices are not presented as a fresh update"
+        )
     if unsafe_open_global_count:
         errors.append(f"Unsafe/unknown global session prices would be published: {unsafe_open_global_count}")
 
@@ -253,6 +266,7 @@ def run(rows: list[dict], settings: dict) -> dict:
         "kr_zero_return_count": kr_zero_return_count,
         "kr_future_date_count": kr_future_date_count,
         "kr_inexact_change_count": kr_inexact_change_count,
+        "kr_fetch_error_count": kr_fetch_error_count,
         "unsafe_open_global_count": unsafe_open_global_count,
         "unknown_global_session_count": unknown_global_session_count,
         "missing_price_count": missing_prices,
