@@ -41,7 +41,9 @@ def _completed_cutoff_date() -> str:
 
 def _json_rows(ticker: str) -> list[dict]:
     url = PRICE_URL.format(ticker=str(ticker).zfill(6))
-    payload = get(url, params={"pageSize": 7, "page": 1}, timeout=15, retries=3).json()
+    # The daily workflow fetches every Korean security.  Bound each request so
+    # a NAVER outage cannot serialize into hours of retries across the universe.
+    payload = get(url, params={"pageSize": 7, "page": 1}, timeout=8, retries=2).json()
     if isinstance(payload, list):
         return payload
     if isinstance(payload, dict):
