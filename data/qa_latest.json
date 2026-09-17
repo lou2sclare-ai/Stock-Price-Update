@@ -2,14 +2,7 @@
   "status": "REVIEW",
   "errors": [],
   "warnings": [
-    "완료 종가 미확보: Excelland Robotics (Wuxi) Co. Ltd. Class H (3231) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다.",
-    "완료 종가 미확보: ReTech Environmental Solutions Co., Ltd. (7934) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다.",
-    "완료 종가 미확보: LUOYANG BEARING GROUP CO LTD (301699) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다.",
-    "완료 종가 미확보: TEMB INTELLIGENT TECH SHANDONG CO (603448) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다.",
-    "완료 종가 미확보: XMH Holdings Ltd. (9PQ) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다.",
-    "완료 종가 미확보: Northeast Electric Development Co., Ltd. Class H (42) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다.",
-    "급등락 검토 +58.3%: UHT Unitech Co., Ltd. (6618) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
-    "완료 종가 미확보: Kanohar Electricals Ltd (KANOHAR) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다."
+    "급등락 검토 -43.1%: UHT Unitech Co., Ltd. (6618) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
   ],
   "row_count": 2631,
   "domestic_count": 268,
@@ -23,8 +16,53 @@
   "kr_inexact_change_count": 0,
   "kr_fetch_error_count": 0,
   "unsafe_open_global_count": 0,
-  "unknown_global_session_count": 7,
-  "missing_price_count": 7,
+  "unknown_global_session_count": 0,
+  "missing_price_count": 6,
+  "awaiting_first_completed_close_count": 6,
+  "awaiting_first_completed_close": [
+    {
+      "company_name": "Excelland Robotics (Wuxi) Co. Ltd. Class H",
+      "ticker": "3231",
+      "exchange": "HKEX",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market"
+    },
+    {
+      "company_name": "LUOYANG BEARING GROUP CO LTD",
+      "ticker": "301699",
+      "exchange": "SZSE",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market"
+    },
+    {
+      "company_name": "TEMB INTELLIGENT TECH SHANDONG CO",
+      "ticker": "603448",
+      "exchange": "SSE",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market"
+    },
+    {
+      "company_name": "XMH Holdings Ltd.",
+      "ticker": "9PQ",
+      "exchange": "SGX",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market"
+    },
+    {
+      "company_name": "Northeast Electric Development Co., Ltd. Class H",
+      "ticker": "42",
+      "exchange": "HKEX",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market"
+    },
+    {
+      "company_name": "Kanohar Electricals Ltd",
+      "ticker": "KANOHAR",
+      "exchange": "BSE",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market"
+    }
+  ],
   "missing_return_reference_count": 0,
   "missing_return_references": [],
   "global_lagging_price_date_count": 3,
@@ -713,25 +751,68 @@
     }
   ],
   "checked_on": "2026-09-17",
-  "fetch_error_count": 7,
-  "fetch_errors": [
-    "Excelland Robotics (Wuxi) Co. Ltd. Class H (3231): No Yahoo daily data: 3231.HK",
-    "ReTech Environmental Solutions Co., Ltd. (7934): Yahoo fallback disabled for unmapped exchange TPEX: using the raw ticker could resolve to the wrong security",
-    "LUOYANG BEARING GROUP CO LTD (301699): Yahoo fallback disabled for unmapped exchange SZSE: using the raw ticker could resolve to the wrong security",
-    "TEMB INTELLIGENT TECH SHANDONG CO (603448): Yahoo fallback disabled for unmapped exchange SSE: using the raw ticker could resolve to the wrong security",
-    "XMH Holdings Ltd. (9PQ): No Yahoo daily data: 9PQ.SI",
-    "Northeast Electric Development Co., Ltd. Class H (42): No Yahoo daily data: 42.HK",
-    "Kanohar Electricals Ltd (KANOHAR): No Yahoo daily data: KANOHAR.BO"
-  ],
-  "global_snapshot_count": 2730,
+  "fetch_error_count": 0,
+  "fetch_errors": [],
+  "global_snapshot_count": 2739,
   "global_targeted_snapshot_count": 0,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 7,
+  "global_historical_recovery_attempted_count": 0,
   "global_historical_recovery_succeeded_count": 0,
   "global_checked_no_new_trade_count": 0,
+  "global_awaiting_first_completed_close_count": 6,
+  "global_awaiting_first_completed_close": [
+    {
+      "company_name": "Excelland Robotics (Wuxi) Co. Ltd. Class H",
+      "ticker": "3231",
+      "exchange": "HKEX",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market",
+      "historical_fallback_error": "No Yahoo daily data: 3231.HK"
+    },
+    {
+      "company_name": "LUOYANG BEARING GROUP CO LTD",
+      "ticker": "301699",
+      "exchange": "SZSE",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market",
+      "historical_fallback_error": "No Yahoo daily data: 301699.SZ"
+    },
+    {
+      "company_name": "TEMB INTELLIGENT TECH SHANDONG CO",
+      "ticker": "603448",
+      "exchange": "SSE",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market",
+      "historical_fallback_error": "No Yahoo daily data: 603448.SS"
+    },
+    {
+      "company_name": "XMH Holdings Ltd.",
+      "ticker": "9PQ",
+      "exchange": "SGX",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market",
+      "historical_fallback_error": "No Yahoo daily data: 9PQ.SI"
+    },
+    {
+      "company_name": "Northeast Electric Development Co., Ltd. Class H",
+      "ticker": "42",
+      "exchange": "HKEX",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market",
+      "historical_fallback_error": "No Yahoo daily data: 0042.HK"
+    },
+    {
+      "company_name": "Kanohar Electricals Ltd",
+      "ticker": "KANOHAR",
+      "exchange": "BSE",
+      "observed_trade_date": "2026-09-17",
+      "market_session": "market",
+      "historical_fallback_error": "No Yahoo daily data: KANOHAR.BO"
+    }
+  ],
   "update_scope": "ALL",
-  "refreshed_completed_global_count": 731,
-  "preserved_open_or_unknown_global_count": 1625,
+  "refreshed_completed_global_count": 812,
+  "preserved_open_or_unknown_global_count": 1545,
   "global_exchange_latest_completed_dates": {
     "ADX": "2026-09-16",
     "AMEX": "2026-09-16",
@@ -773,8 +854,10 @@
     "SIX": "2026-09-16",
     "TADAWUL": "2026-09-16",
     "TASE": "2026-09-16",
+    "TPEX": "2026-09-17",
     "TSX": "2026-09-16",
     "TSXV": "2026-09-16",
+    "TWSE": "2026-09-17",
     "VIE": "2026-09-16",
     "XETR": "2026-09-16",
     "ZSE": "2026-09-16"
@@ -782,11 +865,12 @@
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
-  "global_price_date_count": 2356,
-  "global_price_date_missing_count": 7,
+  "global_price_date_count": 2357,
+  "global_price_date_missing_count": 6,
   "global_price_date_distribution": {
     "2026-09-15": 3,
-    "2026-09-16": 2353,
-    "UNKNOWN": 7
+    "2026-09-16": 2273,
+    "2026-09-17": 81,
+    "첫 완료종가 대기": 6
   }
 }
