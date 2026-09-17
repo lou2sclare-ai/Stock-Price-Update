@@ -134,3 +134,8 @@ global_discovery_industries:
   - Electrical Products
   - Industrial Machinery
   - Trucks/Construction/Farm Machinery
+
+price_fetch:
+  # Bounded parallelism keeps a NAVER outage below the workflow timeout while
+  # avoiding an unbounded request burst.
+  domestic_workers: 8

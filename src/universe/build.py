@@ -147,6 +147,61 @@ def build_global(settings: dict) -> list[dict]:
     return out
 
 
+def _existing_active_slice(existing: dict, *, domestic: bool) -> list[dict]:
+    """Reuse only the failed source's validated rows without masking the other source."""
+    rows = []
+    for old in existing.values():
+        is_domestic = str(old.get("country") or "").upper() == "KR"
+        if not _is_active(old) or is_domestic != domestic:
+            continue
+        row = dict(old)
+        row["_source_refresh_fallback"] = True
+        rows.append(row)
+    return rows
+
+
+def build_fresh_with_source_fallback(
+    settings: dict,
+    existing: dict,
+) -> tuple[list[dict], list[str]]:
+    """Refresh NAVER and TradingView independently.
+
+    A temporary NAVER failure must not prevent stale/removed global listings
+    from being refreshed, and the inverse is also true.  Failed source slices
+    retain their previously validated rows and source timestamps.
+    """
+    errors: list[str] = []
+    refreshed_source_count = 0
+
+    try:
+        domestic = build_domestic(settings)
+        refreshed_source_count += 1
+    except Exception as exc:
+        domestic = _existing_active_slice(existing, domestic=True)
+        errors.append(f"NAVER domestic refresh fallback: {exc}")
+
+    try:
+        global_rows = build_global(settings)
+        refreshed_source_count += 1
+    except Exception as exc:
+        global_rows = _existing_active_slice(existing, domestic=False)
+        errors.append(f"TradingView global refresh fallback: {exc}")
+
+    if refreshed_source_count == 0:
+        raise RuntimeError(
+            "All universe sources failed; keeping the last validated universe. "
+            + " | ".join(errors)
+        )
+    if not domestic or not global_rows:
+        raise RuntimeError(
+            "Universe source fallback unavailable for an empty source slice. "
+            + " | ".join(errors)
+        )
+
+    fresh = apply_overrides(dedupe(domestic + global_rows), settings)
+    return fresh, errors
+
+
 def dedupe(rows: list[dict]) -> list[dict]:
     exact: dict[tuple[str, str, str], dict] = {}
     for row in rows:
@@ -237,6 +292,7 @@ def merge_with_existing(current: list[dict], existing: dict) -> tuple[list[dict]
 
     for k, row in current_map.items():
         old = existing.get(k)
+        source_fallback = bool(row.pop("_source_refresh_fallback", False))
         if old:
             for field in PRESERVE_FIELDS:
                 if old.get(field) not in (None, ""):
@@ -245,8 +301,12 @@ def merge_with_existing(current: list[dict], existing: dict) -> tuple[list[dict]
         else:
             row["first_seen"] = today
             added.append({"key": list(k), "company_name": row.get("company_name"), "research_sector": row.get("research_sector")})
-        row["last_seen"] = today
-        row["source_status"] = "PRESENT"
+        if source_fallback and old:
+            row["last_seen"] = old.get("last_seen") or row.get("last_seen") or ""
+            row["source_status"] = old.get("source_status") or row.get("source_status") or "PRESENT"
+        else:
+            row["last_seen"] = today
+            row["source_status"] = "PRESENT"
 
     for k, old in existing.items():
         if k in current_map:
@@ -293,18 +353,18 @@ def main():
     s = load_settings()
     universe_path = s["project"]["universe_csv"]
     existing = load_existing(universe_path)
-    domestic = build_domestic(s)
-    global_rows = build_global(s)
-    fresh = apply_overrides(dedupe(domestic + global_rows), s)
+    fresh, source_errors = build_fresh_with_source_fallback(s, existing)
     validate_fresh_universe(fresh, existing, s)
     rows, changes = merge_with_existing(fresh, existing)
     write_universe(rows, universe_path)
     cp = Path(s["project"]["universe_changes_json"])
     cp.parent.mkdir(parents=True, exist_ok=True)
     cp.write_text(json.dumps(changes, ensure_ascii=False, indent=2), encoding="utf-8")
+    if source_errors:
+        print("Universe partial source fallback: " + " | ".join(source_errors))
     print(
-        f"Universe: domestic={len(domestic)}, global={len(global_rows)}, "
-        f"fresh={len(fresh)}, total={len(rows)}, added={changes['added_count']}, removed={changes['removed_count']}"
+        f"Universe: fresh={len(fresh)}, total={len(rows)}, "
+        f"added={changes['added_count']}, removed={changes['removed_count']}"
     )
 
 

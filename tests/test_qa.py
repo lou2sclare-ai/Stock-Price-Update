@@ -65,6 +65,41 @@ class QaTests(unittest.TestCase):
         self.assertEqual(qa["status"], "REVIEW")
         self.assertTrue(any("완료거래일 절대 지연 검토" in message for message in qa["warnings"]))
 
+    def test_concentrated_domestic_fetch_failures_block_publication(self):
+        rows = []
+        for index in range(12):
+            row = valid_kr_row()
+            row["ticker"] = f"{index:06d}"
+            row["data_status"] = "PRESERVED_AFTER_FETCH_ERROR"
+            rows.append(row)
+
+        qa = run(rows, settings())
+
+        self.assertEqual(qa["status"], "FAIL")
+        self.assertEqual(qa["kr_fetch_error_count"], 12)
+        self.assertTrue(any(
+            "Korean quote source failure concentration" in message
+            for message in qa["errors"]
+        ))
+
+    def test_missing_global_price_is_not_mislabeled_as_unsafe_published_price(self):
+        row = {
+            "country": "Taiwan",
+            "exchange": "TPEX",
+            "ticker": "NEW",
+            "company_name": "New Listing",
+            "price": None,
+            "market_session": None,
+            "data_status": "FETCH_ERROR",
+            "research_status": "UNDEFINED",
+        }
+
+        qa = run([row], settings())
+
+        self.assertEqual(qa["unsafe_open_global_count"], 0)
+        self.assertEqual(qa["missing_price_count"], 1)
+        self.assertEqual(qa["status"], "REVIEW")
+
 
 if __name__ == "__main__":
     unittest.main()

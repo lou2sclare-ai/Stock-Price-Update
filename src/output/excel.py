@@ -39,6 +39,7 @@ def _data_status_label(v):
         "COMPLETED_HISTORICAL_FALLBACK":"최신 완료 거래일",
         "COMPLETED_NO_COMPARISON_REFERENCE":"신규상장·직전 기준값 없음",
         "PRESERVED_OPEN_OR_UNKNOWN":"이전 완료 거래일 유지",
+        "CHECKED_NO_NEW_TRADE":"확인 완료·신규 체결 없음",
         "PRESERVED_AFTER_FETCH_ERROR":"수집 오류·이전값 유지",
         "FETCH_ERROR":"수집 오류",
     }

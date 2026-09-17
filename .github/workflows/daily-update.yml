@@ -25,7 +25,7 @@ on:
           - ALL
           - SAFE_REFRESH
       refresh_universe:
-        description: 'Universe refresh (AUTO=scheduled Monday only; FORCE=refresh now; SKIP=use current)'
+        description: 'Universe refresh (AUTO=every ALL run; FORCE=refresh now; SKIP=use current)'
         required: true
         default: AUTO
         type: choice
@@ -141,7 +141,6 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           MANUAL_UNIVERSE_MODE: ${{ inputs.refresh_universe }}
         run: |
-          KST_DOW=$(TZ=Asia/Seoul date +%u)
           MODE="${MANUAL_UNIVERSE_MODE:-AUTO}"
           SHOULD_REFRESH=false
           REQUIRED_REFRESH=false
@@ -151,7 +150,7 @@ jobs:
             REQUIRED_REFRESH=true
           elif [ "$MODE" = "FORCE" ]; then
             SHOULD_REFRESH=true
-          elif [ "$MODE" = "AUTO" ] && [ "$EVENT_NAME" = "schedule" ] && [ "$UPDATE_SCOPE" = "ALL" ] && [ "$KST_DOW" = "1" ]; then
+          elif [ "$MODE" = "AUTO" ] && [ "$UPDATE_SCOPE" = "ALL" ]; then
             SHOULD_REFRESH=true
           fi
 
