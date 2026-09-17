@@ -1,12 +1,17 @@
 {
-  "status": "REVIEW",
-  "errors": [],
-  "warnings": [
-    "급등락 검토 +58.3%: UHT Unitech Co., Ltd. (6618) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
-    "거래소 내 거래일 지연 검토: 3개 종목이 동일 거래소 최신 거래일보다 7일 이상 늦습니다. 휴장·거래정지·저유동성 여부를 확인할 REVIEW 항목입니다. sample=[{'company_name': 'Interroll Holding AG', 'ticker': 'I3H', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-16', 'lag_calendar_days': 12, 'data_status': 'REFRESHED_COMPLETED_SESSION'}, {'company_name': 'Schweiter Technologies AG', 'ticker': 'SN20', 'exchange': 'BX', 'price_date': '2026-09-04', 'exchange_latest_date': '2026-09-16', 'lag_calendar_days': 12, 'data_status': 'REFRESHED_COMPLETED_SESSION'}, {'company_name': 'Mewar Hi-Tech Engineering Ltd.', 'ticker': 'MHEL', 'exchange': 'BSE', 'price_date': '2026-09-08', 'exchange_latest_date': '2026-09-16', 'lag_calendar_days': 8, 'data_status': 'REFRESHED_COMPLETED_SESSION'}]",
-    "완료거래일 절대 지연 검토: 3개 해외 종목의 완료거래일이 오늘보다 7일 이상 오래되었습니다. 동일 거래소 전체가 함께 멈춘 경우도 잡는 REVIEW 항목입니다. 이 중 PRESERVED 상태는 0개입니다. sample=[{'company_name': 'Interroll Holding AG', 'ticker': 'I3H', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 13, 'market_session': 'out_of_session', 'data_status': 'REFRESHED_COMPLETED_SESSION'}, {'company_name': 'Schweiter Technologies AG', 'ticker': 'SN20', 'exchange': 'BX', 'price_date': '2026-09-04', 'age_calendar_days': 13, 'market_session': 'out_of_session', 'data_status': 'REFRESHED_COMPLETED_SESSION'}, {'company_name': 'Mewar Hi-Tech Engineering Ltd.', 'ticker': 'MHEL', 'exchange': 'BSE', 'price_date': '2026-09-08', 'age_calendar_days': 9, 'market_session': 'out_of_session', 'data_status': 'REFRESHED_COMPLETED_SESSION'}]"
+  "status": "FAIL",
+  "errors": [
+    "Unsafe/unknown global session prices would be published: 2"
   ],
-  "row_count": 2651,
+  "warnings": [
+    "완료 종가 미확보: ReTech Environmental Solutions Co., Ltd. (7934) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다.",
+    "완료 종가 미확보: LUOYANG BEARING GROUP CO LTD (301699) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다.",
+    "완료 종가 미확보: TEMB INTELLIGENT TECH SHANDONG CO (603448) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다.",
+    "완료 종가 미확보: Northeast Electric Development Co., Ltd. Class H (42) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다.",
+    "급등락 검토 +58.3%: UHT Unitech Co., Ltd. (6618) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다.",
+    "완료 종가 미확보: Kanohar Electricals Ltd (KANOHAR) — 아직 완료 거래일 시세가 없거나 수집하지 못한 종목입니다. 신규상장·첫 거래 전·거래정지 등의 경우 정상일 수 있으며, 해당 종목만 가격을 비워 둡니다."
+  ],
+  "row_count": 2631,
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
@@ -16,58 +21,14 @@
   "kr_zero_return_count": 22,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
-  "unsafe_open_global_count": 0,
-  "unknown_global_session_count": 0,
-  "missing_price_count": 0,
+  "kr_fetch_error_count": 0,
+  "unsafe_open_global_count": 2,
+  "unknown_global_session_count": 5,
+  "missing_price_count": 5,
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 14,
+  "global_lagging_price_date_count": 3,
   "global_lagging_price_dates": [
-    {
-      "company_name": "Accelleron Industries AG",
-      "ticker": "ZH2",
-      "exchange": "BX",
-      "price_date": "2026-09-15",
-      "exchange_latest_date": "2026-09-16",
-      "lag_calendar_days": 1,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "Sulzer AG",
-      "ticker": "SUL1",
-      "exchange": "BX",
-      "price_date": "2026-09-15",
-      "exchange_latest_date": "2026-09-16",
-      "lag_calendar_days": 1,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "Interroll Holding AG",
-      "ticker": "I3H",
-      "exchange": "BX",
-      "price_date": "2026-09-04",
-      "exchange_latest_date": "2026-09-16",
-      "lag_calendar_days": 12,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "Schweiter Technologies AG",
-      "ticker": "SN20",
-      "exchange": "BX",
-      "price_date": "2026-09-04",
-      "exchange_latest_date": "2026-09-16",
-      "lag_calendar_days": 12,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "Trio-Tech International",
-      "ticker": "TRT",
-      "exchange": "AMEX",
-      "price_date": "2026-09-15",
-      "exchange_latest_date": "2026-09-16",
-      "lag_calendar_days": 1,
-      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
-    },
     {
       "company_name": "Lemo Services Co., Ltd. Class H",
       "ticker": "2539",
@@ -75,7 +36,7 @@
       "price_date": "2026-09-15",
       "exchange_latest_date": "2026-09-16",
       "lag_calendar_days": 1,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "Tomita Co., Ltd.",
@@ -84,61 +45,7 @@
       "price_date": "2026-09-15",
       "exchange_latest_date": "2026-09-16",
       "lag_calendar_days": 1,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "AURA SMART AIR LTD",
-      "ticker": "AUSA-M",
-      "exchange": "TASE",
-      "price_date": "2026-09-15",
-      "exchange_latest_date": "2026-09-16",
-      "lag_calendar_days": 1,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "AO \"ANZHER MASHIN ZAVOD\" ORD",
-      "ticker": "ANGE",
-      "exchange": "RUS",
-      "price_date": "2026-09-15",
-      "exchange_latest_date": "2026-09-16",
-      "lag_calendar_days": 1,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "Gurunanak Agriculture India Limited",
-      "ticker": "GURUNANAK",
-      "exchange": "NSE",
-      "price_date": "2026-09-15",
-      "exchange_latest_date": "2026-09-16",
-      "lag_calendar_days": 1,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "Mewar Hi-Tech Engineering Ltd.",
-      "ticker": "MHEL",
-      "exchange": "BSE",
-      "price_date": "2026-09-08",
-      "exchange_latest_date": "2026-09-16",
-      "lag_calendar_days": 8,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "Suzhou Huazhijie Telecom Co., Ltd. Class A",
-      "ticker": "603400",
-      "exchange": "SSE",
-      "price_date": "2026-09-14",
-      "exchange_latest_date": "2026-09-16",
-      "lag_calendar_days": 2,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "Visdem Technosys Limited",
-      "ticker": "VISDEM",
-      "exchange": "NSE",
-      "price_date": "2026-09-15",
-      "exchange_latest_date": "2026-09-16",
-      "lag_calendar_days": 1,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     },
     {
       "company_name": "PT Semacom Integrated Tbk",
@@ -147,40 +54,12 @@
       "price_date": "2026-09-15",
       "exchange_latest_date": "2026-09-16",
       "lag_calendar_days": 1,
-      "data_status": "REFRESHED_COMPLETED_SESSION"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     }
   ],
-  "global_severe_lagging_price_date_count": 3,
-  "global_absolute_stale_price_date_count": 3,
-  "global_absolute_stale_price_dates": [
-    {
-      "company_name": "Interroll Holding AG",
-      "ticker": "I3H",
-      "exchange": "BX",
-      "price_date": "2026-09-04",
-      "age_calendar_days": 13,
-      "market_session": "out_of_session",
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "Schweiter Technologies AG",
-      "ticker": "SN20",
-      "exchange": "BX",
-      "price_date": "2026-09-04",
-      "age_calendar_days": 13,
-      "market_session": "out_of_session",
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    },
-    {
-      "company_name": "Mewar Hi-Tech Engineering Ltd.",
-      "ticker": "MHEL",
-      "exchange": "BSE",
-      "price_date": "2026-09-08",
-      "age_calendar_days": 9,
-      "market_session": "out_of_session",
-      "data_status": "REFRESHED_COMPLETED_SESSION"
-    }
-  ],
+  "global_severe_lagging_price_date_count": 0,
+  "global_absolute_stale_price_date_count": 0,
+  "global_absolute_stale_price_dates": [],
   "global_preserved_absolute_stale_count": 0,
   "corporate_action_adjustment_count": 81,
   "corporate_action_adjustments": [
@@ -834,23 +713,27 @@
     }
   ],
   "checked_on": "2026-09-17",
-  "fetch_error_count": 1,
+  "fetch_error_count": 5,
   "fetch_errors": [
-    "Trio-Tech International (TRT) historical recovery: No Yahoo daily data: TRT"
+    "ReTech Environmental Solutions Co., Ltd. (7934): Yahoo fallback disabled for unmapped exchange TPEX: using the raw ticker could resolve to the wrong security",
+    "LUOYANG BEARING GROUP CO LTD (301699): Yahoo fallback disabled for unmapped exchange SZSE: using the raw ticker could resolve to the wrong security",
+    "TEMB INTELLIGENT TECH SHANDONG CO (603448): Yahoo fallback disabled for unmapped exchange SSE: using the raw ticker could resolve to the wrong security",
+    "Northeast Electric Development Co., Ltd. Class H (42): No Yahoo daily data: 42.HK",
+    "Kanohar Electricals Ltd (KANOHAR): Need at least 2 completed daily closes"
   ],
-  "global_snapshot_count": 2795,
-  "global_targeted_snapshot_count": 14,
+  "global_snapshot_count": 2730,
+  "global_targeted_snapshot_count": 0,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 1,
-  "global_historical_recovery_succeeded_count": 0,
+  "global_historical_recovery_attempted_count": 7,
+  "global_historical_recovery_succeeded_count": 2,
+  "global_checked_no_new_trade_count": 0,
   "update_scope": "ALL",
-  "refreshed_completed_global_count": 2382,
-  "preserved_open_or_unknown_global_count": 1,
+  "refreshed_completed_global_count": 733,
+  "preserved_open_or_unknown_global_count": 1625,
   "global_exchange_latest_completed_dates": {
     "ADX": "2026-09-16",
     "AMEX": "2026-09-16",
     "AQUIS": "2026-09-16",
-    "ASX": "2026-09-16",
     "ATHEX": "2026-09-16",
     "BCBA": "2026-09-16",
     "BELEX": "2026-09-16",
@@ -858,36 +741,24 @@
     "BIST": "2026-09-16",
     "BME": "2026-09-16",
     "BMFBOVESPA": "2026-09-16",
-    "BSE": "2026-09-16",
     "BSESOF": "2026-09-16",
     "BSSE": "2026-09-16",
     "BVB": "2026-09-16",
     "BVMT": "2026-09-16",
     "BX": "2026-09-16",
     "CSE": "2026-09-16",
-    "CSELK": "2026-09-16",
     "CSEMA": "2026-09-16",
-    "DSEBD": "2026-09-16",
     "EGX": "2026-09-16",
     "EURONEXT": "2026-09-16",
-    "FSE": "2026-09-16",
     "GPW": "2026-09-16",
-    "HKEX": "2026-09-16",
-    "HNX": "2026-09-16",
-    "HOSE": "2026-09-16",
-    "IDX": "2026-09-16",
     "JSE": "2026-09-16",
-    "KRX": "2026-09-16",
     "KSE": "2026-09-16",
     "LSE": "2026-09-16",
     "MIL": "2026-09-16",
-    "MYX": "2026-09-15",
-    "NAG": "2026-09-16",
     "NASDAQ": "2026-09-16",
     "NEO": "2026-09-16",
     "NEWCONNECT": "2026-09-16",
     "NGM": "2026-09-16",
-    "NSE": "2026-09-16",
     "NSEKE": "2026-09-16",
     "NSENG": "2026-09-16",
     "NYSE": "2026-09-16",
@@ -896,23 +767,12 @@
     "OMXSTO": "2026-09-16",
     "OMXTSE": "2026-09-16",
     "OSL": "2026-09-16",
-    "PSE": "2026-09-16",
     "PSECZ": "2026-09-16",
-    "PSX": "2026-09-16",
-    "RUS": "2026-09-16",
-    "SET": "2026-09-16",
-    "SGX": "2026-09-16",
     "SIX": "2026-09-16",
-    "SSE": "2026-09-16",
-    "SZSE": "2026-09-16",
     "TADAWUL": "2026-09-16",
     "TASE": "2026-09-16",
-    "TPEX": "2026-09-16",
-    "TSE": "2026-09-16",
     "TSX": "2026-09-16",
     "TSXV": "2026-09-16",
-    "TWSE": "2026-09-16",
-    "UPCOM": "2026-09-16",
     "VIE": "2026-09-16",
     "XETR": "2026-09-16",
     "ZSE": "2026-09-16"
@@ -920,13 +780,11 @@
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
   "priority_coverage_missing": [],
-  "global_price_date_count": 2383,
-  "global_price_date_missing_count": 0,
+  "global_price_date_count": 2358,
+  "global_price_date_missing_count": 5,
   "global_price_date_distribution": {
-    "2026-09-04": 2,
-    "2026-09-08": 1,
-    "2026-09-14": 1,
-    "2026-09-15": 10,
-    "2026-09-16": 2369
+    "2026-09-15": 3,
+    "2026-09-16": 2355,
+    "UNKNOWN": 5
   }
 }
