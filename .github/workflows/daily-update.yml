@@ -1,6 +1,12 @@
 name: Daily stock update
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'config/**'
+      - '.github/workflows/daily-update.yml'
   schedule:
     # Morning ALL retries, KST Mon-Fri: 06:47 / 07:17 / 07:47 / 08:17 / 08:47.
     - cron: '47 21 * * 0-4'
@@ -73,6 +79,10 @@ jobs:
                 SCOPE="SAFE_REFRESH"
                 ;;
             esac
+          elif [ "$EVENT_NAME" = "push" ]; then
+            # Code/config changes must regenerate today's outputs immediately.
+            # Python completed-session guards keep this safe at any KST hour.
+            SCOPE="ALL"
           else
             SCOPE="${MANUAL_SCOPE:-AUTO}"
             if [ "$SCOPE" = "AUTO" ]; then
