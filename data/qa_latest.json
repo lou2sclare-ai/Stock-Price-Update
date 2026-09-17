@@ -1462,8 +1462,8 @@
     "Elong Power Holding Limited (ELPW) historical recovery: No Yahoo daily data: ELPW",
     "Erayak Power Solution Group Inc. (RAYA) historical recovery: No Yahoo daily data: RAYA"
   ],
-  "global_snapshot_count": 2797,
-  "global_targeted_snapshot_count": 24,
+  "global_snapshot_count": 2799,
+  "global_targeted_snapshot_count": 25,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 126,
   "global_historical_recovery_succeeded_count": 0,
@@ -1471,15 +1471,15 @@
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1947,
-  "preserved_open_or_unknown_global_count": 416,
+  "refreshed_completed_global_count": 1937,
+  "preserved_open_or_unknown_global_count": 426,
   "global_exchange_latest_completed_dates": {
     "ADX": "2026-09-17",
     "AMEX": "2026-09-16",
     "ASX": "2026-09-17",
     "BCBA": "2026-09-16",
-    "BMFBOVESPA": "2026-09-16",
     "BSE": "2026-09-17",
+    "BVMT": "2026-09-17",
     "CSE": "2026-09-16",
     "CSELK": "2026-09-17",
     "DSEBD": "2026-09-17",
@@ -1519,7 +1519,7 @@
   "global_price_date_count": 2363,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-09-16": 721,
-    "2026-09-17": 1642
+    "2026-09-16": 720,
+    "2026-09-17": 1643
   }
 }
