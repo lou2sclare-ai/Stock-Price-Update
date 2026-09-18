@@ -698,11 +698,9 @@
     }
   ],
   "checked_on": "2026-09-18",
-  "fetch_error_count": 4,
+  "fetch_error_count": 2,
   "fetch_errors": [
     "Ben Thanh Rubber JSC (BRC) historical recovery: Yahoo fallback disabled for unmapped exchange HOSE: using the raw ticker could resolve to the wrong security",
-    "Sino-Synergy Hydrogen Energy Technology (Jiaxing) Co., Ltd. Class H (9663) historical recovery: No Yahoo daily data: 9663.HK",
-    "APT Electronics Co., Ltd. Class H (2551) historical recovery: No Yahoo daily data: 2551.HK",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-09-18"
   ],
   "global_snapshot_count": 2788,
