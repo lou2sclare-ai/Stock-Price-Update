@@ -20,7 +20,7 @@
   "awaiting_first_completed_close": [],
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 3,
+  "global_lagging_price_date_count": 4,
   "global_lagging_price_dates": [
     {
       "company_name": "Ben Thanh Rubber JSC",
@@ -44,6 +44,15 @@
       "company_name": "APT Electronics Co., Ltd. Class H",
       "ticker": "2551",
       "exchange": "HKEX",
+      "price_date": "2026-09-17",
+      "exchange_latest_date": "2026-09-18",
+      "lag_calendar_days": 1,
+      "data_status": "CHECKED_NO_NEW_TRADE"
+    },
+    {
+      "company_name": "Eunisell Interlinked Plc",
+      "ticker": "EUNISELL",
+      "exchange": "NSENG",
       "price_date": "2026-09-17",
       "exchange_latest_date": "2026-09-18",
       "lag_calendar_days": 1,
@@ -698,29 +707,32 @@
     }
   ],
   "checked_on": "2026-09-18",
-  "fetch_error_count": 4,
+  "fetch_error_count": 6,
   "fetch_errors": [
     "Ben Thanh Rubber JSC (BRC) historical recovery: Yahoo fallback disabled for unmapped exchange HOSE: using the raw ticker could resolve to the wrong security",
+    "IMMI AD (IMMI) historical recovery: Yahoo fallback disabled for unmapped exchange BSESOF: using the raw ticker could resolve to the wrong security",
     "Sino-Synergy Hydrogen Energy Technology (Jiaxing) Co., Ltd. Class H (9663) historical recovery: No Yahoo daily data: 9663.HK",
     "APT Electronics Co., Ltd. Class H (2551) historical recovery: No Yahoo daily data: 2551.HK",
+    "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-09-18"
   ],
-  "global_snapshot_count": 2782,
-  "global_targeted_snapshot_count": 317,
+  "global_snapshot_count": 2788,
+  "global_targeted_snapshot_count": 29,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 3,
+  "global_historical_recovery_attempted_count": 5,
   "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 3,
+  "global_checked_no_new_trade_count": 5,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1965,
-  "preserved_open_or_unknown_global_count": 396,
+  "refreshed_completed_global_count": 1684,
+  "preserved_open_or_unknown_global_count": 677,
   "global_exchange_latest_completed_dates": {
     "ADX": "2026-09-18",
-    "AMEX": "2026-09-17",
     "ASX": "2026-09-18",
+    "ATHEX": "2026-09-18",
     "BSE": "2026-09-18",
+    "BSESOF": "2026-09-18",
     "BVMT": "2026-09-18",
     "CSELK": "2026-09-18",
     "DSEBD": "2026-09-17",
@@ -733,13 +745,14 @@
     "KSE": "2026-09-17",
     "MYX": "2026-09-18",
     "NAG": "2026-09-18",
-    "NASDAQ": "2026-09-17",
-    "NEO": "2026-09-17",
     "NSE": "2026-09-18",
     "NSEKE": "2026-09-18",
-    "NYSE": "2026-09-17",
+    "NSENG": "2026-09-18",
     "NZX": "2026-09-18",
+    "OMXRSE": "2026-09-18",
+    "OMXTSE": "2026-09-18",
     "PSE": "2026-09-18",
+    "PSECZ": "2026-09-18",
     "PSX": "2026-09-18",
     "SET": "2026-09-18",
     "SGX": "2026-09-18",
@@ -749,10 +762,9 @@
     "TASE": "2026-09-17",
     "TPEX": "2026-09-18",
     "TSE": "2026-09-18",
-    "TSX": "2026-09-17",
-    "TSXV": "2026-09-17",
     "TWSE": "2026-09-18",
-    "UPCOM": "2026-09-18"
+    "UPCOM": "2026-09-18",
+    "ZSE": "2026-09-18"
   },
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
@@ -760,7 +772,7 @@
   "global_price_date_count": 2361,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-09-17": 745,
-    "2026-09-18": 1616
+    "2026-09-17": 736,
+    "2026-09-18": 1625
   }
 }
