@@ -1,17 +1,15 @@
 {
-  "status": "REVIEW",
+  "status": "PASS",
   "errors": [],
-  "warnings": [
-    "급등락 검토 +177.7%: SHENGU GROUP CO LTD (601091) — 원천 시세가 제공한 등락률을 그대로 사용한 값입니다. 계산 오류를 뜻하는 경고가 아니라 큰 변동폭을 한 번 더 확인하기 위한 REVIEW 항목입니다."
-  ],
+  "warnings": [],
   "row_count": 2623,
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
-  "kr_completed_cutoff": "2026-09-20",
-  "kr_latest_price_date": "2026-09-18",
+  "kr_completed_cutoff": "2026-09-21",
+  "kr_latest_price_date": "2026-09-21",
   "kr_latest_price_date_count": 267,
-  "kr_zero_return_count": 25,
+  "kr_zero_return_count": 26,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "kr_fetch_error_count": 1,
@@ -22,1640 +20,1376 @@
   "missing_price_count": 0,
   "awaiting_first_completed_close_count": 0,
   "awaiting_first_completed_close": [],
-  "missing_return_reference_count": 3,
-  "missing_return_references": [
+  "missing_return_reference_count": 0,
+  "missing_return_references": [],
+  "global_lagging_price_date_count": 3,
+  "global_lagging_price_dates": [
     {
-      "company_name": "OM GALAXY LIMITED",
-      "ticker": "OMG",
-      "exchange": "BSE",
+      "company_name": "Eunisell Interlinked Plc",
+      "ticker": "EUNISELL",
+      "exchange": "NSENG",
       "price_date": "2026-09-18",
-      "data_status": "COMPLETED_NO_COMPARISON_REFERENCE"
+      "exchange_latest_date": "2026-09-21",
+      "lag_calendar_days": 3,
+      "data_status": "CHECKED_NO_NEW_TRADE"
     },
     {
-      "company_name": "Dynapack International Technology Corporation",
-      "ticker": "3211",
-      "exchange": "TPEX",
+      "company_name": "PT Semacom Integrated Tbk",
+      "ticker": "SEMA",
+      "exchange": "IDX",
       "price_date": "2026-09-18",
-      "data_status": "COMPLETED_PRIOR_CLOSE_FROM_LIVE_SNAPSHOT"
+      "exchange_latest_date": "2026-09-21",
+      "lag_calendar_days": 3,
+      "data_status": "CHECKED_NO_NEW_TRADE"
     },
     {
-      "company_name": "RAKSAN TRANSFORMERS LIMITED",
-      "ticker": "RAKSAN",
-      "exchange": "BSE",
+      "company_name": "Lighting & Equipment Public Co., Ltd.",
+      "ticker": "L&E",
+      "exchange": "SET",
       "price_date": "2026-09-18",
-      "data_status": "COMPLETED_NO_COMPARISON_REFERENCE"
+      "exchange_latest_date": "2026-09-21",
+      "lag_calendar_days": 3,
+      "data_status": "CHECKED_NO_NEW_TRADE"
     }
   ],
-  "global_lagging_price_date_count": 0,
-  "global_lagging_price_dates": [],
   "global_severe_lagging_price_date_count": 0,
   "global_absolute_stale_price_date_count": 0,
   "global_absolute_stale_price_dates": [],
   "global_preserved_absolute_stale_count": 0,
-  "corporate_action_adjustment_count": 80,
+  "corporate_action_adjustment_count": 47,
   "corporate_action_adjustments": [
-    {
-      "company_name": "대모",
-      "ticker": "317850",
-      "raw_previous_close": 6230.0,
-      "official_comparison_base": 6300.0,
-      "raw_close_change_pct": 0.48154093097914075,
-      "official_change_pct": -0.63
-    },
-    {
-      "company_name": "대창단조",
-      "ticker": "015230",
-      "raw_previous_close": 6660.0,
-      "official_comparison_base": 6790.0,
-      "raw_close_change_pct": 0.9009009009008917,
-      "official_change_pct": -1.03
-    },
     {
       "company_name": "동일금속",
       "ticker": "109860",
-      "raw_previous_close": 7590.0,
-      "official_comparison_base": 7390.0,
-      "raw_close_change_pct": -0.13175230566534468,
-      "official_change_pct": 2.57
+      "raw_previous_close": 7580.0,
+      "official_comparison_base": 7490.0,
+      "raw_close_change_pct": -1.978891820580475,
+      "official_change_pct": -0.8
     },
     {
-      "company_name": "RF머트리얼즈",
-      "ticker": "327260",
-      "raw_previous_close": 46000.0,
-      "official_comparison_base": 45350.0,
-      "raw_close_change_pct": 5.760869565217397,
-      "official_change_pct": 7.28
+      "company_name": "나라스페이스테크놀로지",
+      "ticker": "478340",
+      "raw_previous_close": 14100.0,
+      "official_comparison_base": 14460.0,
+      "raw_close_change_pct": 0.7801418439716379,
+      "official_change_pct": -1.73
     },
     {
-      "company_name": "비츠로넥스텍",
-      "ticker": "488900",
-      "raw_previous_close": 11930.0,
-      "official_comparison_base": 12130.0,
-      "raw_close_change_pct": -3.8558256496228016,
-      "official_change_pct": -5.44
+      "company_name": "니어스랩",
+      "ticker": "417030",
+      "raw_previous_close": 30900.0,
+      "official_comparison_base": 31250.0,
+      "raw_close_change_pct": 10.517799352750812,
+      "official_change_pct": 9.28
     },
     {
       "company_name": "삼양컴텍",
       "ticker": "484590",
-      "raw_previous_close": 6790.0,
-      "official_comparison_base": 6710.0,
-      "raw_close_change_pct": -1.3254786450662692,
-      "official_change_pct": -0.15
-    },
-    {
-      "company_name": "솔디펜스",
-      "ticker": "215090",
-      "raw_previous_close": 1499.0,
-      "official_comparison_base": 1430.0,
-      "raw_close_change_pct": -1.0673782521681163,
-      "official_change_pct": 3.71
+      "raw_previous_close": 6700.0,
+      "official_comparison_base": 6630.0,
+      "raw_close_change_pct": -1.6417910447761197,
+      "official_change_pct": -0.6
     },
     {
       "company_name": "스피어",
       "ticker": "347700",
-      "raw_previous_close": 24100.0,
-      "official_comparison_base": 23750.0,
-      "raw_close_change_pct": 1.4522821576763434,
-      "official_change_pct": 2.95
+      "raw_previous_close": 24450.0,
+      "official_comparison_base": 24150.0,
+      "raw_close_change_pct": -4.089979550102251,
+      "official_change_pct": -2.9
     },
     {
-      "company_name": "아스트",
-      "ticker": "067390",
-      "raw_previous_close": 5960.0,
-      "official_comparison_base": 5850.0,
-      "raw_close_change_pct": -0.5033557046979831,
-      "official_change_pct": 1.37
+      "company_name": "엠앤씨솔루션",
+      "ticker": "484870",
+      "raw_previous_close": 18730.0,
+      "official_comparison_base": 19000.0,
+      "raw_close_change_pct": -2.7229044313934914,
+      "official_change_pct": -4.11
     },
     {
-      "company_name": "우리기술",
-      "ticker": "032820",
-      "raw_previous_close": 13460.0,
-      "official_comparison_base": 13330.0,
-      "raw_close_change_pct": 3.789004457652312,
-      "official_change_pct": 4.8
-    },
-    {
-      "company_name": "웨이브일렉트로",
-      "ticker": "095270",
-      "raw_previous_close": 4295.0,
-      "official_comparison_base": 4240.0,
-      "raw_close_change_pct": 1.2805587892898762,
-      "official_change_pct": 2.59
-    },
-    {
-      "company_name": "코츠테크놀로지",
-      "ticker": "448710",
-      "raw_previous_close": 11350.0,
-      "official_comparison_base": 11120.0,
-      "raw_close_change_pct": 1.6740088105726914,
-      "official_change_pct": 3.78
-    },
-    {
-      "company_name": "퍼스텍",
-      "ticker": "010820",
+      "company_name": "이노스페이스",
+      "ticker": "462350",
       "raw_previous_close": 6430.0,
-      "official_comparison_base": 6350.0,
-      "raw_close_change_pct": -0.4665629860031051,
-      "official_change_pct": 0.79
+      "official_comparison_base": 6520.0,
+      "raw_close_change_pct": 2.6438569206842955,
+      "official_change_pct": 1.23
     },
     {
-      "company_name": "한화시스템",
-      "ticker": "272210",
-      "raw_previous_close": 79600.0,
-      "official_comparison_base": 77500.0,
-      "raw_close_change_pct": 0.37688442211054607,
-      "official_change_pct": 3.1
+      "company_name": "컨텍",
+      "ticker": "451760",
+      "raw_previous_close": 8470.0,
+      "official_comparison_base": 8570.0,
+      "raw_close_change_pct": -3.65997638724912,
+      "official_change_pct": -4.78
     },
     {
-      "company_name": "TPC로보틱스",
-      "ticker": "048770",
-      "raw_previous_close": 4315.0,
-      "official_comparison_base": 4260.0,
-      "raw_close_change_pct": 1.1587485515643037,
-      "official_change_pct": 2.46
+      "company_name": "켄코아에어로스페이스",
+      "ticker": "274090",
+      "raw_previous_close": 12880.0,
+      "official_comparison_base": 13220.0,
+      "raw_close_change_pct": -2.251552795031053,
+      "official_change_pct": -4.77
     },
     {
-      "company_name": "기신정기",
-      "ticker": "092440",
-      "raw_previous_close": 2010.0,
-      "official_comparison_base": 1874.0,
-      "raw_close_change_pct": -5.970149253731338,
-      "official_change_pct": 0.85
+      "company_name": "하이즈항공",
+      "ticker": "221840",
+      "raw_previous_close": 2075.0,
+      "official_comparison_base": 2050.0,
+      "raw_close_change_pct": 0.0,
+      "official_change_pct": 1.22
+    },
+    {
+      "company_name": "한화에어로스페이스",
+      "ticker": "012450",
+      "raw_previous_close": 1092000.0,
+      "official_comparison_base": 1078000.0,
+      "raw_close_change_pct": -1.6483516483516536,
+      "official_change_pct": -0.37
     },
     {
       "company_name": "나우로보틱스",
       "ticker": "459510",
-      "raw_previous_close": 16140.0,
-      "official_comparison_base": 15960.0,
-      "raw_close_change_pct": 0.867410161090465,
-      "official_change_pct": 2.01
+      "raw_previous_close": 16280.0,
+      "official_comparison_base": 16000.0,
+      "raw_close_change_pct": -2.518427518427513,
+      "official_change_pct": -0.81
     },
     {
-      "company_name": "두산로보틱스",
-      "ticker": "454910",
-      "raw_previous_close": 69800.0,
-      "official_comparison_base": 69100.0,
-      "raw_close_change_pct": -0.2865329512893977,
-      "official_change_pct": 0.72
-    },
-    {
-      "company_name": "두산에너빌리티",
-      "ticker": "034020",
-      "raw_previous_close": 86400.0,
-      "official_comparison_base": 85400.0,
-      "raw_close_change_pct": -0.810185185185186,
-      "official_change_pct": 0.35
-    },
-    {
-      "company_name": "모델솔루션",
-      "ticker": "417970",
-      "raw_previous_close": 10730.0,
-      "official_comparison_base": 10390.0,
-      "raw_close_change_pct": -0.9319664492078328,
-      "official_change_pct": 2.31
+      "company_name": "링크솔루션",
+      "ticker": "474650",
+      "raw_previous_close": 27900.0,
+      "official_comparison_base": 28350.0,
+      "raw_close_change_pct": 2.1505376344086002,
+      "official_change_pct": 0.53
     },
     {
       "company_name": "부스타",
       "ticker": "008470",
       "raw_previous_close": 1700.0,
-      "official_comparison_base": 1676.0,
-      "raw_close_change_pct": 0.0,
-      "official_change_pct": 1.43
+      "official_comparison_base": 1673.0,
+      "raw_close_change_pct": -0.588235294117645,
+      "official_change_pct": 1.02
     },
     {
       "company_name": "브이원텍",
       "ticker": "251630",
-      "raw_previous_close": 3490.0,
-      "official_comparison_base": 3385.0,
-      "raw_close_change_pct": -4.154727793696278,
-      "official_change_pct": -1.18
+      "raw_previous_close": 3345.0,
+      "official_comparison_base": 3450.0,
+      "raw_close_change_pct": 3.7369207772795177,
+      "official_change_pct": 0.58
     },
     {
-      "company_name": "삼미금속",
-      "ticker": "012210",
-      "raw_previous_close": 11410.0,
-      "official_comparison_base": 11290.0,
-      "raw_close_change_pct": -2.1910604732690575,
-      "official_change_pct": -1.15
+      "company_name": "서암기계공업",
+      "ticker": "100660",
+      "raw_previous_close": 3060.0,
+      "official_comparison_base": 3095.0,
+      "raw_close_change_pct": 1.7973856209150263,
+      "official_change_pct": 0.65
     },
     {
-      "company_name": "신진에스엠",
-      "ticker": "138070",
-      "raw_previous_close": 1509.0,
-      "official_comparison_base": 1491.0,
-      "raw_close_change_pct": -1.0603048376408242,
-      "official_change_pct": 0.13
+      "company_name": "에이테크솔루션",
+      "ticker": "071670",
+      "raw_previous_close": 5040.0,
+      "official_comparison_base": 4985.0,
+      "raw_close_change_pct": -0.8928571428571397,
+      "official_change_pct": 0.2
     },
     {
-      "company_name": "씨메스로보틱스",
-      "ticker": "475400",
-      "raw_previous_close": 18740.0,
-      "official_comparison_base": 18380.0,
-      "raw_close_change_pct": 0.0,
-      "official_change_pct": 1.96
-    },
-    {
-      "company_name": "씨케이솔루션",
-      "ticker": "480370",
-      "raw_previous_close": 2105.0,
-      "official_comparison_base": 2080.0,
-      "raw_close_change_pct": -3.8004750593824244,
-      "official_change_pct": -2.64
-    },
-    {
-      "company_name": "아세아텍",
-      "ticker": "050860",
-      "raw_previous_close": 1725.0,
-      "official_comparison_base": 1697.0,
-      "raw_close_change_pct": -1.7391304347826098,
-      "official_change_pct": -0.12
-    },
-    {
-      "company_name": "알에스오토메이션",
-      "ticker": "140670",
-      "raw_previous_close": 10240.0,
-      "official_comparison_base": 10120.0,
-      "raw_close_change_pct": 3.02734375,
-      "official_change_pct": 4.25
-    },
-    {
-      "company_name": "에스비비테크",
-      "ticker": "389500",
-      "raw_previous_close": 40550.0,
-      "official_comparison_base": 40000.0,
-      "raw_close_change_pct": 0.7398273736128225,
-      "official_change_pct": 2.13
-    },
-    {
-      "company_name": "우진",
-      "ticker": "105840",
-      "raw_previous_close": 14600.0,
-      "official_comparison_base": 14400.0,
-      "raw_close_change_pct": 5.547945205479454,
-      "official_change_pct": 7.01
+      "company_name": "오텍",
+      "ticker": "067170",
+      "raw_previous_close": 2405.0,
+      "official_comparison_base": 2380.0,
+      "raw_close_change_pct": 2.2869022869022926,
+      "official_change_pct": 3.36
     },
     {
       "company_name": "우진플라임",
       "ticker": "049800",
-      "raw_previous_close": 1892.0,
-      "official_comparison_base": 1800.0,
-      "raw_close_change_pct": 0.3171247357293794,
-      "official_change_pct": 5.44
+      "raw_previous_close": 1898.0,
+      "official_comparison_base": 1813.0,
+      "raw_close_change_pct": -5.005268703898846,
+      "official_change_pct": -0.55
     },
     {
-      "company_name": "유일로보틱스",
-      "ticker": "388720",
-      "raw_previous_close": 70500.0,
-      "official_comparison_base": 69600.0,
-      "raw_close_change_pct": -1.134751773049647,
-      "official_change_pct": 0.14
+      "company_name": "유진로봇",
+      "ticker": "056080",
+      "raw_previous_close": 12640.0,
+      "official_comparison_base": 12500.0,
+      "raw_close_change_pct": 2.452531645569622,
+      "official_change_pct": 3.6
     },
     {
-      "company_name": "제닉스로보틱스",
-      "ticker": "381620",
-      "raw_previous_close": 6110.0,
-      "official_comparison_base": 6030.0,
-      "raw_close_change_pct": 2.9459901800327426,
-      "official_change_pct": 4.31
-    },
-    {
-      "company_name": "케이엔알시스템",
-      "ticker": "199430",
-      "raw_previous_close": 19190.0,
-      "official_comparison_base": 18950.0,
-      "raw_close_change_pct": -1.3027618551328835,
-      "official_change_pct": -0.05
-    },
-    {
-      "company_name": "케이피에프",
-      "ticker": "024880",
-      "raw_previous_close": 3855.0,
-      "official_comparison_base": 3800.0,
-      "raw_close_change_pct": 0.6485084306095956,
-      "official_change_pct": 2.11
-    },
-    {
-      "company_name": "코메론",
-      "ticker": "049430",
-      "raw_previous_close": 23200.0,
-      "official_comparison_base": 22950.0,
-      "raw_close_change_pct": -2.5862068965517238,
-      "official_change_pct": -1.53
-    },
-    {
-      "company_name": "코스모로보틱스",
-      "ticker": "439960",
-      "raw_previous_close": 11350.0,
-      "official_comparison_base": 11230.0,
-      "raw_close_change_pct": 1.497797356828201,
-      "official_change_pct": 2.58
-    },
-    {
-      "company_name": "클로봇",
-      "ticker": "466100",
-      "raw_previous_close": 23250.0,
-      "official_comparison_base": 23000.0,
-      "raw_close_change_pct": 0.21505376344086446,
-      "official_change_pct": 1.3
+      "company_name": "태광",
+      "ticker": "023160",
+      "raw_previous_close": 26550.0,
+      "official_comparison_base": 26050.0,
+      "raw_close_change_pct": 3.3898305084745672,
+      "official_change_pct": 5.37
     },
     {
       "company_name": "티로보틱스",
       "ticker": "117730",
-      "raw_previous_close": 12450.0,
-      "official_comparison_base": 12300.0,
-      "raw_close_change_pct": 6.024096385542177,
-      "official_change_pct": 7.32
+      "raw_previous_close": 13200.0,
+      "official_comparison_base": 13340.0,
+      "raw_close_change_pct": 1.3636363636363669,
+      "official_change_pct": 0.3
     },
     {
-      "company_name": "프리엠스",
-      "ticker": "053160",
-      "raw_previous_close": 10250.0,
-      "official_comparison_base": 9960.0,
-      "raw_close_change_pct": -9.073170731707314,
-      "official_change_pct": -6.43
+      "company_name": "파라텍",
+      "ticker": "033540",
+      "raw_previous_close": 2785.0,
+      "official_comparison_base": 2750.0,
+      "raw_close_change_pct": -1.4362657091561926,
+      "official_change_pct": -0.18
     },
     {
       "company_name": "하이젠알앤엠",
       "ticker": "160190",
-      "raw_previous_close": 24600.0,
-      "official_comparison_base": 24050.0,
-      "raw_close_change_pct": 7.92682926829269,
-      "official_change_pct": 10.4
-    },
-    {
-      "company_name": "한선엔지니어링",
-      "ticker": "452280",
-      "raw_previous_close": 13580.0,
-      "official_comparison_base": 13430.0,
-      "raw_close_change_pct": 0.07363770250368162,
-      "official_change_pct": 1.19
+      "raw_previous_close": 26550.0,
+      "official_comparison_base": 27400.0,
+      "raw_close_change_pct": 13.370998116760834,
+      "official_change_pct": 9.85
     },
     {
       "company_name": "현대무벡스",
       "ticker": "319400",
-      "raw_previous_close": 21900.0,
-      "official_comparison_base": 21600.0,
-      "raw_close_change_pct": 4.337899543378998,
-      "official_change_pct": 5.79
+      "raw_previous_close": 22850.0,
+      "official_comparison_base": 22500.0,
+      "raw_close_change_pct": -4.157549234135671,
+      "official_change_pct": -2.67
     },
     {
-      "company_name": "현대에버다임",
-      "ticker": "041440",
-      "raw_previous_close": 6780.0,
-      "official_comparison_base": 6690.0,
-      "raw_close_change_pct": -0.8849557522123908,
-      "official_change_pct": 0.45
+      "company_name": "화천기계",
+      "ticker": "010660",
+      "raw_previous_close": 3160.0,
+      "official_comparison_base": 3125.0,
+      "raw_close_change_pct": -3.639240506329111,
+      "official_change_pct": -2.56
     },
     {
-      "company_name": "APS이노베이션",
-      "ticker": "079810",
-      "raw_previous_close": 3805.0,
-      "official_comparison_base": 3745.0,
-      "raw_close_change_pct": -2.23390275952694,
-      "official_change_pct": -0.67
+      "company_name": "화천기공",
+      "ticker": "000850",
+      "raw_previous_close": 38750.0,
+      "official_comparison_base": 39550.0,
+      "raw_close_change_pct": 0.1290322580645098,
+      "official_change_pct": -1.9
     },
     {
-      "company_name": "LS",
-      "ticker": "006260",
-      "raw_previous_close": 307500.0,
-      "official_comparison_base": 304000.0,
-      "raw_close_change_pct": 5.36585365853659,
-      "official_change_pct": 6.58
+      "company_name": "KBI메탈",
+      "ticker": "024840",
+      "raw_previous_close": 6430.0,
+      "official_comparison_base": 6500.0,
+      "raw_close_change_pct": -1.0886469673405896,
+      "official_change_pct": -2.15
     },
     {
-      "company_name": "LS에코에너지",
-      "ticker": "229640",
-      "raw_previous_close": 53900.0,
-      "official_comparison_base": 53000.0,
-      "raw_close_change_pct": 11.873840445269025,
-      "official_change_pct": 13.77
+      "company_name": "LS ELECTRIC",
+      "ticker": "010120",
+      "raw_previous_close": 208500.0,
+      "official_comparison_base": 211500.0,
+      "raw_close_change_pct": 1.1990407673860837,
+      "official_change_pct": -0.24
+    },
+    {
+      "company_name": "LS머트리얼즈",
+      "ticker": "417200",
+      "raw_previous_close": 13730.0,
+      "official_comparison_base": 13500.0,
+      "raw_close_change_pct": 0.7283321194464731,
+      "official_change_pct": 2.44
     },
     {
       "company_name": "SK아이이테크놀로지",
       "ticker": "361610",
-      "raw_previous_close": 16220.0,
-      "official_comparison_base": 16050.0,
-      "raw_close_change_pct": -1.9728729963008673,
-      "official_change_pct": -0.93
+      "raw_previous_close": 15900.0,
+      "official_comparison_base": 15720.0,
+      "raw_close_change_pct": 2.2012578616352307,
+      "official_change_pct": 3.37
     },
     {
       "company_name": "가온전선",
       "ticker": "000500",
-      "raw_previous_close": 264000.0,
-      "official_comparison_base": 260500.0,
-      "raw_close_change_pct": 21.969696969696972,
-      "official_change_pct": 23.61
+      "raw_previous_close": 322000.0,
+      "official_comparison_base": 327000.0,
+      "raw_close_change_pct": 1.2422360248447228,
+      "official_change_pct": -0.31
     },
     {
-      "company_name": "대원전선",
-      "ticker": "006340",
-      "raw_previous_close": 12980.0,
-      "official_comparison_base": 12860.0,
-      "raw_close_change_pct": 7.395993836671799,
-      "official_change_pct": 8.4
-    },
-    {
-      "company_name": "대한전선",
-      "ticker": "001440",
-      "raw_previous_close": 28700.0,
-      "official_comparison_base": 28300.0,
-      "raw_close_change_pct": 10.278745644599297,
-      "official_change_pct": 11.84
-    },
-    {
-      "company_name": "더블유씨피",
-      "ticker": "393890",
-      "raw_previous_close": 9870.0,
-      "official_comparison_base": 9700.0,
-      "raw_close_change_pct": 4.5592705167173175,
-      "official_change_pct": 6.39
-    },
-    {
-      "company_name": "바이오스마트",
-      "ticker": "038460",
-      "raw_previous_close": 2840.0,
-      "official_comparison_base": 2805.0,
-      "raw_close_change_pct": 1.760563380281699,
-      "official_change_pct": 3.03
-    },
-    {
-      "company_name": "범한퓨얼셀",
-      "ticker": "382900",
-      "raw_previous_close": 26700.0,
-      "official_comparison_base": 25700.0,
-      "raw_close_change_pct": -5.4307116104868935,
-      "official_change_pct": -1.75
-    },
-    {
-      "company_name": "보성파워텍",
-      "ticker": "006910",
-      "raw_previous_close": 7430.0,
-      "official_comparison_base": 7320.0,
-      "raw_close_change_pct": 3.364737550471064,
-      "official_change_pct": 4.92
-    },
-    {
-      "company_name": "비나텍",
-      "ticker": "126340",
-      "raw_previous_close": 79300.0,
-      "official_comparison_base": 77400.0,
-      "raw_close_change_pct": 2.2698612862547263,
-      "official_change_pct": 4.78
-    },
-    {
-      "company_name": "산일전기",
-      "ticker": "062040",
-      "raw_previous_close": 203000.0,
-      "official_comparison_base": 201000.0,
-      "raw_close_change_pct": 3.9408866995073843,
-      "official_change_pct": 4.98
-    },
-    {
-      "company_name": "삼성SDI",
-      "ticker": "006400",
-      "raw_previous_close": 545000.0,
-      "official_comparison_base": 539000.0,
-      "raw_close_change_pct": -0.5504587155963248,
-      "official_change_pct": 0.56
-    },
-    {
-      "company_name": "삼화콘덴서",
-      "ticker": "001820",
-      "raw_previous_close": 139300.0,
-      "official_comparison_base": 137600.0,
-      "raw_close_change_pct": 3.3022254127781814,
-      "official_change_pct": 4.58
+      "company_name": "비츠로테크",
+      "ticker": "042370",
+      "raw_previous_close": 11630.0,
+      "official_comparison_base": 11440.0,
+      "raw_close_change_pct": -5.159071367153912,
+      "official_change_pct": -3.58
     },
     {
       "company_name": "상신이디피",
       "ticker": "091580",
-      "raw_previous_close": 21850.0,
-      "official_comparison_base": 21550.0,
-      "raw_close_change_pct": 4.347826086956519,
-      "official_change_pct": 5.8
-    },
-    {
-      "company_name": "서전기전",
-      "ticker": "189860",
-      "raw_previous_close": 5340.0,
-      "official_comparison_base": 5250.0,
-      "raw_close_change_pct": -0.9363295880149836,
-      "official_change_pct": 0.76
-    },
-    {
-      "company_name": "서진시스템",
-      "ticker": "178320",
-      "raw_previous_close": 34800.0,
-      "official_comparison_base": 34250.0,
-      "raw_close_change_pct": -2.155172413793105,
-      "official_change_pct": -0.58
+      "raw_previous_close": 22800.0,
+      "official_comparison_base": 23100.0,
+      "raw_close_change_pct": -5.701754385964907,
+      "official_change_pct": -6.93
     },
     {
       "company_name": "성호전자",
       "ticker": "043260",
-      "raw_previous_close": 22200.0,
-      "official_comparison_base": 21600.0,
-      "raw_close_change_pct": 18.918918918918926,
-      "official_change_pct": 22.22
+      "raw_previous_close": 26400.0,
+      "official_comparison_base": 26800.0,
+      "raw_close_change_pct": 2.840909090909083,
+      "official_change_pct": 1.31
     },
     {
-      "company_name": "세명전기",
-      "ticker": "017510",
-      "raw_previous_close": 7790.0,
-      "official_comparison_base": 7700.0,
-      "raw_close_change_pct": 4.7496790757381335,
-      "official_change_pct": 5.97
+      "company_name": "솔브레인홀딩스",
+      "ticker": "036830",
+      "raw_previous_close": 41400.0,
+      "official_comparison_base": 40700.0,
+      "raw_close_change_pct": -2.657004830917875,
+      "official_change_pct": -0.98
     },
     {
-      "company_name": "에코프로비엠",
-      "ticker": "247540",
-      "raw_previous_close": 103900.0,
-      "official_comparison_base": 102700.0,
-      "raw_close_change_pct": 1.3474494706448459,
-      "official_change_pct": 2.53
+      "company_name": "에스프리즘",
+      "ticker": "288620",
+      "raw_previous_close": 4440.0,
+      "official_comparison_base": 4385.0,
+      "raw_close_change_pct": -4.842342342342343,
+      "official_change_pct": -3.65
     },
     {
-      "company_name": "엔켐",
-      "ticker": "348370",
-      "raw_previous_close": 20600.0,
-      "official_comparison_base": 20200.0,
-      "raw_close_change_pct": -1.2135922330097082,
-      "official_change_pct": 0.74
+      "company_name": "엠오티",
+      "ticker": "413390",
+      "raw_previous_close": 6330.0,
+      "official_comparison_base": 6250.0,
+      "raw_close_change_pct": -3.4755134281200584,
+      "official_change_pct": -2.24
     },
     {
-      "company_name": "엘앤에프",
-      "ticker": "066970",
-      "raw_previous_close": 113200.0,
-      "official_comparison_base": 111300.0,
-      "raw_close_change_pct": -2.3851590106007015,
-      "official_change_pct": -0.72
+      "company_name": "천보",
+      "ticker": "278280",
+      "raw_previous_close": 37000.0,
+      "official_comparison_base": 36450.0,
+      "raw_close_change_pct": -2.837837837837842,
+      "official_change_pct": -1.37
     },
     {
-      "company_name": "이지트로닉스",
-      "ticker": "377330",
-      "raw_previous_close": 2855.0,
-      "official_comparison_base": 2730.0,
-      "raw_close_change_pct": -7.705779334500873,
-      "official_change_pct": -3.48
+      "company_name": "티씨머티리얼즈",
+      "ticker": "125020",
+      "raw_previous_close": 6410.0,
+      "official_comparison_base": 6540.0,
+      "raw_close_change_pct": -1.2480499219968744,
+      "official_change_pct": -3.21
     },
     {
-      "company_name": "일진전기",
-      "ticker": "103590",
-      "raw_previous_close": 70900.0,
-      "official_comparison_base": 70200.0,
-      "raw_close_change_pct": 7.052186177715081,
-      "official_change_pct": 8.12
-    },
-    {
-      "company_name": "제일일렉트릭",
-      "ticker": "199820",
-      "raw_previous_close": 7730.0,
-      "official_comparison_base": 7630.0,
-      "raw_close_change_pct": 3.1047865459249646,
-      "official_change_pct": 4.46
-    },
-    {
-      "company_name": "코칩",
-      "ticker": "126730",
-      "raw_previous_close": 23900.0,
-      "official_comparison_base": 24550.0,
-      "raw_close_change_pct": -0.8368200836820106,
-      "official_change_pct": -3.46
-    },
-    {
-      "company_name": "피노",
-      "ticker": "033790",
-      "raw_previous_close": 7540.0,
-      "official_comparison_base": 7430.0,
-      "raw_close_change_pct": 7.161803713527859,
-      "official_change_pct": 8.75
+      "company_name": "파워넷",
+      "ticker": "037030",
+      "raw_previous_close": 3870.0,
+      "official_comparison_base": 3810.0,
+      "raw_close_change_pct": -6.0723514211886265,
+      "official_change_pct": -4.59
     },
     {
       "company_name": "피앤씨테크",
       "ticker": "237750",
-      "raw_previous_close": 3395.0,
-      "official_comparison_base": 3345.0,
-      "raw_close_change_pct": 1.3254786450662692,
-      "official_change_pct": 2.84
+      "raw_previous_close": 3440.0,
+      "official_comparison_base": 3395.0,
+      "raw_close_change_pct": 1.4534883720930258,
+      "official_change_pct": 2.8
     },
     {
-      "company_name": "피엔티",
-      "ticker": "137400",
-      "raw_previous_close": 28900.0,
-      "official_comparison_base": 28550.0,
-      "raw_close_change_pct": 0.17301038062282892,
-      "official_change_pct": 1.4
+      "company_name": "HD현대",
+      "ticker": "267250",
+      "raw_previous_close": 212000.0,
+      "official_comparison_base": 208000.0,
+      "raw_close_change_pct": -0.4716981132075526,
+      "official_change_pct": 1.44
     },
     {
-      "company_name": "피엔티엠에스",
-      "ticker": "257370",
-      "raw_previous_close": 1848.0,
-      "official_comparison_base": 1808.0,
-      "raw_close_change_pct": -2.759740259740262,
-      "official_change_pct": -0.61
+      "company_name": "대창솔루션",
+      "ticker": "096350",
+      "raw_previous_close": 1966.0,
+      "official_comparison_base": 1944.0,
+      "raw_close_change_pct": -3.4587995930823956,
+      "official_change_pct": -2.37
     },
     {
-      "company_name": "필에너지",
-      "ticker": "378340",
-      "raw_previous_close": 11900.0,
-      "official_comparison_base": 11730.0,
-      "raw_close_change_pct": 1.5966386554621792,
-      "official_change_pct": 3.07
+      "company_name": "삼성중공업",
+      "ticker": "010140",
+      "raw_previous_close": 21050.0,
+      "official_comparison_base": 20800.0,
+      "raw_close_change_pct": -1.4251781472684133,
+      "official_change_pct": -0.24
     },
     {
-      "company_name": "한중엔시에스",
-      "ticker": "107640",
-      "raw_previous_close": 42000.0,
-      "official_comparison_base": 41250.0,
-      "raw_close_change_pct": -0.23809523809523725,
-      "official_change_pct": 1.58
+      "company_name": "케이에스피",
+      "ticker": "073010",
+      "raw_previous_close": 3500.0,
+      "official_comparison_base": 3455.0,
+      "raw_close_change_pct": -1.571428571428568,
+      "official_change_pct": -0.29
     },
     {
-      "company_name": "STX엔진",
-      "ticker": "077970",
-      "raw_previous_close": 24650.0,
-      "official_comparison_base": 24100.0,
-      "raw_close_change_pct": -3.8539553752535483,
-      "official_change_pct": -1.66
-    },
-    {
-      "company_name": "삼영엠텍",
-      "ticker": "054540",
-      "raw_previous_close": 6800.0,
-      "official_comparison_base": 6660.0,
-      "raw_close_change_pct": -1.3235294117647012,
-      "official_change_pct": 0.75
-    },
-    {
-      "company_name": "한화엔진",
-      "ticker": "082740",
-      "raw_previous_close": 53800.0,
-      "official_comparison_base": 53000.0,
-      "raw_close_change_pct": -4.089219330855021,
-      "official_change_pct": -2.64
+      "company_name": "티엠씨",
+      "ticker": "217590",
+      "raw_previous_close": 14930.0,
+      "official_comparison_base": 14550.0,
+      "raw_close_change_pct": -3.281982585398524,
+      "official_change_pct": -0.76
     }
   ],
   "checked_on": "2026-09-21",
-  "fetch_error_count": 1,
+  "fetch_error_count": 5,
   "fetch_errors": [
-    "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-09-20"
+    "Sotipapier SA (STPAP) historical recovery: Yahoo fallback disabled for unmapped exchange BVMT: using the raw ticker could resolve to the wrong security",
+    "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
+    "PT Semacom Integrated Tbk (SEMA) historical recovery: No Yahoo daily data: SEMA.JK",
+    "Lighting & Equipment Public Co., Ltd. (L&E) historical recovery: No Yahoo daily data: L&E.BK",
+    "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-09-21"
   ],
-  "global_snapshot_count": 2740,
-  "global_targeted_snapshot_count": 8,
+  "global_snapshot_count": 2800,
+  "global_targeted_snapshot_count": 21,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 1,
-  "global_historical_recovery_succeeded_count": 1,
-  "global_checked_no_new_trade_count": 0,
+  "global_historical_recovery_attempted_count": 4,
+  "global_historical_recovery_succeeded_count": 0,
+  "global_checked_no_new_trade_count": 4,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 996,
+  "global_rejected_unfinished_snapshot_count": 663,
   "global_rejected_unfinished_snapshots": [
     {
-      "company_name": "XCMG Construction Machinery Co., Ltd. Class A",
-      "ticker": "000425",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Sany Heavy Equipment International Holdings Co., Ltd.",
-      "ticker": "631",
-      "exchange": "HKEX",
+      "company_name": "Caterpillar, Inc.",
+      "ticker": "CAT",
+      "exchange": "NYSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Shantui Construction Machinery Co., Ltd. Class A",
-      "ticker": "000680",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "AVIC Shenyang Aircraft Co., Ltd. Class A",
-      "ticker": "600760",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "AECC Aviation Power Co Ltd Class A",
-      "ticker": "600893",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Raytron Technology Co., Ltd. Class A",
-      "ticker": "688002",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Jonhon Optronic Technology Co., Ltd. Class A",
-      "ticker": "002179",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "AVIC Xi'an Aircraft Industry Group Co., Ltd. Class A",
-      "ticker": "000768",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "AVIC Airborne Systems Co. Ltd. Class A",
-      "ticker": "600372",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "China Aerospace Times Electronics Co., Ltd. Class A",
-      "ticker": "600879",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Nanchang Sanrui Intelligence Technology Co., Ltd. Class A",
-      "ticker": "301696",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Glarun Technology Co., Ltd. Class A",
-      "ticker": "600562",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Avic (Chengdu) UAS Co., Ltd. Class A",
-      "ticker": "688297",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Sai MicroElectronics Inc. Class A",
-      "ticker": "300456",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "AECC Aero-engine Control Co., Ltd. Class A",
-      "ticker": "000738",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Baimtec Material Co., Ltd. Class A",
-      "ticker": "688563",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Anhui GreatWall Military Industry Co., Ltd. Class A",
-      "ticker": "601606",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Jiangxi Hongdu Aviation Industry Co., Ltd. Class A",
-      "ticker": "600316",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Inner Mongolia First Machinery Group Co Ltd Class A",
-      "ticker": "600967",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Avicopter Plc Class A",
-      "ticker": "600038",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "North Industries Group Red Arrow Co., Ltd. Class A",
-      "ticker": "000519",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "AviChina Industry & Technology Co. Ltd. Class H",
-      "ticker": "2357",
-      "exchange": "HKEX",
+      "company_name": "Deere & Company",
+      "ticker": "DE",
+      "exchange": "NYSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Aerospace CH UAV Co. Ltd. Class A",
-      "ticker": "002389",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "North Navigation Control Technology Co., Ltd. Class A",
-      "ticker": "600435",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "AECC Aero Science And Technology Co Ltd. Class A",
-      "ticker": "600391",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Cirrus Aircraft Limited",
-      "ticker": "2507",
-      "exchange": "HKEX",
+      "company_name": "GE Aerospace",
+      "ticker": "GE",
+      "exchange": "NYSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "China Marine Information Electronics Co., Ltd. Class A",
-      "ticker": "600764",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "North Electro-Optic Co., Ltd. Class A",
-      "ticker": "600184",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Ligeance Aerospace Technology Co., Ltd. Class A",
-      "ticker": "000697",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Xi'an Triangle Defense Co., Ltd. Class A",
-      "ticker": "300775",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Beijing Highlander Digital Technology Co., Ltd. Class A",
-      "ticker": "300065",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Beijing LeiKe Defense Technology Co Ltd Class A",
-      "ticker": "002413",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Beijing Beimo High-tech Frictional Material Co., Ltd. Class A",
-      "ticker": "002985",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Hefei Jianghang Aircraft Equipment Corporation Ltd. Class A",
-      "ticker": "688586",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Sichuan 6912 Communication Technology Co., Ltd. Class A",
-      "ticker": "301592",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Streamax Technology Co., Ltd. Class A",
-      "ticker": "002970",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Shaanxi Zhongtian Rocket Technology Co., Ltd. Class A",
-      "ticker": "003009",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Guanglian Aviation Industry Co., Ltd. Class A",
-      "ticker": "300900",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "CIMC Safeway Technologies Co., Ltd. Class A",
-      "ticker": "301559",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Wuxi Hyatech Co.,Ltd. Class A",
-      "ticker": "688510",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Nanjing LES Information Technology Co., Ltd Class A",
-      "ticker": "688631",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Jiangxi Xinyu Guoke Technology Co., Ltd. Class A",
-      "ticker": "300722",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Chengdu ALD Aviation Manufacturing Corp. Class A",
-      "ticker": "300696",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Xi'an ChenXi Aviation Technology Corp., Ltd. Class A",
-      "ticker": "300581",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Xi'An Tian He Defense Technology Co. Ltd. Class A",
-      "ticker": "300397",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Jiangsu Maixinlin Aviation Science and Technology Corp Class A",
-      "ticker": "688685",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Sun-Create Electronics Co., Ltd Class A",
-      "ticker": "600990",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Shandong Senter Electronic Co., Ltd. Class A",
-      "ticker": "001388",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Beijing Navigation Control Technology Co., Ltd. Class A",
-      "ticker": "688282",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Chengdu Lihang Technology Co., Ltd. Class A",
-      "ticker": "603261",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Continental Aerospace Technologies Holding Ltd.",
-      "ticker": "232",
-      "exchange": "HKEX",
+      "company_name": "RTX Corporation",
+      "ticker": "RTX",
+      "exchange": "NYSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Beijing Emerging Eastern Aviation Equipment Co., Ltd. Class A",
-      "ticker": "002933",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Sichuan Tianwei Electronic Co. Ltd. Class A",
-      "ticker": "688511",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Beijing Andawell Science & Technology Co., Ltd. Class A",
-      "ticker": "300719",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Chengdu Jouav Automation Tech Co., Ltd. Class A",
-      "ticker": "688070",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Chenfull Precision Co., Ltd.",
-      "ticker": "6829",
-      "exchange": "TPEX",
+      "company_name": "Airbus SE",
+      "ticker": "AIR",
+      "exchange": "EURONEXT",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Beijing Hengyu Datacom Aviation Equipment Co. Ltd. Class A",
-      "ticker": "300965",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Chengdu Tianjian Technology Co. Ltd. Class A",
-      "ticker": "002977",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Integrity Technology Group Inc. Class A",
-      "ticker": "688244",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Seyond Holdings Ltd",
-      "ticker": "2665",
-      "exchange": "HKEX",
+      "company_name": "Rolls-Royce Holdings plc",
+      "ticker": "RR.",
+      "exchange": "LSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Anhui Jialiqi Advanced Composites Technology Co., Ltd. Class A",
-      "ticker": "301586",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Hunan Aerospace Huanyu Communication Technology Co., Ltd. Class A",
-      "ticker": "688523",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Magnate Technology Co., Ltd.",
-      "ticker": "4541",
-      "exchange": "TPEX",
+      "company_name": "Boeing Company (The)",
+      "ticker": "BA",
+      "exchange": "NYSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Accordance Systems, Inc.",
-      "ticker": "7870",
-      "exchange": "TPEX",
+      "company_name": "Safran SA",
+      "ticker": "SAF",
+      "exchange": "EURONEXT",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Carbon-Based Technology, Inc.",
-      "ticker": "7719",
-      "exchange": "TPEX",
+      "company_name": "Lockheed Martin Corporation",
+      "ticker": "LMT",
+      "exchange": "NYSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "PT Utama Radar Cahaya Tbk",
-      "ticker": "RCCC",
-      "exchange": "IDX",
+      "company_name": "General Dynamics Corporation",
+      "ticker": "GD",
+      "exchange": "NYSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Eoptolink Technology Inc., Ltd. Class A",
-      "ticker": "300502",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "NAURA Technology Group Co Ltd Class A",
-      "ticker": "002371",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Advanced Micro-Fabrication Equipment Inc. China Class A",
-      "ticker": "688012",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "China CSSC Holdings Limited Class A",
-      "ticker": "600150",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Yushu Technology Co., Ltd. Class A",
-      "ticker": "688836",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Gree Electric Appliances, Inc. of Zhuhai Class A",
-      "ticker": "000651",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "SHENGU GROUP CO LTD",
-      "ticker": "601091",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "CRRC Corporation Limited Class A",
-      "ticker": "601766",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Sany Heavy Industry Co., Ltd. Class A",
-      "ticker": "600031",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Zhejiang Sanhua Intelligent Controls Co., Ltd. Class A",
-      "ticker": "002050",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "ACM Research (Shanghai), Inc. Class A",
-      "ticker": "688082",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Guangdong Dtech Technology Co., Ltd. Class A",
-      "ticker": "301377",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Shenzhen Han's CNC Technology Co., Ltd. Class A",
-      "ticker": "301200",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Huagong Tech Co., Ltd. Class A",
-      "ticker": "000988",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Robotechnik Intelligent Technology Co., Ltd. Class A",
-      "ticker": "300757",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Han's Laser Technology Industry Group Co., Ltd. Class A",
-      "ticker": "002008",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "GlobalWafers Co., Ltd.",
-      "ticker": "6488",
-      "exchange": "TPEX",
+      "company_name": "Howmet Aerospace Inc.",
+      "ticker": "HWM",
+      "exchange": "NYSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Sinotruk Hong Kong Ltd.",
-      "ticker": "3808",
-      "exchange": "HKEX",
+      "company_name": "BAE Systems plc",
+      "ticker": "BA.",
+      "exchange": "LSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Beijing Huafeng Test & Control Technology Co. Ltd. Class A",
-      "ticker": "688200",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Shenzhen Envicool Technology Co., Ltd. Class A",
-      "ticker": "002837",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "KINGSEMI Co., Ltd. Class A",
-      "ticker": "688037",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Beijing E-Town Semiconductor Technology Co., Ltd. Class A",
-      "ticker": "688729",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "LandMark Optoelectronics Corp.",
-      "ticker": "3081",
-      "exchange": "TPEX",
+      "company_name": "Northrop Grumman Corporation",
+      "ticker": "NOC",
+      "exchange": "NYSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Zhejiang Jingsheng Mechanical & Electrical Co., Ltd. Class A",
-      "ticker": "300316",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Circuit Fabology Microelectronics Equipment Co.,Ltd. Class A",
-      "ticker": "688630",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Leader Harmonious Drive Systems Co., Ltd. Class A",
-      "ticker": "688017",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Wuxi Lead Intelligent Equipment Co. Ltd. Class A",
-      "ticker": "300450",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Zoomlion Heavy Industry Science & Technology Co. Ltd. Class A",
-      "ticker": "000157",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Wuhan DR Laser Technology Corp. Ltd. Class A",
-      "ticker": "300776",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Jiangsu Lettall Electronic Co., Ltd. Class A",
-      "ticker": "603629",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Moon Environment Technology Co., Ltd. Class A",
-      "ticker": "000811",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Guangdong Shenling Environmental Systems Co., Ltd. Class A",
-      "ticker": "301018",
-      "exchange": "SZSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Shanghai BOCHU Electronic Technology Corporation Limited Class A",
-      "ticker": "688188",
-      "exchange": "SSE",
-      "price_date": "2026-09-21",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "UBTECH ROBOTICS CORP LTD Class H",
-      "ticker": "9880",
-      "exchange": "HKEX",
+      "company_name": "Transdigm Group Inc.",
+      "ticker": "TDG",
+      "exchange": "NYSE",
       "price_date": "2026-09-21",
       "market_session": "market",
       "reason": "official_session_not_closed"
-    }
-  ],
-  "global_discarded_invalid_previous_count": 1,
-  "global_discarded_invalid_previous": [
+    },
     {
-      "company_name": "Dynapack International Technology Corporation",
-      "ticker": "3211",
-      "exchange": "TPEX",
+      "company_name": "Thales SA",
+      "ticker": "HO",
+      "exchange": "EURONEXT",
       "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Rheinmetall AG",
+      "ticker": "RHM",
+      "exchange": "XETR",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Honeywell Aerospace Inc.",
+      "ticker": "HONA",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "L3Harris Technologies, Inc.",
+      "ticker": "LHX",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Rocket Lab Corporation",
+      "ticker": "RKLB",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Axon Enterprise, Inc.",
+      "ticker": "AXON",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Heico Corporation",
+      "ticker": "HEI",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Aselsan Elektronik Sanayi ve Ticaret A.S. Class B",
+      "ticker": "ASELS",
+      "exchange": "BIST",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Leonardo SpA",
+      "ticker": "LDO",
+      "exchange": "MIL",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Saab AB Class B",
+      "ticker": "SAAB_B",
+      "exchange": "OMXSTO",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Teledyne Technologies Incorporated",
+      "ticker": "TDY",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Dassault Aviation SA",
+      "ticker": "AM",
+      "exchange": "EURONEXT",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Arxis, Inc.",
+      "ticker": "ARXS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Bombardier Inc. Class A",
+      "ticker": "BBD.A",
+      "exchange": "TSX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "MTU Aero Engines AG",
+      "ticker": "MTX",
+      "exchange": "XETR",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Curtiss-Wright Corporation",
+      "ticker": "CW",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "FTAI Aviation Ltd.",
+      "ticker": "FTAI",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "CSG N.V.",
+      "ticker": "CSG",
+      "exchange": "EURONEXT",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Textron Inc.",
+      "ticker": "TXT",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Embraer S.A.",
+      "ticker": "EMBJ3",
+      "exchange": "BMFBOVESPA",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "BWX Technologies, Inc.",
+      "ticker": "BWXT",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Moog Inc.",
+      "ticker": "MOG.A",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Crane Company",
+      "ticker": "CR",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Huntington Ingalls Industries, Inc.",
+      "ticker": "HII",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "HENSOLDT AG",
+      "ticker": "HAG",
+      "exchange": "XETR",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Leonardo DRS, Inc.",
+      "ticker": "DRS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Kratos Defense & Security Solutions, Inc.",
+      "ticker": "KTOS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "AeroVironment, Inc.",
+      "ticker": "AVAV",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Melrose Industries PLC",
+      "ticker": "MRO",
+      "exchange": "LSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Hexcel Corporation",
+      "ticker": "HXL",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Joby Aviation, Inc.",
+      "ticker": "JOBY",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Loar Holdings Inc.",
+      "ticker": "LOAR",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Mercury Systems Inc",
+      "ticker": "MRCY",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Beta Technologies, Inc.",
+      "ticker": "BETA",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "RENK Group AG",
+      "ticker": "R3NK",
+      "exchange": "XETR",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Amentum Holdings, Inc.",
+      "ticker": "AMTM",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Karman Holdings Inc.",
+      "ticker": "KRMN",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Ob.aviastroitelnaya korp.",
+      "ticker": "UNAC",
+      "exchange": "RUS",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "AAR Corp.",
+      "ticker": "AIR",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Archer Aviation Inc.",
+      "ticker": "ACHR",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Mirion Technologies, Inc.",
+      "ticker": "MIR",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Firefly Aerospace Inc.",
+      "ticker": "FLY",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "QinetiQ Group plc",
+      "ticker": "QQ.",
+      "exchange": "LSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "LISI SA",
+      "ticker": "FII",
+      "exchange": "EURONEXT",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Intuitive Machines, Inc.",
+      "ticker": "LUNR",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "OSI Systems, Inc.",
+      "ticker": "OSIS",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Astronics Corporation",
+      "ticker": "ATRO",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Redwire Corporation",
+      "ticker": "RDW",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "COLT CZ GROUP SE",
+      "ticker": "COLT",
+      "exchange": "PSECZ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Yakovlev-3",
+      "ticker": "IRKT",
+      "exchange": "RUS",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Ducommun Incorporated",
+      "ticker": "DCO",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Exail Technologies SA",
+      "ticker": "EXA",
+      "exchange": "EURONEXT",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Applied Aerospace & Defense, Inc.",
+      "ticker": "AADX",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Bodycote plc",
+      "ticker": "BOY",
+      "exchange": "LSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Chemring Group PLC",
+      "ticker": "CHG",
+      "exchange": "LSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "AEVEX Corp.",
+      "ticker": "AVEX",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Senior plc",
+      "ticker": "SNR",
+      "exchange": "LSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Avio SpA",
+      "ticker": "AVIO",
+      "exchange": "MIL",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Magellan Aerospace Corporation",
+      "ticker": "MAL",
+      "exchange": "TSX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Kraken Robotics Inc",
+      "ticker": "PNG",
+      "exchange": "TSXV",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "York Space Systems Inc.",
+      "ticker": "YSS",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Cadre Holdings, Inc.",
+      "ticker": "CDRE",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "National Presto Industries, Inc.",
+      "ticker": "NPK",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "VINCORION SE",
+      "ticker": "V1NC",
+      "exchange": "XETR",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "FACC AG",
+      "ticker": "FACC",
+      "exchange": "VIE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Satellogic Inc.",
+      "ticker": "SATL",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Cohort plc",
+      "ticker": "CHRT",
+      "exchange": "LSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Eve Holding, Inc.",
+      "ticker": "EVEX",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Avon Technologies PLC",
+      "ticker": "AVON",
+      "exchange": "LSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Park Aerospace Corp.",
+      "ticker": "PKE",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Smith & Wesson Brands, Inc.",
+      "ticker": "SWBI",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Aerostar SA",
+      "ticker": "ARS",
+      "exchange": "BVB",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Figeac Aero SA",
+      "ticker": "FGA",
+      "exchange": "EURONEXT",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "TAT Technologies Ltd.",
+      "ticker": "TATT",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Virgin Galactic Holdings, Inc.",
+      "ticker": "SPCE",
+      "exchange": "NYSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "MS International PLC",
+      "ticker": "MSI",
+      "exchange": "LSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Innovative Solutions and Support, Inc.",
+      "ticker": "IA",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Volatus Aerospace Inc.",
+      "ticker": "FLT",
+      "exchange": "TSX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Altinay Savunma Teknolojileri A.S.",
+      "ticker": "ALTNY",
+      "exchange": "BIST",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Gabler Group AG",
+      "ticker": "XK4",
+      "exchange": "XETR",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Outdoor Holding Company",
+      "ticker": "POWW",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "RKK Energia",
+      "ticker": "RKKE",
+      "exchange": "RUS",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Maritime Launch Services Inc",
+      "ticker": "MAXQ",
+      "exchange": "NEO",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "SDT Uzay ve Savunma Teknolojileri A.S.",
+      "ticker": "SDTTR",
+      "exchange": "BIST",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "AIRO Group Holdings, Inc.",
+      "ticker": "AIRO",
+      "exchange": "NASDAQ",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Taurus Armas S.A.",
+      "ticker": "TASA3",
+      "exchange": "BMFBOVESPA",
+      "price_date": "2026-09-21",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     }
   ],
-  "update_scope": "ALL",
-  "refreshed_completed_global_count": 1360,
-  "preserved_open_or_unknown_global_count": 995,
+  "global_discarded_invalid_previous_count": 0,
+  "global_discarded_invalid_previous": [],
+  "update_scope": "SAFE_REFRESH",
+  "refreshed_completed_global_count": 1692,
+  "preserved_open_or_unknown_global_count": 663,
   "global_exchange_completed_reference_dates": {
-    "ADX": "2026-09-18",
+    "ADX": "2026-09-21",
     "AMEX": "2026-09-18",
-    "AQUIS": "2026-09-18",
+    "ASX": "2026-09-21",
     "ATHEX": "2026-09-18",
-    "BCBA": "2026-09-18",
     "BET": "2026-09-18",
     "BIST": "2026-09-18",
     "BME": "2026-09-18",
     "BMFBOVESPA": "2026-09-18",
-    "BSE": "2026-09-18",
+    "BSE": "2026-09-21",
     "BSESOF": "2026-09-18",
-    "BSSE": "2026-09-18",
     "BVB": "2026-09-18",
-    "BVMT": "2026-09-18",
+    "BVMT": "2026-09-21",
     "BX": "2026-09-18",
     "CSE": "2026-09-18",
-    "CSELK": "2026-09-18",
+    "CSELK": "2026-09-21",
     "CSEMA": "2026-09-18",
-    "DSEBD": "2026-09-20",
-    "EGX": "2026-09-20",
+    "DSEBD": "2026-09-21",
+    "EGX": "2026-09-21",
     "EURONEXT": "2026-09-18",
     "GPW": "2026-09-18",
-    "HKEX": "2026-09-18",
-    "HNX": "2026-09-18",
-    "HOSE": "2026-09-18",
-    "IDX": "2026-09-18",
+    "HKEX": "2026-09-21",
+    "HNX": "2026-09-21",
+    "HOSE": "2026-09-21",
+    "IDX": "2026-09-21",
     "JSE": "2026-09-18",
-    "KRX": "2026-09-18",
-    "KSE": "2026-09-20",
+    "KRX": "2026-09-21",
+    "KSE": "2026-09-21",
     "LSE": "2026-09-18",
     "MIL": "2026-09-18",
-    "MYX": "2026-09-18",
+    "MYX": "2026-09-21",
     "NAG": "2026-09-18",
     "NASDAQ": "2026-09-18",
     "NEO": "2026-09-18",
     "NEWCONNECT": "2026-09-18",
     "NGM": "2026-09-18",
-    "NSE": "2026-09-18",
-    "NSEKE": "2026-09-18",
-    "NSENG": "2026-09-18",
+    "NSE": "2026-09-21",
+    "NSEKE": "2026-09-21",
+    "NSENG": "2026-09-21",
     "NYSE": "2026-09-18",
+    "NZX": "2026-09-21",
     "OMXCOP": "2026-09-18",
     "OMXHEX": "2026-09-18",
-    "OMXRSE": "2026-09-18",
     "OMXSTO": "2026-09-18",
     "OMXTSE": "2026-09-18",
     "OSL": "2026-09-18",
-    "PSE": "2026-09-18",
+    "PSE": "2026-09-21",
     "PSECZ": "2026-09-18",
-    "PSX": "2026-09-18",
+    "PSX": "2026-09-21",
     "RUS": "2026-09-20",
-    "SET": "2026-09-18",
-    "SGX": "2026-09-18",
+    "SET": "2026-09-21",
+    "SGX": "2026-09-21",
     "SIX": "2026-09-18",
-    "SSE": "2026-09-18",
-    "SZSE": "2026-09-18",
-    "TADAWUL": "2026-09-20",
+    "SSE": "2026-09-21",
+    "SZSE": "2026-09-21",
+    "TADAWUL": "2026-09-21",
     "TASE": "2026-09-17",
-    "TPEX": "2026-09-18",
+    "TPEX": "2026-09-21",
     "TSE": "2026-09-18",
     "TSX": "2026-09-18",
     "TSXV": "2026-09-18",
-    "UPCOM": "2026-09-18",
+    "TWSE": "2026-09-21",
+    "UPCOM": "2026-09-21",
     "VIE": "2026-09-18",
     "XETR": "2026-09-18",
     "ZSE": "2026-09-18"
   },
   "global_exchange_latest_completed_dates": {
-    "ADX": "2026-09-18",
+    "ADX": "2026-09-21",
     "AMEX": "2026-09-18",
-    "AQUIS": "2026-09-18",
+    "ASX": "2026-09-21",
     "ATHEX": "2026-09-18",
-    "BCBA": "2026-09-18",
     "BET": "2026-09-18",
     "BIST": "2026-09-18",
     "BME": "2026-09-18",
     "BMFBOVESPA": "2026-09-18",
-    "BSE": "2026-09-18",
+    "BSE": "2026-09-21",
     "BSESOF": "2026-09-18",
-    "BSSE": "2026-09-18",
     "BVB": "2026-09-18",
-    "BVMT": "2026-09-18",
+    "BVMT": "2026-09-21",
     "BX": "2026-09-18",
     "CSE": "2026-09-18",
-    "CSELK": "2026-09-18",
+    "CSELK": "2026-09-21",
     "CSEMA": "2026-09-18",
-    "DSEBD": "2026-09-20",
-    "EGX": "2026-09-20",
+    "DSEBD": "2026-09-21",
+    "EGX": "2026-09-21",
     "EURONEXT": "2026-09-18",
     "GPW": "2026-09-18",
-    "HKEX": "2026-09-18",
-    "HNX": "2026-09-18",
-    "HOSE": "2026-09-18",
-    "IDX": "2026-09-18",
+    "HKEX": "2026-09-21",
+    "HNX": "2026-09-21",
+    "HOSE": "2026-09-21",
+    "IDX": "2026-09-21",
     "JSE": "2026-09-18",
-    "KRX": "2026-09-18",
-    "KSE": "2026-09-20",
+    "KRX": "2026-09-21",
+    "KSE": "2026-09-21",
     "LSE": "2026-09-18",
     "MIL": "2026-09-18",
-    "MYX": "2026-09-18",
+    "MYX": "2026-09-21",
     "NAG": "2026-09-18",
     "NASDAQ": "2026-09-18",
     "NEO": "2026-09-18",
     "NEWCONNECT": "2026-09-18",
     "NGM": "2026-09-18",
-    "NSE": "2026-09-18",
-    "NSEKE": "2026-09-18",
-    "NSENG": "2026-09-18",
+    "NSE": "2026-09-21",
+    "NSEKE": "2026-09-21",
+    "NSENG": "2026-09-21",
     "NYSE": "2026-09-18",
+    "NZX": "2026-09-21",
     "OMXCOP": "2026-09-18",
     "OMXHEX": "2026-09-18",
-    "OMXRSE": "2026-09-18",
     "OMXSTO": "2026-09-18",
     "OMXTSE": "2026-09-18",
     "OSL": "2026-09-18",
-    "PSE": "2026-09-18",
+    "PSE": "2026-09-21",
     "PSECZ": "2026-09-18",
-    "PSX": "2026-09-18",
+    "PSX": "2026-09-21",
     "RUS": "2026-09-20",
-    "SET": "2026-09-18",
-    "SGX": "2026-09-18",
+    "SET": "2026-09-21",
+    "SGX": "2026-09-21",
     "SIX": "2026-09-18",
-    "SSE": "2026-09-18",
-    "SZSE": "2026-09-18",
-    "TADAWUL": "2026-09-20",
+    "SSE": "2026-09-21",
+    "SZSE": "2026-09-21",
+    "TADAWUL": "2026-09-21",
     "TASE": "2026-09-17",
-    "TPEX": "2026-09-18",
+    "TPEX": "2026-09-21",
     "TSE": "2026-09-18",
     "TSX": "2026-09-18",
     "TSXV": "2026-09-18",
-    "UPCOM": "2026-09-18",
+    "TWSE": "2026-09-21",
+    "UPCOM": "2026-09-21",
     "VIE": "2026-09-18",
     "XETR": "2026-09-18",
     "ZSE": "2026-09-18"
@@ -1667,7 +1401,8 @@
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
     "2026-09-17": 32,
-    "2026-09-18": 2295,
-    "2026-09-20": 28
+    "2026-09-18": 960,
+    "2026-09-20": 6,
+    "2026-09-21": 1357
   }
 }
