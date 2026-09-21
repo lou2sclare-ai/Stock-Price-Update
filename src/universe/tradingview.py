@@ -116,6 +116,11 @@ def _price_date(row: dict) -> tuple[str | None, str | None]:
         text = str(n)
         return f"{text[:4]}-{text[4:6]}-{text[6:8]}", "TradingView time_business_day"
 
+    business_ts = _epoch_seconds(business_day)
+    if business_ts is not None:
+        dt = datetime.fromtimestamp(business_ts, tz=timezone.utc)
+        return dt.date().isoformat(), "TradingView time_business_day UTC date"
+
     ts = _epoch_seconds(row.get("daily-bar.time"))
     if ts is None:
         return None, None
@@ -232,6 +237,10 @@ def _snapshot_from_item(
         "price_bar_update_time": row.get("last_bar_update_time"),
         "comparison_base_source": comparison_base_source,
         "data_status": "COMPLETED_SESSION_SNAPSHOT",
+        # Keep source market identity on the snapshot so completion checks use
+        # the exchange clock, not the GitHub runner or KST calendar alone.
+        "snapshot_exchange": exchange,
+        "snapshot_country": row.get("country"),
     }
 
 

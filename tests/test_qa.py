@@ -1,6 +1,12 @@
 import unittest
+from datetime import datetime, timezone
 
-from src.qa import OFFICIAL_KR_BASE_SOURCE, OFFICIAL_KR_CHANGE_ORIGIN, run
+from src.qa import (
+    OFFICIAL_KR_BASE_SOURCE,
+    OFFICIAL_KR_CHANGE_ORIGIN,
+    _exchange_reference_dates,
+    run,
+)
 
 
 def settings():
@@ -119,6 +125,43 @@ class QaTests(unittest.TestCase):
         self.assertEqual(qa["missing_price_count"], 1)
         self.assertEqual(qa["awaiting_first_completed_close_count"], 1)
         self.assertFalse(any("완료 종가 미확보" in message for message in qa["warnings"]))
+
+    def test_same_day_bar_before_exchange_close_blocks_publication(self):
+        row = {
+            "country": "Taiwan",
+            "exchange": "TPEX",
+            "ticker": "3211",
+            "company_name": "Dynapack",
+            "price": 331.5,
+            "previous_close": 368.0,
+            "price_change": -36.5,
+            "price_change_pct": -9.9,
+            "price_date": "2026-09-21",
+            "market_session": "out_of_session",
+            "data_status": "REFRESHED_COMPLETED_SESSION",
+            "research_status": "UNDEFINED",
+        }
+
+        qa = run(
+            [row],
+            settings(),
+            now=datetime(2026, 9, 20, 23, 32, tzinfo=timezone.utc),
+        )
+
+        self.assertEqual(qa["status"], "FAIL")
+        self.assertEqual(qa["invalid_completed_date_count"], 1)
+        self.assertTrue(any("미완료·미래 해외 거래일 발행 차단" in e for e in qa["errors"]))
+
+    def test_exchange_reference_date_uses_mode_not_maximum(self):
+        rows = [
+            {"exchange": "TPEX", "price_date": "2026-09-18"}
+            for _ in range(80)
+        ] + [{"exchange": "TPEX", "price_date": "2026-09-21"}]
+
+        self.assertEqual(
+            _exchange_reference_dates(rows)["TPEX"].isoformat(),
+            "2026-09-18",
+        )
 
 
 if __name__ == "__main__":

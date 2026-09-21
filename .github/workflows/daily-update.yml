@@ -15,12 +15,13 @@ on:
     - cron: '17 23 * * 0-4'
     - cron: '47 23 * * 0-4'
     # Afternoon SAFE_REFRESH passes, KST Mon-Fri. Each pass is intentional:
-    # Asian exchanges close at different times, with India last around 19:00.
+    # Asian and Middle-East exchanges close at different times.
     - cron: '20 7 * * 1-5'
     - cron: '50 7 * * 1-5'
     - cron: '20 8 * * 1-5'
     - cron: '20 9 * * 1-5'
     - cron: '20 10 * * 1-5'
+    - cron: '20 13 * * 1-5'
   workflow_dispatch:
     inputs:
       scope:
