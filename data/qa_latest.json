@@ -436,9 +436,10 @@
     }
   ],
   "checked_on": "2026-09-21",
-  "fetch_error_count": 5,
+  "fetch_error_count": 6,
   "fetch_errors": [
     "Sotipapier SA (STPAP) historical recovery: Yahoo fallback disabled for unmapped exchange BVMT: using the raw ticker could resolve to the wrong security",
+    "IMMI AD (IMMI) historical recovery: Yahoo fallback disabled for unmapped exchange BSESOF: using the raw ticker could resolve to the wrong security",
     "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
     "PT Semacom Integrated Tbk (SEMA) historical recovery: No Yahoo daily data: SEMA.JK",
     "Lighting & Equipment Public Co., Ltd. (L&E) historical recovery: No Yahoo daily data: L&E.BK",
@@ -447,12 +448,12 @@
   "global_snapshot_count": 2800,
   "global_targeted_snapshot_count": 21,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 4,
+  "global_historical_recovery_attempted_count": 5,
   "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 4,
+  "global_checked_no_new_trade_count": 5,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 663,
+  "global_rejected_unfinished_snapshot_count": 661,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
@@ -955,7 +956,7 @@
       "ticker": "COLT",
       "exchange": "PSECZ",
       "price_date": "2026-09-21",
-      "market_session": "market",
+      "market_session": "post_market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1258,8 +1259,8 @@
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1692,
-  "preserved_open_or_unknown_global_count": 663,
+  "refreshed_completed_global_count": 1694,
+  "preserved_open_or_unknown_global_count": 661,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-09-21",
     "AMEX": "2026-09-18",
@@ -1270,7 +1271,7 @@
     "BME": "2026-09-18",
     "BMFBOVESPA": "2026-09-18",
     "BSE": "2026-09-21",
-    "BSESOF": "2026-09-18",
+    "BSESOF": "2026-09-21",
     "BVB": "2026-09-18",
     "BVMT": "2026-09-21",
     "BX": "2026-09-18",
@@ -1325,7 +1326,7 @@
     "UPCOM": "2026-09-21",
     "VIE": "2026-09-18",
     "XETR": "2026-09-18",
-    "ZSE": "2026-09-18"
+    "ZSE": "2026-09-21"
   },
   "global_exchange_latest_completed_dates": {
     "ADX": "2026-09-21",
@@ -1337,7 +1338,7 @@
     "BME": "2026-09-18",
     "BMFBOVESPA": "2026-09-18",
     "BSE": "2026-09-21",
-    "BSESOF": "2026-09-18",
+    "BSESOF": "2026-09-21",
     "BVB": "2026-09-18",
     "BVMT": "2026-09-21",
     "BX": "2026-09-18",
@@ -1392,7 +1393,7 @@
     "UPCOM": "2026-09-21",
     "VIE": "2026-09-18",
     "XETR": "2026-09-18",
-    "ZSE": "2026-09-18"
+    "ZSE": "2026-09-21"
   },
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
@@ -1401,8 +1402,8 @@
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
     "2026-09-17": 32,
-    "2026-09-18": 960,
+    "2026-09-18": 958,
     "2026-09-20": 6,
-    "2026-09-21": 1357
+    "2026-09-21": 1359
   }
 }
