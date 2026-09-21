@@ -43,6 +43,7 @@ def _data_status_label(v):
         "PRESERVED_AFTER_FETCH_ERROR":"수집 오류·이전값 유지",
         "FETCH_ERROR":"수집 오류",
         "AWAITING_FIRST_COMPLETED_CLOSE":"장 마감 후 첫 완료종가 확인 예정",
+        "COMPLETED_PRIOR_CLOSE_FROM_LIVE_SNAPSHOT":"직전 완료종가 복구",
     }
     return labels.get(v,v or "-")
 

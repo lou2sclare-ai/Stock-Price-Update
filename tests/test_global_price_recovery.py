@@ -1,4 +1,5 @@
 import unittest
+from datetime import datetime, timezone
 from unittest.mock import patch
 
 from src import main as stock_main
@@ -73,15 +74,91 @@ class GlobalPriceRecoveryTests(unittest.TestCase):
             "price": 10.0,
             "price_date": "2026-09-17",
             "market_session": "market",
-        }))
+            "snapshot_exchange": "TPEX",
+        }, now=datetime(2026, 9, 16, 23, 0, tzinfo=timezone.utc)))
         self.assertFalse(stock_main.awaiting_first_completed_close({
             "price": 10.0,
             "price_date": "2026-09-17",
             "market_session": "post_market",
-        }))
+            "snapshot_exchange": "TPEX",
+        }, now=datetime(2026, 9, 17, 6, 0, tzinfo=timezone.utc)))
+
+    def test_exchange_reference_uses_consensus_not_single_future_outlier(self):
+        snapshots = {
+            **{
+                ("TPEX", str(index)): {
+                    "price": 100.0,
+                    "price_date": "2026-09-18",
+                    "market_session": "out_of_session",
+                    "snapshot_exchange": "TPEX",
+                }
+                for index in range(80)
+            },
+            ("TPEX", "BAD"): {
+                "price": 100.0,
+                "price_date": "2026-09-21",
+                "market_session": "out_of_session",
+                "snapshot_exchange": "TPEX",
+            },
+        }
+
+        reference = stock_main._exchange_completed_reference(
+            snapshots,
+            now=datetime(2026, 9, 20, 23, 32, tzinfo=timezone.utc),
+        )
+
+        self.assertEqual(reference["TPEX"], "2026-09-18")
+
+    def test_rejected_live_bar_can_recover_its_prior_completed_close(self):
+        recovered = stock_main._prior_completed_from_live_snapshot(
+            {
+                "price": 331.5,
+                "previous_close": 368.0,
+                "price_date": "2026-09-21",
+                "comparison_base_source": "TradingView_change_abs",
+            },
+            "2026-09-18",
+        )
+
+        self.assertEqual(recovered["price"], 368.0)
+        self.assertEqual(recovered["price_date"], "2026-09-18")
+        self.assertEqual(
+            recovered["data_status"],
+            "COMPLETED_PRIOR_CLOSE_FROM_LIVE_SNAPSHOT",
+        )
+
+    def test_previous_consensus_ignores_poisoned_same_day_value(self):
+        previous_rows = [
+            {
+                "exchange": "TPEX",
+                "ticker": str(index),
+                "price": 100.0,
+                "price_date": "2026-09-18",
+                "market_session": "out_of_session",
+            }
+            for index in range(80)
+        ] + [{
+            "exchange": "TPEX",
+            "ticker": "BAD",
+            "price": 331.5,
+            "price_date": "2026-09-21",
+            "market_session": "out_of_session",
+        }]
+
+        reference = stock_main._previous_exchange_completed_reference(
+            previous_rows,
+            now=datetime(2026, 9, 20, 23, 32, tzinfo=timezone.utc),
+        )
+
+        self.assertEqual(reference["TPEX"], "2026-09-18")
 
     def test_exchange_lagging_snapshot_is_eligible_for_newer_history(self):
-        snapshot = {"price_date": "2026-09-04", "market_session": "out_of_session"}
+        snapshot = {
+            "price": 100.0,
+            "price_date": "2026-09-04",
+            "market_session": "out_of_session",
+            "snapshot_exchange": "BX",
+        }
         previous = {"price_date": "2026-09-04"}
         exchange_target = "2026-09-16"
 

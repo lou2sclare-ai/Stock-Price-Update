@@ -1,19 +1,20 @@
 from __future__ import annotations
 from collections import Counter
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
+from src.market_clock import published_date_violation
 
 KST = ZoneInfo("Asia/Seoul")
 OFFICIAL_KR_CHANGE_ORIGIN = "NAVER_KRX_MIRROR_DAILY_QUOTE"
 OFFICIAL_KR_BASE_SOURCE = "source_exact_absolute_change"
-CLOSED_GLOBAL_SESSION_STATES = {
-    "out_of_session", "post_market", "pre_market", "holiday", "night"
-}
 
 
-def _completed_kr_cutoff() -> str:
-    now = datetime.now(KST)
-    cutoff = now.date() if now.hour >= 16 else now.date() - timedelta(days=1)
+def _completed_kr_cutoff(now: datetime | None = None) -> str:
+    current = now or datetime.now(timezone.utc)
+    if current.tzinfo is None:
+        current = current.replace(tzinfo=timezone.utc)
+    local_now = current.astimezone(KST)
+    cutoff = local_now.date() if local_now.hour >= 16 else local_now.date() - timedelta(days=1)
     return cutoff.isoformat()
 
 
@@ -24,7 +25,26 @@ def _parse_date(value):
         return None
 
 
-def run(rows: list[dict], settings: dict) -> dict:
+def _exchange_reference_dates(rows: list[dict]) -> dict[str, date]:
+    """Return each exchange's modal date, breaking ties toward the newer date."""
+    counts: dict[str, Counter] = {}
+    for row in rows:
+        exchange = str(row.get("exchange") or "").upper()
+        trade_date = _parse_date(row.get("price_date"))
+        if exchange and trade_date:
+            counts.setdefault(exchange, Counter())[trade_date] += 1
+    return {
+        exchange: max(date_counts, key=lambda d: (date_counts[d], d))
+        for exchange, date_counts in counts.items()
+    }
+
+
+def run(
+    rows: list[dict],
+    settings: dict,
+    *,
+    now: datetime | None = None,
+) -> dict:
     errors, warnings = [], []
     qa_cfg = settings.get("qa", {})
     keys = [(r.get("country"), r.get("exchange"), r.get("ticker")) for r in rows]
@@ -54,7 +74,11 @@ def run(rows: list[dict], settings: dict) -> dict:
     unknown_global_session_count = 0
     no_comparison_reference = []
     awaiting_first_close = []
-    kr_cutoff = _completed_kr_cutoff()
+    invalid_completed_dates = []
+    current_utc = now or datetime.now(timezone.utc)
+    if current_utc.tzinfo is None:
+        current_utc = current_utc.replace(tzinfo=timezone.utc)
+    kr_cutoff = _completed_kr_cutoff(current_utc)
 
     for r in rows:
         ident = f"{r.get('company_name')} ({r.get('ticker')})"
@@ -112,20 +136,22 @@ def run(rows: list[dict], settings: dict) -> dict:
                 if abs((float(p) - float(prev)) - float(chg)) > 1e-6:
                     kr_inexact_change_count += 1
         elif country != "KR":
+            date_violation = published_date_violation(r, now=current_utc)
+            if date_violation:
+                invalid_completed_dates.append({
+                    "company_name": r.get("company_name"),
+                    "ticker": r.get("ticker"),
+                    "exchange": r.get("exchange"),
+                    "price_date": r.get("price_date"),
+                    "market_session": r.get("market_session"),
+                    "reason": date_violation,
+                })
             session = str(r.get("market_session") or "").strip().lower()
-            status = str(r.get("data_status") or "")
             if not session:
                 unknown_global_session_count += 1
-                if p is not None and p > 0 and not status.startswith("PRESERVED") and status not in {
-                    "COMPLETED_HISTORICAL_FALLBACK", "COMPLETED_NO_COMPARISON_REFERENCE"
-                }:
-                    unsafe_open_global_count += 1
-            elif (
-                p is not None
-                and p > 0
-                and session not in CLOSED_GLOBAL_SESSION_STATES
-                and not status.startswith("PRESERVED")
-            ):
+            # The exchange-calendar verdict is authoritative. A market can be
+            # open now while the row safely publishes an older completed bar.
+            if date_violation and p is not None and p > 0:
                 unsafe_open_global_count += 1
 
             if p is not None and p > 0 and (
@@ -177,19 +203,18 @@ def run(rows: list[dict], settings: dict) -> dict:
             f"Korean quote source failure concentration: {kr_fetch_error_count}/{domestic_count}; "
             "publication blocked so stale domestic prices are not presented as a fresh update"
         )
-    if unsafe_open_global_count:
-        errors.append(f"Unsafe/unknown global session prices would be published: {unsafe_open_global_count}")
+    if invalid_completed_dates:
+        errors.append(
+            "미완료·미래 해외 거래일 발행 차단: "
+            f"{len(invalid_completed_dates)}개 종목의 가격 거래일이 해당 거래소 현지 마감 기준으로 "
+            f"아직 완료되지 않았습니다. sample={invalid_completed_dates[:5]}"
+        )
 
     # Relative freshness diagnostics. Compare stocks with other stocks on the
     # same exchange so ordinary weekends, holidays and time zones do not create
     # false alarms. This catches individual laggards, but it cannot detect an
     # entire exchange whose rows all stopped refreshing on the same old date.
-    exchange_latest = {}
-    for r in global_rows:
-        ex = str(r.get("exchange") or "").upper()
-        d = _parse_date(r.get("price_date"))
-        if ex and d and (ex not in exchange_latest or d > exchange_latest[ex]):
-            exchange_latest[ex] = d
+    exchange_latest = _exchange_reference_dates(global_rows)
 
     lagging_global = []
     severe_lagging_global = []
@@ -226,7 +251,7 @@ def run(rows: list[dict], settings: dict) -> dict:
     # every stock on an exchange can remain on the same stale date and relative
     # comparison reports no lag at all. Calendar-day age is only a REVIEW signal,
     # not a hard failure, because long holidays and suspensions are legitimate.
-    today = datetime.now(KST).date()
+    today = current_utc.astimezone(KST).date()
     absolute_stale_global = []
     preserved_absolute_stale_global = []
     for r in global_rows:
@@ -278,6 +303,8 @@ def run(rows: list[dict], settings: dict) -> dict:
         "kr_inexact_change_count": kr_inexact_change_count,
         "kr_fetch_error_count": kr_fetch_error_count,
         "unsafe_open_global_count": unsafe_open_global_count,
+        "invalid_completed_date_count": len(invalid_completed_dates),
+        "invalid_completed_dates": invalid_completed_dates[:100],
         "unknown_global_session_count": unknown_global_session_count,
         "missing_price_count": missing_prices,
         "awaiting_first_completed_close_count": len(awaiting_first_close),

@@ -5,8 +5,12 @@ import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
-from zoneinfo import ZoneInfo
 import yaml
+from src.market_clock import (
+    completed_snapshot_decision,
+    historical_exclusive_cutoff,
+    published_date_violation,
+)
 from src.prices.service import fetch as fetch_price
 from src.qa import run as run_qa
 from src.output.excel import build as build_excel
@@ -21,12 +25,9 @@ PRICE_FIELDS = {
     "price_bar_time", "price_bar_update_time",
     "raw_previous_close", "raw_close_change_pct", "corporate_action_adjusted",
     "source_change_origin", "comparison_base_source",
+    "completion_decision", "snapshot_exchange", "snapshot_country",
+    "observed_market_session",
 }
-
-CLOSED_GLOBAL_SESSION_STATES = {
-    "out_of_session", "post_market", "pre_market", "holiday", "night"
-}
-KST = ZoneInfo("Asia/Seoul")
 
 
 def load_rows(path: str) -> list[dict]:
@@ -72,14 +73,20 @@ def copy_previous_price(row: dict, previous: dict | None) -> bool:
     return copied
 
 
-def safe_global_snapshot_value(snapshot: dict | None) -> bool:
-    if not snapshot or not snapshot.get("price_date"):
-        return False
-    session = str(snapshot.get("market_session") or "").strip().lower()
-    return session in CLOSED_GLOBAL_SESSION_STATES
+def safe_global_snapshot_value(
+    snapshot: dict | None,
+    *,
+    now: datetime | None = None,
+) -> bool:
+    safe, _ = completed_snapshot_decision(snapshot, now=now)
+    return safe
 
 
-def awaiting_first_completed_close(snapshot: dict | None) -> bool:
+def awaiting_first_completed_close(
+    snapshot: dict | None,
+    *,
+    now: datetime | None = None,
+) -> bool:
     """Return whether a live quote exists but its session is not complete."""
     if not snapshot or not snapshot.get("price_date"):
         return False
@@ -88,8 +95,8 @@ def awaiting_first_completed_close(snapshot: dict | None) -> bool:
             return False
     except (TypeError, ValueError):
         return False
-    session = str(snapshot.get("market_session") or "").strip().lower()
-    return bool(session and session not in CLOSED_GLOBAL_SESSION_STATES)
+    safe, _ = completed_snapshot_decision(snapshot, now=now)
+    return not safe
 
 
 def _price_date_not_older(candidate: dict | None, previous: dict | None) -> bool:
@@ -113,6 +120,42 @@ def _completed_snapshot_status(row: dict) -> str:
     if row.get("previous_close") is None or row.get("price_change_pct") is None:
         return "COMPLETED_NO_COMPARISON_REFERENCE"
     return "REFRESHED_COMPLETED_SESSION"
+
+
+def _prior_completed_from_live_snapshot(
+    snapshot: dict | None,
+    exchange_reference_date: str | None,
+) -> dict | None:
+    """Recover the prior close carried by a rejected live daily snapshot."""
+    if not snapshot or not exchange_reference_date:
+        return None
+    if not snapshot.get("price_date") or str(snapshot["price_date"]) <= str(exchange_reference_date):
+        return None
+    try:
+        prior_close = float(snapshot.get("previous_close") or 0)
+    except (TypeError, ValueError):
+        return None
+    if prior_close <= 0:
+        return None
+    if snapshot.get("comparison_base_source") not in {
+        "TradingView_change_abs",
+        "TradingView_change_pct_implied",
+    }:
+        return None
+    return {
+        "price": prior_close,
+        "previous_close": None,
+        "price_change": None,
+        "price_change_pct": None,
+        "price_date": str(exchange_reference_date),
+        "previous_trading_date": None,
+        "calendar_days_elapsed": None,
+        "volume": None,
+        "price_source": "TradingView prior completed close from unfinished daily bar",
+        "market_session": "historical_fallback",
+        "completion_decision": "derived_prior_close_from_unfinished_bar",
+        "data_status": "COMPLETED_PRIOR_CLOSE_FROM_LIVE_SNAPSHOT",
+    }
 
 
 def _priority_map(settings: dict) -> dict[str, dict]:
@@ -162,15 +205,46 @@ def _active_global_keys(rows: list[dict]) -> list[tuple[str, str]]:
     return out
 
 
-def _exchange_completed_latest(snapshot: dict[tuple[str, str], dict]) -> dict[str, str]:
-    out: dict[str, str] = {}
+def _exchange_completed_reference(
+    snapshot: dict[tuple[str, str], dict],
+    *,
+    now: datetime | None = None,
+) -> dict[str, str]:
+    """Use the modal completed date so one bad outlier cannot poison a market."""
+    counts: dict[str, dict[str, int]] = {}
     for (exchange, _), value in snapshot.items():
-        if not safe_global_snapshot_value(value):
+        if not safe_global_snapshot_value(value, now=now):
             continue
         d = value.get("price_date")
-        if d and (exchange not in out or str(d) > out[exchange]):
-            out[exchange] = str(d)
-    return out
+        if d:
+            exchange_counts = counts.setdefault(exchange, {})
+            exchange_counts[str(d)] = exchange_counts.get(str(d), 0) + 1
+    return {
+        exchange: max(date_counts, key=lambda d: (date_counts[d], d))
+        for exchange, date_counts in counts.items()
+    }
+
+
+def _previous_exchange_completed_reference(
+    previous_rows: list[dict],
+    *,
+    now: datetime | None = None,
+) -> dict[str, str]:
+    """Consensus fallback built only from previously publishable completed rows."""
+    counts: dict[str, dict[str, int]] = {}
+    for row in previous_rows:
+        exchange = str(row.get("exchange") or "").upper()
+        trade_date = str(row.get("price_date") or "")
+        if not exchange or not trade_date:
+            continue
+        if published_date_violation(row, now=now):
+            continue
+        exchange_counts = counts.setdefault(exchange, {})
+        exchange_counts[trade_date] = exchange_counts.get(trade_date, 0) + 1
+    return {
+        exchange: max(date_counts, key=lambda d: (date_counts[d], d))
+        for exchange, date_counts in counts.items()
+    }
 
 
 def _fetch_domestic_batch(
@@ -213,8 +287,8 @@ def main():
     rows = load_rows(upath)
     previous_map = load_previous(settings["project"]["output_json"])
     priority_map = _priority_map(settings)
-    checked_at = datetime.now(timezone.utc).isoformat()
-    completed_before_date = datetime.now(KST).date().isoformat()
+    run_now = datetime.now(timezone.utc)
+    checked_at = run_now.isoformat()
 
     try:
         global_snapshot = tradingview.fetch_price_snapshot(
@@ -243,7 +317,19 @@ def main():
         targeted_snapshot_error = f"skipped unusually large missing-key set: {len(missing_keys)}"
         print(f"Targeted TradingView recovery skipped for {len(missing_keys)} missing keys.")
 
-    exchange_latest = _exchange_completed_latest(global_snapshot)
+    previous_exchange_reference = _previous_exchange_completed_reference(
+        list(previous_map.values()),
+        now=run_now,
+    )
+    current_exchange_reference = _exchange_completed_reference(
+        global_snapshot,
+        now=run_now,
+    )
+    exchange_latest = dict(previous_exchange_reference)
+    # A current completed consensus is stronger than the stored fallback. If a
+    # market is open and all current bars are unfinished, the prior consensus
+    # remains available for recovering the carried previous close.
+    exchange_latest.update(current_exchange_reference)
     domestic_workers = int(settings.get("price_fetch", {}).get("domestic_workers", 8))
     domestic_results = _fetch_domestic_batch(
         rows,
@@ -258,6 +344,8 @@ def main():
     historical_recovery_succeeded = 0
     checked_no_new_trade = 0
     awaiting_first_close = []
+    rejected_unfinished_snapshots = []
+    discarded_invalid_previous = []
 
     for source_row in rows:
         if str(source_row.get("active", "")).upper() not in ("TRUE", "1", "YES"):
@@ -268,13 +356,38 @@ def main():
         previous = previous_map.get(row_key(row))
 
         if country != "KR":
+            if previous:
+                previous_violation = published_date_violation(previous, now=run_now)
+                if previous_violation:
+                    discarded_invalid_previous.append({
+                        "company_name": row.get("company_name"),
+                        "ticker": row.get("ticker"),
+                        "exchange": row.get("exchange"),
+                        "price_date": previous.get("price_date"),
+                        "reason": previous_violation,
+                    })
+                    previous = None
             key = _global_key(row)
             snap = global_snapshot.get(key)
             exchange_target = exchange_latest.get(key[0])
+            completed_before_date = historical_exclusive_cutoff(row, now=run_now)
+            snap_safe, completion_reason = completed_snapshot_decision(
+                snap,
+                now=run_now,
+            )
             snap_is_safe = (
-                safe_global_snapshot_value(snap)
+                snap_safe
                 and _price_date_not_older(snap, previous)
             )
+            if snap is not None and not snap_safe:
+                rejected_unfinished_snapshots.append({
+                    "company_name": row.get("company_name"),
+                    "ticker": row.get("ticker"),
+                    "exchange": row.get("exchange"),
+                    "price_date": snap.get("price_date"),
+                    "market_session": snap.get("market_session"),
+                    "reason": completion_reason,
+                })
             snap_date = str(snap.get("price_date") or "") if snap else ""
             snap_lags_exchange = bool(
                 snap_is_safe and exchange_target and snap_date < exchange_target
@@ -300,23 +413,28 @@ def main():
                 recovery_error = None
                 if needs_recovery:
                     historical_recovery_attempted += 1
-                    try:
-                        recovered = fetch_price(
-                            row,
-                            global_snapshot=None,
-                            before_date=completed_before_date,
-                        )
-                    except Exception as exc:
-                        recovery_error = exc
+                    recovered = _prior_completed_from_live_snapshot(
+                        snap,
+                        exchange_target,
+                    )
+                    if recovered is None:
+                        try:
+                            recovered = fetch_price(
+                                row,
+                                global_snapshot=None,
+                                before_date=completed_before_date,
+                            )
+                        except Exception as exc:
+                            recovery_error = exc
 
                 recovery_baseline = snap if snap_is_safe else previous
                 if recovered and _price_date_newer(recovered, recovery_baseline):
                     row.update(recovered)
                     if snap:
-                        row["market_session"] = snap.get("market_session")
+                        row["observed_market_session"] = snap.get("market_session")
                         row["price_observed_at"] = snap.get("price_observed_at")
                     row["last_checked_at"] = checked_at
-                    row["data_status"] = (
+                    row["data_status"] = recovered.get("data_status") or (
                         "COMPLETED_NO_COMPARISON_REFERENCE"
                         if row.get("previous_close") is None or row.get("price_change_pct") is None
                         else "COMPLETED_HISTORICAL_FALLBACK"
@@ -343,7 +461,7 @@ def main():
                         )
                 elif copy_previous_price(row, previous):
                     if snap:
-                        row["market_session"] = snap.get("market_session")
+                        row["observed_market_session"] = snap.get("market_session")
                         row["price_observed_at"] = snap.get("price_observed_at")
                     row["last_checked_at"] = checked_at
                     row["data_status"] = "PRESERVED_OPEN_OR_UNKNOWN"
@@ -384,13 +502,14 @@ def main():
                             "price_source": None,
                         })
                         row["last_checked_at"] = checked_at
-                        if awaiting_first_completed_close(snap):
+                        if awaiting_first_completed_close(snap, now=run_now):
                             # A real live quote exists, but this row entered the
                             # universe before a safely publishable close was
                             # stored. Retry after the exchange closes.
                             row["market_session"] = snap.get("market_session")
                             row["price_observed_at"] = snap.get("price_observed_at")
                             row["pending_trade_date"] = snap.get("price_date")
+                            row["completion_decision"] = completion_reason
                             row["data_status"] = "AWAITING_FIRST_COMPLETED_CLOSE"
                             awaiting_first_close.append({
                                 "company_name": row.get("company_name"),
@@ -439,7 +558,7 @@ def main():
             fetch_errors.append(f"{row.get('company_name')} ({row.get('ticker')}): {exc}")
         enriched.append(row)
 
-    qa = run_qa(enriched, settings)
+    qa = run_qa(enriched, settings, now=run_now)
     qa["fetch_error_count"] = len(fetch_errors)
     qa["fetch_errors"] = fetch_errors[:200]
     qa["global_snapshot_count"] = len(global_snapshot)
@@ -450,9 +569,16 @@ def main():
     qa["global_checked_no_new_trade_count"] = checked_no_new_trade
     qa["global_awaiting_first_completed_close_count"] = len(awaiting_first_close)
     qa["global_awaiting_first_completed_close"] = awaiting_first_close[:100]
+    qa["global_rejected_unfinished_snapshot_count"] = len(rejected_unfinished_snapshots)
+    qa["global_rejected_unfinished_snapshots"] = rejected_unfinished_snapshots[:100]
+    qa["global_discarded_invalid_previous_count"] = len(discarded_invalid_previous)
+    qa["global_discarded_invalid_previous"] = discarded_invalid_previous[:100]
     qa["update_scope"] = scope
     qa["refreshed_completed_global_count"] = refreshed_global
     qa["preserved_open_or_unknown_global_count"] = preserved_global
+    qa["global_exchange_completed_reference_dates"] = dict(sorted(exchange_latest.items()))
+    # Backward-compatible key for existing consumers. The value is now a
+    # consensus reference date, not an unsafe single-row maximum.
     qa["global_exchange_latest_completed_dates"] = dict(sorted(exchange_latest.items()))
 
     priority_rows = sorted(
