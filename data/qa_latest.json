@@ -16,11 +16,13 @@
   "kr_inexact_change_count": 0,
   "kr_fetch_error_count": 1,
   "unsafe_open_global_count": 0,
+  "invalid_completed_date_count": 0,
+  "invalid_completed_dates": [],
   "unknown_global_session_count": 0,
   "missing_price_count": 0,
   "awaiting_first_completed_close_count": 0,
   "awaiting_first_completed_close": [],
-  "missing_return_reference_count": 2,
+  "missing_return_reference_count": 3,
   "missing_return_references": [
     {
       "company_name": "OM GALAXY LIMITED",
@@ -30,6 +32,13 @@
       "data_status": "COMPLETED_NO_COMPARISON_REFERENCE"
     },
     {
+      "company_name": "Dynapack International Technology Corporation",
+      "ticker": "3211",
+      "exchange": "TPEX",
+      "price_date": "2026-09-18",
+      "data_status": "COMPLETED_PRIOR_CLOSE_FROM_LIVE_SNAPSHOT"
+    },
+    {
       "company_name": "RAKSAN TRANSFORMERS LIMITED",
       "ticker": "RAKSAN",
       "exchange": "BSE",
@@ -37,729 +46,8 @@
       "data_status": "COMPLETED_NO_COMPARISON_REFERENCE"
     }
   ],
-  "global_lagging_price_date_count": 80,
-  "global_lagging_price_dates": [
-    {
-      "company_name": "Chenfull Precision Co., Ltd.",
-      "ticker": "6829",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Magnate Technology Co., Ltd.",
-      "ticker": "4541",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Accordance Systems, Inc.",
-      "ticker": "7870",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Carbon-Based Technology, Inc.",
-      "ticker": "7719",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "GlobalWafers Co., Ltd.",
-      "ticker": "6488",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "LandMark Optoelectronics Corp.",
-      "ticker": "3081",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "All Ring Tech Co., Ltd.",
-      "ticker": "6187",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Ableprint Technology Co Ltd",
-      "ticker": "7734",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Wafer Works Corp.",
-      "ticker": "6182",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Chang Wah Technology Co., Ltd.",
-      "ticker": "6548",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Gudeng Precision Industrial Co., Ltd.",
-      "ticker": "3680",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Ye Siang Enterprise Co., Ltd.",
-      "ticker": "7909",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Horng Terng Automation Co Ltd",
-      "ticker": "7751",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Gallant Micro Machining Co. Ltd.",
-      "ticker": "6640",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "META Green Cooling Technology Co., Ltd.",
-      "ticker": "7892",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "GMT Global Inc.",
-      "ticker": "4573",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Glotech Industrial Corp",
-      "ticker": "5475",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Nova Technology Corp",
-      "ticker": "6613",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "E&R Engineering Corp.",
-      "ticker": "8027",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Asia Metal Industries, Inc.",
-      "ticker": "6727",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Shuz Tung Machinery Industrial Co., Ltd.",
-      "ticker": "4537",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Feedback Technology Corp.",
-      "ticker": "8091",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "ReTech Environmental Solutions Co., Ltd.",
-      "ticker": "7934",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "USUN Technology Co.,Ltd",
-      "ticker": "3498",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Key Ware Electronics Co., Ltd.",
-      "ticker": "5498",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Asia Neo Tech Industrial Co., Ltd.",
-      "ticker": "4542",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Cica-Huntek Chemical Technology Taiwan Co",
-      "ticker": "6725",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Chyi Ding Technologies Co. Ltd.",
-      "ticker": "6849",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Eclat Forever Machinery Co., Ltd.",
-      "ticker": "3485",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Highlight Tech Corp.",
-      "ticker": "6208",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Taiwan Kong King Co. Ltd.",
-      "ticker": "3093",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Kao Fong Machinery Co., Ltd.",
-      "ticker": "4510",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Spectrum Electrics Corporation",
-      "ticker": "5381",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Fu Chun Shin Machinery Manufacture Co., Ltd.",
-      "ticker": "6603",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Shieh Yih Machinery Industry Co., Ltd.",
-      "ticker": "4533",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Tera Autotech Corporation",
-      "ticker": "6234",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Value Valves Co., Ltd.",
-      "ticker": "4580",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Chime Ball Technology Co., Ltd.",
-      "ticker": "1595",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "UVAT Technology Co., Ltd.",
-      "ticker": "3580",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Bright Sheland International Co Ltd",
-      "ticker": "4556",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Easy Field Corp.",
-      "ticker": "6425",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Chernan Metal Industrial Corp.",
-      "ticker": "3631",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Ching Chan Optical Technology Co., Ltd.",
-      "ticker": "2070",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Trinity Precision Technology Co., Ltd.",
-      "ticker": "4534",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Single Well Industrial Co. Ltd.",
-      "ticker": "3490",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Kenturn Nano Tec Co., Ltd.",
-      "ticker": "4561",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Falcon Machine Tools Co., Ltd.",
-      "ticker": "4513",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "China Fineblanking Technology Co., Ltd.",
-      "ticker": "1586",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Top High Image Corp.",
-      "ticker": "3284",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Baso Precision Optics Ltd.",
-      "ticker": "6517",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Gold Rain Enterprises Corp.",
-      "ticker": "4503",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Forward Science Corp.",
-      "ticker": "7530",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Taihan Precision Technology Co., Ltd.",
-      "ticker": "1336",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Taiwan Benefit Co.",
-      "ticker": "3379",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "JG Environmental Technology Co., Ltd.",
-      "ticker": "6723",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Certain Micro Application Technology Inc",
-      "ticker": "7899",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Toyo Automation Co. Ltd.",
-      "ticker": "7942",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "FOCI Fiber Optic Communications, Inc.",
-      "ticker": "3363",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Simplo Technology Co. Ltd.",
-      "ticker": "6121",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Longwell Company",
-      "ticker": "6290",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Taiwan Puritic Corp.",
-      "ticker": "6826",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "STL Technology Co., Ltd.",
-      "ticker": "4931",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Wonderful Hi-Tech Co., Ltd.",
-      "ticker": "6190",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Asia Electronic Material Co., Ltd.",
-      "ticker": "4939",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Radbon Electronics Co., Ltd.",
-      "ticker": "7893",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "VSO Electronics Co., Ltd.",
-      "ticker": "6913",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "HYE Technology Co., Ltd.",
-      "ticker": "6877",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Sea Sonic Electronics Co., Ltd.",
-      "ticker": "6203",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Ubright Optronics Corporation",
-      "ticker": "4933",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "United Fiber Optic Communication Inc.",
-      "ticker": "4903",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Solteam Incorporation",
-      "ticker": "3484",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "YFC-BonEagle Electric Co., Ltd.",
-      "ticker": "6220",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Formosa Electronic Industries Inc.",
-      "ticker": "8171",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Linkcom Manufacturing Co., Ltd.",
-      "ticker": "6821",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "C-Tech United Corp.",
-      "ticker": "3625",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Tien Li Offshore Wind Technology Co., Ltd.",
-      "ticker": "6793",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "UHT Unitech Co., Ltd.",
-      "ticker": "6618",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Electric Power Technology Limited",
-      "ticker": "4529",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Grenergy Enterprise Co. Ltd.",
-      "ticker": "7936",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Jong Shyn Shipbuilding Co., Ltd.",
-      "ticker": "2644",
-      "exchange": "TPEX",
-      "price_date": "2026-09-18",
-      "exchange_latest_date": "2026-09-21",
-      "lag_calendar_days": 3,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    }
-  ],
+  "global_lagging_price_date_count": 0,
+  "global_lagging_price_dates": [],
   "global_severe_lagging_price_date_count": 0,
   "global_absolute_stale_price_date_count": 0,
   "global_absolute_stale_price_dates": [],
@@ -1408,101 +696,902 @@
     }
   ],
   "checked_on": "2026-09-21",
-  "fetch_error_count": 81,
+  "fetch_error_count": 1,
   "fetch_errors": [
-    "Chenfull Precision Co., Ltd. (6829) historical recovery: No Yahoo daily data: 6829.TWO",
-    "Magnate Technology Co., Ltd. (4541) historical recovery: No Yahoo daily data: 4541.TWO",
-    "Accordance Systems, Inc. (7870) historical recovery: No Yahoo daily data: 7870.TWO",
-    "Carbon-Based Technology, Inc. (7719) historical recovery: No Yahoo daily data: 7719.TWO",
-    "GlobalWafers Co., Ltd. (6488) historical recovery: No Yahoo daily data: 6488.TWO",
-    "LandMark Optoelectronics Corp. (3081) historical recovery: No Yahoo daily data: 3081.TWO",
-    "All Ring Tech Co., Ltd. (6187) historical recovery: No Yahoo daily data: 6187.TWO",
-    "Ableprint Technology Co Ltd (7734) historical recovery: No Yahoo daily data: 7734.TWO",
-    "Wafer Works Corp. (6182) historical recovery: No Yahoo daily data: 6182.TWO",
-    "Chang Wah Technology Co., Ltd. (6548) historical recovery: No Yahoo daily data: 6548.TWO",
-    "Gudeng Precision Industrial Co., Ltd. (3680) historical recovery: No Yahoo daily data: 3680.TWO",
-    "Ye Siang Enterprise Co., Ltd. (7909) historical recovery: No Yahoo daily data: 7909.TWO",
-    "Horng Terng Automation Co Ltd (7751) historical recovery: No Yahoo daily data: 7751.TWO",
-    "Gallant Micro Machining Co. Ltd. (6640) historical recovery: No Yahoo daily data: 6640.TWO",
-    "META Green Cooling Technology Co., Ltd. (7892) historical recovery: No Yahoo daily data: 7892.TWO",
-    "GMT Global Inc. (4573) historical recovery: No Yahoo daily data: 4573.TWO",
-    "Glotech Industrial Corp (5475) historical recovery: No Yahoo daily data: 5475.TWO",
-    "Nova Technology Corp (6613) historical recovery: No Yahoo daily data: 6613.TWO",
-    "E&R Engineering Corp. (8027) historical recovery: No Yahoo daily data: 8027.TWO",
-    "Asia Metal Industries, Inc. (6727) historical recovery: No Yahoo daily data: 6727.TWO",
-    "Shuz Tung Machinery Industrial Co., Ltd. (4537) historical recovery: No Yahoo daily data: 4537.TWO",
-    "Feedback Technology Corp. (8091) historical recovery: No Yahoo daily data: 8091.TWO",
-    "ReTech Environmental Solutions Co., Ltd. (7934) historical recovery: No Yahoo daily data: 7934.TWO",
-    "USUN Technology Co.,Ltd (3498) historical recovery: No Yahoo daily data: 3498.TWO",
-    "Key Ware Electronics Co., Ltd. (5498) historical recovery: No Yahoo daily data: 5498.TWO",
-    "Asia Neo Tech Industrial Co., Ltd. (4542) historical recovery: No Yahoo daily data: 4542.TWO",
-    "Cica-Huntek Chemical Technology Taiwan Co (6725) historical recovery: No Yahoo daily data: 6725.TWO",
-    "Chyi Ding Technologies Co. Ltd. (6849) historical recovery: No Yahoo daily data: 6849.TWO",
-    "Eclat Forever Machinery Co., Ltd. (3485) historical recovery: No Yahoo daily data: 3485.TWO",
-    "Highlight Tech Corp. (6208) historical recovery: No Yahoo daily data: 6208.TWO",
-    "Taiwan Kong King Co. Ltd. (3093) historical recovery: No Yahoo daily data: 3093.TWO",
-    "Kao Fong Machinery Co., Ltd. (4510) historical recovery: No Yahoo daily data: 4510.TWO",
-    "Spectrum Electrics Corporation (5381) historical recovery: No Yahoo daily data: 5381.TWO",
-    "Fu Chun Shin Machinery Manufacture Co., Ltd. (6603) historical recovery: No Yahoo daily data: 6603.TWO",
-    "Shieh Yih Machinery Industry Co., Ltd. (4533) historical recovery: No Yahoo daily data: 4533.TWO",
-    "Tera Autotech Corporation (6234) historical recovery: No Yahoo daily data: 6234.TWO",
-    "Value Valves Co., Ltd. (4580) historical recovery: No Yahoo daily data: 4580.TWO",
-    "Chime Ball Technology Co., Ltd. (1595) historical recovery: No Yahoo daily data: 1595.TWO",
-    "UVAT Technology Co., Ltd. (3580) historical recovery: No Yahoo daily data: 3580.TWO",
-    "Bright Sheland International Co Ltd (4556) historical recovery: No Yahoo daily data: 4556.TWO",
-    "Easy Field Corp. (6425) historical recovery: No Yahoo daily data: 6425.TWO",
-    "Chernan Metal Industrial Corp. (3631) historical recovery: No Yahoo daily data: 3631.TWO",
-    "Ching Chan Optical Technology Co., Ltd. (2070) historical recovery: No Yahoo daily data: 2070.TWO",
-    "Trinity Precision Technology Co., Ltd. (4534) historical recovery: No Yahoo daily data: 4534.TWO",
-    "Single Well Industrial Co. Ltd. (3490) historical recovery: No Yahoo daily data: 3490.TWO",
-    "Kenturn Nano Tec Co., Ltd. (4561) historical recovery: No Yahoo daily data: 4561.TWO",
-    "Falcon Machine Tools Co., Ltd. (4513) historical recovery: No Yahoo daily data: 4513.TWO",
-    "China Fineblanking Technology Co., Ltd. (1586) historical recovery: No Yahoo daily data: 1586.TWO",
-    "Top High Image Corp. (3284) historical recovery: No Yahoo daily data: 3284.TWO",
-    "Baso Precision Optics Ltd. (6517) historical recovery: No Yahoo daily data: 6517.TWO",
-    "Gold Rain Enterprises Corp. (4503) historical recovery: No Yahoo daily data: 4503.TWO",
-    "Forward Science Corp. (7530) historical recovery: No Yahoo daily data: 7530.TWO",
-    "Taihan Precision Technology Co., Ltd. (1336) historical recovery: No Yahoo daily data: 1336.TWO",
-    "Taiwan Benefit Co. (3379) historical recovery: No Yahoo daily data: 3379.TWO",
-    "JG Environmental Technology Co., Ltd. (6723) historical recovery: No Yahoo daily data: 6723.TWO",
-    "Certain Micro Application Technology Inc (7899) historical recovery: No Yahoo daily data: 7899.TWO",
-    "Toyo Automation Co. Ltd. (7942) historical recovery: No Yahoo daily data: 7942.TWO",
-    "FOCI Fiber Optic Communications, Inc. (3363) historical recovery: No Yahoo daily data: 3363.TWO",
-    "Simplo Technology Co. Ltd. (6121) historical recovery: No Yahoo daily data: 6121.TWO",
-    "Longwell Company (6290) historical recovery: No Yahoo daily data: 6290.TWO",
-    "Taiwan Puritic Corp. (6826) historical recovery: No Yahoo daily data: 6826.TWO",
-    "STL Technology Co., Ltd. (4931) historical recovery: No Yahoo daily data: 4931.TWO",
-    "Wonderful Hi-Tech Co., Ltd. (6190) historical recovery: No Yahoo daily data: 6190.TWO",
-    "Asia Electronic Material Co., Ltd. (4939) historical recovery: No Yahoo daily data: 4939.TWO",
-    "Radbon Electronics Co., Ltd. (7893) historical recovery: No Yahoo daily data: 7893.TWO",
-    "VSO Electronics Co., Ltd. (6913) historical recovery: No Yahoo daily data: 6913.TWO",
-    "HYE Technology Co., Ltd. (6877) historical recovery: No Yahoo daily data: 6877.TWO",
-    "Sea Sonic Electronics Co., Ltd. (6203) historical recovery: No Yahoo daily data: 6203.TWO",
-    "Ubright Optronics Corporation (4933) historical recovery: No Yahoo daily data: 4933.TWO",
-    "United Fiber Optic Communication Inc. (4903) historical recovery: No Yahoo daily data: 4903.TWO",
-    "Solteam Incorporation (3484) historical recovery: No Yahoo daily data: 3484.TWO",
-    "YFC-BonEagle Electric Co., Ltd. (6220) historical recovery: No Yahoo daily data: 6220.TWO",
-    "Formosa Electronic Industries Inc. (8171) historical recovery: No Yahoo daily data: 8171.TWO",
-    "Linkcom Manufacturing Co., Ltd. (6821) historical recovery: No Yahoo daily data: 6821.TWO",
-    "C-Tech United Corp. (3625) historical recovery: No Yahoo daily data: 3625.TWO",
-    "Tien Li Offshore Wind Technology Co., Ltd. (6793) historical recovery: No Yahoo daily data: 6793.TWO",
-    "UHT Unitech Co., Ltd. (6618) historical recovery: No Yahoo daily data: 6618.TWO",
-    "Electric Power Technology Limited (4529) historical recovery: No Yahoo daily data: 4529.TWO",
-    "Grenergy Enterprise Co. Ltd. (7936) historical recovery: No Yahoo daily data: 7936.TWO",
-    "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-09-20",
-    "Jong Shyn Shipbuilding Co., Ltd. (2644) historical recovery: No Yahoo daily data: 2644.TWO"
+    "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-09-20"
   ],
-  "global_snapshot_count": 2760,
-  "global_targeted_snapshot_count": 0,
+  "global_snapshot_count": 2740,
+  "global_targeted_snapshot_count": 8,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 80,
-  "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 80,
+  "global_historical_recovery_attempted_count": 1,
+  "global_historical_recovery_succeeded_count": 1,
+  "global_checked_no_new_trade_count": 0,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
+  "global_rejected_unfinished_snapshot_count": 996,
+  "global_rejected_unfinished_snapshots": [
+    {
+      "company_name": "XCMG Construction Machinery Co., Ltd. Class A",
+      "ticker": "000425",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Sany Heavy Equipment International Holdings Co., Ltd.",
+      "ticker": "631",
+      "exchange": "HKEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Shantui Construction Machinery Co., Ltd. Class A",
+      "ticker": "000680",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "AVIC Shenyang Aircraft Co., Ltd. Class A",
+      "ticker": "600760",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "AECC Aviation Power Co Ltd Class A",
+      "ticker": "600893",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Raytron Technology Co., Ltd. Class A",
+      "ticker": "688002",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Jonhon Optronic Technology Co., Ltd. Class A",
+      "ticker": "002179",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "AVIC Xi'an Aircraft Industry Group Co., Ltd. Class A",
+      "ticker": "000768",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "AVIC Airborne Systems Co. Ltd. Class A",
+      "ticker": "600372",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "China Aerospace Times Electronics Co., Ltd. Class A",
+      "ticker": "600879",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Nanchang Sanrui Intelligence Technology Co., Ltd. Class A",
+      "ticker": "301696",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Glarun Technology Co., Ltd. Class A",
+      "ticker": "600562",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Avic (Chengdu) UAS Co., Ltd. Class A",
+      "ticker": "688297",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Sai MicroElectronics Inc. Class A",
+      "ticker": "300456",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "AECC Aero-engine Control Co., Ltd. Class A",
+      "ticker": "000738",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Baimtec Material Co., Ltd. Class A",
+      "ticker": "688563",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Anhui GreatWall Military Industry Co., Ltd. Class A",
+      "ticker": "601606",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Jiangxi Hongdu Aviation Industry Co., Ltd. Class A",
+      "ticker": "600316",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Inner Mongolia First Machinery Group Co Ltd Class A",
+      "ticker": "600967",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Avicopter Plc Class A",
+      "ticker": "600038",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "North Industries Group Red Arrow Co., Ltd. Class A",
+      "ticker": "000519",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "AviChina Industry & Technology Co. Ltd. Class H",
+      "ticker": "2357",
+      "exchange": "HKEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Aerospace CH UAV Co. Ltd. Class A",
+      "ticker": "002389",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "North Navigation Control Technology Co., Ltd. Class A",
+      "ticker": "600435",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "AECC Aero Science And Technology Co Ltd. Class A",
+      "ticker": "600391",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Cirrus Aircraft Limited",
+      "ticker": "2507",
+      "exchange": "HKEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "China Marine Information Electronics Co., Ltd. Class A",
+      "ticker": "600764",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "North Electro-Optic Co., Ltd. Class A",
+      "ticker": "600184",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Ligeance Aerospace Technology Co., Ltd. Class A",
+      "ticker": "000697",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Xi'an Triangle Defense Co., Ltd. Class A",
+      "ticker": "300775",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Beijing Highlander Digital Technology Co., Ltd. Class A",
+      "ticker": "300065",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Beijing LeiKe Defense Technology Co Ltd Class A",
+      "ticker": "002413",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Beijing Beimo High-tech Frictional Material Co., Ltd. Class A",
+      "ticker": "002985",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Hefei Jianghang Aircraft Equipment Corporation Ltd. Class A",
+      "ticker": "688586",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Sichuan 6912 Communication Technology Co., Ltd. Class A",
+      "ticker": "301592",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Streamax Technology Co., Ltd. Class A",
+      "ticker": "002970",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Shaanxi Zhongtian Rocket Technology Co., Ltd. Class A",
+      "ticker": "003009",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Guanglian Aviation Industry Co., Ltd. Class A",
+      "ticker": "300900",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "CIMC Safeway Technologies Co., Ltd. Class A",
+      "ticker": "301559",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Wuxi Hyatech Co.,Ltd. Class A",
+      "ticker": "688510",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Nanjing LES Information Technology Co., Ltd Class A",
+      "ticker": "688631",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Jiangxi Xinyu Guoke Technology Co., Ltd. Class A",
+      "ticker": "300722",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Chengdu ALD Aviation Manufacturing Corp. Class A",
+      "ticker": "300696",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Xi'an ChenXi Aviation Technology Corp., Ltd. Class A",
+      "ticker": "300581",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Xi'An Tian He Defense Technology Co. Ltd. Class A",
+      "ticker": "300397",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Jiangsu Maixinlin Aviation Science and Technology Corp Class A",
+      "ticker": "688685",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Sun-Create Electronics Co., Ltd Class A",
+      "ticker": "600990",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Shandong Senter Electronic Co., Ltd. Class A",
+      "ticker": "001388",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Beijing Navigation Control Technology Co., Ltd. Class A",
+      "ticker": "688282",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Chengdu Lihang Technology Co., Ltd. Class A",
+      "ticker": "603261",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Continental Aerospace Technologies Holding Ltd.",
+      "ticker": "232",
+      "exchange": "HKEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Beijing Emerging Eastern Aviation Equipment Co., Ltd. Class A",
+      "ticker": "002933",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Sichuan Tianwei Electronic Co. Ltd. Class A",
+      "ticker": "688511",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Beijing Andawell Science & Technology Co., Ltd. Class A",
+      "ticker": "300719",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Chengdu Jouav Automation Tech Co., Ltd. Class A",
+      "ticker": "688070",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Chenfull Precision Co., Ltd.",
+      "ticker": "6829",
+      "exchange": "TPEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Beijing Hengyu Datacom Aviation Equipment Co. Ltd. Class A",
+      "ticker": "300965",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Chengdu Tianjian Technology Co. Ltd. Class A",
+      "ticker": "002977",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Integrity Technology Group Inc. Class A",
+      "ticker": "688244",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Seyond Holdings Ltd",
+      "ticker": "2665",
+      "exchange": "HKEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Anhui Jialiqi Advanced Composites Technology Co., Ltd. Class A",
+      "ticker": "301586",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Hunan Aerospace Huanyu Communication Technology Co., Ltd. Class A",
+      "ticker": "688523",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Magnate Technology Co., Ltd.",
+      "ticker": "4541",
+      "exchange": "TPEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Accordance Systems, Inc.",
+      "ticker": "7870",
+      "exchange": "TPEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Carbon-Based Technology, Inc.",
+      "ticker": "7719",
+      "exchange": "TPEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "PT Utama Radar Cahaya Tbk",
+      "ticker": "RCCC",
+      "exchange": "IDX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Eoptolink Technology Inc., Ltd. Class A",
+      "ticker": "300502",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "NAURA Technology Group Co Ltd Class A",
+      "ticker": "002371",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Advanced Micro-Fabrication Equipment Inc. China Class A",
+      "ticker": "688012",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "China CSSC Holdings Limited Class A",
+      "ticker": "600150",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Yushu Technology Co., Ltd. Class A",
+      "ticker": "688836",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Gree Electric Appliances, Inc. of Zhuhai Class A",
+      "ticker": "000651",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "SHENGU GROUP CO LTD",
+      "ticker": "601091",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "CRRC Corporation Limited Class A",
+      "ticker": "601766",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Sany Heavy Industry Co., Ltd. Class A",
+      "ticker": "600031",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Zhejiang Sanhua Intelligent Controls Co., Ltd. Class A",
+      "ticker": "002050",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "ACM Research (Shanghai), Inc. Class A",
+      "ticker": "688082",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Guangdong Dtech Technology Co., Ltd. Class A",
+      "ticker": "301377",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Shenzhen Han's CNC Technology Co., Ltd. Class A",
+      "ticker": "301200",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Huagong Tech Co., Ltd. Class A",
+      "ticker": "000988",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Robotechnik Intelligent Technology Co., Ltd. Class A",
+      "ticker": "300757",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Han's Laser Technology Industry Group Co., Ltd. Class A",
+      "ticker": "002008",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "GlobalWafers Co., Ltd.",
+      "ticker": "6488",
+      "exchange": "TPEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Sinotruk Hong Kong Ltd.",
+      "ticker": "3808",
+      "exchange": "HKEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Beijing Huafeng Test & Control Technology Co. Ltd. Class A",
+      "ticker": "688200",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Shenzhen Envicool Technology Co., Ltd. Class A",
+      "ticker": "002837",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "KINGSEMI Co., Ltd. Class A",
+      "ticker": "688037",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Beijing E-Town Semiconductor Technology Co., Ltd. Class A",
+      "ticker": "688729",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "LandMark Optoelectronics Corp.",
+      "ticker": "3081",
+      "exchange": "TPEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Zhejiang Jingsheng Mechanical & Electrical Co., Ltd. Class A",
+      "ticker": "300316",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Circuit Fabology Microelectronics Equipment Co.,Ltd. Class A",
+      "ticker": "688630",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Leader Harmonious Drive Systems Co., Ltd. Class A",
+      "ticker": "688017",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Wuxi Lead Intelligent Equipment Co. Ltd. Class A",
+      "ticker": "300450",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Zoomlion Heavy Industry Science & Technology Co. Ltd. Class A",
+      "ticker": "000157",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Wuhan DR Laser Technology Corp. Ltd. Class A",
+      "ticker": "300776",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Jiangsu Lettall Electronic Co., Ltd. Class A",
+      "ticker": "603629",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Moon Environment Technology Co., Ltd. Class A",
+      "ticker": "000811",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Guangdong Shenling Environmental Systems Co., Ltd. Class A",
+      "ticker": "301018",
+      "exchange": "SZSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Shanghai BOCHU Electronic Technology Corporation Limited Class A",
+      "ticker": "688188",
+      "exchange": "SSE",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "UBTECH ROBOTICS CORP LTD Class H",
+      "ticker": "9880",
+      "exchange": "HKEX",
+      "price_date": "2026-09-21",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    }
+  ],
+  "global_discarded_invalid_previous_count": 1,
+  "global_discarded_invalid_previous": [
+    {
+      "company_name": "Dynapack International Technology Corporation",
+      "ticker": "3211",
+      "exchange": "TPEX",
+      "price_date": "2026-09-21",
+      "reason": "official_session_not_closed"
+    }
+  ],
   "update_scope": "ALL",
-  "refreshed_completed_global_count": 2355,
-  "preserved_open_or_unknown_global_count": 0,
+  "refreshed_completed_global_count": 1360,
+  "preserved_open_or_unknown_global_count": 995,
+  "global_exchange_completed_reference_dates": {
+    "ADX": "2026-09-18",
+    "AMEX": "2026-09-18",
+    "AQUIS": "2026-09-18",
+    "ATHEX": "2026-09-18",
+    "BCBA": "2026-09-18",
+    "BET": "2026-09-18",
+    "BIST": "2026-09-18",
+    "BME": "2026-09-18",
+    "BMFBOVESPA": "2026-09-18",
+    "BSE": "2026-09-18",
+    "BSESOF": "2026-09-18",
+    "BSSE": "2026-09-18",
+    "BVB": "2026-09-18",
+    "BVMT": "2026-09-18",
+    "BX": "2026-09-18",
+    "CSE": "2026-09-18",
+    "CSELK": "2026-09-18",
+    "CSEMA": "2026-09-18",
+    "DSEBD": "2026-09-20",
+    "EGX": "2026-09-20",
+    "EURONEXT": "2026-09-18",
+    "GPW": "2026-09-18",
+    "HKEX": "2026-09-18",
+    "HNX": "2026-09-18",
+    "HOSE": "2026-09-18",
+    "IDX": "2026-09-18",
+    "JSE": "2026-09-18",
+    "KRX": "2026-09-18",
+    "KSE": "2026-09-20",
+    "LSE": "2026-09-18",
+    "MIL": "2026-09-18",
+    "MYX": "2026-09-18",
+    "NAG": "2026-09-18",
+    "NASDAQ": "2026-09-18",
+    "NEO": "2026-09-18",
+    "NEWCONNECT": "2026-09-18",
+    "NGM": "2026-09-18",
+    "NSE": "2026-09-18",
+    "NSEKE": "2026-09-18",
+    "NSENG": "2026-09-18",
+    "NYSE": "2026-09-18",
+    "OMXCOP": "2026-09-18",
+    "OMXHEX": "2026-09-18",
+    "OMXRSE": "2026-09-18",
+    "OMXSTO": "2026-09-18",
+    "OMXTSE": "2026-09-18",
+    "OSL": "2026-09-18",
+    "PSE": "2026-09-18",
+    "PSECZ": "2026-09-18",
+    "PSX": "2026-09-18",
+    "RUS": "2026-09-20",
+    "SET": "2026-09-18",
+    "SGX": "2026-09-18",
+    "SIX": "2026-09-18",
+    "SSE": "2026-09-18",
+    "SZSE": "2026-09-18",
+    "TADAWUL": "2026-09-20",
+    "TASE": "2026-09-17",
+    "TPEX": "2026-09-18",
+    "TSE": "2026-09-18",
+    "TSX": "2026-09-18",
+    "TSXV": "2026-09-18",
+    "UPCOM": "2026-09-18",
+    "VIE": "2026-09-18",
+    "XETR": "2026-09-18",
+    "ZSE": "2026-09-18"
+  },
   "global_exchange_latest_completed_dates": {
     "ADX": "2026-09-18",
     "AMEX": "2026-09-18",
@@ -1562,11 +1651,10 @@
     "SZSE": "2026-09-18",
     "TADAWUL": "2026-09-20",
     "TASE": "2026-09-17",
-    "TPEX": "2026-09-21",
+    "TPEX": "2026-09-18",
     "TSE": "2026-09-18",
     "TSX": "2026-09-18",
     "TSXV": "2026-09-18",
-    "TWSE": "2026-09-18",
     "UPCOM": "2026-09-18",
     "VIE": "2026-09-18",
     "XETR": "2026-09-18",
@@ -1579,8 +1667,7 @@
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
     "2026-09-17": 32,
-    "2026-09-18": 2294,
-    "2026-09-20": 28,
-    "2026-09-21": 1
+    "2026-09-18": 2295,
+    "2026-09-20": 28
   }
 }
