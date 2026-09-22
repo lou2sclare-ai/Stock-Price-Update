@@ -724,15 +724,15 @@
   "fetch_errors": [
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-09-22"
   ],
-  "global_snapshot_count": 2800,
-  "global_targeted_snapshot_count": 14,
+  "global_snapshot_count": 2799,
+  "global_targeted_snapshot_count": 16,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 0,
   "global_historical_recovery_succeeded_count": 0,
   "global_checked_no_new_trade_count": 0,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 392,
+  "global_rejected_unfinished_snapshot_count": 401,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Airbus SE",
@@ -834,6 +834,14 @@
       "company_name": "CSG N.V.",
       "ticker": "CSG",
       "exchange": "EURONEXT",
+      "price_date": "2026-09-22",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Embraer S.A.",
+      "ticker": "EMBJ3",
+      "exchange": "BMFBOVESPA",
       "price_date": "2026-09-22",
       "market_session": "market",
       "reason": "official_session_not_closed"
@@ -1058,6 +1066,14 @@
       "company_name": "SDT Uzay ve Savunma Teknolojileri A.S.",
       "ticker": "SDTTR",
       "exchange": "BIST",
+      "price_date": "2026-09-22",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Taurus Armas S.A.",
+      "ticker": "TASA3",
+      "exchange": "BMFBOVESPA",
       "price_date": "2026-09-22",
       "market_session": "market",
       "reason": "official_session_not_closed"
@@ -1517,29 +1533,13 @@
       "price_date": "2026-09-22",
       "market_session": "market",
       "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "TKMS AG & Co. KGaA",
-      "ticker": "TKMS",
-      "exchange": "XETR",
-      "price_date": "2026-09-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "KION GROUP AG",
-      "ticker": "KGX",
-      "exchange": "XETR",
-      "price_date": "2026-09-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
     }
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1960,
-  "preserved_open_or_unknown_global_count": 392,
+  "refreshed_completed_global_count": 1951,
+  "preserved_open_or_unknown_global_count": 401,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-09-22",
     "AMEX": "2026-09-21",
