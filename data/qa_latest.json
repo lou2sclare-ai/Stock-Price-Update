@@ -510,8 +510,8 @@
     "Dien Quang Lamp JSC (DQC) historical recovery: Yahoo fallback disabled for unmapped exchange HOSE: using the raw ticker could resolve to the wrong security",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-09-23"
   ],
-  "global_snapshot_count": 2797,
-  "global_targeted_snapshot_count": 23,
+  "global_snapshot_count": 2795,
+  "global_targeted_snapshot_count": 34,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 3,
   "global_historical_recovery_succeeded_count": 0,
