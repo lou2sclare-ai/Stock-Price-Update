@@ -24,7 +24,7 @@
   "awaiting_first_completed_close": [],
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 3,
+  "global_lagging_price_date_count": 4,
   "global_lagging_price_dates": [
     {
       "company_name": "Lemo Services Co., Ltd. Class H",
@@ -48,6 +48,15 @@
       "company_name": "Honbridge Holdings Limited",
       "ticker": "8137",
       "exchange": "HKEX",
+      "price_date": "2026-09-24",
+      "exchange_latest_date": "2026-09-25",
+      "lag_calendar_days": 1,
+      "data_status": "CHECKED_NO_NEW_TRADE"
+    },
+    {
+      "company_name": "Eunisell Interlinked Plc",
+      "ticker": "EUNISELL",
+      "exchange": "NSENG",
       "price_date": "2026-09-24",
       "exchange_latest_date": "2026-09-25",
       "lag_calendar_days": 1,
@@ -502,29 +511,31 @@
     }
   ],
   "checked_on": "2026-09-25",
-  "fetch_error_count": 4,
+  "fetch_error_count": 6,
   "fetch_errors": [
     "Lemo Services Co., Ltd. Class H (2539) historical recovery: No Yahoo daily data: 2539.HK",
     "Munish Forge Ltd. (MUNISH) historical recovery: No Yahoo daily data: MUNISH.NS",
+    "IMMI AD (IMMI) historical recovery: Yahoo fallback disabled for unmapped exchange BSESOF: using the raw ticker could resolve to the wrong security",
     "Honbridge Holdings Limited (8137) historical recovery: No Yahoo daily data: 8137.HK",
+    "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-09-25"
   ],
-  "global_snapshot_count": 2792,
-  "global_targeted_snapshot_count": 39,
+  "global_snapshot_count": 2798,
+  "global_targeted_snapshot_count": 28,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 3,
+  "global_historical_recovery_attempted_count": 5,
   "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 3,
+  "global_checked_no_new_trade_count": 5,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 645,
+  "global_rejected_unfinished_snapshot_count": 653,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
       "ticker": "CAT",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -532,7 +543,7 @@
       "ticker": "DE",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -540,7 +551,7 @@
       "ticker": "GE",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -548,7 +559,7 @@
       "ticker": "RTX",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -580,7 +591,7 @@
       "ticker": "BA",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -588,7 +599,7 @@
       "ticker": "LMT",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -596,7 +607,7 @@
       "ticker": "HWM",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -604,7 +615,7 @@
       "ticker": "GD",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -620,7 +631,7 @@
       "ticker": "NOC",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -628,7 +639,7 @@
       "ticker": "TDG",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -660,7 +671,7 @@
       "ticker": "LHX",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -676,7 +687,7 @@
       "ticker": "HEI",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -716,7 +727,7 @@
       "ticker": "TDY",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -748,7 +759,7 @@
       "ticker": "CW",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -780,7 +791,7 @@
       "ticker": "TXT",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -788,7 +799,7 @@
       "ticker": "BWXT",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -796,7 +807,7 @@
       "ticker": "MOG.A",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -804,7 +815,7 @@
       "ticker": "CR",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -812,7 +823,7 @@
       "ticker": "HII",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -860,7 +871,7 @@
       "ticker": "HXL",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -868,7 +879,7 @@
       "ticker": "JOBY",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -876,7 +887,7 @@
       "ticker": "LOAR",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -884,7 +895,7 @@
       "ticker": "BETA",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -900,7 +911,7 @@
       "ticker": "AIR",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -916,7 +927,7 @@
       "ticker": "AMTM",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -932,7 +943,7 @@
       "ticker": "KRMN",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -940,7 +951,7 @@
       "ticker": "ACHR",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -948,7 +959,7 @@
       "ticker": "MIR",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1004,7 +1015,7 @@
       "ticker": "RDW",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1012,7 +1023,7 @@
       "ticker": "DCO",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1028,7 +1039,7 @@
       "ticker": "COLT",
       "exchange": "PSECZ",
       "price_date": "2026-09-25",
-      "market_session": "market",
+      "market_session": "post_market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1044,7 +1055,7 @@
       "ticker": "AADX",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1060,7 +1071,7 @@
       "ticker": "AVEX",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1100,7 +1111,7 @@
       "ticker": "YSS",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1116,7 +1127,7 @@
       "ticker": "CDRE",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1132,7 +1143,7 @@
       "ticker": "NPK",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1156,7 +1167,7 @@
       "ticker": "EVEX",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1180,7 +1191,7 @@
       "ticker": "PKE",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1220,7 +1231,7 @@
       "ticker": "SPCE",
       "exchange": "NYSE",
       "price_date": "2026-09-25",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1323,8 +1334,8 @@
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1423,
-  "preserved_open_or_unknown_global_count": 645,
+  "refreshed_completed_global_count": 1415,
+  "preserved_open_or_unknown_global_count": 653,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-09-25",
     "AMEX": "2026-09-24",
@@ -1335,7 +1346,7 @@
     "BME": "2026-09-24",
     "BMFBOVESPA": "2026-09-24",
     "BSE": "2026-09-25",
-    "BSESOF": "2026-09-24",
+    "BSESOF": "2026-09-25",
     "BVB": "2026-09-24",
     "BVMT": "2026-09-25",
     "BX": "2026-09-24",
@@ -1363,7 +1374,7 @@
     "NGM": "2026-09-24",
     "NSE": "2026-09-25",
     "NSEKE": "2026-09-25",
-    "NSENG": "2026-09-24",
+    "NSENG": "2026-09-25",
     "NYSE": "2026-09-24",
     "NZX": "2026-09-25",
     "OMXCOP": "2026-09-24",
@@ -1390,7 +1401,7 @@
     "UPCOM": "2026-09-25",
     "VIE": "2026-09-24",
     "XETR": "2026-09-24",
-    "ZSE": "2026-09-24"
+    "ZSE": "2026-09-25"
   },
   "global_exchange_latest_completed_dates": {
     "ADX": "2026-09-25",
@@ -1402,7 +1413,7 @@
     "BME": "2026-09-24",
     "BMFBOVESPA": "2026-09-24",
     "BSE": "2026-09-25",
-    "BSESOF": "2026-09-24",
+    "BSESOF": "2026-09-25",
     "BVB": "2026-09-24",
     "BVMT": "2026-09-25",
     "BX": "2026-09-24",
@@ -1430,7 +1441,7 @@
     "NGM": "2026-09-24",
     "NSE": "2026-09-25",
     "NSEKE": "2026-09-25",
-    "NSENG": "2026-09-24",
+    "NSENG": "2026-09-25",
     "NYSE": "2026-09-24",
     "NZX": "2026-09-25",
     "OMXCOP": "2026-09-24",
@@ -1457,7 +1468,7 @@
     "UPCOM": "2026-09-25",
     "VIE": "2026-09-24",
     "XETR": "2026-09-24",
-    "ZSE": "2026-09-24"
+    "ZSE": "2026-09-25"
   },
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
@@ -1466,7 +1477,7 @@
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
     "2026-09-23": 2,
-    "2026-09-24": 1648,
-    "2026-09-25": 418
+    "2026-09-24": 1645,
+    "2026-09-25": 421
   }
 }
