@@ -431,20 +431,24 @@
     }
   ],
   "checked_on": "2026-09-29",
-  "fetch_error_count": 2,
+  "fetch_error_count": 6,
   "fetch_errors": [
+    "Cando Drones Ltd. (CNDO) historical recovery: No Yahoo daily data: CNDO.TA",
+    "PARKOMAT INTERNATIONAL LTD (PRKM) historical recovery: No Yahoo daily data: PRKM.TA",
+    "Harish Textile Engineers Ltd (HARISH) historical recovery: No Yahoo daily data: HARISH.BO",
+    "IMMI AD (IMMI) historical recovery: Yahoo fallback disabled for unmapped exchange BSESOF: using the raw ticker could resolve to the wrong security",
     "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-09-29"
   ],
   "global_snapshot_count": 2790,
-  "global_targeted_snapshot_count": 31,
+  "global_targeted_snapshot_count": 28,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 4,
+  "global_historical_recovery_attempted_count": 5,
   "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 4,
+  "global_checked_no_new_trade_count": 5,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 650,
+  "global_rejected_unfinished_snapshot_count": 632,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
@@ -951,14 +955,6 @@
       "reason": "same_day_session_not_completed:market"
     },
     {
-      "company_name": "COLT CZ GROUP SE",
-      "ticker": "COLT",
-      "exchange": "PSECZ",
-      "price_date": "2026-09-29",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
       "company_name": "Ducommun Incorporated",
       "ticker": "DCO",
       "exchange": "NYSE",
@@ -1245,24 +1241,32 @@
       "price_date": "2026-09-29",
       "market_session": "market",
       "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Latecoere SA",
+      "ticker": "LAT",
+      "exchange": "EURONEXT",
+      "price_date": "2026-09-29",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
     }
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1408,
-  "preserved_open_or_unknown_global_count": 651,
+  "refreshed_completed_global_count": 1426,
+  "preserved_open_or_unknown_global_count": 633,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-09-29",
     "AMEX": "2026-09-28",
     "ASX": "2026-09-29",
-    "ATHEX": "2026-09-28",
+    "ATHEX": "2026-09-29",
     "BET": "2026-09-28",
     "BIST": "2026-09-28",
     "BME": "2026-09-28",
     "BMFBOVESPA": "2026-09-28",
     "BSE": "2026-09-29",
-    "BSESOF": "2026-09-28",
+    "BSESOF": "2026-09-29",
     "BVB": "2026-09-28",
     "BVMT": "2026-09-29",
     "BX": "2026-09-28",
@@ -1297,9 +1301,9 @@
     "OMXHEX": "2026-09-28",
     "OMXSTO": "2026-09-28",
     "OMXTSE": "2026-09-28",
-    "OSL": "2026-09-28",
+    "OSL": "2026-09-29",
     "PSE": "2026-09-29",
-    "PSECZ": "2026-09-25",
+    "PSECZ": "2026-09-29",
     "PSX": "2026-09-29",
     "RUS": "2026-09-28",
     "SET": "2026-09-29",
@@ -1323,13 +1327,13 @@
     "ADX": "2026-09-29",
     "AMEX": "2026-09-28",
     "ASX": "2026-09-29",
-    "ATHEX": "2026-09-28",
+    "ATHEX": "2026-09-29",
     "BET": "2026-09-28",
     "BIST": "2026-09-28",
     "BME": "2026-09-28",
     "BMFBOVESPA": "2026-09-28",
     "BSE": "2026-09-29",
-    "BSESOF": "2026-09-28",
+    "BSESOF": "2026-09-29",
     "BVB": "2026-09-28",
     "BVMT": "2026-09-29",
     "BX": "2026-09-28",
@@ -1364,9 +1368,9 @@
     "OMXHEX": "2026-09-28",
     "OMXSTO": "2026-09-28",
     "OMXTSE": "2026-09-28",
-    "OSL": "2026-09-28",
+    "OSL": "2026-09-29",
     "PSE": "2026-09-29",
-    "PSECZ": "2026-09-25",
+    "PSECZ": "2026-09-29",
     "PSX": "2026-09-29",
     "RUS": "2026-09-28",
     "SET": "2026-09-29",
@@ -1392,8 +1396,7 @@
   "global_price_date_count": 2059,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-09-25": 3,
-    "2026-09-28": 678,
-    "2026-09-29": 1378
+    "2026-09-28": 660,
+    "2026-09-29": 1399
   }
 }
