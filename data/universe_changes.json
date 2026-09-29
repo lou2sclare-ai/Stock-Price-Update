@@ -1,44 +1,98 @@
 {
-  "as_of": "2026-09-28",
-  "added_count": 2,
-  "removed_count": 42,
+  "as_of": "2026-09-29",
+  "added_count": 3,
+  "removed_count": 148,
   "added": [
     {
       "key": [
-        "INDIA",
-        "NSE",
-        "SPECTRAA"
+        "AUSTRALIA",
+        "ASX",
+        "INN"
       ],
-      "company_name": "SpectraA Technology Solutions Limited",
+      "company_name": "Innovaero Technologies Ltd.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "SWITZERLAND",
+        "BX",
+        "MH4N"
+      ],
+      "company_name": "Mikron Holding AG",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "FRANCE",
-        "EURONEXT",
-        "ALDAT"
+        "CANADA",
+        "CSE",
+        "MARY.X"
       ],
-      "company_name": "D.A.T.E. (Developpement et Application des Techniques de l'Energie)",
+      "company_name": "Mary Agrotechnologies, Inc.",
       "research_sector": "MACHINERY"
     }
   ],
   "removed": [
     {
       "key": [
-        "INDIA",
-        "NSE",
-        "READYMIX"
+        "TAIWAN",
+        "TWSE",
+        "3004"
       ],
-      "company_name": "Readymix Construction Machinery Ltd.",
-      "research_sector": "CONSTRUCTION_EQUIPMENT"
+      "company_name": "National Aerospace Fasteners Corporation",
+      "research_sector": "DEFENSE"
     },
     {
       "key": [
-        "SWITZERLAND",
-        "BX",
-        "BUHA"
+        "SPAIN",
+        "EURONEXT",
+        "ALUAV"
       ],
-      "company_name": "Bucher Industries AG",
+      "company_name": "Embention Sistemas Inteligentes SA",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "4572"
+      ],
+      "company_name": "Drewloong Precision, Inc.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "8222"
+      ],
+      "company_name": "Aero Win Technology Corp.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "7870"
+      ],
+      "company_name": "Accordance Systems, Inc.",
+      "research_sector": "DEFENSE"
+    },
+    {
+      "key": [
+        "JAPAN",
+        "TSE",
+        "7240"
+      ],
+      "company_name": "NOK Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "JAPAN",
+        "TSE",
+        "6486"
+      ],
+      "company_name": "Eagle Industry Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
@@ -52,353 +106,1262 @@
     },
     {
       "key": [
-        "SWITZERLAND",
-        "BX",
-        "PXM0"
+        "HONG KONG",
+        "HKEX",
+        "693"
       ],
-      "company_name": "Phoenix Mecano AG",
+      "company_name": "Tan Chong International Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "5292"
+      ],
+      "company_name": "Desiccant Technology Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "9942"
+      ],
+      "company_name": "Nak Sealing Technologies Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SINGAPORE",
+        "SGX",
+        "5DD"
+      ],
+      "company_name": "Micro-Mechanics (Holdings) Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "4571"
+      ],
+      "company_name": "Khgears International Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "6725"
+      ],
+      "company_name": "Cica-Huntek Chemical Technology Taiwan Co",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "COASTAL"
+      ],
+      "company_name": "Coastal Contracts Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "6658"
+      ],
+      "company_name": "SynPower Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "HEXIND"
+      ],
+      "company_name": "Hextar Industries Bhd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "1580"
+      ],
+      "company_name": "Sinmag Equipment Corporation",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SINGAPORE",
+        "SGX",
+        "1J4"
+      ],
+      "company_name": "JEP Holdings Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "HONG KONG",
+        "HKEX",
+        "255"
+      ],
+      "company_name": "Lung Kee Group Holdings Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "ENGTEX"
+      ],
+      "company_name": "Engtex Group Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "4555"
+      ],
+      "company_name": "Taiwan Chelic Corp. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "FAVCO"
+      ],
+      "company_name": "Favelle Favco Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "6606"
+      ],
+      "company_name": "Kent Industrial Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "1530"
+      ],
+      "company_name": "Awea Mechantronic Co. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "2070"
+      ],
+      "company_name": "Ching Chan Optical Technology Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "SLP"
+      ],
+      "company_name": "SLP Resources Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "1531"
+      ],
+      "company_name": "Kaulin Manufacturing Co. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "3REN"
+      ],
+      "company_name": "3Ren Bhd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "6591"
+      ],
+      "company_name": "Sun Max Tech Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "4552"
+      ],
+      "company_name": "Lida Holdings Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "HIL"
+      ],
+      "company_name": "HIL Industries Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "1599"
+      ],
+      "company_name": "Aeontek Co Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "NORWAY",
+        "OSL",
+        "ININ"
+      ],
+      "company_name": "Inin Group AS",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "UNIMECH"
+      ],
+      "company_name": "Unimech Group Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "CHINA",
+        "HKEX",
+        "6118"
+      ],
+      "company_name": "Austar Lifesciences Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "PMIBHD"
+      ],
+      "company_name": "Pan Merchant Bhd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "JAPAN",
+        "TSE",
+        "6346"
+      ],
+      "company_name": "Kikukawa Enterprise,Inc.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "JAPAN",
+        "TSE",
+        "6360"
+      ],
+      "company_name": "Tokyo Automatic Machinery Works, Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "1336"
+      ],
+      "company_name": "Taihan Precision Technology Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "6843"
+      ],
+      "company_name": "JDV Control Valves Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "UNIQUE"
+      ],
+      "company_name": "Unique Fire Holdings Bhd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "SEALINK"
+      ],
+      "company_name": "Sealink International Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "4568"
+      ],
+      "company_name": "Koge Micro Tech Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "JAPAN",
+        "FSE",
+        "5953"
+      ],
+      "company_name": "Showa Manufacturing Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "5267"
+      ],
+      "company_name": "Lung Pien Vacuum Industry Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "4584"
+      ],
+      "company_name": "Jufan Industrial Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "DESTINI"
+      ],
+      "company_name": "Destini Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "JAPAN",
+        "TSE",
+        "6265"
+      ],
+      "company_name": "CONVUM Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SINGAPORE",
+        "SGX",
+        "5NF"
+      ],
+      "company_name": "Mencast Holdings Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "CHINA",
+        "HKEX",
+        "1289"
+      ],
+      "company_name": "Wuxi Sunlit Science & Technology Co., Ltd. Class H",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "1539"
+      ],
+      "company_name": "Chiu Ting Machinery Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "KEINHIN"
+      ],
+      "company_name": "Kein Hing International Bhd.",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
         "ARGENTINA",
         "BCBA",
-        "MIRG.CI"
+        "AGRO.CI"
       ],
-      "company_name": "Mirgor SA Class C",
+      "company_name": "Agrometal SA",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "FRANCE",
-        "EURONEXT",
-        "ALGEV"
+        "TAIWAN",
+        "TPEX",
+        "4575"
       ],
-      "company_name": "Gevelot SA",
+      "company_name": "Chumpower Machinery Corp.",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "CHINA",
-        "HKEX",
-        "2539"
+        "TAIWAN",
+        "TPEX",
+        "7794"
       ],
-      "company_name": "Lemo Services Co., Ltd. Class H",
+      "company_name": "AcerPure, Inc.",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "BULGARIA",
-        "BSESOF",
-        "HES"
+        "MALAYSIA",
+        "MYX",
+        "PRESTAR"
       ],
-      "company_name": "Hydraulic Elements and Systems AD",
+      "company_name": "Prestar Resources Bhd.",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "CHINA",
-        "HKEX",
-        "1527"
+        "JAPAN",
+        "TSE",
+        "6342"
       ],
-      "company_name": "Zhejiang Tengy Environmental Technology Co., Ltd. Class H",
+      "company_name": "Taihei Machinery Works, Ltd.",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "SINGAPORE",
-        "SGX",
-        "1Y1"
+        "TAIWAN",
+        "TPEX",
+        "4544"
       ],
-      "company_name": "9R Limited",
+      "company_name": "Chun Zu Machinery Industry Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "CHINA",
-        "HKEX",
-        "1930"
+        "TUNISIA",
+        "BVMT",
+        "STPAP"
       ],
-      "company_name": "Shinelong Automotive Lightweight Application Limited",
+      "company_name": "Sotipapier SA",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "INDIA",
-        "NSE",
-        "MUNISH"
+        "MALAYSIA",
+        "MYX",
+        "COSMOS"
       ],
-      "company_name": "Munish Forge Ltd.",
+      "company_name": "Cosmos Technology International Bhd",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "FRANCE",
-        "EURONEXT",
-        "MLOCT"
+        "MALAYSIA",
+        "MYX",
+        "EPB"
       ],
-      "company_name": "Octopus Biosafety SA",
+      "company_name": "EPB Group Berhad",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "DENMARK",
-        "OMXCOP",
-        "GJ"
+        "TAIWAN",
+        "TWSE",
+        "6641"
       ],
-      "company_name": "Glunz & Jensen Holding A/S",
+      "company_name": "GSD Technologies Co., Ltd.",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "HONG KONG",
-        "HKEX",
-        "118"
+        "MALAYSIA",
+        "MYX",
+        "SEERS"
       ],
-      "company_name": "Cosmos Machinery Enterprises Limited",
+      "company_name": "Seers Bhd.",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "INDIA",
-        "NSE",
-        "ROYALARC"
+        "MALAYSIA",
+        "MYX",
+        "ASM"
       ],
-      "company_name": "Royal Arc Electrodes Limited",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "CANADA",
-        "TSXV",
-        "ENW"
-      ],
-      "company_name": "EnWave Corporation",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "CHINA",
-        "SGX",
-        "BTX"
-      ],
-      "company_name": "Anchun International Holdings Ltd.",
+      "company_name": "ASM Automation Group Berhad",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
         "SINGAPORE",
         "SGX",
-        "5OR"
+        "J03"
       ],
-      "company_name": "Heatec Jietong Holdings Ltd.",
+      "company_name": "Jadason Enterprises Ltd",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "CANADA",
-        "TSXV",
-        "DAR"
+        "MALAYSIA",
+        "MYX",
+        "POWER"
       ],
-      "company_name": "Darelle Online Solutions Inc.",
+      "company_name": "POWERTECHNIC GROUP BHD",
       "research_sector": "MACHINERY"
     },
     {
       "key": [
-        "SWEDEN",
-        "NGM",
-        "ZOOM"
+        "JAPAN",
+        "NAG",
+        "5530"
       ],
-      "company_name": "ZOOMABILITY INT AB",
+      "company_name": "JAPAN SYSTEMBANK CORPORATION",
       "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "CANADA",
-        "CSE",
-        "KLN"
-      ],
-      "company_name": "Kleen HY-DRO-GEN Inc.",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "HONG KONG",
-        "HKEX",
-        "8153"
-      ],
-      "company_name": "Jiading International Group Holdings Limited",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "INDIA",
-        "BSE",
-        "REXSEAL"
-      ],
-      "company_name": "Rex Sealing & Packing Industries Ltd.",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "HONG KONG",
-        "HKEX",
-        "8169"
-      ],
-      "company_name": "Eco-Tek Holdings Limited",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "INDIA",
-        "NSE",
-        "BOSS"
-      ],
-      "company_name": "Boss Packaging Solutions Limited",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "ROMANIA",
-        "BVB",
-        "ARM"
-      ],
-      "company_name": "Armatura SA",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "INDIA",
-        "BSE",
-        "EPBIO"
-      ],
-      "company_name": "Ep Biocomposites Limited",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "ROMANIA",
-        "BVB",
-        "FACY"
-      ],
-      "company_name": "Fabrica de Scule Rasnov SA",
-      "research_sector": "MACHINERY"
-    },
-    {
-      "key": [
-        "HONG KONG",
-        "HKEX",
-        "8137"
-      ],
-      "company_name": "Honbridge Holdings Limited",
-      "research_sector": "POWER_EQUIPMENT"
-    },
-    {
-      "key": [
-        "CHINA",
-        "HKEX",
-        "1202"
-      ],
-      "company_name": "Chengdu SIWI Science & Technology Co., Ltd. Class H",
-      "research_sector": "POWER_EQUIPMENT"
-    },
-    {
-      "key": [
-        "HONG KONG",
-        "HKEX",
-        "8328"
-      ],
-      "company_name": "Xinyi Electric Storage Holdings Limited",
-      "research_sector": "POWER_EQUIPMENT"
-    },
-    {
-      "key": [
-        "HONG KONG",
-        "HKEX",
-        "1868"
-      ],
-      "company_name": "Neo-Neon Holdings Ltd",
-      "research_sector": "POWER_EQUIPMENT"
-    },
-    {
-      "key": [
-        "CHINA",
-        "HKEX",
-        "2222"
-      ],
-      "company_name": "NVC International Holdings Ltd.",
-      "research_sector": "POWER_EQUIPMENT"
-    },
-    {
-      "key": [
-        "UNITED KINGDOM",
-        "AQUIS",
-        "EQIP"
-      ],
-      "company_name": "Equipmake Holdings Plc",
-      "research_sector": "POWER_EQUIPMENT"
     },
     {
       "key": [
         "VIETNAM",
         "HNX",
-        "PHN"
+        "SHE"
       ],
-      "company_name": "Hanoi Battery JSC",
-      "research_sector": "POWER_EQUIPMENT"
-    },
-    {
-      "key": [
-        "MALAYSIA",
-        "HKEX",
-        "8427"
-      ],
-      "company_name": "WS-SK Target Group Limited",
-      "research_sector": "POWER_EQUIPMENT"
+      "company_name": "Son Ha Development of Renewable Energy JSC",
+      "research_sector": "MACHINERY"
     },
     {
       "key": [
         "HONG KONG",
         "HKEX",
-        "8222"
+        "572"
       ],
-      "company_name": "E Lighting Group Holdings Ltd",
-      "research_sector": "POWER_EQUIPMENT"
+      "company_name": "Future World Holdings Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "CHINA",
+        "HKEX",
+        "1241"
+      ],
+      "company_name": "Shuanghua Holdings Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "MMSV"
+      ],
+      "company_name": "MMS Ventures Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "JAPAN",
+        "NAG",
+        "3442"
+      ],
+      "company_name": "Mie Corp. Co., Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "CEKD"
+      ],
+      "company_name": "CEKD Bhd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SINGAPORE",
+        "SGX",
+        "A52"
+      ],
+      "company_name": "Annaik Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "SEB"
+      ],
+      "company_name": "Seremban Engineering Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "HPI"
+      ],
+      "company_name": "Hydropipes Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "VIETNAM",
+        "HOSE",
+        "L10"
+      ],
+      "company_name": "LILAMA 10 JSC",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "FLEXI"
+      ],
+      "company_name": "Flexidynamic Holdings Bhd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "HONG KONG",
+        "HKEX",
+        "2363"
+      ],
+      "company_name": "Tongda Hong Tai Holdings Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "ROMANIA",
+        "BVB",
+        "MECF"
+      ],
+      "company_name": "Mecanica Ceahlau SA",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "CNASIA"
+      ],
+      "company_name": "CN Asia Corporation Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "SANICHI"
+      ],
+      "company_name": "Sanichi Technology Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "APB"
+      ],
+      "company_name": "APB Resources Bhd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SINGAPORE",
+        "SGX",
+        "M03"
+      ],
+      "company_name": "Miyoshi Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "FRANCE",
+        "EURONEXT",
+        "MLSTR"
+      ],
+      "company_name": "Streit Mecanique SA",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "SGX",
+        "51O"
+      ],
+      "company_name": "MSM International Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "SINGAPORE",
+        "SGX",
+        "42Z"
+      ],
+      "company_name": "Eindec Corp. Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "ISRAEL",
+        "TASE",
+        "AUSA-M"
+      ],
+      "company_name": "AURA SMART AIR LTD",
+      "research_sector": "MACHINERY"
     },
     {
       "key": [
         "INDIA",
         "BSE",
-        "GALADA"
+        "SARTHAKIND"
       ],
-      "company_name": "Galada Power & Telecommunication Ltd.",
+      "company_name": "Sarthak Industries Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "VIETNAM",
+        "UPCOM",
+        "GGG"
+      ],
+      "company_name": "Giaiphong Motor JSC",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "INDIA",
+        "BSE",
+        "QRIL"
+      ],
+      "company_name": "Quality Ro Industries Limited",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "FINLAND",
+        "OMXHEX",
+        "PALLAS"
+      ],
+      "company_name": "Pallas Air Plc",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "CANADA",
+        "TSXV",
+        "TEST.H"
+      ],
+      "company_name": "FluroTech Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "FRANCE",
+        "EURONEXT",
+        "ALBOO"
+      ],
+      "company_name": "Boostheat SAS",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "INDIA",
+        "BSE",
+        "KEL"
+      ],
+      "company_name": "Kotia Enterprises Ltd",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "INDIA",
+        "BSE",
+        "MHEL"
+      ],
+      "company_name": "Mewar Hi-Tech Engineering Ltd.",
+      "research_sector": "MACHINERY"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "1623"
+      ],
+      "company_name": "Ta Tun Electric Wire & Cable Co Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "8499"
+      ],
+      "company_name": "Top Bright Holding Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "7869"
+      ],
+      "company_name": "Horng Yu Electric Co. Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "1537"
+      ],
+      "company_name": "Kung Long Batteries Industrial Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "1615"
+      ],
+      "company_name": "Dah San Electric Wire & Cable Corp",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "1618"
+      ],
+      "company_name": "Hold-Key Electric Wire & Cable Co., Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SINGAPORE",
+        "SGX",
+        "G20"
+      ],
+      "company_name": "GP Industries Limited",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "7740"
+      ],
+      "company_name": "Seetel New Energy Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SINGAPORE",
+        "SGX",
+        "500"
+      ],
+      "company_name": "Tai Sin Electric Limited",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "4590"
+      ],
+      "company_name": "Fukuta Electric & Machinery Co. Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "3051"
+      ],
+      "company_name": "Optimax Technology Corporation",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "JAPAN",
+        "TSE",
+        "1787"
+      ],
+      "company_name": "Nakabohtec Corrosion Protecting Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "3296"
+      ],
+      "company_name": "Powertech Industrial Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "8011"
+      ],
+      "company_name": "Tai Tung Communication Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "3092"
+      ],
+      "company_name": "Hotron Precision Electronic Industrial Co. Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "JAPAN",
+        "TSE",
+        "5819"
+      ],
+      "company_name": "Canare Electric Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "ULICORP"
+      ],
+      "company_name": "United U-LI Corp. Bhd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "6558"
+      ],
+      "company_name": "SYNergy ScienTech Corp.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "6597"
+      ],
+      "company_name": "Ecocera Optronics Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "6222"
+      ],
+      "company_name": "Li Hsuan Development & Construction Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "3516"
+      ],
+      "company_name": "ADO Optronic Corp.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "7816"
+      ],
+      "company_name": "RiTWIN Corporation",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "3308"
+      ],
+      "company_name": "Bestec Power Electronics Co., Ltd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "3625"
+      ],
+      "company_name": "C-Tech United Corp.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TWSE",
+        "2496"
+      ],
+      "company_name": "Success Prime Corporation",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "METROD"
+      ],
+      "company_name": "Metrod Holdings Bhd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "4972"
+      ],
+      "company_name": "Tons Lightology Inc.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "2245"
+      ],
+      "company_name": "Nww Manufacturing Co. Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "HEXCAP"
+      ],
+      "company_name": "Hextar Capital Bhd",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "FRANCE",
+        "EURONEXT",
+        "MLBSP"
+      ],
+      "company_name": "Blue Shark Power System SA",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "JAPAN",
+        "TSE",
+        "5939"
+      ],
+      "company_name": "Otani Kogyo Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SINGAPORE",
+        "SGX",
+        "5AI"
+      ],
+      "company_name": "H2G Green Limited",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "NEW ZEALAND",
+        "NZX",
+        "AOF"
+      ],
+      "company_name": "AoFrio Limited",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "UMSNGB"
+      ],
+      "company_name": "UMS-Neiken Group Bhd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SWITZERLAND",
+        "BX",
+        "PEDU"
+      ],
+      "company_name": "Perrot Duval Holding SA",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "THAILAND",
+        "SET",
+        "L&E"
+      ],
+      "company_name": "Lighting & Equipment Public Co., Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "ISRAEL",
+        "TASE",
+        "TEDE"
+      ],
+      "company_name": "Tedea Technological Development & Automation Ltd.",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
       "key": [
         "INDIA",
         "NSE",
-        "MAKS"
+        "EXCELLENT"
       ],
-      "company_name": "Maks Energy Solutions India Limited",
+      "company_name": "Excellent Wires & Packaging Limited",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
       "key": [
-        "ROMANIA",
-        "BVB",
-        "ECT"
+        "INDIA",
+        "NSE",
+        "VISDEM"
       ],
-      "company_name": "Grupul Industrial Electrocontact SA",
+      "company_name": "Visdem Technosys Limited",
       "research_sector": "POWER_EQUIPMENT"
     },
     {
       "key": [
-        "ROMANIA",
-        "BVB",
-        "STNM"
+        "TAIWAN",
+        "TPEX",
+        "4529"
       ],
-      "company_name": "Santierul Naval 2 Mai SA Mangalia",
+      "company_name": "Electric Power Technology Limited",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "BULGARIA",
+        "BSESOF",
+        "ELHM"
+      ],
+      "company_name": "Elhim-Iskra JSC",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "HWGB"
+      ],
+      "company_name": "Ho Wah Genting Bhd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "HONG KONG",
+        "HKEX",
+        "1166"
+      ],
+      "company_name": "Solartech International Holdings Limited",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "MIDTOWN"
+      ],
+      "company_name": "Midtown Group Berhad",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "ISRAEL",
+        "TASE",
+        "STRG"
+      ],
+      "company_name": "Storage Drop Storage Technologies LTD",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "VIETNAM",
+        "UPCOM",
+        "VKC"
+      ],
+      "company_name": "VKC Holdings Join Stock Company",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "TAIWAN",
+        "TPEX",
+        "7936"
+      ],
+      "company_name": "Grenergy Enterprise Co. Ltd.",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "VIETNAM",
+        "UPCOM",
+        "TGP"
+      ],
+      "company_name": "Truong Phu JSC",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "VIETNAM",
+        "UPCOM",
+        "VTE"
+      ],
+      "company_name": "Vinacap Telecom Electronics Joint Stock Co",
+      "research_sector": "POWER_EQUIPMENT"
+    },
+    {
+      "key": [
+        "SINGAPORE",
+        "SGX",
+        "A04"
+      ],
+      "company_name": "ASL Marine Holdings Ltd.",
+      "research_sector": "SHIPBUILDING"
+    },
+    {
+      "key": [
+        "MALAYSIA",
+        "MYX",
+        "TAS"
+      ],
+      "company_name": "TAS Offshore Bhd.",
       "research_sector": "SHIPBUILDING"
     }
   ]
