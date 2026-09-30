@@ -22,7 +22,7 @@
   "awaiting_first_completed_close": [],
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 4,
+  "global_lagging_price_date_count": 5,
   "global_lagging_price_dates": [
     {
       "company_name": "Willing New Energy Co., Ltd. Class A",
@@ -37,6 +37,15 @@
       "company_name": "Bitcore Capital Group Ltd.",
       "ticker": "BITC",
       "exchange": "TASE",
+      "price_date": "2026-09-29",
+      "exchange_latest_date": "2026-09-30",
+      "lag_calendar_days": 1,
+      "data_status": "CHECKED_NO_NEW_TRADE"
+    },
+    {
+      "company_name": "Eunisell Interlinked Plc",
+      "ticker": "EUNISELL",
+      "exchange": "NSENG",
       "price_date": "2026-09-29",
       "exchange_latest_date": "2026-09-30",
       "lag_calendar_days": 1,
@@ -709,23 +718,24 @@
     }
   ],
   "checked_on": "2026-09-30",
-  "fetch_error_count": 5,
+  "fetch_error_count": 6,
   "fetch_errors": [
     "Willing New Energy Co., Ltd. Class A (002667) historical recovery: No Yahoo daily data: 002667.SZ",
     "Bitcore Capital Group Ltd. (BITC) historical recovery: No Yahoo daily data: BITC.TA",
+    "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
     "Northeast Electric Development Co., Ltd. Class H (42) historical recovery: No Yahoo daily data: 0042.HK",
     "Golden Power Group Holdings Ltd. (3919) historical recovery: No Yahoo daily data: 3919.HK",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-09-30"
   ],
-  "global_snapshot_count": 2785,
-  "global_targeted_snapshot_count": 41,
+  "global_snapshot_count": 2791,
+  "global_targeted_snapshot_count": 24,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 4,
+  "global_historical_recovery_attempted_count": 5,
   "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 4,
+  "global_checked_no_new_trade_count": 5,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 641,
+  "global_rejected_unfinished_snapshot_count": 657,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
@@ -1531,8 +1541,8 @@
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1414,
-  "preserved_open_or_unknown_global_count": 641,
+  "refreshed_completed_global_count": 1398,
+  "preserved_open_or_unknown_global_count": 657,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-09-30",
     "AMEX": "2026-09-29",
@@ -1571,7 +1581,7 @@
     "NGM": "2026-09-29",
     "NSE": "2026-09-30",
     "NSEKE": "2026-09-30",
-    "NSENG": "2026-09-29",
+    "NSENG": "2026-09-30",
     "NYSE": "2026-09-29",
     "NZX": "2026-09-30",
     "OMXCOP": "2026-09-29",
@@ -1638,7 +1648,7 @@
     "NGM": "2026-09-29",
     "NSE": "2026-09-30",
     "NSEKE": "2026-09-30",
-    "NSENG": "2026-09-29",
+    "NSENG": "2026-09-30",
     "NYSE": "2026-09-29",
     "NZX": "2026-09-30",
     "OMXCOP": "2026-09-29",
@@ -1673,7 +1683,7 @@
   "global_price_date_count": 2055,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-09-29": 682,
-    "2026-09-30": 1373
+    "2026-09-29": 681,
+    "2026-09-30": 1374
   }
 }
