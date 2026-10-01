@@ -458,7 +458,7 @@
     "UHT Unitech Co., Ltd. (6618) historical recovery: No Yahoo daily data: 6618.TWO",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-01"
   ],
-  "global_snapshot_count": 2787,
+  "global_snapshot_count": 2790,
   "global_targeted_snapshot_count": 18,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 2,
@@ -466,7 +466,7 @@
   "global_checked_no_new_trade_count": 2,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 655,
+  "global_rejected_unfinished_snapshot_count": 634,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
@@ -981,14 +981,6 @@
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "COLT CZ GROUP SE",
-      "ticker": "COLT",
-      "exchange": "PSECZ",
-      "price_date": "2026-10-01",
-      "market_session": "post_market",
-      "reason": "official_session_not_closed"
-    },
-    {
       "company_name": "Exail Technologies SA",
       "ticker": "EXA",
       "exchange": "EURONEXT",
@@ -1267,18 +1259,26 @@
       "price_date": "2026-10-01",
       "market_session": "market",
       "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Latecoere SA",
+      "ticker": "LAT",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-01",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
     }
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1394,
-  "preserved_open_or_unknown_global_count": 655,
+  "refreshed_completed_global_count": 1415,
+  "preserved_open_or_unknown_global_count": 634,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-10-01",
     "AMEX": "2026-09-30",
     "ASX": "2026-10-01",
-    "ATHEX": "2026-09-30",
+    "ATHEX": "2026-10-01",
     "BET": "2026-09-30",
     "BIST": "2026-09-30",
     "BME": "2026-09-30",
@@ -1319,9 +1319,9 @@
     "OMXHEX": "2026-09-30",
     "OMXSTO": "2026-09-30",
     "OMXTSE": "2026-09-30",
-    "OSL": "2026-09-30",
+    "OSL": "2026-10-01",
     "PSE": "2026-10-01",
-    "PSECZ": "2026-09-30",
+    "PSECZ": "2026-10-01",
     "PSX": "2026-10-01",
     "RUS": "2026-09-30",
     "SET": "2026-10-01",
@@ -1345,7 +1345,7 @@
     "ADX": "2026-10-01",
     "AMEX": "2026-09-30",
     "ASX": "2026-10-01",
-    "ATHEX": "2026-09-30",
+    "ATHEX": "2026-10-01",
     "BET": "2026-09-30",
     "BIST": "2026-09-30",
     "BME": "2026-09-30",
@@ -1386,9 +1386,9 @@
     "OMXHEX": "2026-09-30",
     "OMXSTO": "2026-09-30",
     "OMXTSE": "2026-09-30",
-    "OSL": "2026-09-30",
+    "OSL": "2026-10-01",
     "PSE": "2026-10-01",
-    "PSECZ": "2026-09-30",
+    "PSECZ": "2026-10-01",
     "PSX": "2026-10-01",
     "RUS": "2026-09-30",
     "SET": "2026-10-01",
@@ -1414,7 +1414,7 @@
   "global_price_date_count": 2049,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-09-30": 1568,
-    "2026-10-01": 481
+    "2026-09-30": 1547,
+    "2026-10-01": 502
   }
 }
