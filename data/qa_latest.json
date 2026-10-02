@@ -345,15 +345,15 @@
     "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-02"
   ],
-  "global_snapshot_count": 2781,
-  "global_targeted_snapshot_count": 32,
+  "global_snapshot_count": 2782,
+  "global_targeted_snapshot_count": 25,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 1,
   "global_historical_recovery_succeeded_count": 0,
   "global_checked_no_new_trade_count": 1,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 641,
+  "global_rejected_unfinished_snapshot_count": 648,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
@@ -567,6 +567,14 @@
       "company_name": "MTU Aero Engines AG",
       "ticker": "MTX",
       "exchange": "XETR",
+      "price_date": "2026-10-02",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Bombardier Inc. Class A",
+      "ticker": "BBD.A",
+      "exchange": "TSX",
       "price_date": "2026-10-02",
       "market_session": "market",
       "reason": "official_session_not_closed"
@@ -1146,21 +1154,13 @@
       "price_date": "2026-10-02",
       "market_session": "market",
       "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Fjord Defence Group ASA",
-      "ticker": "DFENS",
-      "exchange": "OSL",
-      "price_date": "2026-10-02",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
     }
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1395,
-  "preserved_open_or_unknown_global_count": 644,
+  "refreshed_completed_global_count": 1388,
+  "preserved_open_or_unknown_global_count": 651,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-10-02",
     "AMEX": "2026-10-01",
