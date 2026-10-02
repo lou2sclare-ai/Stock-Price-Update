@@ -340,20 +340,21 @@
     }
   ],
   "checked_on": "2026-10-02",
-  "fetch_error_count": 2,
+  "fetch_error_count": 3,
   "fetch_errors": [
+    "IMMI AD (IMMI) historical recovery: Yahoo fallback disabled for unmapped exchange BSESOF: using the raw ticker could resolve to the wrong security",
     "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-02"
   ],
-  "global_snapshot_count": 2782,
-  "global_targeted_snapshot_count": 25,
+  "global_snapshot_count": 2784,
+  "global_targeted_snapshot_count": 19,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 1,
+  "global_historical_recovery_attempted_count": 2,
   "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 1,
+  "global_checked_no_new_trade_count": 2,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 648,
+  "global_rejected_unfinished_snapshot_count": 631,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
@@ -868,14 +869,6 @@
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "COLT CZ GROUP SE",
-      "ticker": "COLT",
-      "exchange": "PSECZ",
-      "price_date": "2026-10-02",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
       "company_name": "Exail Technologies SA",
       "ticker": "EXA",
       "exchange": "EURONEXT",
@@ -1154,24 +1147,32 @@
       "price_date": "2026-10-02",
       "market_session": "market",
       "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "CTT Systems AB",
+      "ticker": "CTT",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-02",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
     }
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1388,
-  "preserved_open_or_unknown_global_count": 651,
+  "refreshed_completed_global_count": 1405,
+  "preserved_open_or_unknown_global_count": 634,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-10-02",
     "AMEX": "2026-10-01",
     "ASX": "2026-10-02",
-    "ATHEX": "2026-10-01",
+    "ATHEX": "2026-10-02",
     "BET": "2026-10-01",
     "BIST": "2026-10-01",
     "BME": "2026-10-01",
     "BMFBOVESPA": "2026-10-01",
     "BSE": "2026-10-01",
-    "BSESOF": "2026-10-01",
+    "BSESOF": "2026-10-02",
     "BVB": "2026-10-01",
     "BVMT": "2026-10-02",
     "BX": "2026-10-01",
@@ -1206,9 +1207,9 @@
     "OMXHEX": "2026-10-01",
     "OMXSTO": "2026-10-01",
     "OMXTSE": "2026-10-01",
-    "OSL": "2026-10-01",
+    "OSL": "2026-10-02",
     "PSE": "2026-10-02",
-    "PSECZ": "2026-10-01",
+    "PSECZ": "2026-10-02",
     "PSX": "2026-10-02",
     "RUS": "2026-10-01",
     "SET": "2026-10-02",
@@ -1226,19 +1227,19 @@
     "UPCOM": "2026-10-02",
     "VIE": "2026-10-01",
     "XETR": "2026-10-01",
-    "ZSE": "2026-10-01"
+    "ZSE": "2026-10-02"
   },
   "global_exchange_latest_completed_dates": {
     "ADX": "2026-10-02",
     "AMEX": "2026-10-01",
     "ASX": "2026-10-02",
-    "ATHEX": "2026-10-01",
+    "ATHEX": "2026-10-02",
     "BET": "2026-10-01",
     "BIST": "2026-10-01",
     "BME": "2026-10-01",
     "BMFBOVESPA": "2026-10-01",
     "BSE": "2026-10-01",
-    "BSESOF": "2026-10-01",
+    "BSESOF": "2026-10-02",
     "BVB": "2026-10-01",
     "BVMT": "2026-10-02",
     "BX": "2026-10-01",
@@ -1273,9 +1274,9 @@
     "OMXHEX": "2026-10-01",
     "OMXSTO": "2026-10-01",
     "OMXTSE": "2026-10-01",
-    "OSL": "2026-10-01",
+    "OSL": "2026-10-02",
     "PSE": "2026-10-02",
-    "PSECZ": "2026-10-01",
+    "PSECZ": "2026-10-02",
     "PSX": "2026-10-02",
     "RUS": "2026-10-01",
     "SET": "2026-10-02",
@@ -1293,7 +1294,7 @@
     "UPCOM": "2026-10-02",
     "VIE": "2026-10-01",
     "XETR": "2026-10-01",
-    "ZSE": "2026-10-01"
+    "ZSE": "2026-10-02"
   },
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
@@ -1302,7 +1303,7 @@
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
     "2026-09-30": 832,
-    "2026-10-01": 1011,
-    "2026-10-02": 196
+    "2026-10-01": 988,
+    "2026-10-02": 219
   }
 }
