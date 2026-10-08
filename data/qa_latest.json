@@ -590,8 +590,8 @@
     "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-08",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-08"
   ],
-  "global_snapshot_count": 2804,
-  "global_targeted_snapshot_count": 23,
+  "global_snapshot_count": 2808,
+  "global_targeted_snapshot_count": 20,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 5,
   "global_historical_recovery_succeeded_count": 0,
@@ -607,7 +607,7 @@
       "historical_fallback_error": "Yahoo fallback disabled for unmapped exchange FSE: using the raw ticker could resolve to the wrong security"
     }
   ],
-  "global_rejected_unfinished_snapshot_count": 677,
+  "global_rejected_unfinished_snapshot_count": 631,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
@@ -786,14 +786,6 @@
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Elbit Systems Ltd",
-      "ticker": "ESLT",
-      "exchange": "TASE",
-      "price_date": "2026-10-08",
-      "market_session": "market",
-      "reason": "session_not_completed:market"
-    },
-    {
       "company_name": "Saab AB Class B",
       "ticker": "SAAB_B",
       "exchange": "OMXSTO",
@@ -815,14 +807,6 @@
       "exchange": "NYSE",
       "price_date": "2026-10-08",
       "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Kongsberg Gruppen ASA",
-      "ticker": "KOG",
-      "exchange": "OSL",
-      "price_date": "2026-10-08",
-      "market_session": "post_market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1130,14 +1114,6 @@
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "COLT CZ GROUP SE",
-      "ticker": "COLT",
-      "exchange": "PSECZ",
-      "price_date": "2026-10-08",
-      "market_session": "post_market",
-      "reason": "official_session_not_closed"
-    },
-    {
       "company_name": "Ducommun Incorporated",
       "ticker": "DCO",
       "exchange": "NYSE",
@@ -1152,14 +1128,6 @@
       "price_date": "2026-10-08",
       "market_session": "market",
       "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Bet Shemesh Engines Holdings (1997) Ltd.",
-      "ticker": "BSEN",
-      "exchange": "TASE",
-      "price_date": "2026-10-08",
-      "market_session": "market",
-      "reason": "session_not_completed:market"
     },
     {
       "company_name": "Bodycote plc",
@@ -1322,22 +1290,6 @@
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Ashot Ashkelon Industries Ltd.",
-      "ticker": "ASHO",
-      "exchange": "TASE",
-      "price_date": "2026-10-08",
-      "market_session": "market",
-      "reason": "session_not_completed:market"
-    },
-    {
-      "company_name": "Aryt Industries Ltd.",
-      "ticker": "ARYT",
-      "exchange": "TASE",
-      "price_date": "2026-10-08",
-      "market_session": "market",
-      "reason": "session_not_completed:market"
-    },
-    {
       "company_name": "Virgin Galactic Holdings, Inc.",
       "ticker": "SPCE",
       "exchange": "NYSE",
@@ -1370,14 +1322,6 @@
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Smart Shooter Ltd.",
-      "ticker": "SMSH",
-      "exchange": "TASE",
-      "price_date": "2026-10-08",
-      "market_session": "market",
-      "reason": "session_not_completed:market"
-    },
-    {
       "company_name": "Volatus Aerospace Inc.",
       "ticker": "FLT",
       "exchange": "TSX",
@@ -1408,18 +1352,74 @@
       "price_date": "2026-10-08",
       "market_session": "market",
       "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "RKK Energia",
+      "ticker": "RKKE",
+      "exchange": "RUS",
+      "price_date": "2026-10-08",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Taurus Armas S.A.",
+      "ticker": "TASA3",
+      "exchange": "BMFBOVESPA",
+      "price_date": "2026-10-08",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Maritime Launch Services Inc",
+      "ticker": "MAXQ",
+      "exchange": "NEO",
+      "price_date": "2026-10-08",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "SDT Uzay ve Savunma Teknolojileri A.S.",
+      "ticker": "SDTTR",
+      "exchange": "BIST",
+      "price_date": "2026-10-08",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "AIRO Group Holdings, Inc.",
+      "ticker": "AIRO",
+      "exchange": "NASDAQ",
+      "price_date": "2026-10-08",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Latecoere SA",
+      "ticker": "LAT",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-08",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "CTT Systems AB",
+      "ticker": "CTT",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-08",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
     }
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1335,
-  "preserved_open_or_unknown_global_count": 676,
+  "refreshed_completed_global_count": 1381,
+  "preserved_open_or_unknown_global_count": 630,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-10-08",
     "AMEX": "2026-10-07",
     "ASX": "2026-10-08",
-    "ATHEX": "2026-10-07",
+    "ATHEX": "2026-10-08",
     "BET": "2026-10-07",
     "BIST": "2026-10-07",
     "BME": "2026-10-07",
@@ -1459,9 +1459,9 @@
     "OMXHEX": "2026-10-07",
     "OMXSTO": "2026-10-07",
     "OMXTSE": "2026-10-07",
-    "OSL": "2026-10-07",
+    "OSL": "2026-10-08",
     "PSE": "2026-10-08",
-    "PSECZ": "2026-10-07",
+    "PSECZ": "2026-10-08",
     "PSX": "2026-10-08",
     "RUS": "2026-10-07",
     "SET": "2026-10-08",
@@ -1470,7 +1470,7 @@
     "SSE": "2026-10-08",
     "SZSE": "2026-10-08",
     "TADAWUL": "2026-10-08",
-    "TASE": "2026-10-07",
+    "TASE": "2026-10-08",
     "TPEX": "2026-10-08",
     "TSE": "2026-10-08",
     "TSX": "2026-10-07",
@@ -1485,7 +1485,7 @@
     "ADX": "2026-10-08",
     "AMEX": "2026-10-07",
     "ASX": "2026-10-08",
-    "ATHEX": "2026-10-07",
+    "ATHEX": "2026-10-08",
     "BET": "2026-10-07",
     "BIST": "2026-10-07",
     "BME": "2026-10-07",
@@ -1525,9 +1525,9 @@
     "OMXHEX": "2026-10-07",
     "OMXSTO": "2026-10-07",
     "OMXTSE": "2026-10-07",
-    "OSL": "2026-10-07",
+    "OSL": "2026-10-08",
     "PSE": "2026-10-08",
-    "PSECZ": "2026-10-07",
+    "PSECZ": "2026-10-08",
     "PSX": "2026-10-08",
     "RUS": "2026-10-07",
     "SET": "2026-10-08",
@@ -1536,7 +1536,7 @@
     "SSE": "2026-10-08",
     "SZSE": "2026-10-08",
     "TADAWUL": "2026-10-08",
-    "TASE": "2026-10-07",
+    "TASE": "2026-10-08",
     "TPEX": "2026-10-08",
     "TSE": "2026-10-08",
     "TSX": "2026-10-07",
@@ -1554,8 +1554,8 @@
   "global_price_date_missing_count": 1,
   "global_price_date_distribution": {
     "2026-09-30": 1,
-    "2026-10-07": 701,
-    "2026-10-08": 1309,
+    "2026-10-07": 652,
+    "2026-10-08": 1358,
     "첫 완료종가 대기": 1
   }
 }
