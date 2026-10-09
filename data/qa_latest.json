@@ -548,18 +548,19 @@
     }
   ],
   "checked_on": "2026-10-09",
-  "fetch_error_count": 3,
+  "fetch_error_count": 4,
   "fetch_errors": [
+    "IMMI AD (IMMI) historical recovery: Yahoo fallback disabled for unmapped exchange BSESOF: using the raw ticker could resolve to the wrong security",
     "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
     "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-09",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-09"
   ],
   "global_snapshot_count": 2780,
-  "global_targeted_snapshot_count": 22,
+  "global_targeted_snapshot_count": 18,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 1,
+  "global_historical_recovery_attempted_count": 2,
   "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 1,
+  "global_checked_no_new_trade_count": 2,
   "global_awaiting_first_completed_close_count": 1,
   "global_awaiting_first_completed_close": [
     {
@@ -571,7 +572,7 @@
       "historical_fallback_error": "Yahoo fallback disabled for unmapped exchange FSE: using the raw ticker could resolve to the wrong security"
     }
   ],
-  "global_rejected_unfinished_snapshot_count": 673,
+  "global_rejected_unfinished_snapshot_count": 657,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
@@ -777,14 +778,6 @@
       "company_name": "Teledyne Technologies Incorporated",
       "ticker": "TDY",
       "exchange": "NYSE",
-      "price_date": "2026-10-09",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Kongsberg Gruppen ASA",
-      "ticker": "KOG",
-      "exchange": "OSL",
       "price_date": "2026-10-09",
       "market_session": "market",
       "reason": "official_session_not_closed"
@@ -1102,14 +1095,6 @@
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "COLT CZ GROUP SE",
-      "ticker": "COLT",
-      "exchange": "PSECZ",
-      "price_date": "2026-10-09",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
       "company_name": "Exail Technologies SA",
       "ticker": "EXA",
       "exchange": "EURONEXT",
@@ -1372,24 +1357,40 @@
       "price_date": "2026-10-09",
       "market_session": "market",
       "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "RKK Energia",
+      "ticker": "RKKE",
+      "exchange": "RUS",
+      "price_date": "2026-10-09",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Taurus Armas S.A.",
+      "ticker": "TASA3",
+      "exchange": "BMFBOVESPA",
+      "price_date": "2026-10-09",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
     }
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1333,
-  "preserved_open_or_unknown_global_count": 672,
+  "refreshed_completed_global_count": 1349,
+  "preserved_open_or_unknown_global_count": 656,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-10-09",
     "AMEX": "2026-10-08",
     "ASX": "2026-10-09",
-    "ATHEX": "2026-10-08",
+    "ATHEX": "2026-10-09",
     "BET": "2026-10-08",
     "BIST": "2026-10-08",
     "BME": "2026-10-08",
     "BMFBOVESPA": "2026-10-08",
     "BSE": "2026-10-09",
-    "BSESOF": "2026-10-08",
+    "BSESOF": "2026-10-09",
     "BVB": "2026-10-08",
     "BVMT": "2026-10-09",
     "BX": "2026-10-08",
@@ -1423,9 +1424,9 @@
     "OMXHEX": "2026-10-08",
     "OMXSTO": "2026-10-08",
     "OMXTSE": "2026-10-08",
-    "OSL": "2026-10-08",
+    "OSL": "2026-10-09",
     "PSE": "2026-10-09",
-    "PSECZ": "2026-10-08",
+    "PSECZ": "2026-10-09",
     "PSX": "2026-10-09",
     "RUS": "2026-10-08",
     "SET": "2026-10-09",
@@ -1449,13 +1450,13 @@
     "ADX": "2026-10-09",
     "AMEX": "2026-10-08",
     "ASX": "2026-10-09",
-    "ATHEX": "2026-10-08",
+    "ATHEX": "2026-10-09",
     "BET": "2026-10-08",
     "BIST": "2026-10-08",
     "BME": "2026-10-08",
     "BMFBOVESPA": "2026-10-08",
     "BSE": "2026-10-09",
-    "BSESOF": "2026-10-08",
+    "BSESOF": "2026-10-09",
     "BVB": "2026-10-08",
     "BVMT": "2026-10-09",
     "BX": "2026-10-08",
@@ -1489,9 +1490,9 @@
     "OMXHEX": "2026-10-08",
     "OMXSTO": "2026-10-08",
     "OMXTSE": "2026-10-08",
-    "OSL": "2026-10-08",
+    "OSL": "2026-10-09",
     "PSE": "2026-10-09",
-    "PSECZ": "2026-10-08",
+    "PSECZ": "2026-10-09",
     "PSX": "2026-10-09",
     "RUS": "2026-10-08",
     "SET": "2026-10-09",
@@ -1518,8 +1519,8 @@
   "global_price_date_missing_count": 1,
   "global_price_date_distribution": {
     "2026-10-07": 3,
-    "2026-10-08": 771,
-    "2026-10-09": 1231,
+    "2026-10-08": 751,
+    "2026-10-09": 1251,
     "첫 완료종가 대기": 1
   }
 }
