@@ -786,8 +786,8 @@
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-14",
     "Viet Nam Fishery Mechanical Shipbuilding Joint Stock Co (FSO) historical recovery: Yahoo fallback disabled for unmapped exchange UPCOM: using the raw ticker could resolve to the wrong security"
   ],
-  "global_snapshot_count": 2810,
-  "global_targeted_snapshot_count": 15,
+  "global_snapshot_count": 2808,
+  "global_targeted_snapshot_count": 26,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 2,
   "global_historical_recovery_succeeded_count": 0,
