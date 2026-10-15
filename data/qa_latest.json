@@ -650,7 +650,7 @@
   "global_checked_no_new_trade_count": 5,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 372,
+  "global_rejected_unfinished_snapshot_count": 383,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Airbus SE",
@@ -760,6 +760,14 @@
       "company_name": "CSG N.V.",
       "ticker": "CSG",
       "exchange": "EURONEXT",
+      "price_date": "2026-10-15",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Embraer S.A.",
+      "ticker": "EMBJ3",
+      "exchange": "BMFBOVESPA",
       "price_date": "2026-10-15",
       "market_session": "market",
       "reason": "official_session_not_closed"
@@ -960,6 +968,14 @@
       "company_name": "Gabler Group AG",
       "ticker": "XK4",
       "exchange": "XETR",
+      "price_date": "2026-10-15",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Taurus Armas S.A.",
+      "ticker": "TASA3",
+      "exchange": "BMFBOVESPA",
       "price_date": "2026-10-15",
       "market_session": "market",
       "reason": "official_session_not_closed"
@@ -1435,29 +1451,13 @@
       "price_date": "2026-10-15",
       "market_session": "market",
       "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Renishaw plc",
-      "ticker": "RSW",
-      "exchange": "LSE",
-      "price_date": "2026-10-15",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "TKMS AG & Co. KGaA",
-      "ticker": "TKMS",
-      "exchange": "XETR",
-      "price_date": "2026-10-15",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
     }
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1634,
-  "preserved_open_or_unknown_global_count": 372,
+  "refreshed_completed_global_count": 1623,
+  "preserved_open_or_unknown_global_count": 383,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-10-15",
     "AMEX": "2026-10-14",
