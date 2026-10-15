@@ -632,15 +632,17 @@
     }
   ],
   "checked_on": "2026-10-15",
-  "fetch_error_count": 5,
+  "fetch_error_count": 7,
   "fetch_errors": [
+    "Envair Electrodyne Limited (ENVAIREL) historical recovery: No Yahoo daily data: ENVAIREL.BO",
     "Dong Anh Mechanical JSC (CKD) historical recovery: Yahoo fallback disabled for unmapped exchange UPCOM: using the raw ticker could resolve to the wrong security",
+    "Incon Engineers Ltd (INCON) historical recovery: No Yahoo daily data: INCON.BO",
     "Lilama 69-3 Joint Stock Co (L63) historical recovery: Yahoo fallback disabled for unmapped exchange UPCOM: using the raw ticker could resolve to the wrong security",
     "Smarten Power Systems Limited (SMARTEN) historical recovery: No Yahoo daily data: SMARTEN.NS",
     "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-15",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-15"
   ],
-  "global_snapshot_count": 2813,
+  "global_snapshot_count": 2814,
   "global_targeted_snapshot_count": 26,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 5,
