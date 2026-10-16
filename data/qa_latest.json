@@ -8,10 +8,10 @@
   "domestic_count": 268,
   "kr_priced_count": 268,
   "official_kr_return_count": 268,
-  "kr_completed_cutoff": "2026-10-15",
-  "kr_latest_price_date": "2026-10-15",
+  "kr_completed_cutoff": "2026-10-16",
+  "kr_latest_price_date": "2026-10-16",
   "kr_latest_price_date_count": 266,
-  "kr_zero_return_count": 15,
+  "kr_zero_return_count": 18,
   "kr_future_date_count": 0,
   "kr_inexact_change_count": 0,
   "kr_fetch_error_count": 2,
@@ -24,587 +24,1638 @@
   "awaiting_first_completed_close": [],
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 0,
-  "global_lagging_price_dates": [],
+  "global_lagging_price_date_count": 1,
+  "global_lagging_price_dates": [
+    {
+      "company_name": "Ho Chi Minh City Public Lighting Joint Stock Co",
+      "ticker": "CHS",
+      "exchange": "UPCOM",
+      "price_date": "2026-10-15",
+      "exchange_latest_date": "2026-10-16",
+      "lag_calendar_days": 1,
+      "data_status": "CHECKED_NO_NEW_TRADE"
+    }
+  ],
   "global_severe_lagging_price_date_count": 0,
   "global_absolute_stale_price_date_count": 0,
   "global_absolute_stale_price_dates": [],
   "global_preserved_absolute_stale_count": 0,
-  "corporate_action_adjustment_count": 69,
+  "corporate_action_adjustment_count": 179,
   "corporate_action_adjustments": [
+    {
+      "company_name": "HD건설기계",
+      "ticker": "267270",
+      "raw_previous_close": 91600.0,
+      "official_comparison_base": 92700.0,
+      "raw_close_change_pct": 0.7641921397379958,
+      "official_change_pct": -0.43
+    },
+    {
+      "company_name": "대모",
+      "ticker": "317850",
+      "raw_previous_close": 5450.0,
+      "official_comparison_base": 5550.0,
+      "raw_close_change_pct": 4.587155963302747,
+      "official_change_pct": 2.7
+    },
+    {
+      "company_name": "동일금속",
+      "ticker": "109860",
+      "raw_previous_close": 7300.0,
+      "official_comparison_base": 7220.0,
+      "raw_close_change_pct": -0.2739726027397249,
+      "official_change_pct": 0.83
+    },
+    {
+      "company_name": "두산밥캣",
+      "ticker": "241560",
+      "raw_previous_close": 51400.0,
+      "official_comparison_base": 50500.0,
+      "raw_close_change_pct": -0.5836575875486361,
+      "official_change_pct": 1.19
+    },
+    {
+      "company_name": "디와이파워",
+      "ticker": "210540",
+      "raw_previous_close": 10390.0,
+      "official_comparison_base": 10500.0,
+      "raw_close_change_pct": 3.2723772858517908,
+      "official_change_pct": 2.19
+    },
+    {
+      "company_name": "진성티이씨",
+      "ticker": "036890",
+      "raw_previous_close": 9270.0,
+      "official_comparison_base": 9420.0,
+      "raw_close_change_pct": 5.070118662351675,
+      "official_change_pct": 3.4
+    },
+    {
+      "company_name": "LIG디펜스앤에어로스페이스",
+      "ticker": "079550",
+      "raw_previous_close": 541000.0,
+      "official_comparison_base": 550000.0,
+      "raw_close_change_pct": 7.208872458410354,
+      "official_change_pct": 5.45
+    },
     {
       "company_name": "RF머트리얼즈",
       "ticker": "327260",
-      "raw_previous_close": 46400.0,
-      "official_comparison_base": 47400.0,
-      "raw_close_change_pct": -16.271551724137932,
-      "official_change_pct": -18.04
+      "raw_previous_close": 38850.0,
+      "official_comparison_base": 40950.0,
+      "raw_close_change_pct": 17.117117117117118,
+      "official_change_pct": 11.11
     },
     {
       "company_name": "RF시스템즈",
       "ticker": "474610",
-      "raw_previous_close": 7380.0,
-      "official_comparison_base": 7480.0,
-      "raw_close_change_pct": -8.265582655826552,
-      "official_change_pct": -9.49
+      "raw_previous_close": 6770.0,
+      "official_comparison_base": 6950.0,
+      "raw_close_change_pct": 9.74889217134416,
+      "official_change_pct": 6.91
+    },
+    {
+      "company_name": "나라스페이스테크놀로지",
+      "ticker": "478340",
+      "raw_previous_close": 9190.0,
+      "official_comparison_base": 9470.0,
+      "raw_close_change_pct": 8.70511425462459,
+      "official_change_pct": 5.49
+    },
+    {
+      "company_name": "비츠로넥스텍",
+      "ticker": "488900",
+      "raw_previous_close": 7690.0,
+      "official_comparison_base": 7800.0,
+      "raw_close_change_pct": 7.932379713914184,
+      "official_change_pct": 6.41
+    },
+    {
+      "company_name": "빅텍",
+      "ticker": "065450",
+      "raw_previous_close": 2675.0,
+      "official_comparison_base": 2730.0,
+      "raw_close_change_pct": 8.037383177570101,
+      "official_change_pct": 5.86
+    },
+    {
+      "company_name": "삼양컴텍",
+      "ticker": "484590",
+      "raw_previous_close": 5920.0,
+      "official_comparison_base": 5990.0,
+      "raw_close_change_pct": 8.108108108108114,
+      "official_change_pct": 6.84
     },
     {
       "company_name": "솔디펜스",
       "ticker": "215090",
-      "raw_previous_close": 1550.0,
-      "official_comparison_base": 1531.0,
-      "raw_close_change_pct": -10.580645161290326,
-      "official_change_pct": -9.47
+      "raw_previous_close": 1386.0,
+      "official_comparison_base": 1432.0,
+      "raw_close_change_pct": 3.535353535353525,
+      "official_change_pct": 0.21
     },
     {
       "company_name": "스피어",
       "ticker": "347700",
-      "raw_previous_close": 21650.0,
-      "official_comparison_base": 22150.0,
-      "raw_close_change_pct": -12.93302540415704,
-      "official_change_pct": -14.9
+      "raw_previous_close": 18850.0,
+      "official_comparison_base": 19480.0,
+      "raw_close_change_pct": 13.262599469496017,
+      "official_change_pct": 9.6
     },
     {
-      "company_name": "아스트",
-      "ticker": "067390",
-      "raw_previous_close": 5270.0,
-      "official_comparison_base": 5190.0,
-      "raw_close_change_pct": -5.692599620493355,
-      "official_change_pct": -4.24
+      "company_name": "쎄트렉아이",
+      "ticker": "099320",
+      "raw_previous_close": 53500.0,
+      "official_comparison_base": 54300.0,
+      "raw_close_change_pct": 7.289719626168223,
+      "official_change_pct": 5.71
     },
     {
       "company_name": "아이쓰리시스템",
       "ticker": "214430",
-      "raw_previous_close": 72300.0,
-      "official_comparison_base": 73200.0,
-      "raw_close_change_pct": -12.586445366528354,
-      "official_change_pct": -13.66
+      "raw_previous_close": 63200.0,
+      "official_comparison_base": 66700.0,
+      "raw_close_change_pct": 7.278481012658222,
+      "official_change_pct": 1.65
+    },
+    {
+      "company_name": "엠앤씨솔루션",
+      "ticker": "484870",
+      "raw_previous_close": 16280.0,
+      "official_comparison_base": 16470.0,
+      "raw_close_change_pct": 5.098280098280106,
+      "official_change_pct": 3.89
+    },
+    {
+      "company_name": "우리기술",
+      "ticker": "032820",
+      "raw_previous_close": 9550.0,
+      "official_comparison_base": 9880.0,
+      "raw_close_change_pct": 7.5392670157067965,
+      "official_change_pct": 3.95
     },
     {
       "company_name": "웨이브일렉트로",
       "ticker": "095270",
-      "raw_previous_close": 4600.0,
-      "official_comparison_base": 4520.0,
-      "raw_close_change_pct": -5.108695652173911,
-      "official_change_pct": -3.43
-    },
-    {
-      "company_name": "웨이비스",
-      "ticker": "289930",
-      "raw_previous_close": 7350.0,
-      "official_comparison_base": 7210.0,
-      "raw_close_change_pct": -7.482993197278908,
-      "official_change_pct": -5.69
-    },
-    {
-      "company_name": "이노스페이스",
-      "ticker": "462350",
-      "raw_previous_close": 5290.0,
-      "official_comparison_base": 5180.0,
-      "raw_close_change_pct": -6.805293005671076,
-      "official_change_pct": -4.83
+      "raw_previous_close": 4365.0,
+      "official_comparison_base": 4295.0,
+      "raw_close_change_pct": 3.8946162657502947,
+      "official_change_pct": 5.59
     },
     {
       "company_name": "컨텍",
       "ticker": "451760",
-      "raw_previous_close": 6880.0,
-      "official_comparison_base": 6800.0,
-      "raw_close_change_pct": -10.029069767441856,
-      "official_change_pct": -8.97
+      "raw_previous_close": 6190.0,
+      "official_comparison_base": 6100.0,
+      "raw_close_change_pct": 4.523424878836835,
+      "official_change_pct": 6.07
+    },
+    {
+      "company_name": "케이피항공산업",
+      "ticker": "288180",
+      "raw_previous_close": 6580.0,
+      "official_comparison_base": 6710.0,
+      "raw_close_change_pct": 5.623100303951367,
+      "official_change_pct": 3.58
     },
     {
       "company_name": "켄코아에어로스페이스",
       "ticker": "274090",
-      "raw_previous_close": 9790.0,
-      "official_comparison_base": 9990.0,
-      "raw_close_change_pct": -9.908069458631253,
-      "official_change_pct": -11.71
+      "raw_previous_close": 8820.0,
+      "official_comparison_base": 8990.0,
+      "raw_close_change_pct": 12.811791383219951,
+      "official_change_pct": 10.68
     },
     {
-      "company_name": "하이즈항공",
-      "ticker": "221840",
-      "raw_previous_close": 2015.0,
-      "official_comparison_base": 1981.0,
-      "raw_close_change_pct": -1.2406947890818865,
-      "official_change_pct": 0.45
+      "company_name": "퍼스텍",
+      "ticker": "010820",
+      "raw_previous_close": 5020.0,
+      "official_comparison_base": 5150.0,
+      "raw_close_change_pct": 7.17131474103585,
+      "official_change_pct": 4.47
+    },
+    {
+      "company_name": "한국항공우주",
+      "ticker": "047810",
+      "raw_previous_close": 104500.0,
+      "official_comparison_base": 105800.0,
+      "raw_close_change_pct": 3.0622009569377884,
+      "official_change_pct": 1.8
+    },
+    {
+      "company_name": "한화시스템",
+      "ticker": "272210",
+      "raw_previous_close": 73800.0,
+      "official_comparison_base": 75100.0,
+      "raw_close_change_pct": 9.07859078590787,
+      "official_change_pct": 7.19
+    },
+    {
+      "company_name": "한화에어로스페이스",
+      "ticker": "012450",
+      "raw_previous_close": 815000.0,
+      "official_comparison_base": 824000.0,
+      "raw_close_change_pct": 10.429447852760742,
+      "official_change_pct": 9.22
+    },
+    {
+      "company_name": "현대로템",
+      "ticker": "064350",
+      "raw_previous_close": 90300.0,
+      "official_comparison_base": 91800.0,
+      "raw_close_change_pct": 7.973421926910307,
+      "official_change_pct": 6.21
+    },
+    {
+      "company_name": "휴니드",
+      "ticker": "005870",
+      "raw_previous_close": 3970.0,
+      "official_comparison_base": 4090.0,
+      "raw_close_change_pct": 4.4080604534004975,
+      "official_change_pct": 1.34
     },
     {
       "company_name": "3S",
       "ticker": "060310",
-      "raw_previous_close": 1297.0,
-      "official_comparison_base": 1251.0,
-      "raw_close_change_pct": -6.322282189668471,
-      "official_change_pct": -2.88
+      "raw_previous_close": 1215.0,
+      "official_comparison_base": 1235.0,
+      "raw_close_change_pct": 10.20576131687243,
+      "official_change_pct": 8.42
+    },
+    {
+      "company_name": "DKME",
+      "ticker": "015590",
+      "raw_previous_close": 2100.0,
+      "official_comparison_base": 2050.0,
+      "raw_close_change_pct": -1.6666666666666718,
+      "official_change_pct": 0.73
     },
     {
       "company_name": "KZ정밀",
       "ticker": "036560",
-      "raw_previous_close": 11640.0,
-      "official_comparison_base": 11490.0,
-      "raw_close_change_pct": -2.577319587628868,
-      "official_change_pct": -1.31
+      "raw_previous_close": 11340.0,
+      "official_comparison_base": 11520.0,
+      "raw_close_change_pct": 1.85185185185186,
+      "official_change_pct": 0.26
+    },
+    {
+      "company_name": "SFA",
+      "ticker": "056190",
+      "raw_previous_close": 27500.0,
+      "official_comparison_base": 28050.0,
+      "raw_close_change_pct": 0.727272727272732,
+      "official_change_pct": -1.25
     },
     {
       "company_name": "TPC로보틱스",
       "ticker": "048770",
-      "raw_previous_close": 3695.0,
-      "official_comparison_base": 3650.0,
-      "raw_close_change_pct": -10.419485791610283,
-      "official_change_pct": -9.32
+      "raw_previous_close": 3310.0,
+      "official_comparison_base": 3360.0,
+      "raw_close_change_pct": 8.157099697885206,
+      "official_change_pct": 6.55
+    },
+    {
+      "company_name": "TYM",
+      "ticker": "002900",
+      "raw_previous_close": 5740.0,
+      "official_comparison_base": 5810.0,
+      "raw_close_change_pct": 3.832752613240409,
+      "official_change_pct": 2.58
     },
     {
       "company_name": "기신정기",
       "ticker": "092440",
-      "raw_previous_close": 1861.0,
-      "official_comparison_base": 1820.0,
-      "raw_close_change_pct": -1.4508328855454056,
-      "official_change_pct": 0.77
+      "raw_previous_close": 1834.0,
+      "official_comparison_base": 1800.0,
+      "raw_close_change_pct": 0.32715376226826187,
+      "official_change_pct": 2.22
+    },
+    {
+      "company_name": "나우로보틱스",
+      "ticker": "459510",
+      "raw_previous_close": 12240.0,
+      "official_comparison_base": 12440.0,
+      "raw_close_change_pct": 5.4738562091503296,
+      "official_change_pct": 3.78
+    },
+    {
+      "company_name": "뉴로메카",
+      "ticker": "348340",
+      "raw_previous_close": 16170.0,
+      "official_comparison_base": 16500.0,
+      "raw_close_change_pct": 6.246134817563398,
+      "official_change_pct": 4.12
+    },
+    {
+      "company_name": "대동",
+      "ticker": "000490",
+      "raw_previous_close": 6690.0,
+      "official_comparison_base": 6790.0,
+      "raw_close_change_pct": 3.4379671150971625,
+      "official_change_pct": 1.91
+    },
+    {
+      "company_name": "대동기어",
+      "ticker": "008830",
+      "raw_previous_close": 5180.0,
+      "official_comparison_base": 5270.0,
+      "raw_close_change_pct": 5.405405405405395,
+      "official_change_pct": 3.61
+    },
+    {
+      "company_name": "두산로보틱스",
+      "ticker": "454910",
+      "raw_previous_close": 56500.0,
+      "official_comparison_base": 57800.0,
+      "raw_close_change_pct": 4.6017699115044275,
+      "official_change_pct": 2.25
+    },
+    {
+      "company_name": "두산에너빌리티",
+      "ticker": "034020",
+      "raw_previous_close": 61400.0,
+      "official_comparison_base": 63300.0,
+      "raw_close_change_pct": 4.885993485342022,
+      "official_change_pct": 1.74
     },
     {
       "company_name": "디케이락",
       "ticker": "105740",
-      "raw_previous_close": 11150.0,
-      "official_comparison_base": 11000.0,
-      "raw_close_change_pct": -4.7533632286995475,
-      "official_change_pct": -3.45
+      "raw_previous_close": 10620.0,
+      "official_comparison_base": 10850.0,
+      "raw_close_change_pct": 2.354048964218447,
+      "official_change_pct": 0.18
+    },
+    {
+      "company_name": "레인보우로보틱스",
+      "ticker": "277810",
+      "raw_previous_close": 335000.0,
+      "official_comparison_base": 345500.0,
+      "raw_close_change_pct": 6.119402985074629,
+      "official_change_pct": 2.89
     },
     {
       "company_name": "로보스타",
       "ticker": "090360",
-      "raw_previous_close": 66100.0,
-      "official_comparison_base": 65100.0,
-      "raw_close_change_pct": -13.010590015128598,
-      "official_change_pct": -11.67
+      "raw_previous_close": 57500.0,
+      "official_comparison_base": 59500.0,
+      "raw_close_change_pct": 6.78260869565217,
+      "official_change_pct": 3.19
+    },
+    {
+      "company_name": "로보티즈",
+      "ticker": "108490",
+      "raw_previous_close": 211000.0,
+      "official_comparison_base": 217500.0,
+      "raw_close_change_pct": 10.90047393364928,
+      "official_change_pct": 7.59
     },
     {
       "company_name": "모델솔루션",
       "ticker": "417970",
-      "raw_previous_close": 10690.0,
-      "official_comparison_base": 10520.0,
-      "raw_close_change_pct": -5.612722170252571,
-      "official_change_pct": -4.09
+      "raw_previous_close": 10090.0,
+      "official_comparison_base": 10190.0,
+      "raw_close_change_pct": 6.640237859266596,
+      "official_change_pct": 5.59
+    },
+    {
+      "company_name": "부스타",
+      "ticker": "008470",
+      "raw_previous_close": 1649.0,
+      "official_comparison_base": 1583.0,
+      "raw_close_change_pct": 1.0309278350515427,
+      "official_change_pct": 5.24
+    },
+    {
+      "company_name": "브이원텍",
+      "ticker": "251630",
+      "raw_previous_close": 3890.0,
+      "official_comparison_base": 3655.0,
+      "raw_close_change_pct": -5.26992287917738,
+      "official_change_pct": 0.82
     },
     {
       "company_name": "비엠티",
       "ticker": "086670",
-      "raw_previous_close": 17580.0,
-      "official_comparison_base": 17320.0,
-      "raw_close_change_pct": -9.328782707622295,
-      "official_change_pct": -7.97
+      "raw_previous_close": 15940.0,
+      "official_comparison_base": 16300.0,
+      "raw_close_change_pct": 5.269761606022594,
+      "official_change_pct": 2.94
     },
     {
-      "company_name": "서암기계공업",
-      "ticker": "100660",
-      "raw_previous_close": 3145.0,
-      "official_comparison_base": 3065.0,
-      "raw_close_change_pct": -7.790143084260737,
-      "official_change_pct": -5.38
+      "company_name": "삼미금속",
+      "ticker": "012210",
+      "raw_previous_close": 9380.0,
+      "official_comparison_base": 9660.0,
+      "raw_close_change_pct": 5.4371002132196145,
+      "official_change_pct": 2.38
     },
     {
-      "company_name": "스페코",
-      "ticker": "013810",
-      "raw_previous_close": 1433.0,
-      "official_comparison_base": 1456.0,
-      "raw_close_change_pct": -4.745289602233083,
-      "official_change_pct": -6.25
+      "company_name": "삼익THK",
+      "ticker": "004380",
+      "raw_previous_close": 7010.0,
+      "official_comparison_base": 7150.0,
+      "raw_close_change_pct": 5.278174037089878,
+      "official_change_pct": 3.22
+    },
+    {
+      "company_name": "성광벤드",
+      "ticker": "014620",
+      "raw_previous_close": 26250.0,
+      "official_comparison_base": 26700.0,
+      "raw_close_change_pct": 3.23809523809524,
+      "official_change_pct": 1.5
     },
     {
       "company_name": "신진에스엠",
       "ticker": "138070",
-      "raw_previous_close": 1399.0,
-      "official_comparison_base": 1370.0,
-      "raw_close_change_pct": -5.003573981415299,
-      "official_change_pct": -2.99
+      "raw_previous_close": 1329.0,
+      "official_comparison_base": 1359.0,
+      "raw_close_change_pct": -0.8276899924755443,
+      "official_change_pct": -3.02
     },
     {
       "company_name": "신화프리텍",
       "ticker": "095190",
-      "raw_previous_close": 1851.0,
-      "official_comparison_base": 1804.0,
-      "raw_close_change_pct": -2.80929227444624,
-      "official_change_pct": -0.28
+      "raw_previous_close": 1799.0,
+      "official_comparison_base": 1747.0,
+      "raw_close_change_pct": 0.8337965536409087,
+      "official_change_pct": 3.84
+    },
+    {
+      "company_name": "씨케이솔루션",
+      "ticker": "480370",
+      "raw_previous_close": 1817.0,
+      "official_comparison_base": 1867.0,
+      "raw_close_change_pct": 10.621904237754531,
+      "official_change_pct": 7.66
+    },
+    {
+      "company_name": "씨피시스템",
+      "ticker": "413630",
+      "raw_previous_close": 3315.0,
+      "official_comparison_base": 3350.0,
+      "raw_close_change_pct": 8.295625942684758,
+      "official_change_pct": 7.16
     },
     {
       "company_name": "아세아텍",
       "ticker": "050860",
-      "raw_previous_close": 1768.0,
-      "official_comparison_base": 1732.0,
-      "raw_close_change_pct": -0.9615384615384581,
-      "official_change_pct": 1.1
+      "raw_previous_close": 1751.0,
+      "official_comparison_base": 1714.0,
+      "raw_close_change_pct": 0.913763563677894,
+      "official_change_pct": 3.09
+    },
+    {
+      "company_name": "앤로보틱스",
+      "ticker": "138360",
+      "raw_previous_close": 1219.0,
+      "official_comparison_base": 1231.0,
+      "raw_close_change_pct": 6.726825266611969,
+      "official_change_pct": 5.69
     },
     {
       "company_name": "에너토크",
       "ticker": "019990",
-      "raw_previous_close": 4980.0,
-      "official_comparison_base": 5050.0,
-      "raw_close_change_pct": -4.618473895582332,
-      "official_change_pct": -5.94
+      "raw_previous_close": 4750.0,
+      "official_comparison_base": 4700.0,
+      "raw_close_change_pct": 4.631578947368431,
+      "official_change_pct": 5.74
     },
     {
-      "company_name": "에이치케이",
-      "ticker": "044780",
-      "raw_previous_close": 1245.0,
-      "official_comparison_base": 1231.0,
-      "raw_close_change_pct": -2.5702811244979973,
-      "official_change_pct": -1.46
+      "company_name": "에스비비테크",
+      "ticker": "389500",
+      "raw_previous_close": 30300.0,
+      "official_comparison_base": 31050.0,
+      "raw_close_change_pct": 8.910891089108919,
+      "official_change_pct": 6.28
+    },
+    {
+      "company_name": "에이테크솔루션",
+      "ticker": "071670",
+      "raw_previous_close": 4925.0,
+      "official_comparison_base": 4870.0,
+      "raw_close_change_pct": 2.3350253807106647,
+      "official_change_pct": 3.49
     },
     {
       "company_name": "오텍",
       "ticker": "067170",
-      "raw_previous_close": 2585.0,
-      "official_comparison_base": 2550.0,
-      "raw_close_change_pct": -11.605415860735013,
-      "official_change_pct": -10.39
+      "raw_previous_close": 2285.0,
+      "official_comparison_base": 2320.0,
+      "raw_close_change_pct": 4.814004376367609,
+      "official_change_pct": 3.23
     },
     {
-      "company_name": "우진플라임",
-      "ticker": "049800",
-      "raw_previous_close": 1924.0,
-      "official_comparison_base": 1900.0,
-      "raw_close_change_pct": -4.677754677754676,
-      "official_change_pct": -3.47
+      "company_name": "와이지-원",
+      "ticker": "019210",
+      "raw_previous_close": 10300.0,
+      "official_comparison_base": 10490.0,
+      "raw_close_change_pct": 10.679611650485432,
+      "official_change_pct": 8.67
     },
     {
-      "company_name": "케이엔솔",
-      "ticker": "053080",
-      "raw_previous_close": 8370.0,
-      "official_comparison_base": 8220.0,
-      "raw_close_change_pct": -8.960573476702505,
-      "official_change_pct": -7.3
+      "company_name": "우림피티에스",
+      "ticker": "101170",
+      "raw_previous_close": 6660.0,
+      "official_comparison_base": 6880.0,
+      "raw_close_change_pct": 7.657657657657668,
+      "official_change_pct": 4.22
     },
     {
-      "company_name": "코메론",
-      "ticker": "049430",
-      "raw_previous_close": 23000.0,
-      "official_comparison_base": 22700.0,
-      "raw_close_change_pct": -4.347826086956519,
-      "official_change_pct": -3.08
+      "company_name": "우진",
+      "ticker": "105840",
+      "raw_previous_close": 10210.0,
+      "official_comparison_base": 10440.0,
+      "raw_close_change_pct": 6.562193927522042,
+      "official_change_pct": 4.21
+    },
+    {
+      "company_name": "유일로보틱스",
+      "ticker": "388720",
+      "raw_previous_close": 60500.0,
+      "official_comparison_base": 61600.0,
+      "raw_close_change_pct": -0.16528925619834212,
+      "official_change_pct": -1.95
+    },
+    {
+      "company_name": "유진로봇",
+      "ticker": "056080",
+      "raw_previous_close": 9040.0,
+      "official_comparison_base": 9250.0,
+      "raw_close_change_pct": 10.176991150442483,
+      "official_change_pct": 7.68
+    },
+    {
+      "company_name": "전진건설로봇",
+      "ticker": "079900",
+      "raw_previous_close": 32000.0,
+      "official_comparison_base": 32800.0,
+      "raw_close_change_pct": 6.25,
+      "official_change_pct": 3.66
+    },
+    {
+      "company_name": "제닉스로보틱스",
+      "ticker": "381620",
+      "raw_previous_close": 4820.0,
+      "official_comparison_base": 4750.0,
+      "raw_close_change_pct": 4.564315352697101,
+      "official_change_pct": 6.11
+    },
+    {
+      "company_name": "져스텍",
+      "ticker": "153890",
+      "raw_previous_close": 6850.0,
+      "official_comparison_base": 6760.0,
+      "raw_close_change_pct": 7.7372262773722555,
+      "official_change_pct": 9.17
+    },
+    {
+      "company_name": "케이엔알시스템",
+      "ticker": "199430",
+      "raw_previous_close": 12600.0,
+      "official_comparison_base": 13150.0,
+      "raw_close_change_pct": 12.142857142857144,
+      "official_change_pct": 7.45
+    },
+    {
+      "company_name": "케이피에프",
+      "ticker": "024880",
+      "raw_previous_close": 3590.0,
+      "official_comparison_base": 3640.0,
+      "raw_close_change_pct": 2.646239554317553,
+      "official_change_pct": 1.24
+    },
+    {
+      "company_name": "코스모로보틱스",
+      "ticker": "439960",
+      "raw_previous_close": 5190.0,
+      "official_comparison_base": 5270.0,
+      "raw_close_change_pct": 8.477842003853574,
+      "official_change_pct": 6.83
+    },
+    {
+      "company_name": "코윈테크",
+      "ticker": "282880",
+      "raw_previous_close": 9800.0,
+      "official_comparison_base": 10030.0,
+      "raw_close_change_pct": 5.306122448979589,
+      "official_change_pct": 2.89
+    },
+    {
+      "company_name": "클로봇",
+      "ticker": "466100",
+      "raw_previous_close": 18010.0,
+      "official_comparison_base": 18480.0,
+      "raw_close_change_pct": 7.495835646862847,
+      "official_change_pct": 4.76
+    },
+    {
+      "company_name": "태광",
+      "ticker": "023160",
+      "raw_previous_close": 25300.0,
+      "official_comparison_base": 25850.0,
+      "raw_close_change_pct": 4.743083003952564,
+      "official_change_pct": 2.51
     },
     {
       "company_name": "티로보틱스",
       "ticker": "117730",
-      "raw_previous_close": 13320.0,
-      "official_comparison_base": 13030.0,
-      "raw_close_change_pct": -13.438438438438439,
-      "official_change_pct": -11.51
+      "raw_previous_close": 11530.0,
+      "official_comparison_base": 11760.0,
+      "raw_close_change_pct": 7.285342584562016,
+      "official_change_pct": 5.19
     },
     {
       "company_name": "티엑스알로보틱스",
       "ticker": "484810",
-      "raw_previous_close": 10250.0,
-      "official_comparison_base": 10450.0,
-      "raw_close_change_pct": -10.634146341463413,
-      "official_change_pct": -12.34
+      "raw_previous_close": 9160.0,
+      "official_comparison_base": 9420.0,
+      "raw_close_change_pct": 9.497816593886466,
+      "official_change_pct": 6.48
     },
     {
       "company_name": "파라텍",
       "ticker": "033540",
-      "raw_previous_close": 2740.0,
-      "official_comparison_base": 2695.0,
-      "raw_close_change_pct": -1.0948905109489093,
-      "official_change_pct": 0.56
+      "raw_previous_close": 2710.0,
+      "official_comparison_base": 2600.0,
+      "raw_close_change_pct": -2.7675276752767486,
+      "official_change_pct": 1.35
+    },
+    {
+      "company_name": "포메탈",
+      "ticker": "119500",
+      "raw_previous_close": 2200.0,
+      "official_comparison_base": 2140.0,
+      "raw_close_change_pct": 0.2272727272727204,
+      "official_change_pct": 3.04
     },
     {
       "company_name": "프리엠스",
       "ticker": "053160",
-      "raw_previous_close": 8110.0,
-      "official_comparison_base": 8250.0,
-      "raw_close_change_pct": -5.302096177558568,
-      "official_change_pct": -6.91
-    },
-    {
-      "company_name": "하이록코리아",
-      "ticker": "013030",
-      "raw_previous_close": 33550.0,
-      "official_comparison_base": 33000.0,
-      "raw_close_change_pct": -5.216095380029806,
-      "official_change_pct": -3.64
-    },
-    {
-      "company_name": "하이젠알앤엠",
-      "ticker": "160190",
-      "raw_previous_close": 24350.0,
-      "official_comparison_base": 23950.0,
-      "raw_close_change_pct": -9.650924024640661,
-      "official_change_pct": -8.14
+      "raw_previous_close": 7680.0,
+      "official_comparison_base": 7880.0,
+      "raw_close_change_pct": 6.901041666666674,
+      "official_change_pct": 4.19
     },
     {
       "company_name": "한국정밀기계",
       "ticker": "101680",
-      "raw_previous_close": 2645.0,
-      "official_comparison_base": 2705.0,
-      "raw_close_change_pct": -1.1342155009451793,
-      "official_change_pct": -3.33
+      "raw_previous_close": 2615.0,
+      "official_comparison_base": 2485.0,
+      "raw_close_change_pct": 3.632887189292533,
+      "official_change_pct": 9.05
     },
     {
-      "company_name": "해성에어로보틱스",
-      "ticker": "059270",
-      "raw_previous_close": 4895.0,
-      "official_comparison_base": 4740.0,
-      "raw_close_change_pct": -8.069458631256389,
-      "official_change_pct": -5.06
+      "company_name": "한선엔지니어링",
+      "ticker": "452280",
+      "raw_previous_close": 14840.0,
+      "official_comparison_base": 14670.0,
+      "raw_close_change_pct": 12.061994609164417,
+      "official_change_pct": 13.36
     },
     {
-      "company_name": "혜인",
-      "ticker": "003010",
-      "raw_previous_close": 7280.0,
-      "official_comparison_base": 7170.0,
-      "raw_close_change_pct": -11.126373626373631,
-      "official_change_pct": -9.76
+      "company_name": "한신기계",
+      "ticker": "011700",
+      "raw_previous_close": 2150.0,
+      "official_comparison_base": 2185.0,
+      "raw_close_change_pct": 3.488372093023262,
+      "official_change_pct": 1.83
+    },
+    {
+      "company_name": "현대무벡스",
+      "ticker": "319400",
+      "raw_previous_close": 17360.0,
+      "official_comparison_base": 17810.0,
+      "raw_close_change_pct": 7.027649769585254,
+      "official_change_pct": 4.32
+    },
+    {
+      "company_name": "화성밸브",
+      "ticker": "039610",
+      "raw_previous_close": 6630.0,
+      "official_comparison_base": 6560.0,
+      "raw_close_change_pct": 10.708898944193068,
+      "official_change_pct": 11.89
+    },
+    {
+      "company_name": "화천기계",
+      "ticker": "010660",
+      "raw_previous_close": 2995.0,
+      "official_comparison_base": 3030.0,
+      "raw_close_change_pct": 3.338898163606019,
+      "official_change_pct": 2.15
+    },
+    {
+      "company_name": "휴림로봇",
+      "ticker": "090710",
+      "raw_previous_close": 4960.0,
+      "official_comparison_base": 5050.0,
+      "raw_close_change_pct": 6.25,
+      "official_change_pct": 4.36
+    },
+    {
+      "company_name": "APS이노베이션",
+      "ticker": "079810",
+      "raw_previous_close": 3375.0,
+      "official_comparison_base": 3430.0,
+      "raw_close_change_pct": 5.777777777777771,
+      "official_change_pct": 4.08
+    },
+    {
+      "company_name": "HD현대일렉트릭",
+      "ticker": "267260",
+      "raw_previous_close": 475000.0,
+      "official_comparison_base": 487000.0,
+      "raw_close_change_pct": 8.000000000000007,
+      "official_change_pct": 5.34
+    },
+    {
+      "company_name": "KBI메탈",
+      "ticker": "024840",
+      "raw_previous_close": 4585.0,
+      "official_comparison_base": 4670.0,
+      "raw_close_change_pct": 5.561613958560518,
+      "official_change_pct": 3.64
+    },
+    {
+      "company_name": "LG에너지솔루션",
+      "ticker": "373220",
+      "raw_previous_close": 393000.0,
+      "official_comparison_base": 402500.0,
+      "raw_close_change_pct": 2.6717557251908497,
+      "official_change_pct": 0.25
+    },
+    {
+      "company_name": "LS",
+      "ticker": "006260",
+      "raw_previous_close": 217000.0,
+      "official_comparison_base": 222000.0,
+      "raw_close_change_pct": 5.299539170506917,
+      "official_change_pct": 2.93
+    },
+    {
+      "company_name": "LS ELECTRIC",
+      "ticker": "010120",
+      "raw_previous_close": 151100.0,
+      "official_comparison_base": 155700.0,
+      "raw_close_change_pct": 5.228325612177365,
+      "official_change_pct": 2.12
+    },
+    {
+      "company_name": "LS머트리얼즈",
+      "ticker": "417200",
+      "raw_previous_close": 13480.0,
+      "official_comparison_base": 13990.0,
+      "raw_close_change_pct": -3.3382789317507378,
+      "official_change_pct": -6.86
     },
     {
       "company_name": "LS에코에너지",
       "ticker": "229640",
-      "raw_previous_close": 70300.0,
-      "official_comparison_base": 69500.0,
-      "raw_close_change_pct": -8.819345661450928,
-      "official_change_pct": -7.77
-    },
-    {
-      "company_name": "대원전선우",
-      "ticker": "006345",
-      "raw_previous_close": 9460.0,
-      "official_comparison_base": 9320.0,
-      "raw_close_change_pct": -11.099365750528545,
-      "official_change_pct": -9.76
-    },
-    {
-      "company_name": "대한전선",
-      "ticker": "001440",
-      "raw_previous_close": 25300.0,
-      "official_comparison_base": 24950.0,
-      "raw_close_change_pct": -9.683794466403162,
-      "official_change_pct": -8.42
-    },
-    {
-      "company_name": "민테크",
-      "ticker": "452200",
-      "raw_previous_close": 1608.0,
-      "official_comparison_base": 1631.0,
-      "raw_close_change_pct": -1.8656716417910446,
-      "official_change_pct": -3.25
-    },
-    {
-      "company_name": "바이오스마트",
-      "ticker": "038460",
-      "raw_previous_close": 2730.0,
-      "official_comparison_base": 2695.0,
-      "raw_close_change_pct": -2.7472527472527486,
-      "official_change_pct": -1.48
-    },
-    {
-      "company_name": "범한퓨얼셀",
-      "ticker": "382900",
-      "raw_previous_close": 21900.0,
-      "official_comparison_base": 21650.0,
-      "raw_close_change_pct": -13.242009132420096,
-      "official_change_pct": -12.24
-    },
-    {
-      "company_name": "보성파워텍",
-      "ticker": "006910",
-      "raw_previous_close": 6230.0,
-      "official_comparison_base": 6150.0,
-      "raw_close_change_pct": -14.125200642054569,
-      "official_change_pct": -13.01
-    },
-    {
-      "company_name": "비나텍",
-      "ticker": "126340",
-      "raw_previous_close": 87400.0,
-      "official_comparison_base": 86000.0,
-      "raw_close_change_pct": -15.903890160183066,
-      "official_change_pct": -14.53
-    },
-    {
-      "company_name": "삼화전기",
-      "ticker": "009470",
-      "raw_previous_close": 30250.0,
-      "official_comparison_base": 29500.0,
-      "raw_close_change_pct": -7.272727272727275,
-      "official_change_pct": -4.92
-    },
-    {
-      "company_name": "새빗켐",
-      "ticker": "107600",
-      "raw_previous_close": 12830.0,
-      "official_comparison_base": 12640.0,
-      "raw_close_change_pct": -10.210444271239282,
-      "official_change_pct": -8.86
-    },
-    {
-      "company_name": "서전기전",
-      "ticker": "189860",
-      "raw_previous_close": 4645.0,
-      "official_comparison_base": 4580.0,
-      "raw_close_change_pct": -8.826695371367066,
-      "official_change_pct": -7.53
-    },
-    {
-      "company_name": "선도전기",
-      "ticker": "007610",
-      "raw_previous_close": 3855.0,
-      "official_comparison_base": 3765.0,
-      "raw_close_change_pct": -11.413748378728927,
-      "official_change_pct": -9.3
-    },
-    {
-      "company_name": "성일하이텍",
-      "ticker": "365340",
-      "raw_previous_close": 35750.0,
-      "official_comparison_base": 35100.0,
-      "raw_close_change_pct": -12.587412587412583,
-      "official_change_pct": -10.97
-    },
-    {
-      "company_name": "신흥에스이씨",
-      "ticker": "243840",
-      "raw_previous_close": 6980.0,
-      "official_comparison_base": 6760.0,
-      "raw_close_change_pct": -13.467048710601714,
-      "official_change_pct": -10.65
-    },
-    {
-      "company_name": "에스프리즘",
-      "ticker": "288620",
-      "raw_previous_close": 3750.0,
-      "official_comparison_base": 3695.0,
-      "raw_close_change_pct": -6.133333333333335,
-      "official_change_pct": -4.74
-    },
-    {
-      "company_name": "엠오티",
-      "ticker": "413390",
-      "raw_previous_close": 6650.0,
-      "official_comparison_base": 6550.0,
-      "raw_close_change_pct": -9.624060150375936,
-      "official_change_pct": -8.24
-    },
-    {
-      "company_name": "웰킵스하이텍",
-      "ticker": "043590",
-      "raw_previous_close": 1960.0,
-      "official_comparison_base": 2190.0,
-      "raw_close_change_pct": -7.653061224489798,
-      "official_change_pct": -17.35
-    },
-    {
-      "company_name": "이닉스",
-      "ticker": "452400",
-      "raw_previous_close": 5330.0,
-      "official_comparison_base": 5180.0,
-      "raw_close_change_pct": -8.818011257035652,
+      "raw_previous_close": 64100.0,
+      "official_comparison_base": 66300.0,
+      "raw_close_change_pct": -2.9641185647425905,
       "official_change_pct": -6.18
     },
     {
-      "company_name": "이지트로닉스",
-      "ticker": "377330",
-      "raw_previous_close": 2850.0,
-      "official_comparison_base": 2745.0,
-      "raw_close_change_pct": -4.561403508771933,
-      "official_change_pct": -0.91
+      "company_name": "SFA넥셀",
+      "ticker": "222080",
+      "raw_previous_close": 7620.0,
+      "official_comparison_base": 7810.0,
+      "raw_close_change_pct": 5.38057742782152,
+      "official_change_pct": 2.82
     },
     {
-      "company_name": "키스트론",
-      "ticker": "475430",
-      "raw_previous_close": 4385.0,
-      "official_comparison_base": 4440.0,
-      "raw_close_change_pct": -6.727480045610035,
-      "official_change_pct": -7.88
+      "company_name": "SK아이이테크놀로지",
+      "ticker": "361610",
+      "raw_previous_close": 17560.0,
+      "official_comparison_base": 17760.0,
+      "raw_close_change_pct": -0.4555808656036442,
+      "official_change_pct": -1.58
     },
     {
-      "company_name": "피에스텍",
-      "ticker": "002230",
-      "raw_previous_close": 4780.0,
-      "official_comparison_base": 4700.0,
-      "raw_close_change_pct": -7.635983263598323,
-      "official_change_pct": -6.06
-    },
-    {
-      "company_name": "피엔티엠에스",
-      "ticker": "257370",
-      "raw_previous_close": 1905.0,
-      "official_comparison_base": 1817.0,
-      "raw_close_change_pct": -8.608923884514441,
-      "official_change_pct": -4.18
-    },
-    {
-      "company_name": "대창솔루션",
-      "ticker": "096350",
-      "raw_previous_close": 1778.0,
-      "official_comparison_base": 1756.0,
-      "raw_close_change_pct": -11.248593925759277,
-      "official_change_pct": -10.14
-    },
-    {
-      "company_name": "동방선기",
-      "ticker": "099410",
-      "raw_previous_close": 2865.0,
-      "official_comparison_base": 2810.0,
-      "raw_close_change_pct": -8.726003490401402,
-      "official_change_pct": -6.94
-    },
-    {
-      "company_name": "오리엔탈정공",
-      "ticker": "014940",
-      "raw_previous_close": 4230.0,
-      "official_comparison_base": 4160.0,
-      "raw_close_change_pct": -7.5650118203309695,
-      "official_change_pct": -6.01
-    },
-    {
-      "company_name": "제일테크노스",
-      "ticker": "038010",
-      "raw_previous_close": 5190.0,
-      "official_comparison_base": 5260.0,
-      "raw_close_change_pct": 1.541425818882458,
-      "official_change_pct": 0.19
-    },
-    {
-      "company_name": "케이에스피",
-      "ticker": "073010",
-      "raw_previous_close": 2880.0,
-      "official_comparison_base": 2825.0,
-      "raw_close_change_pct": -10.243055555555557,
-      "official_change_pct": -8.5
-    },
-    {
-      "company_name": "한라IMS",
-      "ticker": "092460",
-      "raw_previous_close": 16510.0,
-      "official_comparison_base": 16750.0,
-      "raw_close_change_pct": -3.2707450030284635,
-      "official_change_pct": -4.66
-    },
-    {
-      "company_name": "한화엔진",
-      "ticker": "082740",
-      "raw_previous_close": 40300.0,
-      "official_comparison_base": 39850.0,
-      "raw_close_change_pct": -10.66997518610422,
-      "official_change_pct": -9.66
+      "company_name": "가온전선",
+      "ticker": "000500",
+      "raw_previous_close": 236000.0,
+      "official_comparison_base": 249000.0,
+      "raw_close_change_pct": 7.203389830508478,
+      "official_change_pct": 1.61
     }
   ],
   "checked_on": "2026-10-16",
-  "fetch_error_count": 2,
+  "fetch_error_count": 3,
   "fetch_errors": [
-    "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-15",
-    "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-15"
+    "Ho Chi Minh City Public Lighting Joint Stock Co (CHS) historical recovery: Yahoo fallback disabled for unmapped exchange UPCOM: using the raw ticker could resolve to the wrong security",
+    "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-16",
+    "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-16"
   ],
-  "global_snapshot_count": 2822,
-  "global_targeted_snapshot_count": 0,
+  "global_snapshot_count": 2830,
+  "global_targeted_snapshot_count": 18,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 0,
+  "global_historical_recovery_attempted_count": 1,
   "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 0,
+  "global_checked_no_new_trade_count": 1,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 1,
+  "global_rejected_unfinished_snapshot_count": 374,
   "global_rejected_unfinished_snapshots": [
     {
-      "company_name": "Innovaero Technologies Ltd.",
-      "ticker": "INN",
-      "exchange": "ASX",
+      "company_name": "Airbus SE",
+      "ticker": "AIR",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Rolls-Royce Holdings plc",
+      "ticker": "RR.",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Safran SA",
+      "ticker": "SAF",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "BAE Systems plc",
+      "ticker": "BA.",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Thales SA",
+      "ticker": "HO",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Rheinmetall AG",
+      "ticker": "RHM",
+      "exchange": "XETR",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Elbit Systems Ltd",
+      "ticker": "ESLT",
+      "exchange": "TASE",
+      "price_date": "2026-10-16",
+      "market_session": "out_of_session",
+      "reason": "non_session_market_date"
+    },
+    {
+      "company_name": "Saab AB Class B",
+      "ticker": "SAAB_B",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Aselsan Elektronik Sanayi ve Ticaret A.S. Class B",
+      "ticker": "ASELS",
+      "exchange": "BIST",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Leonardo SpA",
+      "ticker": "LDO",
+      "exchange": "MIL",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Kongsberg Gruppen ASA",
+      "ticker": "KOG",
+      "exchange": "OSL",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Dassault Aviation SA",
+      "ticker": "AM",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "MTU Aero Engines AG",
+      "ticker": "MTX",
+      "exchange": "XETR",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "CSG N.V.",
+      "ticker": "CSG",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "HENSOLDT AG",
+      "ticker": "HAG",
+      "exchange": "XETR",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Melrose Industries PLC",
+      "ticker": "MRO",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Ob.aviastroitelnaya korp.",
+      "ticker": "UNAC",
+      "exchange": "RUS",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "RENK Group AG",
+      "ticker": "R3NK",
+      "exchange": "XETR",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "QinetiQ Group plc",
+      "ticker": "QQ.",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "LISI SA",
+      "ticker": "FII",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Yakovlev-3",
+      "ticker": "IRKT",
+      "exchange": "RUS",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "COLT CZ GROUP SE",
+      "ticker": "COLT",
+      "exchange": "PSECZ",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Exail Technologies SA",
+      "ticker": "EXA",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Bet Shemesh Engines Holdings (1997) Ltd.",
+      "ticker": "BSEN",
+      "exchange": "TASE",
+      "price_date": "2026-10-16",
+      "market_session": "out_of_session",
+      "reason": "non_session_market_date"
+    },
+    {
+      "company_name": "Sensofusion Oyj",
+      "ticker": "SENSO",
+      "exchange": "OMXHEX",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Bodycote plc",
+      "ticker": "BOY",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Chemring Group PLC",
+      "ticker": "CHG",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Avio SpA",
+      "ticker": "AVIO",
+      "exchange": "MIL",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "VINCORION SE",
+      "ticker": "V1NC",
+      "exchange": "XETR",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Avon Technologies PLC",
+      "ticker": "AVON",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Cohort plc",
+      "ticker": "CHRT",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "FACC AG",
+      "ticker": "FACC",
+      "exchange": "VIE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Aerostar SA",
+      "ticker": "ARS",
+      "exchange": "BVB",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Figeac Aero SA",
+      "ticker": "FGA",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Ashot Ashkelon Industries Ltd.",
+      "ticker": "ASHO",
+      "exchange": "TASE",
+      "price_date": "2026-10-16",
+      "market_session": "out_of_session",
+      "reason": "non_session_market_date"
+    },
+    {
+      "company_name": "Aryt Industries Ltd.",
+      "ticker": "ARYT",
+      "exchange": "TASE",
+      "price_date": "2026-10-16",
+      "market_session": "out_of_session",
+      "reason": "non_session_market_date"
+    },
+    {
+      "company_name": "MS International PLC",
+      "ticker": "MSI",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Smart Shooter Ltd.",
+      "ticker": "SMSH",
+      "exchange": "TASE",
+      "price_date": "2026-10-16",
+      "market_session": "out_of_session",
+      "reason": "non_session_market_date"
+    },
+    {
+      "company_name": "Gabler Group AG",
+      "ticker": "XK4",
+      "exchange": "XETR",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Altinay Savunma Teknolojileri A.S.",
+      "ticker": "ALTNY",
+      "exchange": "BIST",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "RKK Energia",
+      "ticker": "RKKE",
+      "exchange": "RUS",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "SDT Uzay ve Savunma Teknolojileri A.S.",
+      "ticker": "SDTTR",
+      "exchange": "BIST",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Latecoere SA",
+      "ticker": "LAT",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "CTT Systems AB",
+      "ticker": "CTT",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Fjord Defence Group ASA",
+      "ticker": "DFENS",
+      "exchange": "OSL",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Primoco UAV SE",
+      "ticker": "PRIUA",
+      "exchange": "PSECZ",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "NSE SA",
+      "ticker": "ALNSE",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "DSIT Solutions Ltd.",
+      "ticker": "DSIT",
+      "exchange": "TASE",
+      "price_date": "2026-10-16",
+      "market_session": "out_of_session",
+      "reason": "non_session_market_date"
+    },
+    {
+      "company_name": "Axvik Group AB",
+      "ticker": "AXVIK",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "IAR SA",
+      "ticker": "IARV",
+      "exchange": "BVB",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "SOGECLAIR SA",
+      "ticker": "ALSOG",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Scandinavian Astor Group AB",
+      "ticker": "ASTOR",
+      "exchange": "NGM",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Liftero S.A.",
+      "ticker": "LFR",
+      "exchange": "GPW",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "CI Systems (Israel) Ltd.",
+      "ticker": "CISY",
+      "exchange": "TASE",
+      "price_date": "2026-10-16",
+      "market_session": "out_of_session",
+      "reason": "non_session_market_date"
+    },
+    {
+      "company_name": "Imco Industries Ltd.",
+      "ticker": "IMCO",
+      "exchange": "TASE",
+      "price_date": "2026-10-16",
+      "market_session": "out_of_session",
+      "reason": "non_session_market_date"
+    },
+    {
+      "company_name": "RSL Electronics Ltd.",
+      "ticker": "RSEL",
+      "exchange": "TASE",
+      "price_date": "2026-10-16",
+      "market_session": "out_of_session",
+      "reason": "non_session_market_date"
+    },
+    {
+      "company_name": "Drone Volt SA",
+      "ticker": "ALDRV",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Defence Holdings Plc",
+      "ticker": "ALRT",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Turbomecanica SA",
+      "ticker": "TBM",
+      "exchange": "BVB",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Porto Aviation Group S.P.A.",
+      "ticker": "PAG",
+      "exchange": "MIL",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "AVTECH Sweden AB",
+      "ticker": "AVT_B",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Tonner Drones S.A.",
+      "ticker": "ALTD",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "BactiQuant A/S",
+      "ticker": "BACTIQ",
+      "exchange": "OMXCOP",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Croma Security Solutions Group PLC",
+      "ticker": "CSSG",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Serstech AB",
+      "ticker": "SERT",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Windar Photonics Plc",
+      "ticker": "WPHO",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Velocity Composites Plc",
+      "ticker": "VEL",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Thruvision Group PLC",
+      "ticker": "THRU",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Danish Aerospace and Defence Company A/S",
+      "ticker": "DADC",
+      "exchange": "OMXCOP",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Image Scan Holdings plc",
+      "ticker": "IGE",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "SARSYS AB",
+      "ticker": "SARS",
+      "exchange": "NGM",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Axon Vision Ltd.",
+      "ticker": "AXN",
+      "exchange": "TASE",
+      "price_date": "2026-10-16",
+      "market_session": "out_of_session",
+      "reason": "non_session_market_date"
+    },
+    {
+      "company_name": "Siemens AG",
+      "ticker": "SIE",
+      "exchange": "XETR",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Atlas Copco AB Class A",
+      "ticker": "ATCO_A",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Volvo AB Class A",
+      "ticker": "VOLV_A",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Sandvik AB",
+      "ticker": "SAND",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "ASM International N.V.",
+      "ticker": "ASM",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Epiroc AB Class A",
+      "ticker": "EPI_A",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Alfa Laval AB",
+      "ticker": "ALFA",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Wartsila Oyj Abp",
+      "ticker": "WRT1V",
+      "exchange": "OMXHEX",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "BE Semiconductor Industries N.V.",
+      "ticker": "BESI",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Metso Corporation",
+      "ticker": "METSO",
+      "exchange": "OMXHEX",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Lifco AB Class B",
+      "ticker": "LIFCO_B",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "GEA Group Aktiengesellschaft",
+      "ticker": "G1A",
+      "exchange": "XETR",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Indutrade AB",
+      "ticker": "INDT",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "IMI plc",
+      "ticker": "IMI",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Weir PLC",
+      "ticker": "WEIR",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "ANDRITZ AG",
+      "ticker": "ANDR",
+      "exchange": "VIE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "NIBE Industrier AB Class B",
+      "ticker": "NIBE_B",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Gaztransport & Technigaz SA",
+      "ticker": "GTT",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Alstom SA",
+      "ticker": "ALO",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Konecranes Oyj",
+      "ticker": "KCR",
+      "exchange": "OMXHEX",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Rational Aktiengesellschaft",
+      "ticker": "RAA",
+      "exchange": "XETR",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Spirax Group plc.",
+      "ticker": "SPX",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Mycronic AB",
+      "ticker": "MYCR",
+      "exchange": "OMXSTO",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Babcock International Group PLC",
+      "ticker": "BAB",
+      "exchange": "LSE",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Kongsberg Maritime ASA",
+      "ticker": "KMAR",
+      "exchange": "OSL",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Valmet Corp",
+      "ticker": "VALMT",
+      "exchange": "OMXHEX",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "TKMS AG & Co. KGaA",
+      "ticker": "TKMS",
+      "exchange": "XETR",
+      "price_date": "2026-10-16",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Renishaw plc",
+      "ticker": "RSW",
+      "exchange": "LSE",
       "price_date": "2026-10-16",
       "market_session": "market",
       "reason": "official_session_not_closed"
@@ -612,145 +1663,135 @@
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
-  "update_scope": "ALL",
-  "refreshed_completed_global_count": 1998,
-  "preserved_open_or_unknown_global_count": 1,
+  "update_scope": "SAFE_REFRESH",
+  "refreshed_completed_global_count": 1625,
+  "preserved_open_or_unknown_global_count": 374,
   "global_exchange_completed_reference_dates": {
-    "ADX": "2026-10-15",
+    "ADX": "2026-10-16",
     "AMEX": "2026-10-15",
-    "AQUIS": "2026-10-15",
-    "ASX": "2026-10-15",
+    "ASX": "2026-10-16",
     "ATHEX": "2026-10-15",
     "BCBA": "2026-10-15",
     "BET": "2026-10-15",
     "BIST": "2026-10-15",
     "BME": "2026-10-15",
     "BMFBOVESPA": "2026-10-15",
-    "BSE": "2026-10-15",
+    "BSE": "2026-10-16",
     "BSESOF": "2026-10-15",
-    "BSSE": "2026-10-15",
     "BVB": "2026-10-15",
-    "BVMT": "2026-10-14",
-    "BX": "2026-10-14",
     "CSE": "2026-10-15",
-    "CSELK": "2026-10-15",
+    "CSELK": "2026-10-16",
     "CSEMA": "2026-10-15",
     "DSEBD": "2026-10-15",
     "EGX": "2026-10-15",
     "EURONEXT": "2026-10-15",
-    "FSE": "2026-10-15",
     "GPW": "2026-10-15",
-    "HKEX": "2026-10-15",
-    "HNX": "2026-10-15",
-    "HOSE": "2026-10-15",
-    "IDX": "2026-10-15",
+    "HKEX": "2026-10-16",
+    "HNX": "2026-10-16",
+    "HOSE": "2026-10-16",
+    "IDX": "2026-10-16",
     "JSE": "2026-10-15",
-    "KRX": "2026-10-15",
+    "KRX": "2026-10-16",
     "KSE": "2026-10-15",
     "LSE": "2026-10-15",
     "MIL": "2026-10-15",
-    "MYX": "2026-10-15",
-    "NAG": "2026-10-15",
+    "MYX": "2026-10-16",
+    "NAG": "2026-10-16",
     "NASDAQ": "2026-10-15",
     "NEO": "2026-10-15",
     "NGM": "2026-10-15",
-    "NSE": "2026-10-15",
-    "NSEKE": "2026-10-15",
+    "NSE": "2026-10-16",
+    "NSEKE": "2026-10-16",
     "NSENG": "2026-10-15",
     "NYSE": "2026-10-15",
+    "NZX": "2026-10-16",
     "OMXCOP": "2026-10-15",
     "OMXHEX": "2026-10-15",
-    "OMXRSE": "2026-10-15",
     "OMXSTO": "2026-10-15",
     "OMXTSE": "2026-10-15",
     "OSL": "2026-10-15",
-    "PSE": "2026-10-15",
+    "PSE": "2026-10-16",
     "PSECZ": "2026-10-15",
-    "PSX": "2026-10-15",
+    "PSX": "2026-10-16",
     "RUS": "2026-10-15",
     "SET": "2026-10-15",
-    "SGX": "2026-10-15",
+    "SGX": "2026-10-16",
     "SIX": "2026-10-15",
-    "SSE": "2026-10-15",
-    "SZSE": "2026-10-15",
+    "SSE": "2026-10-16",
+    "SZSE": "2026-10-16",
     "TADAWUL": "2026-10-15",
     "TASE": "2026-10-15",
-    "TPEX": "2026-10-15",
-    "TSE": "2026-10-15",
+    "TPEX": "2026-10-16",
+    "TSE": "2026-10-16",
     "TSX": "2026-10-15",
     "TSXV": "2026-10-15",
-    "TWSE": "2026-10-15",
-    "UPCOM": "2026-10-15",
+    "TWSE": "2026-10-16",
+    "UPCOM": "2026-10-16",
     "VIE": "2026-10-15",
     "XETR": "2026-10-15",
     "ZSE": "2026-10-15"
   },
   "global_exchange_latest_completed_dates": {
-    "ADX": "2026-10-15",
+    "ADX": "2026-10-16",
     "AMEX": "2026-10-15",
-    "AQUIS": "2026-10-15",
-    "ASX": "2026-10-15",
+    "ASX": "2026-10-16",
     "ATHEX": "2026-10-15",
     "BCBA": "2026-10-15",
     "BET": "2026-10-15",
     "BIST": "2026-10-15",
     "BME": "2026-10-15",
     "BMFBOVESPA": "2026-10-15",
-    "BSE": "2026-10-15",
+    "BSE": "2026-10-16",
     "BSESOF": "2026-10-15",
-    "BSSE": "2026-10-15",
     "BVB": "2026-10-15",
-    "BVMT": "2026-10-14",
-    "BX": "2026-10-14",
     "CSE": "2026-10-15",
-    "CSELK": "2026-10-15",
+    "CSELK": "2026-10-16",
     "CSEMA": "2026-10-15",
     "DSEBD": "2026-10-15",
     "EGX": "2026-10-15",
     "EURONEXT": "2026-10-15",
-    "FSE": "2026-10-15",
     "GPW": "2026-10-15",
-    "HKEX": "2026-10-15",
-    "HNX": "2026-10-15",
-    "HOSE": "2026-10-15",
-    "IDX": "2026-10-15",
+    "HKEX": "2026-10-16",
+    "HNX": "2026-10-16",
+    "HOSE": "2026-10-16",
+    "IDX": "2026-10-16",
     "JSE": "2026-10-15",
-    "KRX": "2026-10-15",
+    "KRX": "2026-10-16",
     "KSE": "2026-10-15",
     "LSE": "2026-10-15",
     "MIL": "2026-10-15",
-    "MYX": "2026-10-15",
-    "NAG": "2026-10-15",
+    "MYX": "2026-10-16",
+    "NAG": "2026-10-16",
     "NASDAQ": "2026-10-15",
     "NEO": "2026-10-15",
     "NGM": "2026-10-15",
-    "NSE": "2026-10-15",
-    "NSEKE": "2026-10-15",
+    "NSE": "2026-10-16",
+    "NSEKE": "2026-10-16",
     "NSENG": "2026-10-15",
     "NYSE": "2026-10-15",
+    "NZX": "2026-10-16",
     "OMXCOP": "2026-10-15",
     "OMXHEX": "2026-10-15",
-    "OMXRSE": "2026-10-15",
     "OMXSTO": "2026-10-15",
     "OMXTSE": "2026-10-15",
     "OSL": "2026-10-15",
-    "PSE": "2026-10-15",
+    "PSE": "2026-10-16",
     "PSECZ": "2026-10-15",
-    "PSX": "2026-10-15",
+    "PSX": "2026-10-16",
     "RUS": "2026-10-15",
     "SET": "2026-10-15",
-    "SGX": "2026-10-15",
+    "SGX": "2026-10-16",
     "SIX": "2026-10-15",
-    "SSE": "2026-10-15",
-    "SZSE": "2026-10-15",
+    "SSE": "2026-10-16",
+    "SZSE": "2026-10-16",
     "TADAWUL": "2026-10-15",
     "TASE": "2026-10-15",
-    "TPEX": "2026-10-15",
-    "TSE": "2026-10-15",
+    "TPEX": "2026-10-16",
+    "TSE": "2026-10-16",
     "TSX": "2026-10-15",
     "TSXV": "2026-10-15",
-    "TWSE": "2026-10-15",
-    "UPCOM": "2026-10-15",
+    "TWSE": "2026-10-16",
+    "UPCOM": "2026-10-16",
     "VIE": "2026-10-15",
     "XETR": "2026-10-15",
     "ZSE": "2026-10-15"
@@ -761,6 +1802,7 @@
   "global_price_date_count": 1999,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-10-15": 1999
+    "2026-10-15": 746,
+    "2026-10-16": 1253
   }
 }
