@@ -677,24 +677,25 @@
     }
   ],
   "checked_on": "2026-10-19",
-  "fetch_error_count": 6,
+  "fetch_error_count": 7,
   "fetch_errors": [
     "Ha Lo Technologies Joint stock company (HLO) historical recovery: Yahoo fallback disabled for unmapped exchange UPCOM: using the raw ticker could resolve to the wrong security",
     "IMMI AD (IMMI) historical recovery: Yahoo fallback disabled for unmapped exchange BSESOF: using the raw ticker could resolve to the wrong security",
+    "Saakshi Medtech and Panels Limited (SAAKSHI) historical recovery: No Yahoo daily data: SAAKSHI.NS",
     "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
     "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-19",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-19",
     "Petrovietnam Marine Shipyard Joint Stock Co (PVY) historical recovery: Yahoo fallback disabled for unmapped exchange UPCOM: using the raw ticker could resolve to the wrong security"
   ],
-  "global_snapshot_count": 2828,
-  "global_targeted_snapshot_count": 20,
+  "global_snapshot_count": 2831,
+  "global_targeted_snapshot_count": 18,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 5,
   "global_historical_recovery_succeeded_count": 0,
   "global_checked_no_new_trade_count": 5,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 654,
+  "global_rejected_unfinished_snapshot_count": 627,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
@@ -855,14 +856,6 @@
       "price_date": "2026-10-19",
       "market_session": "market",
       "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Elbit Systems Ltd",
-      "ticker": "ESLT",
-      "exchange": "TASE",
-      "price_date": "2026-10-19",
-      "market_session": "market",
-      "reason": "session_not_completed:market"
     },
     {
       "company_name": "Leonardo SpA",
@@ -1217,14 +1210,6 @@
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Bet Shemesh Engines Holdings (1997) Ltd.",
-      "ticker": "BSEN",
-      "exchange": "TASE",
-      "price_date": "2026-10-19",
-      "market_session": "market",
-      "reason": "session_not_completed:market"
-    },
-    {
       "company_name": "Redwire Corporation",
       "ticker": "RDW",
       "exchange": "NYSE",
@@ -1401,22 +1386,6 @@
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Ashot Ashkelon Industries Ltd.",
-      "ticker": "ASHO",
-      "exchange": "TASE",
-      "price_date": "2026-10-19",
-      "market_session": "market",
-      "reason": "session_not_completed:market"
-    },
-    {
-      "company_name": "Aryt Industries Ltd.",
-      "ticker": "ARYT",
-      "exchange": "TASE",
-      "price_date": "2026-10-19",
-      "market_session": "market",
-      "reason": "session_not_completed:market"
-    },
-    {
       "company_name": "TAT Technologies Ltd.",
       "ticker": "TATT",
       "exchange": "NASDAQ",
@@ -1457,14 +1426,6 @@
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Smart Shooter Ltd.",
-      "ticker": "SMSH",
-      "exchange": "TASE",
-      "price_date": "2026-10-19",
-      "market_session": "market",
-      "reason": "session_not_completed:market"
-    },
-    {
       "company_name": "Gabler Group AG",
       "ticker": "XK4",
       "exchange": "XETR",
@@ -1495,13 +1456,53 @@
       "price_date": "2026-10-19",
       "market_session": "market",
       "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "RKK Energia",
+      "ticker": "RKKE",
+      "exchange": "RUS",
+      "price_date": "2026-10-19",
+      "market_session": "market",
+      "reason": "same_day_session_not_completed:market"
+    },
+    {
+      "company_name": "Taurus Armas S.A.",
+      "ticker": "TASA3",
+      "exchange": "BMFBOVESPA",
+      "price_date": "2026-10-19",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Altinay Savunma Teknolojileri A.S.",
+      "ticker": "ALTNY",
+      "exchange": "BIST",
+      "price_date": "2026-10-19",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "SDT Uzay ve Savunma Teknolojileri A.S.",
+      "ticker": "SDTTR",
+      "exchange": "BIST",
+      "price_date": "2026-10-19",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Latecoere SA",
+      "ticker": "LAT",
+      "exchange": "EURONEXT",
+      "price_date": "2026-10-19",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
     }
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1345,
-  "preserved_open_or_unknown_global_count": 656,
+  "refreshed_completed_global_count": 1372,
+  "preserved_open_or_unknown_global_count": 629,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-10-19",
     "AMEX": "2026-10-16",
@@ -1556,7 +1557,7 @@
     "SSE": "2026-10-19",
     "SZSE": "2026-10-19",
     "TADAWUL": "2026-10-19",
-    "TASE": "2026-10-15",
+    "TASE": "2026-10-19",
     "TPEX": "2026-10-19",
     "TSE": "2026-10-19",
     "TSX": "2026-10-16",
@@ -1621,7 +1622,7 @@
     "SSE": "2026-10-19",
     "SZSE": "2026-10-19",
     "TADAWUL": "2026-10-19",
-    "TASE": "2026-10-15",
+    "TASE": "2026-10-19",
     "TPEX": "2026-10-19",
     "TSE": "2026-10-19",
     "TSX": "2026-10-16",
@@ -1638,9 +1639,8 @@
   "global_price_date_count": 2001,
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
-    "2026-10-15": 29,
     "2026-10-16": 683,
     "2026-10-18": 6,
-    "2026-10-19": 1283
+    "2026-10-19": 1312
   }
 }
