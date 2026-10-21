@@ -22,8 +22,17 @@
   "awaiting_first_completed_close": [],
   "missing_return_reference_count": 0,
   "missing_return_references": [],
-  "global_lagging_price_date_count": 2,
+  "global_lagging_price_date_count": 3,
   "global_lagging_price_dates": [
+    {
+      "company_name": "Eunisell Interlinked Plc",
+      "ticker": "EUNISELL",
+      "exchange": "NSENG",
+      "price_date": "2026-10-20",
+      "exchange_latest_date": "2026-10-21",
+      "lag_calendar_days": 1,
+      "data_status": "CHECKED_NO_NEW_TRADE"
+    },
     {
       "company_name": "Viet Duc Welding Electrode JSC",
       "ticker": "QHD",
@@ -851,22 +860,23 @@
     }
   ],
   "checked_on": "2026-10-21",
-  "fetch_error_count": 4,
+  "fetch_error_count": 5,
   "fetch_errors": [
+    "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
     "Viet Duc Welding Electrode JSC (QHD) historical recovery: Yahoo fallback disabled for unmapped exchange HNX: using the raw ticker could resolve to the wrong security",
     "Thang Long Metal Wares Joint Stock Co (KTL) historical recovery: Yahoo fallback disabled for unmapped exchange UPCOM: using the raw ticker could resolve to the wrong security",
     "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-21",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-21"
   ],
-  "global_snapshot_count": 2812,
-  "global_targeted_snapshot_count": 40,
+  "global_snapshot_count": 2818,
+  "global_targeted_snapshot_count": 24,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 2,
+  "global_historical_recovery_attempted_count": 3,
   "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 2,
+  "global_checked_no_new_trade_count": 3,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 659,
+  "global_rejected_unfinished_snapshot_count": 672,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
@@ -1385,7 +1395,7 @@
       "ticker": "COLT",
       "exchange": "PSECZ",
       "price_date": "2026-10-21",
-      "market_session": "market",
+      "market_session": "post_market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1672,8 +1682,8 @@
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1344,
-  "preserved_open_or_unknown_global_count": 659,
+  "refreshed_completed_global_count": 1331,
+  "preserved_open_or_unknown_global_count": 672,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-10-21",
     "AMEX": "2026-10-20",
@@ -1711,7 +1721,7 @@
     "NGM": "2026-10-20",
     "NSE": "2026-10-21",
     "NSEKE": "2026-10-21",
-    "NSENG": "2026-10-20",
+    "NSENG": "2026-10-21",
     "NYSE": "2026-10-20",
     "NZX": "2026-10-21",
     "OMXCOP": "2026-10-20",
@@ -1738,7 +1748,7 @@
     "UPCOM": "2026-10-21",
     "VIE": "2026-10-20",
     "XETR": "2026-10-20",
-    "ZSE": "2026-10-20"
+    "ZSE": "2026-10-21"
   },
   "global_exchange_latest_completed_dates": {
     "ADX": "2026-10-21",
@@ -1777,7 +1787,7 @@
     "NGM": "2026-10-20",
     "NSE": "2026-10-21",
     "NSEKE": "2026-10-21",
-    "NSENG": "2026-10-20",
+    "NSENG": "2026-10-21",
     "NYSE": "2026-10-20",
     "NZX": "2026-10-21",
     "OMXCOP": "2026-10-20",
@@ -1804,7 +1814,7 @@
     "UPCOM": "2026-10-21",
     "VIE": "2026-10-20",
     "XETR": "2026-10-20",
-    "ZSE": "2026-10-20"
+    "ZSE": "2026-10-21"
   },
   "priority_coverage_expected_count": 15,
   "priority_coverage_present_count": 15,
@@ -1813,7 +1823,7 @@
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
     "2026-10-19": 9,
-    "2026-10-20": 698,
-    "2026-10-21": 1296
+    "2026-10-20": 695,
+    "2026-10-21": 1299
   }
 }
