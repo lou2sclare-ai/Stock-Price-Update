@@ -528,7 +528,7 @@
     "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-22",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-22"
   ],
-  "global_snapshot_count": 2800,
+  "global_snapshot_count": 2802,
   "global_targeted_snapshot_count": 29,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 1,
