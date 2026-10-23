@@ -20,29 +20,18 @@
   "missing_price_count": 0,
   "awaiting_first_completed_close_count": 0,
   "awaiting_first_completed_close": [],
-  "missing_return_reference_count": 0,
-  "missing_return_references": [],
-  "global_lagging_price_date_count": 2,
-  "global_lagging_price_dates": [
+  "missing_return_reference_count": 1,
+  "missing_return_references": [
     {
-      "company_name": "United Heat Transfer Ltd.",
-      "ticker": "UHTL",
-      "exchange": "NSE",
-      "price_date": "2026-10-21",
-      "exchange_latest_date": "2026-10-22",
-      "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
-    },
-    {
-      "company_name": "Eunisell Interlinked Plc",
-      "ticker": "EUNISELL",
-      "exchange": "NSENG",
-      "price_date": "2026-10-21",
-      "exchange_latest_date": "2026-10-22",
-      "lag_calendar_days": 1,
-      "data_status": "CHECKED_NO_NEW_TRADE"
+      "company_name": "Racing Electric Instrument Co., Ltd.",
+      "ticker": "7958",
+      "exchange": "TPEX",
+      "price_date": "2026-10-22",
+      "data_status": "COMPLETED_NO_COMPARISON_REFERENCE"
     }
   ],
+  "global_lagging_price_date_count": 0,
+  "global_lagging_price_dates": [],
   "global_severe_lagging_price_date_count": 0,
   "global_absolute_stale_price_date_count": 0,
   "global_absolute_stale_price_dates": [],
@@ -222,8 +211,8 @@
       "ticker": "138070",
       "raw_previous_close": 1331.0,
       "official_comparison_base": 1301.0,
-      "raw_close_change_pct": 2.854996243426,
-      "official_change_pct": 5.23
+      "raw_close_change_pct": 3.0803906836964767,
+      "official_change_pct": 5.46
     },
     {
       "company_name": "신화프리텍",
@@ -359,7 +348,7 @@
       "raw_previous_close": 4880.0,
       "official_comparison_base": 4800.0,
       "raw_close_change_pct": -4.713114754098358,
-      "official_change_pct": -3.12
+      "official_change_pct": -3.13
     },
     {
       "company_name": "화천기계",
@@ -530,959 +519,172 @@
       "official_change_pct": -1.54
     }
   ],
-  "checked_on": "2026-10-22",
-  "fetch_error_count": 5,
+  "checked_on": "2026-10-23",
+  "fetch_error_count": 2,
   "fetch_errors": [
-    "United Heat Transfer Ltd. (UHTL) historical recovery: No Yahoo daily data: UHTL.NS",
-    "IMMI AD (IMMI) historical recovery: Yahoo fallback disabled for unmapped exchange BSESOF: using the raw ticker could resolve to the wrong security",
-    "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
     "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-22",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-22"
   ],
-  "global_snapshot_count": 2797,
-  "global_targeted_snapshot_count": 22,
+  "global_snapshot_count": 2510,
+  "global_targeted_snapshot_count": 0,
   "global_targeted_snapshot_error": null,
-  "global_historical_recovery_attempted_count": 3,
+  "global_historical_recovery_attempted_count": 0,
   "global_historical_recovery_succeeded_count": 0,
-  "global_checked_no_new_trade_count": 3,
+  "global_checked_no_new_trade_count": 0,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 671,
+  "global_rejected_unfinished_snapshot_count": 2,
   "global_rejected_unfinished_snapshots": [
     {
-      "company_name": "Caterpillar, Inc.",
-      "ticker": "CAT",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
+      "company_name": "Innovaero Technologies Ltd.",
+      "ticker": "INN",
+      "exchange": "ASX",
+      "price_date": "2026-10-23",
       "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
-      "company_name": "Deere & Company",
-      "ticker": "DE",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "GE Aerospace",
-      "ticker": "GE",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "RTX Corporation",
-      "ticker": "RTX",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Airbus SE",
-      "ticker": "AIR",
-      "exchange": "EURONEXT",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Boeing Company (The)",
-      "ticker": "BA",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Safran SA",
-      "ticker": "SAF",
-      "exchange": "EURONEXT",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Rolls-Royce Holdings plc",
-      "ticker": "RR.",
-      "exchange": "LSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Lockheed Martin Corporation",
-      "ticker": "LMT",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "General Dynamics Corporation",
-      "ticker": "GD",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Howmet Aerospace Inc.",
-      "ticker": "HWM",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Northrop Grumman Corporation",
-      "ticker": "NOC",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "BAE Systems plc",
-      "ticker": "BA.",
-      "exchange": "LSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Transdigm Group Inc.",
-      "ticker": "TDG",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Rheinmetall AG",
-      "ticker": "RHM",
-      "exchange": "XETR",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Thales SA",
-      "ticker": "HO",
-      "exchange": "EURONEXT",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Honeywell Aerospace Inc.",
-      "ticker": "HONA",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "L3Harris Technologies, Inc.",
-      "ticker": "LHX",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Heico Corporation",
-      "ticker": "HEI",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Elbit Systems Ltd",
-      "ticker": "ESLT",
-      "exchange": "TASE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Saab AB Class B",
-      "ticker": "SAAB_B",
-      "exchange": "OMXSTO",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Axon Enterprise, Inc.",
-      "ticker": "AXON",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Rocket Lab Corporation",
-      "ticker": "RKLB",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Leonardo SpA",
-      "ticker": "LDO",
-      "exchange": "MIL",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Aselsan Elektronik Sanayi ve Ticaret A.S. Class B",
-      "ticker": "ASELS",
-      "exchange": "BIST",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Teledyne Technologies Incorporated",
-      "ticker": "TDY",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Kongsberg Gruppen ASA",
-      "ticker": "KOG",
-      "exchange": "OSL",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Dassault Aviation SA",
-      "ticker": "AM",
-      "exchange": "EURONEXT",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Bombardier Inc. Class A",
-      "ticker": "BBD.A",
-      "exchange": "TSX",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Arxis, Inc.",
-      "ticker": "ARXS",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "MTU Aero Engines AG",
-      "ticker": "MTX",
-      "exchange": "XETR",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Curtiss-Wright Corporation",
-      "ticker": "CW",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "FTAI Aviation Ltd.",
-      "ticker": "FTAI",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "CSG N.V.",
-      "ticker": "CSG",
-      "exchange": "EURONEXT",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Textron Inc.",
-      "ticker": "TXT",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Embraer S.A.",
-      "ticker": "EMBJ3",
-      "exchange": "BMFBOVESPA",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "BWX Technologies, Inc.",
-      "ticker": "BWXT",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Crane Company",
-      "ticker": "CR",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Moog Inc.",
-      "ticker": "MOG.A",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "HENSOLDT AG",
-      "ticker": "HAG",
-      "exchange": "XETR",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Huntington Ingalls Industries, Inc.",
-      "ticker": "HII",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Leonardo DRS, Inc.",
-      "ticker": "DRS",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Melrose Industries PLC",
-      "ticker": "MRO",
-      "exchange": "LSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Kratos Defense & Security Solutions, Inc.",
-      "ticker": "KTOS",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Hexcel Corporation",
-      "ticker": "HXL",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "AeroVironment, Inc.",
-      "ticker": "AVAV",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Loar Holdings Inc.",
-      "ticker": "LOAR",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Ob.aviastroitelnaya korp.",
-      "ticker": "UNAC",
-      "exchange": "RUS",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Amentum Holdings, Inc.",
-      "ticker": "AMTM",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Karman Holdings Inc.",
-      "ticker": "KRMN",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Joby Aviation, Inc.",
-      "ticker": "JOBY",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Mercury Systems Inc",
-      "ticker": "MRCY",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Beta Technologies, Inc.",
-      "ticker": "BETA",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "RENK Group AG",
-      "ticker": "R3NK",
-      "exchange": "XETR",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "AAR Corp.",
-      "ticker": "AIR",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Mirion Technologies, Inc.",
-      "ticker": "MIR",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "QinetiQ Group plc",
-      "ticker": "QQ.",
-      "exchange": "LSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "OSI Systems, Inc.",
-      "ticker": "OSIS",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "LISI SA",
-      "ticker": "FII",
-      "exchange": "EURONEXT",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Yakovlev-3",
-      "ticker": "IRKT",
-      "exchange": "RUS",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "same_day_session_not_completed:market"
-    },
-    {
-      "company_name": "Archer Aviation Inc.",
-      "ticker": "ACHR",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Firefly Aerospace Inc.",
-      "ticker": "FLY",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Astronics Corporation",
-      "ticker": "ATRO",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Ducommun Incorporated",
-      "ticker": "DCO",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Intuitive Machines, Inc.",
-      "ticker": "LUNR",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Bet Shemesh Engines Holdings (1997) Ltd.",
-      "ticker": "BSEN",
-      "exchange": "TASE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "COLT CZ GROUP SE",
-      "ticker": "COLT",
-      "exchange": "PSECZ",
-      "price_date": "2026-10-22",
-      "market_session": "post_market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Exail Technologies SA",
-      "ticker": "EXA",
-      "exchange": "EURONEXT",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Redwire Corporation",
-      "ticker": "RDW",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Bodycote plc",
-      "ticker": "BOY",
-      "exchange": "LSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Chemring Group PLC",
-      "ticker": "CHG",
-      "exchange": "LSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Sensofusion Oyj",
-      "ticker": "SENSO",
-      "exchange": "OMXHEX",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Applied Aerospace & Defense, Inc.",
-      "ticker": "AADX",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Avio SpA",
-      "ticker": "AVIO",
-      "exchange": "MIL",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Magellan Aerospace Corporation",
-      "ticker": "MAL",
-      "exchange": "TSX",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "AEVEX Corp.",
-      "ticker": "AVEX",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Cadre Holdings, Inc.",
-      "ticker": "CDRE",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Kraken Robotics Inc",
-      "ticker": "PNG",
-      "exchange": "TSXV",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "VINCORION SE",
-      "ticker": "V1NC",
-      "exchange": "XETR",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "National Presto Industries, Inc.",
-      "ticker": "NPK",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Avon Technologies PLC",
-      "ticker": "AVON",
-      "exchange": "LSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "York Space Systems Inc.",
-      "ticker": "YSS",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Cohort plc",
-      "ticker": "CHRT",
-      "exchange": "LSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "FACC AG",
-      "ticker": "FACC",
-      "exchange": "VIE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Smith & Wesson Brands, Inc.",
-      "ticker": "SWBI",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Satellogic Inc.",
-      "ticker": "SATL",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Aerostar SA",
-      "ticker": "ARS",
-      "exchange": "BVB",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Eve Holding, Inc.",
-      "ticker": "EVEX",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Park Aerospace Corp.",
-      "ticker": "PKE",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Aryt Industries Ltd.",
-      "ticker": "ARYT",
-      "exchange": "TASE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Ashot Ashkelon Industries Ltd.",
-      "ticker": "ASHO",
-      "exchange": "TASE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Figeac Aero SA",
-      "ticker": "FGA",
-      "exchange": "EURONEXT",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "TAT Technologies Ltd.",
-      "ticker": "TATT",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Virgin Galactic Holdings, Inc.",
-      "ticker": "SPCE",
-      "exchange": "NYSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Innovative Solutions and Support, Inc.",
-      "ticker": "IA",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Powerus Corporation",
-      "ticker": "PUSA",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Smart Shooter Ltd.",
-      "ticker": "SMSH",
-      "exchange": "TASE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "MS International PLC",
-      "ticker": "MSI",
-      "exchange": "LSE",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Taurus Armas S.A.",
-      "ticker": "TASA3",
-      "exchange": "BMFBOVESPA",
-      "price_date": "2026-10-22",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Outdoor Holding Company",
-      "ticker": "POWW",
-      "exchange": "NASDAQ",
-      "price_date": "2026-10-22",
+      "company_name": "Overwatch Technologies Limited",
+      "ticker": "OWL",
+      "exchange": "ASX",
+      "price_date": "2026-10-23",
       "market_session": "market",
       "reason": "official_session_not_closed"
     }
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
-  "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1329,
-  "preserved_open_or_unknown_global_count": 672,
+  "update_scope": "ALL",
+  "refreshed_completed_global_count": 1999,
+  "preserved_open_or_unknown_global_count": 2,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-10-22",
-    "AMEX": "2026-10-21",
+    "AMEX": "2026-10-22",
     "ASX": "2026-10-22",
-    "ATHEX": "2026-10-21",
-    "BET": "2026-10-21",
-    "BIST": "2026-10-21",
-    "BME": "2026-10-21",
-    "BMFBOVESPA": "2026-10-21",
+    "ATHEX": "2026-10-22",
+    "BCBA": "2026-10-22",
+    "BET": "2026-10-22",
+    "BIST": "2026-10-22",
+    "BME": "2026-10-22",
+    "BMFBOVESPA": "2026-10-22",
     "BSE": "2026-10-22",
     "BSESOF": "2026-10-22",
-    "BVB": "2026-10-21",
+    "BSSE": "2026-10-22",
+    "BVB": "2026-10-22",
     "BVMT": "2026-10-22",
-    "CSE": "2026-10-21",
+    "CSE": "2026-10-22",
     "CSELK": "2026-10-22",
-    "CSEMA": "2026-10-21",
+    "CSEMA": "2026-10-22",
     "DSEBD": "2026-10-19",
     "EGX": "2026-10-22",
-    "EURONEXT": "2026-10-21",
-    "GPW": "2026-10-21",
+    "EURONEXT": "2026-10-22",
+    "GPW": "2026-10-22",
     "HKEX": "2026-10-22",
     "HNX": "2026-10-22",
     "HOSE": "2026-10-22",
     "IDX": "2026-10-22",
-    "JSE": "2026-10-21",
+    "JSE": "2026-10-22",
     "KRX": "2026-10-22",
     "KSE": "2026-10-22",
-    "LSE": "2026-10-21",
-    "MIL": "2026-10-21",
+    "LSE": "2026-10-22",
+    "MIL": "2026-10-22",
     "MYX": "2026-10-22",
-    "NAG": "2026-10-22",
-    "NASDAQ": "2026-10-21",
-    "NEO": "2026-10-21",
-    "NGM": "2026-10-21",
+    "NASDAQ": "2026-10-22",
+    "NEO": "2026-10-22",
+    "NGM": "2026-10-22",
     "NSE": "2026-10-22",
     "NSEKE": "2026-10-22",
     "NSENG": "2026-10-22",
-    "NYSE": "2026-10-21",
-    "NZX": "2026-10-22",
-    "OMXCOP": "2026-10-21",
-    "OMXHEX": "2026-10-21",
-    "OMXSTO": "2026-10-21",
-    "OMXTSE": "2026-10-21",
-    "OSL": "2026-10-21",
+    "NYSE": "2026-10-22",
+    "OMXCOP": "2026-10-22",
+    "OMXHEX": "2026-10-22",
+    "OMXRSE": "2026-10-22",
+    "OMXSTO": "2026-10-22",
+    "OMXTSE": "2026-10-22",
+    "OSL": "2026-10-22",
     "PSE": "2026-10-22",
-    "PSECZ": "2026-10-21",
+    "PSECZ": "2026-10-22",
     "PSX": "2026-10-22",
-    "RUS": "2026-10-21",
+    "RUS": "2026-10-22",
     "SET": "2026-10-22",
     "SGX": "2026-10-22",
-    "SIX": "2026-10-21",
+    "SIX": "2026-10-22",
     "SSE": "2026-10-22",
     "SZSE": "2026-10-22",
     "TADAWUL": "2026-10-22",
-    "TASE": "2026-10-21",
+    "TASE": "2026-10-22",
     "TPEX": "2026-10-22",
-    "TSE": "2026-10-22",
-    "TSX": "2026-10-21",
-    "TSXV": "2026-10-21",
+    "TSX": "2026-10-22",
+    "TSXV": "2026-10-22",
     "TWSE": "2026-10-22",
     "UPCOM": "2026-10-22",
-    "VIE": "2026-10-21",
-    "XETR": "2026-10-21",
+    "VIE": "2026-10-22",
+    "XETR": "2026-10-22",
     "ZSE": "2026-10-22"
   },
   "global_exchange_latest_completed_dates": {
     "ADX": "2026-10-22",
-    "AMEX": "2026-10-21",
+    "AMEX": "2026-10-22",
     "ASX": "2026-10-22",
-    "ATHEX": "2026-10-21",
-    "BET": "2026-10-21",
-    "BIST": "2026-10-21",
-    "BME": "2026-10-21",
-    "BMFBOVESPA": "2026-10-21",
+    "ATHEX": "2026-10-22",
+    "BCBA": "2026-10-22",
+    "BET": "2026-10-22",
+    "BIST": "2026-10-22",
+    "BME": "2026-10-22",
+    "BMFBOVESPA": "2026-10-22",
     "BSE": "2026-10-22",
     "BSESOF": "2026-10-22",
-    "BVB": "2026-10-21",
+    "BSSE": "2026-10-22",
+    "BVB": "2026-10-22",
     "BVMT": "2026-10-22",
-    "CSE": "2026-10-21",
+    "CSE": "2026-10-22",
     "CSELK": "2026-10-22",
-    "CSEMA": "2026-10-21",
+    "CSEMA": "2026-10-22",
     "DSEBD": "2026-10-19",
     "EGX": "2026-10-22",
-    "EURONEXT": "2026-10-21",
-    "GPW": "2026-10-21",
+    "EURONEXT": "2026-10-22",
+    "GPW": "2026-10-22",
     "HKEX": "2026-10-22",
     "HNX": "2026-10-22",
     "HOSE": "2026-10-22",
     "IDX": "2026-10-22",
-    "JSE": "2026-10-21",
+    "JSE": "2026-10-22",
     "KRX": "2026-10-22",
     "KSE": "2026-10-22",
-    "LSE": "2026-10-21",
-    "MIL": "2026-10-21",
+    "LSE": "2026-10-22",
+    "MIL": "2026-10-22",
     "MYX": "2026-10-22",
-    "NAG": "2026-10-22",
-    "NASDAQ": "2026-10-21",
-    "NEO": "2026-10-21",
-    "NGM": "2026-10-21",
+    "NASDAQ": "2026-10-22",
+    "NEO": "2026-10-22",
+    "NGM": "2026-10-22",
     "NSE": "2026-10-22",
     "NSEKE": "2026-10-22",
     "NSENG": "2026-10-22",
-    "NYSE": "2026-10-21",
-    "NZX": "2026-10-22",
-    "OMXCOP": "2026-10-21",
-    "OMXHEX": "2026-10-21",
-    "OMXSTO": "2026-10-21",
-    "OMXTSE": "2026-10-21",
-    "OSL": "2026-10-21",
+    "NYSE": "2026-10-22",
+    "OMXCOP": "2026-10-22",
+    "OMXHEX": "2026-10-22",
+    "OMXRSE": "2026-10-22",
+    "OMXSTO": "2026-10-22",
+    "OMXTSE": "2026-10-22",
+    "OSL": "2026-10-22",
     "PSE": "2026-10-22",
-    "PSECZ": "2026-10-21",
+    "PSECZ": "2026-10-22",
     "PSX": "2026-10-22",
-    "RUS": "2026-10-21",
+    "RUS": "2026-10-22",
     "SET": "2026-10-22",
     "SGX": "2026-10-22",
-    "SIX": "2026-10-21",
+    "SIX": "2026-10-22",
     "SSE": "2026-10-22",
     "SZSE": "2026-10-22",
     "TADAWUL": "2026-10-22",
-    "TASE": "2026-10-21",
+    "TASE": "2026-10-22",
     "TPEX": "2026-10-22",
-    "TSE": "2026-10-22",
-    "TSX": "2026-10-21",
-    "TSXV": "2026-10-21",
+    "TSX": "2026-10-22",
+    "TSXV": "2026-10-22",
     "TWSE": "2026-10-22",
     "UPCOM": "2026-10-22",
-    "VIE": "2026-10-21",
-    "XETR": "2026-10-21",
+    "VIE": "2026-10-22",
+    "XETR": "2026-10-22",
     "ZSE": "2026-10-22"
   },
   "priority_coverage_expected_count": 15,
@@ -1492,7 +694,6 @@
   "global_price_date_missing_count": 0,
   "global_price_date_distribution": {
     "2026-10-19": 9,
-    "2026-10-21": 693,
-    "2026-10-22": 1299
+    "2026-10-22": 1992
   }
 }
