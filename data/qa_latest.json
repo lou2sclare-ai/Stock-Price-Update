@@ -578,15 +578,15 @@
     "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-23",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-23"
   ],
-  "global_snapshot_count": 2663,
-  "global_targeted_snapshot_count": 78,
+  "global_snapshot_count": 2825,
+  "global_targeted_snapshot_count": 18,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 2,
   "global_historical_recovery_succeeded_count": 0,
   "global_checked_no_new_trade_count": 2,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 374,
+  "global_rejected_unfinished_snapshot_count": 384,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Airbus SE",
@@ -696,6 +696,14 @@
       "company_name": "CSG N.V.",
       "ticker": "CSG",
       "exchange": "EURONEXT",
+      "price_date": "2026-10-23",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
+    },
+    {
+      "company_name": "Embraer S.A.",
+      "ticker": "EMBJ3",
+      "exchange": "BMFBOVESPA",
       "price_date": "2026-10-23",
       "market_session": "market",
       "reason": "official_session_not_closed"
@@ -891,6 +899,14 @@
       "price_date": "2026-10-23",
       "market_session": "out_of_session",
       "reason": "non_session_market_date"
+    },
+    {
+      "company_name": "Taurus Armas S.A.",
+      "ticker": "TASA3",
+      "exchange": "BMFBOVESPA",
+      "price_date": "2026-10-23",
+      "market_session": "market",
+      "reason": "official_session_not_closed"
     },
     {
       "company_name": "Gabler Group AG",
@@ -1371,29 +1387,13 @@
       "price_date": "2026-10-23",
       "market_session": "market",
       "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Rotork plc",
-      "ticker": "ROR",
-      "exchange": "LSE",
-      "price_date": "2026-10-23",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
-    },
-    {
-      "company_name": "Renishaw plc",
-      "ticker": "RSW",
-      "exchange": "LSE",
-      "price_date": "2026-10-23",
-      "market_session": "market",
-      "reason": "official_session_not_closed"
     }
   ],
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1627,
-  "preserved_open_or_unknown_global_count": 374,
+  "refreshed_completed_global_count": 1617,
+  "preserved_open_or_unknown_global_count": 384,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-10-22",
     "AMEX": "2026-10-22",
@@ -1453,6 +1453,7 @@
     "TSE": "2026-10-23",
     "TSX": "2026-10-22",
     "TSXV": "2026-10-22",
+    "TWSE": "2026-10-22",
     "UPCOM": "2026-10-23",
     "VIE": "2026-10-22",
     "XETR": "2026-10-22",
@@ -1517,6 +1518,7 @@
     "TSE": "2026-10-23",
     "TSX": "2026-10-22",
     "TSXV": "2026-10-22",
+    "TWSE": "2026-10-22",
     "UPCOM": "2026-10-23",
     "VIE": "2026-10-22",
     "XETR": "2026-10-22",
