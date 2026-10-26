@@ -835,9 +835,10 @@
     }
   ],
   "checked_on": "2026-10-26",
-  "fetch_error_count": 3,
+  "fetch_error_count": 4,
   "fetch_errors": [
     "Eunisell Interlinked Plc (EUNISELL) historical recovery: Yahoo fallback disabled for unmapped exchange NSENG: using the raw ticker could resolve to the wrong security",
+    "Putian Communication Group Limited (1720) historical recovery: No Yahoo daily data: 1720.HK",
     "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-26",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-26"
   ],
