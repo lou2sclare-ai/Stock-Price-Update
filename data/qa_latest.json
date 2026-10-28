@@ -29,7 +29,7 @@
       "ticker": "FLY",
       "exchange": "CSE",
       "price_date": "2026-10-27",
-      "data_status": "COMPLETED_NO_COMPARISON_REFERENCE"
+      "data_status": "PRESERVED_OPEN_OR_UNKNOWN"
     }
   ],
   "global_lagging_price_date_count": 3,
@@ -876,22 +876,22 @@
     "디에이테크놀로지 (196490): No completed NAVER/KRX-mirrored daily quote: 196490; cutoff=2026-10-28",
     "이노벡스 (279060): No completed NAVER/KRX-mirrored daily quote: 279060; cutoff=2026-10-28"
   ],
-  "global_snapshot_count": 2820,
-  "global_targeted_snapshot_count": 40,
+  "global_snapshot_count": 2821,
+  "global_targeted_snapshot_count": 33,
   "global_targeted_snapshot_error": null,
   "global_historical_recovery_attempted_count": 3,
   "global_historical_recovery_succeeded_count": 0,
   "global_checked_no_new_trade_count": 3,
   "global_awaiting_first_completed_close_count": 0,
   "global_awaiting_first_completed_close": [],
-  "global_rejected_unfinished_snapshot_count": 622,
+  "global_rejected_unfinished_snapshot_count": 629,
   "global_rejected_unfinished_snapshots": [
     {
       "company_name": "Caterpillar, Inc.",
       "ticker": "CAT",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -899,7 +899,7 @@
       "ticker": "DE",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -907,7 +907,7 @@
       "ticker": "GE",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -915,7 +915,7 @@
       "ticker": "RTX",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -931,7 +931,7 @@
       "ticker": "LMT",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -947,7 +947,7 @@
       "ticker": "BA",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -963,7 +963,7 @@
       "ticker": "GD",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -979,7 +979,7 @@
       "ticker": "NOC",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -987,7 +987,7 @@
       "ticker": "HWM",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -995,7 +995,7 @@
       "ticker": "TDG",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1019,7 +1019,7 @@
       "ticker": "HONA",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1027,7 +1027,7 @@
       "ticker": "LHX",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1035,7 +1035,7 @@
       "ticker": "HEI",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1059,7 +1059,7 @@
       "ticker": "RKLB",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1067,7 +1067,7 @@
       "ticker": "AXON",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1083,7 +1083,7 @@
       "ticker": "TDY",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1115,7 +1115,7 @@
       "ticker": "ARXS",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1131,7 +1131,7 @@
       "ticker": "CW",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1139,7 +1139,7 @@
       "ticker": "FTAI",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1155,7 +1155,7 @@
       "ticker": "TXT",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1171,7 +1171,7 @@
       "ticker": "BWXT",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1179,7 +1179,7 @@
       "ticker": "MOG.A",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1195,7 +1195,7 @@
       "ticker": "CR",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1203,7 +1203,7 @@
       "ticker": "HII",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1211,7 +1211,7 @@
       "ticker": "DRS",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1227,7 +1227,7 @@
       "ticker": "KTOS",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1235,7 +1235,7 @@
       "ticker": "AVAV",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1243,7 +1243,7 @@
       "ticker": "HXL",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1251,7 +1251,7 @@
       "ticker": "LOAR",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1267,7 +1267,7 @@
       "ticker": "AMTM",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1275,7 +1275,7 @@
       "ticker": "KRMN",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1283,7 +1283,7 @@
       "ticker": "JOBY",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1291,7 +1291,7 @@
       "ticker": "BETA",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1299,7 +1299,7 @@
       "ticker": "MRCY",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1315,7 +1315,7 @@
       "ticker": "AIR",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1323,7 +1323,7 @@
       "ticker": "MIR",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1339,7 +1339,7 @@
       "ticker": "FLY",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1347,7 +1347,7 @@
       "ticker": "ACHR",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1355,7 +1355,7 @@
       "ticker": "OSIS",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1379,7 +1379,7 @@
       "ticker": "LUNR",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1387,7 +1387,7 @@
       "ticker": "ATRO",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1403,7 +1403,7 @@
       "ticker": "DCO",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1419,7 +1419,7 @@
       "ticker": "RDW",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1451,7 +1451,7 @@
       "ticker": "AADX",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1467,7 +1467,7 @@
       "ticker": "AVEX",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1483,7 +1483,7 @@
       "ticker": "CDRE",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1499,7 +1499,7 @@
       "ticker": "NPK",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1523,7 +1523,7 @@
       "ticker": "YSS",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1547,7 +1547,7 @@
       "ticker": "SWBI",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1555,7 +1555,7 @@
       "ticker": "SATL",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1563,7 +1563,7 @@
       "ticker": "PKE",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1571,7 +1571,7 @@
       "ticker": "EVEX",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1611,7 +1611,7 @@
       "ticker": "TATT",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1619,7 +1619,7 @@
       "ticker": "SPCE",
       "exchange": "NYSE",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1627,7 +1627,7 @@
       "ticker": "IA",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1643,7 +1643,7 @@
       "ticker": "PUSA",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1659,7 +1659,7 @@
       "ticker": "POWW",
       "exchange": "NASDAQ",
       "price_date": "2026-10-28",
-      "market_session": "pre_market",
+      "market_session": "market",
       "reason": "official_session_not_closed"
     },
     {
@@ -1690,8 +1690,8 @@
   "global_discarded_invalid_previous_count": 0,
   "global_discarded_invalid_previous": [],
   "update_scope": "SAFE_REFRESH",
-  "refreshed_completed_global_count": 1379,
-  "preserved_open_or_unknown_global_count": 622,
+  "refreshed_completed_global_count": 1372,
+  "preserved_open_or_unknown_global_count": 629,
   "global_exchange_completed_reference_dates": {
     "ADX": "2026-10-28",
     "AMEX": "2026-10-27",
